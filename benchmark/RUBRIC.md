@@ -7,7 +7,7 @@
 - Identical task: `benchmark/TASK.md`, passed as each session's first prompt.
 - Neither model knows it is being benchmarked or that the other exists.
 - Same starting commit, same plugins, same user skills, same budget guidance.
-- Subagent note: DeepSeek wrapper sets subagents to `deepseek-flash`; Claude side uses its default subagent model. Factor into the efficiency score.
+- Subagent note: `deepseek --pro` sets subagents to the same pro model (wrapper edited 2026-10-01); Claude side uses its default subagent model.
 
 ## Metrics to collect (per model)
 
