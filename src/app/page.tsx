@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col items-center justify-center gap-4 px-6 text-center">
@@ -14,13 +16,12 @@ export default function Home() {
       <p className="text-xl text-balance text-neutral-600 dark:text-neutral-400">
         the way Kerala actually talks
       </p>
-      {/* M0 placeholder: wires to the lesson player in M2 */}
-      <button
-        type="button"
-        className="mt-6 inline-flex min-h-12 w-full max-w-xs items-center justify-center rounded-full bg-foreground px-8 font-medium text-background active:opacity-80"
+      <Link
+        href="/lessons"
+        className="mt-6 inline-flex min-h-12 w-full max-w-xs items-center justify-center rounded-full bg-foreground px-8 font-medium text-background transition-opacity active:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
       >
         Start learning
-      </button>
+      </Link>
     </main>
   );
 }
