@@ -3,6 +3,7 @@
 ## Setup recap
 
 - Two clones: `malayalam-tutor-claude` (branch `model-claude`), `malayalam-tutor-deepseek` (branch `model-deepseek`).
+- Models: Claude side = `claude --model claude-opus-5-5` (most powerful Claude); DeepSeek side = `deepseek --pro` (most powerful DeepSeek).
 - Identical task: `benchmark/TASK.md`, passed as each session's first prompt.
 - Neither model knows it is being benchmarked or that the other exists.
 - Same starting commit, same plugins, same user skills, same budget guidance.
