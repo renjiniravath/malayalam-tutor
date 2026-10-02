@@ -213,7 +213,7 @@ type Item = {
   kind: 'word' | 'phrase' | 'sentence' | 'expression'
   pos?: 'noun' | 'verb' | 'pronoun' | 'particle' | 'suffix' | 'other'
   image?: string             // illustration asset (license record in a sibling manifest)
-  articulation?: { diagram: string; tip: string }  // required for sound:* items (diagram + brief cue, never text-only)
+  articulation?: { cue: string }  // required for sound:* items (text cue only, no visuals)
   audio: { slow: string; medium: string; normal: string; focus?: string[] } // offsets into lesson sprite
   acceptedInputs?: string[]  // forgiving ASCII answers (diacritic-folded, case-insensitive)
   notes?: string[]           // formal form, politeness, usage notes
@@ -246,7 +246,7 @@ type Level = { id: string; name: string; canDo: string[]; lessons: Lesson[]; tes
 
 1. **Source**: dialogues and sentences are patterned on modern Malayalam cinema and real conversation (rewritten/adapted — no copyrighted audio or scripts reused verbatim). This sourcing step is what keeps the register authentic.
 2. Native Malayalam speaker(s) author or review a lesson file: romanization per §9, **script per §9 rule 6** (colloquial spelling, native sign-off), meanings, notes, visuals with license records.
-3. Articulation diagrams (SVG) authored for sound items and reviewed by a native speaker for accuracy.
+3. Articulation text cues authored for sound items and reviewed by a native speaker for accuracy.
 4. `npm run content:check` validates structure, spelling rules, script sanity, visuals, licenses, and audio manifests.
 5. `npm run audio:gen` (incremental) generates the normal clips and derives slow/medium/focus variants; native-speaker review happens in the batch review UI; mispronunciations are fixed by editing text, voice, or regenerating.
 6. Lesson ships only when audio and diagrams pass review.
