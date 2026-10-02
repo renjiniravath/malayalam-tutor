@@ -12,7 +12,7 @@ export function ArticulationView({ articulation }: { articulation: Articulation 
     <figure className="space-y-2 rounded-xl border border-stone-200 bg-white p-3 dark:border-stone-800 dark:bg-stone-900">
       <Image
         src={ARTICULATION_ASSETS[articulation.diagram]}
-        alt={`Tongue position diagram for ${articulation.diagram}`}
+        alt={`Tongue movement diagram for ${articulation.diagram}`}
         width={360}
         height={220}
         className="h-auto w-full rounded-lg"
