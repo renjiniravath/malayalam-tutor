@@ -8,12 +8,16 @@
  *
  * Spelling conventions (PLAN.md §9): long a -> aa, long i -> ee
  * (Malayalee typing, as in `veedu`), long u -> uu, long e/o single;
- * `th` dental vs `t` retroflex; geminates doubled (`tt` = ട്ട, `tth` = ത്ത).
+ * `th` dental vs `t` retroflex; geminates doubled (`tt` = ട്ട, `tth` = ത്ത);
+ * `kh` for the aspirate ഖ (`sukham`); word-final chillus (ൻ, ൾ) keep their
+ * plain letters. Entries without a script follow §9 rule 6 (omit when the
+ * written form misleads).
  */
 
 export interface DictionaryEntry {
   manglish: string
-  script: string
+  /** Omitted when the script rule (PLAN.md §9 rule 6) says no script is shown. */
+  script?: string
   meaning: string
 }
 
@@ -53,4 +57,26 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'alla', script: 'അല്ല', meaning: "isn't, not" },
   { manglish: 'ala', script: 'അല', meaning: 'wave' },
   { manglish: 'cheettha', script: 'ചീത്ത', meaning: 'bad' },
+  // Level 1 Unit 2 — greetings & expressions
+  { manglish: 'engane und', script: 'എങ്ങനെ ഉണ്ട്', meaning: 'how are you?' },
+  { manglish: 'sukham', script: 'സുഖം', meaning: 'fine, well' },
+  { manglish: 'ennaa vishesham', script: 'എന്നാ വിശേഷം', meaning: "what's new?" },
+  // no script: the written form spells a long u that is short in speech (§9 rule 6)
+  { manglish: 'vishesham onnum illa', meaning: 'nothing much' },
+  { manglish: 'sheri', script: 'ശെരി', meaning: 'okay, fine' },
+  { manglish: 'nokkaam', script: 'നോക്കാം', meaning: "let's see" },
+  { manglish: 'ayyo', script: 'അയ്യോ', meaning: 'oh no!' },
+  { manglish: 'pinnalla', script: 'പിന്നല്ല', meaning: 'of course, obviously' },
+  { manglish: 'alle', script: 'അല്ലേ', meaning: "isn't it? (tag question)" },
+  { manglish: 'poyi varatte', script: 'പോയി വരട്ടെ', meaning: 'goodbye (lit. go and come back)' },
+  // Level 1 Unit 3 — pronouns
+  { manglish: 'njaan', script: 'ഞാൻ', meaning: 'I' },
+  { manglish: 'nee', script: 'നീ', meaning: 'you (casual)' },
+  { manglish: 'ningaḷ', script: 'നിങ്ങൾ', meaning: 'you (polite)' },
+  { manglish: 'thaangkaḷ', script: 'താങ്കൾ', meaning: 'you (formal)' },
+  { manglish: 'avan', script: 'അവൻ', meaning: 'he' },
+  { manglish: 'avaḷ', script: 'അവൾ', meaning: 'she' },
+  { manglish: 'nammaḷ', script: 'നമ്മൾ', meaning: 'we (you and me)' },
+  { manglish: 'namukku', script: 'നമുക്ക്', meaning: "to us — also 'let's'" },
+  { manglish: 'nee engane und', script: 'നീ എങ്ങനെ ഉണ്ട്', meaning: 'how are you? — nee for emphasis' },
 ]

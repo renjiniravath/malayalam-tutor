@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npm *)",
       "Bash(npx *)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "mcp__plugin_playwright_playwright__browser_navigate"
     ]
   }
 }

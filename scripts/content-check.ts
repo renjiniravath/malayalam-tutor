@@ -22,6 +22,7 @@ import { LEVELS } from '../src/content/levels'
 import { DICTIONARY } from '../src/content/dictionary'
 import { IMAGE_LICENSES, LICENSE_ALLOWLIST } from '../src/content/imageLicenses'
 import { KNOWN_TAGS, SOUND_TAGS, SOUND_TAG_FEATURE, type SoundTag } from '../src/content/tags'
+import { CONTENT_REVISION } from '../src/content/revision'
 
 const ROOT = path.resolve(__dirname, '..')
 const CONTENT_DIR = path.join(ROOT, 'src', 'content')
@@ -51,7 +52,7 @@ function warn(ctx: string, msg: string): void {
  */
 const GRAPHEMES = [
   'tth', 'nth', 'nt',
-  'zh', 'nj', 'sh', 'ph', 'ng', 'ch', 'th', 'dh',
+  'zh', 'nj', 'sh', 'ph', 'ng', 'ch', 'kh', 'th', 'dh',
   'tt', 'kk', 'pp', 'mm', 'nn', 'll', 'ḷḷ',
   'aa', 'ee', 'uu',
   'ḷ', 'ṇ', 'ṟ',
@@ -128,7 +129,8 @@ const SCRIPT_TRAPS: Record<string, string> = {
 // Script checks (NFC / block / ZWJ)
 // ---------------------------------------------------------------------------
 
-const MALAYALAM_BLOCK = /^[ഀ-ൿ‍]+$/
+/** Malayalam block, plus spaces between the words of multi-word items. */
+const MALAYALAM_BLOCK = /^[ഀ-ൿ‍ ]+$/
 /** Vowel letters and signs — bare consonant letters have no vowel marks. */
 const HAS_VOWEL = /[അആഇഈഉഊഎഏഒഓഔാിീുൂെേൊോൈൗം]/
 const CONSONANTS = new Set('കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ')
@@ -138,6 +140,7 @@ const EXCLUDED_AFTER = new Set(['്', ...VOWEL_SIGNS])
 function checkScript(script: string, ctx: string): void {
   if (script !== script.normalize('NFC')) fail(ctx, `script is not NFC: ${script}`)
   if (!MALAYALAM_BLOCK.test(script)) fail(ctx, `script has non-Malayalam characters: ${script}`)
+  if (script !== script.trim()) fail(ctx, 'script must not start or end with a space')
   if (script.startsWith('‍') || script.endsWith('‍'))
     fail(ctx, `script must not start or end with ZWJ: ${script}`)
   if (script.includes('‍‍')) fail(ctx, `script has doubled ZWJ: ${script}`)
@@ -164,9 +167,9 @@ function hasInherentA(script: string): boolean {
 
 /** token -> script must contain one of these */
 const TOKEN_TO_SCRIPT: Record<string, string[]> = {
-  zh: ['ഴ'], nj: ['ഞ'], sh: ['ശ'], ph: ['ഫ'], ng: ['ങ'], ch: ['ച'],
+  zh: ['ഴ'], nj: ['ഞ'], sh: ['ശ'], ph: ['ഫ'], ng: ['ങ'], ch: ['ച'], kh: ['ഖ'],
   th: ['ത'], dh: ['ദ'], t: ['ട'], d: ['ട', 'ഡ'], ṟ: ['റ'],
-  r: ['ര', 'റ'], l: ['ല'], ḷ: ['ള'], n: ['ന'], ṇ: ['ണ'], m: ['മ'],
+  r: ['ര', 'റ'], l: ['ല'], ḷ: ['ള', 'ൾ'], n: ['ന', 'ണ', 'ൻ'], ṇ: ['ണ'], m: ['മ', 'ം'],
   p: ['പ'], b: ['ബ'], k: ['ക'], g: ['ഗ'], j: ['ജ'], s: ['സ'],
   v: ['വ'], y: ['യ'], h: ['ഹ'],
   tt: ['ട്ട'], tth: ['ത്ത'], kk: ['ക്ക'], pp: ['പ്പ'], mm: ['മ്മ'],
@@ -182,8 +185,8 @@ const VOWEL_TOKENS = new Set(['aa', 'a', 'ee', 'e', 'i', 'uu', 'u', 'o'])
 const SCRIPT_TO_TOKEN: Record<string, string[]> = {
   'ഴ': ['zh'], 'ഞ': ['nj'], 'ശ': ['sh'], 'ഫ': ['ph'], 'ങ': ['ng'], 'ച': ['ch'],
   'ത': ['th'], 'ദ': ['dh'], 'ട': ['t', 'd'], 'ഡ': ['d'], 'ര': ['r'], 'റ': ['ṟ', 'r'],
-  'ല': ['l'], 'ള': ['ḷ'], 'ന': ['n'], 'ണ': ['ṇ'], 'മ': ['m'], 'പ': ['p'], 'ബ': ['b'],
-  'ക': ['k'], 'ഗ': ['g'], 'ജ': ['j'], 'സ': ['s'], 'വ': ['v'], 'യ': ['y'], 'ഹ': ['h'],
+  'ല': ['l'], 'ള': ['ḷ'], 'ന': ['n'], 'ണ': ['ṇ', 'n'], 'മ': ['m'], 'പ': ['p'], 'ബ': ['b'],
+  'ക': ['k'], 'ഖ': ['kh'], 'ഗ': ['g'], 'ജ': ['j'], 'സ': ['s'], 'വ': ['v'], 'യ': ['y'], 'ഹ': ['h'],
   'ം': ['m'],
   'ാ': ['aa'], 'ആ': ['aa'], 'അ': ['a'], 'ി': ['i'], 'ഈ': ['ee'], 'ഇ': ['i'], 'ീ': ['ee'],
   'ു': ['u'], 'ൂ': ['uu'], 'ഉ': ['u'], 'ഊ': ['uu'],
@@ -200,11 +203,15 @@ function countChar(s: string, c: string): number {
   return s.split(c).length - 1
 }
 
-function checkDictionaryEntry(manglish: string, script: string): void {
+/**
+ * `script` is undefined when §9 rule 6 omits it (written form misleads);
+ * only the manglish-side checks apply then.
+ */
+function checkDictionaryEntry(manglish: string, script?: string): void {
   const ctx = `dictionary:${manglish}`
   if (!MANGLISH_CHARSET.test(manglish))
     fail(ctx, `manglish has invalid characters (lowercase a-z, ḷ ṇ ṟ only): ${manglish}`)
-  const hasVowel = HAS_VOWEL.test(script)
+  const hasVowel = script ? HAS_VOWEL.test(script) : false
   for (const word of manglish.split(' ')) {
     const tokens = tokenize(word)
     if (tokens.length === 0) fail(ctx, `cannot tokenize: ${word}`)
@@ -212,6 +219,7 @@ function checkDictionaryEntry(manglish: string, script: string): void {
       fail(ctx, `formal register "${word}" — use the casual "${MANGLISH_TRAPS[word]}"`)
     if (word.includes('ii')) fail(ctx, `long i is written ee (as in veedu), not ii: ${word}`)
     if (word.includes('oo')) fail(ctx, `long u is written uu, not oo: ${word}`)
+    if (!script) continue
     for (const token of tokens) {
       const targets = TOKEN_TO_SCRIPT[token]
       if (!targets) continue
@@ -220,11 +228,15 @@ function checkDictionaryEntry(manglish: string, script: string): void {
       if (token === 'a' && hasInherentA(script)) continue
       fail(ctx, `"${token}" needs ${targets.join(' or ')} in the script, got ${script}`)
     }
-    for (const [rom, conj] of GEMINATE_PAIRS) {
-      const hasRom = tokens.includes(rom)
-      const hasConj = script.includes(conj)
-      if (hasRom !== hasConj) fail(ctx, `${rom} ${hasRom ? 'needs' : 'not matched by'} ${conj}: ${script}`)
-    }
+  }
+  if (!script) return
+  // Geminate correspondence is per entry, not per word: in a multi-word
+  // entry the conjunct may sit in any of its words.
+  const allTokens = manglish.split(' ').flatMap(tokenize)
+  for (const [rom, conj] of GEMINATE_PAIRS) {
+    const hasRom = allTokens.includes(rom)
+    const hasConj = script.includes(conj)
+    if (hasRom !== hasConj) fail(ctx, `${rom} ${hasRom ? 'needs' : 'not matched by'} ${conj}: ${script}`)
   }
   // vowel doubling: aa/ee/uu must match the script's long vowel signs
   const scriptAa = countChar(script, 'ാ') + countChar(script, 'ആ')
@@ -244,7 +256,10 @@ function checkDictionaryEntry(manglish: string, script: string): void {
     if (!options.some((t) => manglish.includes(t)))
       fail(ctx, `script ${ch} needs ${options.join(' or ')} in the manglish: ${manglish}`)
   }
-  if (script.endsWith('്') && !manglish.endsWith('u'))
+  // A final virama on a bare consonant is pronounced with a final u
+  // (kazhinju); on a consonant cluster like ണ്ട് it is not (und).
+  const finalConjunct = /്[ഀ-ൿ]്$/.test(script)
+  if (script.endsWith('്') && !manglish.endsWith('u') && !finalConjunct)
     fail(ctx, `word-final virama is spelled with a final u: ${manglish}`)
   if (manglish.endsWith('u') && !script.endsWith('്') && !/[ഉഊു]/.test(script))
     fail(ctx, `final u needs a final virama, ു, ഉ, or ഊ in the script: ${script}`)
@@ -595,10 +610,12 @@ function main(): void {
   for (const entry of DICTIONARY) {
     const ctx = `dictionary:${entry.manglish}`
     if (dictManglish.has(entry.manglish)) fail(ctx, 'duplicate dictionary manglish')
-    if (dictScript.has(entry.script)) fail(ctx, `duplicate dictionary script: ${entry.script}`)
     dictManglish.add(entry.manglish)
-    dictScript.add(entry.script)
-    checkScript(entry.script, ctx)
+    if (entry.script) {
+      if (dictScript.has(entry.script)) fail(ctx, `duplicate dictionary script: ${entry.script}`)
+      dictScript.add(entry.script)
+      checkScript(entry.script, ctx)
+    }
     checkDictionaryEntry(entry.manglish, entry.script)
     scanForEmoji(entry.meaning, ctx)
   }
@@ -629,7 +646,7 @@ function main(): void {
   const clipCount = items.reduce((n, i) => n + (itemRefs.get(i.id)?.length ?? 0), 0)
   console.log(
     `content:check — ${LEVELS.length} level, ${lessons.length} lessons, ${items.length} items, ` +
-      `${pairs.length} pairs, ${clipCount} audio clips`
+      `${pairs.length} pairs, ${clipCount} audio clips, revision ${CONTENT_REVISION}`
   )
   if (errors.length) {
     console.error(`\n${errors.length} error(s):`)

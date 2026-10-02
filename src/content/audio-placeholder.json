@@ -44,6 +44,35 @@
         "ala.slow", "ala.medium", "ala.normal",
         "cheettha.slow", "cheettha.medium", "cheettha.normal"
       ]
+    },
+    "l1u2l1": {
+      "sprite": "audio/l1u2l1.mp3",
+      "clips": [
+        "engane-und.slow", "engane-und.medium", "engane-und.normal",
+        "sukham.slow", "sukham.medium", "sukham.normal",
+        "ennaa-vishesham.slow", "ennaa-vishesham.medium", "ennaa-vishesham.normal",
+        "vishesham-onnum-illa.slow", "vishesham-onnum-illa.medium", "vishesham-onnum-illa.normal",
+        "seri.slow", "seri.medium", "seri.normal",
+        "nokkam.slow", "nokkam.medium", "nokkam.normal",
+        "ayyo.slow", "ayyo.medium", "ayyo.normal",
+        "pinnalla.slow", "pinnalla.medium", "pinnalla.normal",
+        "alle.slow", "alle.medium", "alle.normal",
+        "poyi-varatte.slow", "poyi-varatte.medium", "poyi-varatte.normal"
+      ]
+    },
+    "l1u3l1": {
+      "sprite": "audio/l1u3l1.mp3",
+      "clips": [
+        "njan.slow", "njan.medium", "njan.normal",
+        "nee.slow", "nee.medium", "nee.normal",
+        "ningal.slow", "ningal.medium", "ningal.normal",
+        "thaankal.slow", "thaankal.medium", "thaankal.normal",
+        "avan.slow", "avan.medium", "avan.normal",
+        "aval.slow", "aval.medium", "aval.normal",
+        "nammal.slow", "nammal.medium", "nammal.normal",
+        "namukku.slow", "namukku.medium", "namukku.normal",
+        "nee-engane-und.slow", "nee-engane-und.medium", "nee-engane-und.normal"
+      ]
     }
   }
 }

@@ -5,6 +5,8 @@
 
 import type { Level } from '../types'
 import { UNIT1_LESSONS } from './unit1'
+import { UNIT2_LESSONS } from './unit2'
+import { UNIT3_LESSONS } from './unit3'
 
 export const LEVEL1: Level = {
   id: 'level1',
@@ -15,7 +17,7 @@ export const LEVEL1: Level = {
     'Use high-frequency nouns, core verbs, and pronouns',
     'Use everyday conversational expressions',
   ],
-  lessons: [...UNIT1_LESSONS],
+  lessons: [...UNIT1_LESSONS, ...UNIT2_LESSONS, ...UNIT3_LESSONS],
   test: {
     itemCount: 20,
     passPct: 0.8,

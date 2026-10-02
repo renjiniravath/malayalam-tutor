@@ -18,6 +18,10 @@ audio-manifest*.json
 # Local Claude Code overrides (personal, not committed)
 .claude/settings.local.json
 
+# Playwright automation artifacts
+.playwright-cli/
+.playwright-mcp/
+
 # OS and editor
 .DS_Store
 *.log
