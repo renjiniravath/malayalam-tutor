@@ -21,3 +21,4 @@ audio-manifest*.json
 # OS and editor
 .DS_Store
 *.log
+benchmark/
