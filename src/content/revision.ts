@@ -6,5 +6,6 @@
  * History:
  *   1 — Unit 1 shipped (revision tracking starts here)
  *   2 — Units 2-3 added (greetings & expressions, pronouns)
+ *   3 — articulation entries became brief text cues (visual diagrams dropped)
  */
-export const CONTENT_REVISION = 2
+export const CONTENT_REVISION = 3

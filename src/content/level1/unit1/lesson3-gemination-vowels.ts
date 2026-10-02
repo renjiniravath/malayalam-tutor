@@ -1,7 +1,7 @@
 /**
  * Level 1 Unit 1 Lesson 3 — Gemination (held consonants) and vowel length.
  * Comprehension-only: hear, reveal, discriminate. Duration features are
- * taught through focus-clip pairs and word pairs, not tongue diagrams.
+ * taught through focus-clip pairs and word pairs, with brief text cues.
  */
 
 import type { Lesson } from '../../types'
@@ -21,8 +21,7 @@ export const lesson3GeminationVowels: Lesson = {
       meaning: 'the ka sound — a quick single k',
       kind: 'sound',
       articulation: {
-        diagram: 'k.svg',
-        tip: 'Back of the tongue touches the soft palate. One quick release.',
+        cue: 'Back of the tongue touches the soft palate. One quick release.',
       },
       audio: { slow: 'ka.slow', medium: 'ka.medium', normal: 'ka.normal', focus: ['ka.focus'] },
       tags: ['sound:geminate', 'level:1'],
@@ -34,8 +33,7 @@ export const lesson3GeminationVowels: Lesson = {
       meaning: 'the kka sound — a held k',
       kind: 'sound',
       articulation: {
-        diagram: 'k-hold.svg',
-        tip: 'Same as ka, but hold the closure a beat longer before you release.',
+        cue: 'Same as ka, but hold the closure a beat longer before you release.',
       },
       audio: { slow: 'kka.slow', medium: 'kka.medium', normal: 'kka.normal', focus: ['kka.focus'] },
       notes: ['A doubled consonant means a held sound: kk, tt, pp.'],
@@ -48,8 +46,7 @@ export const lesson3GeminationVowels: Lesson = {
       meaning: 'the long aa sound',
       kind: 'sound',
       articulation: {
-        diagram: 'a-vowel.svg',
-        tip: 'Mouth open, tongue low. Hold the vowel twice as long as a short a.',
+        cue: 'Mouth open, tongue low. Hold the vowel twice as long as a short a.',
       },
       audio: { slow: 'aa.slow', medium: 'aa.medium', normal: 'aa.normal', focus: ['aa.focus'] },
       notes: ['Long vowels are always written doubled: aa, ee, uu.'],
@@ -62,8 +59,7 @@ export const lesson3GeminationVowels: Lesson = {
       meaning: 'the short a sound',
       kind: 'sound',
       articulation: {
-        diagram: 'a-vowel.svg',
-        tip: 'Mouth open, tongue low. One quick beat.',
+        cue: 'Mouth open, tongue low. One quick beat.',
       },
       audio: { slow: 'a.slow', medium: 'a.medium', normal: 'a.normal', focus: ['a.focus'] },
       tags: ['sound:vowelLength', 'level:1'],
@@ -75,8 +71,7 @@ export const lesson3GeminationVowels: Lesson = {
       meaning: 'the long ee sound',
       kind: 'sound',
       articulation: {
-        diagram: 'i-vowel.svg',
-        tip: 'Lips spread, tongue high at the front. Hold it long — like the ee in see.',
+        cue: 'Lips spread, tongue high at the front. Hold it long — like the ee in see.',
       },
       audio: { slow: 'ee.slow', medium: 'ee.medium', normal: 'ee.normal', focus: ['ee.focus'] },
       tags: ['sound:vowelLength', 'level:1'],
@@ -88,8 +83,7 @@ export const lesson3GeminationVowels: Lesson = {
       meaning: 'the short i sound',
       kind: 'sound',
       articulation: {
-        diagram: 'i-vowel.svg',
-        tip: 'Lips spread, tongue high at the front. One quick beat — like the i in sit.',
+        cue: 'Lips spread, tongue high at the front. One quick beat — like the i in sit.',
       },
       audio: { slow: 'i.slow', medium: 'i.medium', normal: 'i.normal', focus: ['i.focus'] },
       tags: ['sound:vowelLength', 'level:1'],
@@ -101,8 +95,7 @@ export const lesson3GeminationVowels: Lesson = {
       meaning: 'the long uu sound',
       kind: 'sound',
       articulation: {
-        diagram: 'u-vowel.svg',
-        tip: 'Lips rounded, tongue high at the back. Hold it long — like the oo in food.',
+        cue: 'Lips rounded, tongue high at the back. Hold it long — like the oo in food.',
       },
       audio: { slow: 'uu.slow', medium: 'uu.medium', normal: 'uu.normal', focus: ['uu.focus'] },
       tags: ['sound:vowelLength', 'level:1'],
@@ -114,8 +107,7 @@ export const lesson3GeminationVowels: Lesson = {
       meaning: 'the short u sound',
       kind: 'sound',
       articulation: {
-        diagram: 'u-vowel.svg',
-        tip: 'Lips rounded, tongue high at the back. One quick beat — like the u in put.',
+        cue: 'Lips rounded, tongue high at the back. One quick beat — like the u in put.',
       },
       audio: { slow: 'u.slow', medium: 'u.medium', normal: 'u.normal', focus: ['u.focus'] },
       tags: ['sound:vowelLength', 'level:1'],

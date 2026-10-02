@@ -7,7 +7,7 @@
  * - script sanity (NFC, Malayalam block, ZWJ placement)
  * - audio manifest presence (placeholder manifest until audio:gen runs)
  * - image presence + license allowlist
- * - articulation entries for sound items (SVG + brief cue, never text-only)
+ * - articulation entries for sound items (brief text cue, never text-only)
  * - duplicate spellings and ids
  * - tag integrity (registry, level placement, sound-tag/feature consistency)
  * - minimal-pair sanity (referential integrity, feature presence, duration)
@@ -26,7 +26,6 @@ import { CONTENT_REVISION } from '../src/content/revision'
 
 const ROOT = path.resolve(__dirname, '..')
 const CONTENT_DIR = path.join(ROOT, 'src', 'content')
-const ARTICULATION_DIR = path.join(CONTENT_DIR, 'articulations')
 const PUBLIC_DIR = path.join(ROOT, 'public')
 const REAL_MANIFEST_PATH = path.join(ROOT, 'audio-manifest.json')
 const PLACEHOLDER_MANIFEST_PATH = path.join(CONTENT_DIR, 'audio-placeholder.json')
@@ -429,21 +428,14 @@ function main(): void {
           fail(ctx, `tag ${tag} needs "${segment}" in the manglish or a ${segment} minimal pair`)
       }
 
-      // sound items: articulation + focus clips + a sound tag
+      // sound items: articulation cue + focus clips + a sound tag
       if (item.kind === 'sound') {
         if (soundTags.length === 0) fail(ctx, 'sound items need a sound:* tag')
-        if (!item.articulation) fail(ctx, 'sound items need an articulation entry (SVG + tip)')
+        if (!item.articulation) fail(ctx, 'sound items need an articulation entry (text cue)')
         else {
-          if (!item.articulation.tip.trim()) fail(ctx, 'articulation tip is empty')
-          if (item.articulation.tip.length > 200) fail(ctx, 'articulation tip is longer than 200 chars')
-          const diagramPath = path.join(ARTICULATION_DIR, item.articulation.diagram)
-          if (!existsSync(diagramPath)) fail(ctx, `articulation diagram missing: ${item.articulation.diagram}`)
-          else {
-            const svg = readFileSync(diagramPath, 'utf8')
-            if (!svg.includes('<svg') || !svg.includes('</svg>'))
-              fail(ctx, `articulation diagram is not an SVG: ${item.articulation.diagram}`)
-          }
-          scanForEmoji(item.articulation.tip, ctx)
+          if (!item.articulation.cue.trim()) fail(ctx, 'articulation cue is empty')
+          if (item.articulation.cue.length > 200) fail(ctx, 'articulation cue is longer than 200 chars')
+          scanForEmoji(item.articulation.cue, ctx)
         }
         if (!item.audio.focus || item.audio.focus.length === 0)
           fail(ctx, 'sound items need at least one focus clip')
@@ -622,17 +614,6 @@ function main(): void {
   for (const entry of DICTIONARY) {
     if (!items.some((i) => i.manglish === entry.manglish))
       warn(`dictionary:${entry.manglish}`, 'entry not used by any item')
-  }
-
-  // ---- articulation assets -------------------------------------------------
-  const diagrams = new Set<string>()
-  for (const item of items) {
-    if (item.articulation) diagrams.add(item.articulation.diagram)
-  }
-  if (existsSync(ARTICULATION_DIR)) {
-    for (const file of readdirSync(ARTICULATION_DIR)) {
-      if (!diagrams.has(file)) warn(`articulations:${file}`, 'SVG not referenced by any item')
-    }
   }
 
   // ---- emoji scan across content source files ------------------------------

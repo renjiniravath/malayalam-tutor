@@ -20,8 +20,7 @@ export const lesson1Zh: Lesson = {
       meaning: 'the zh sound — tongue curled back',
       kind: 'sound',
       articulation: {
-        diagram: 'zh.svg',
-        tip: 'Curl the tongue tip up and back and let air flow over it — a soft, buzzy r.',
+        cue: 'Curl the tongue tip up and back and let air flow over it — a soft, buzzy r.',
       },
       audio: { slow: 'zha.slow', medium: 'zha.medium', normal: 'zha.normal', focus: ['zha.focus'] },
       notes: ['The sound in mazha (rain) and vazhi (way).'],
@@ -34,8 +33,7 @@ export const lesson1Zh: Lesson = {
       meaning: 'the la sound — like English l',
       kind: 'sound',
       articulation: {
-        diagram: 'l.svg',
-        tip: 'Tongue tip behind the upper teeth, air flowing along the sides — like English l.',
+        cue: 'Tongue tip behind the upper teeth, air flowing along the sides — like English l.',
       },
       audio: { slow: 'la.slow', medium: 'la.medium', normal: 'la.normal', focus: ['la.focus'] },
       tags: ['sound:zh', 'level:1'],

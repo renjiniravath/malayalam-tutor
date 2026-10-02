@@ -20,8 +20,7 @@ export const lesson2Coronals: Lesson = {
       meaning: 'the tha sound — tongue tip at the upper teeth',
       kind: 'sound',
       articulation: {
-        diagram: 'th.svg',
-        tip: 'Touch the back of the upper teeth with the tongue tip — a softer t than English.',
+        cue: 'Touch the back of the upper teeth with the tongue tip — a softer t than English.',
       },
       audio: { slow: 'tha.slow', medium: 'tha.medium', normal: 'tha.normal', focus: ['tha.focus'] },
       tags: ['sound:coronal', 'level:1'],
@@ -33,8 +32,7 @@ export const lesson2Coronals: Lesson = {
       meaning: 'the ta sound — tongue curled back',
       kind: 'sound',
       articulation: {
-        diagram: 't.svg',
-        tip: 'Curl the tongue tip up and back and tap the roof of the mouth.',
+        cue: 'Curl the tongue tip up and back and tap the roof of the mouth.',
       },
       audio: { slow: 'ta.slow', medium: 'ta.medium', normal: 'ta.normal', focus: ['ta.focus'] },
       tags: ['sound:coronal', 'level:1'],
@@ -46,8 +44,7 @@ export const lesson2Coronals: Lesson = {
       meaning: 'the ṟa sound — tongue tip tapping the ridge',
       kind: 'sound',
       articulation: {
-        diagram: 'r.svg',
-        tip: 'Tap the ridge behind the upper teeth with the tongue tip — a quick, rolled r.',
+        cue: 'Tap the ridge behind the upper teeth with the tongue tip — a quick, rolled r.',
       },
       audio: { slow: 'rra.slow', medium: 'rra.medium', normal: 'rra.normal', focus: ['rra.focus'] },
       acceptedInputs: ['ra', 'rra'],

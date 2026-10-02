@@ -32,12 +32,12 @@ export type Pos =
  */
 export type ScriptForm = 'colloquial' | 'written'
 
-/** Sound-teaching items: SVG tongue diagram + brief cue, never text-only. */
+/**
+ * Sound-teaching items: a brief coaching cue shown with the reveal.
+ * Text + audio only — visual tongue diagrams were tried and dropped.
+ */
 export interface Articulation {
-  /** File name inside src/content/articulations/ */
-  diagram: string
-  /** Brief coaching cue shown under the diagram. */
-  tip: string
+  cue: string
 }
 
 /**
