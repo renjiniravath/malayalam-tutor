@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" role="img">
+  <title>Tongue position for the Malayalam zh sound (ഴ)</title>
+  <desc>Side view of the mouth: the tongue tip curls up and back toward the post-alveolar ridge without touching it, and air flows over the tongue.</desc>
+  <!-- head profile, facing left -->
+  <path fill="#e2e8f0" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"
+    d="M 150 30
+       C 148 14 134 8 116 8
+       C 90 8 70 14 58 26
+       C 50 34 46 42 43 48
+       L 37 55
+       L 28 62
+       L 35 67
+       L 31 72
+       L 25 76
+       L 32 81
+       C 36 87 42 91 52 92
+       C 66 94 82 94 94 89
+       C 106 84 116 78 122 71
+       C 134 62 144 50 148 38
+       Z" />
+  <!-- mouth cavity -->
+  <path fill="#334155"
+    d="M 28 70 C 44 66 68 65 92 71 C 96 76 96 80 92 84 C 68 84 44 82 29 80 Z" />
+  <!-- upper teeth -->
+  <path fill="#f8fafc" d="M 29 70 L 37 69.5 L 37 76 L 29 76.5 Z" />
+  <!-- alveolar ridge -->
+  <path fill="#fbbf24" stroke="#b45309" stroke-width="1"
+    d="M 37 69 C 40 67.5 43 67.5 46 68 L 44 70.5 C 41 71 39 71 37 70.5 Z" />
+  <!-- tongue: tip curled back toward the post-alveolar ridge, gap left open -->
+  <path fill="#fb923c" stroke="#c2410c" stroke-width="2" stroke-linejoin="round"
+    d="M 90 84
+       C 80 85 68 82 62 77
+       C 58 73 58 70 60 68.5
+       C 63 67 68 67.5 71 69
+       C 66 71 62 73 60 75
+       C 64 78 76 81 88 83
+       Z" />
+  <!-- airflow passing over the tongue and out through the lips -->
+  <path fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="3 3"
+    d="M 86 69 C 66 66 48 66.5 40 69.5" />
+  <path fill="#3b82f6" d="M 39 67 L 33 69.5 L 39 72 Z" />
+</svg>

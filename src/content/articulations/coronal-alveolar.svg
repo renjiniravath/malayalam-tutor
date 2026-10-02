@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" role="img">
+  <title>Tongue position for the Malayalam alveolar ṟ sound (റ)</title>
+  <desc>Side view of the mouth: the tongue tip taps the gum ridge just behind the upper front teeth.</desc>
+  <!-- head profile, facing left -->
+  <path fill="#e2e8f0" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"
+    d="M 150 30
+       C 148 14 134 8 116 8
+       C 90 8 70 14 58 26
+       C 50 34 46 42 43 48
+       L 37 55
+       L 28 62
+       L 35 67
+       L 31 72
+       L 25 76
+       L 32 81
+       C 36 87 42 91 52 92
+       C 66 94 82 94 94 89
+       C 106 84 116 78 122 71
+       C 134 62 144 50 148 38
+       Z" />
+  <!-- mouth cavity -->
+  <path fill="#334155"
+    d="M 28 70 C 44 66 68 65 92 71 C 96 76 96 80 92 84 C 68 84 44 82 29 80 Z" />
+  <!-- upper teeth -->
+  <path fill="#f8fafc" d="M 29 70 L 37 69.5 L 37 76 L 29 76.5 Z" />
+  <!-- alveolar ridge -->
+  <path fill="#fbbf24" stroke="#b45309" stroke-width="1"
+    d="M 37 69 C 40 67.5 43 67.5 46 68 L 44 70.5 C 41 71 39 71 37 70.5 Z" />
+  <!-- tongue: tip tapping the gum ridge behind the upper teeth -->
+  <path fill="#fb923c" stroke="#c2410c" stroke-width="2" stroke-linejoin="round"
+    d="M 90 83
+       C 80 84 64 84 54 82
+       C 48 79 44 74 45 70.5
+       C 46 68 50 66.5 53 67
+       C 60 69 72 72 84 76
+       C 87 78 89 81 90 83
+       Z" />
+</svg>
