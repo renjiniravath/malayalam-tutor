@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 220" role="img">
+  <title>Tongue position for the geminate kka sound (ക്ക): hold the closure</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L9,4 L0,8 z" fill="#78716c"/>
+    </marker>
+  </defs>
+  <rect x="30" y="20" width="300" height="180" rx="46" fill="#ffffff" stroke="#57534e" stroke-width="2.5"/>
+  <path d="M34,96 L56,90 Q74,84 84,82 Q150,72 215,66 L244,72 L244,100 L232,126 Q160,142 100,136 Q60,128 44,112 L34,106 Z" fill="#f5f5f4"/>
+  <rect x="26" y="86" width="12" height="16" rx="4" fill="#e7e5e4" stroke="#57534e" stroke-width="1.5"/>
+  <rect x="26" y="106" width="12" height="16" rx="4" fill="#e7e5e4" stroke="#57534e" stroke-width="1.5"/>
+  <path d="M46,97 L58,93 L59,101 L46,104 Z" fill="#ffffff" stroke="#57534e" stroke-width="1.5"/>
+  <path d="M60,90 Q68,83 76,88 L74,92 Q66,88 60,92 Z" fill="#d6d3d1"/>
+  <path d="M236,130 C226,118 218,102 214,86 C212,76 212,68 216,62" fill="none" stroke="#fb923c" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="216" cy="64" r="12" fill="#f59e0b22" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="196" y1="52" x2="196" y2="80" stroke="#d97706" stroke-width="3.5"/>
+  <line x1="204" y1="52" x2="204" y2="80" stroke="#d97706" stroke-width="3.5"/>
+  <text x="180" y="48" font-family="system-ui, sans-serif" font-size="13" fill="#d97706">hold</text>
+  <path d="M244,112 C238,94 234,80 231,72" fill="none" stroke="#78716c" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="226" y1="58" x2="226" y2="82" stroke="#d97706" stroke-width="3"/>
+  <text x="50" y="46" font-family="system-ui, sans-serif" font-size="15" fill="#292524">kk</text>
+  <text x="74" y="46" font-family="'Noto Sans Malayalam', system-ui, sans-serif" font-size="15" fill="#57534e">ക്ക</text>
+</svg>

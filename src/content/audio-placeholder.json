@@ -1,0 +1,49 @@
+{
+  "placeholder": true,
+  "comment": "Clip requirements per lesson. Audio is generated with `npm run audio:gen`, which writes real offsets into audio-manifest.json at the repo root (gitignored). Until then this placeholder lets content:check verify audio manifest presence.",
+  "lessons": {
+    "l1u1l1": {
+      "sprite": "audio/l1u1l1.mp3",
+      "clips": [
+        "zha.slow", "zha.medium", "zha.normal", "zha.focus",
+        "la.slow", "la.medium", "la.normal", "la.focus",
+        "mazha.slow", "mazha.medium", "mazha.normal",
+        "pazhaya.slow", "pazhaya.medium", "pazhaya.normal",
+        "kazhinju.slow", "kazhinju.medium", "kazhinju.normal",
+        "vazhi.slow", "vazhi.medium", "vazhi.normal",
+        "vali.slow", "vali.medium", "vali.normal"
+      ]
+    },
+    "l1u1l2": {
+      "sprite": "audio/l1u1l2.mp3",
+      "clips": [
+        "tha.slow", "tha.medium", "tha.normal", "tha.focus",
+        "ta.slow", "ta.medium", "ta.normal", "ta.focus",
+        "rra.slow", "rra.medium", "rra.normal", "rra.focus",
+        "patthu.slow", "patthu.medium", "patthu.normal",
+        "athu.slow", "athu.medium", "athu.normal",
+        "peti.slow", "peti.medium", "peti.normal",
+        "katti.slow", "katti.medium", "katti.normal",
+        "pettannu.slow", "pettannu.medium", "pettannu.normal"
+      ]
+    },
+    "l1u1l3": {
+      "sprite": "audio/l1u1l3.mp3",
+      "clips": [
+        "ka.slow", "ka.medium", "ka.normal", "ka.focus",
+        "kka.slow", "kka.medium", "kka.normal", "kka.focus",
+        "aa.slow", "aa.medium", "aa.normal", "aa.focus",
+        "a.slow", "a.medium", "a.normal", "a.focus",
+        "ee.slow", "ee.medium", "ee.normal", "ee.focus",
+        "i.slow", "i.medium", "i.normal", "i.focus",
+        "uu.slow", "uu.medium", "uu.normal", "uu.focus",
+        "u.slow", "u.medium", "u.normal", "u.focus",
+        "maanam.slow", "maanam.medium", "maanam.normal",
+        "manam.slow", "manam.medium", "manam.normal",
+        "alla.slow", "alla.medium", "alla.normal",
+        "ala.slow", "ala.medium", "ala.normal",
+        "cheettha.slow", "cheettha.medium", "cheettha.normal"
+      ]
+    }
+  }
+}
