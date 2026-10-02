@@ -8,8 +8,9 @@ Interactive web app that teaches conversational Malayalam ("Manglish") to Englis
 
 ```bash
 npm install
-npm run dev     # dev server
-npm run build   # production build
+npm run dev            # dev server
+npm run build          # production build
+npm run content:check  # validate all content
 ```
 
 Stack: Next.js (App Router) + TypeScript + Tailwind CSS v4, mobile-first.
