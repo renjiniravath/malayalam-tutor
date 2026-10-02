@@ -256,7 +256,7 @@ type Level = { id: string; name: string; canDo: string[]; lessons: Lesson[]; tes
 | Milestone | Contents |
 |---|---|
 | M0 | Scaffold (Next.js + TS + Tailwind v4 pinned) **deployed as hello-world on Vercel** (cache headers, file caps validated early); **audio provider spike**: reference clips in colloquial Manglish from Bulbul V3 / Google WaveNet / Chirp 3 HD, native-speaker listen test, provider-terms check |
-| M1 | Content format finalized + `content:check` (incl. script sanity, license checks); image sourcing + license tracking + styling treatment + credits page; full audio pipeline (normal → derive → trim/normalize → sprites) with incremental generation + batch review UI; **Level 1 units 1–2 authored, including SVG articulation diagrams** |
+| M1 | Content format finalized + `content:check` (incl. script sanity, license checks); image sourcing + license tracking + styling treatment + credits page; full audio pipeline (normal → derive → trim/normalize → sprites) with incremental generation + batch review UI; **Level 1 units 1–2 authored, including text articulation cues** |
 | M2 | Core lesson player: tap-to-start audio unlock, Web Audio sprites, anticipation / multiple-choice / minimal-pair / speak-and-compare / typing drills, reveal-after-hear (romanization + passive script), articulation cue (text), silent mode, a11y preferences; **Level 1 units 3–5 authored**; contentRevision reconciliation |
 | M3 | Tests + FSRS (per-skill cards, review logs, review injection, mistakes, **TestSpec incl. pronunciation section**, daily review cap) + **PWA/install + `storage.persist()` + JSON export/import**; streak/achievement logic with injectable-clock tests |
 | M4 | Gamification polish: XP/levels/ranks, grace + pause, achievements UI, progress dashboard |
@@ -271,8 +271,8 @@ type Level = { id: string; name: string; canDo: string[]; lessons: Lesson[]; tes
 | Romanized-only text harms pronunciation learning | Audio-first UI: text and script hidden until heard; slow/medium/normal tiers; minimal-pair drills; research-validated |
 | **Passive script reintroduces the formal register** | §9 rule 6: script spells the colloquial form, native sign-off per item, formal spelling only behind a "written form" badge |
 | TTS mispronounces colloquial Manglish | M0 provider spike with native-speaker listen test; review gate on every clip; incremental regeneration keeps re-review cheap |
-| Retroflex/ഴ/gemination are genuinely hard for English speakers | Sequenced by difficulty, articulation diagrams + sound-focus clips, discrimination drills, per-sound mastery tracking |
-| **Articulation diagrams are inaccurate** | Diagrams limited to place-of-articulation (ഴ, coronals); native-speaker review gate; text cues kept brief (abstract descriptions demonstrably fail) |
+| Retroflex/ഴ/gemination are genuinely hard for English speakers | Sequenced by difficulty, text articulation cues + sound-focus clips, discrimination drills, per-sound mastery tracking |
+| **Articulation cues fail to teach alone** | Cues paired with sound-focus clips; native-speaker review gate; visual diagrams dropped as confusing |
 | Human audio review is the bottleneck (~2.5 h audio ≈ 10+ h reviewer time per full pass) | Incremental `audio:gen` + keyboard-driven batch review UI; cost is irrelevant, reviewer time is not |
 | **Image license violation** | Allowlist (CC0/PD, CC BY; SA as-is; no ND), per-asset license records, content:check enforcement, generated credits page |
 | **Script font/rendering failure** | Noto Sans Malayalam (OFL), `lang="ml"`, NFC/ZWJ linting, fallback stack |
