@@ -1,0 +1,23 @@
+# Dependencies and build output
+node_modules/
+.next/
+out/
+dist/
+
+# Environment and secrets
+.env
+.env*.local
+
+# Generated assets (build artifacts — regenerate with npm run audio:gen)
+public/audio/
+audio-manifest*.json
+
+# Vercel
+.vercel/
+
+# Local Claude Code overrides (personal, not committed)
+.claude/settings.local.json
+
+# OS and editor
+.DS_Store
+*.log
