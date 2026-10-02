@@ -31,7 +31,7 @@ A boot.dev-style web app: the student progresses through levels, earns XP, and p
 - Formal/literary register as the base — casual Manglish is primary
 - Accounts, sync, social features — local-first progress (but see §11: durability is treated as a hard requirement)
 - Runtime TTS or Web Speech API dependence
-- Native-speaker articulation **video** — articulation coaching ships as SVG tongue-position diagrams + sound-focus audio (video is a later-version candidate)
+- Native-speaker articulation **video** — articulation coaching ships as a brief text cue + sound-focus audio (visual diagrams and video are dropped)
 
 ## 4. Design principles (from research)
 
@@ -69,7 +69,7 @@ All levels use English-alphabet romanization; Malayalam script is shown passivel
 **Can do:** recognize and produce the four hard sound classes; greet; use ~40 highest-frequency nouns, ~10 core verbs (as casual present forms), and pronouns; use ~10 everyday expressions.
 
 Units:
-1. **First sounds** (3 lessons, comprehension-only — no speaking yet) — ഴ, dental/retroflex/alveolar, gemination, vowel length. Sound-focus clips + minimal-pair discrimination + **SVG tongue-position diagrams for ഴ and the coronal series** (passive viewing at this stage).
+1. **First sounds** (3 lessons, comprehension-only — no speaking yet) — ഴ, dental/retroflex/alveolar, gemination, vowel length. Sound-focus clips + minimal-pair discrimination + **text articulation cues for ഴ and the coronal series** (no visuals).
 2. **Greetings & expressions** (~10 items) — `engane und?`, `ennaa vishesham?`, `seri`, `nokkam`, `ayyo`, `pinnalla`, `alle?`, `poyi varatte`.
 3. **Pronouns** — `njan`, `nee`, `ningal`, `taankal`, `avan`, `aval`, `nammal`, `namukku`, plus pro-drop.
 4. **High-frequency nouns** (visuals) — food/drink (`vellam`, `chaya`, `kaapi`, `choru`), people (`amma`, `achan`, `chechi`, `kuttikal`), home/city (`veedu`, `joli`, `kashu`, `vazhi`), ~40 items.
@@ -257,7 +257,7 @@ type Level = { id: string; name: string; canDo: string[]; lessons: Lesson[]; tes
 |---|---|
 | M0 | Scaffold (Next.js + TS + Tailwind v4 pinned) **deployed as hello-world on Vercel** (cache headers, file caps validated early); **audio provider spike**: reference clips in colloquial Manglish from Bulbul V3 / Google WaveNet / Chirp 3 HD, native-speaker listen test, provider-terms check |
 | M1 | Content format finalized + `content:check` (incl. script sanity, license checks); image sourcing + license tracking + styling treatment + credits page; full audio pipeline (normal → derive → trim/normalize → sprites) with incremental generation + batch review UI; **Level 1 units 1–2 authored, including SVG articulation diagrams** |
-| M2 | Core lesson player: tap-to-start audio unlock, Web Audio sprites, anticipation / multiple-choice / minimal-pair / speak-and-compare / typing drills, reveal-after-hear (romanization + passive script), articulation display, silent mode, a11y preferences; **Level 1 units 3–5 authored**; contentRevision reconciliation |
+| M2 | Core lesson player: tap-to-start audio unlock, Web Audio sprites, anticipation / multiple-choice / minimal-pair / speak-and-compare / typing drills, reveal-after-hear (romanization + passive script), articulation cue (text), silent mode, a11y preferences; **Level 1 units 3–5 authored**; contentRevision reconciliation |
 | M3 | Tests + FSRS (per-skill cards, review logs, review injection, mistakes, **TestSpec incl. pronunciation section**, daily review cap) + **PWA/install + `storage.persist()` + JSON export/import**; streak/achievement logic with injectable-clock tests |
 | M4 | Gamification polish: XP/levels/ranks, grace + pause, achievements UI, progress dashboard |
 | M5 | Sentence-builder drill; Levels 2–4 content; **private beta** + analytics + Sentry |
@@ -287,7 +287,7 @@ type Level = { id: string; name: string; canDo: string[]; lessons: Lesson[]; tes
 ## 16. Owner decisions (recorded)
 
 1. **Name & tagline**: "Learn Malayalam — the way Kerala actually talks." (Name-availability check at M6.)
-2. **Articulation coaching**: in v1 as SVG tongue-position diagrams + sound-focus audio (no video).
+2. **Articulation coaching**: in v1 as text cues + sound-focus audio (no visuals).
 3. **Proverbs**: none — retracted; everyday conversational expressions only.
 4. **Script display**: passive in v1, colloquial spelling, hidden until heard; reading/writing lessons remain a later version.
 5. **Visuals**: free images, license-tracked, unified by a styling treatment (runtime/build filters).
