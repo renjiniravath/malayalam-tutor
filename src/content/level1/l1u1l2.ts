@@ -19,8 +19,7 @@ export const l1u1l2: Lesson = {
       meaning: 'ten',
       kind: 'word',
       articulation: {
-        diagram: 'articulations/coronal-dental.svg',
-        tip: 'Press the tongue tip against the back of the upper front teeth and release. Hold the contact for the doubled th.',
+        cue: 'Press the tongue tip against the back of the upper front teeth and release. Hold the contact for the doubled th.',
       },
       audio: {
         slow: 'l1u1l2_patthu_slow',
@@ -38,8 +37,7 @@ export const l1u1l2: Lesson = {
       meaning: 'song',
       kind: 'word',
       articulation: {
-        diagram: 'articulations/coronal-retroflex.svg',
-        tip: 'Curl the tongue tip back so its underside touches the roof just behind the gum ridge, hold for the doubled tt, then release.',
+        cue: 'Curl the tongue tip back so its underside touches the roof just behind the gum ridge, hold for the doubled tt, then release.',
       },
       audio: {
         slow: 'l1u1l2_paattu_slow',
@@ -57,8 +55,7 @@ export const l1u1l2: Lesson = {
       meaning: 'wind',
       kind: 'word',
       articulation: {
-        diagram: 'articulations/coronal-alveolar.svg',
-        tip: 'Tap the tongue tip on the gum ridge just behind the upper teeth — like the tt in "butter" — and hold the tap for the doubled sound.',
+        cue: 'Tap the tongue tip on the gum ridge just behind the upper teeth, like the tt in "butter", and hold the tap for the doubled sound.',
       },
       audio: {
         slow: 'l1u1l2_kaarru_slow',
@@ -77,8 +74,7 @@ export const l1u1l2: Lesson = {
       meaning: 'my',
       kind: 'word',
       articulation: {
-        diagram: 'articulations/coronal-alveolar.svg',
-        tip: 'The nṟ flicks the tongue tip on the gum ridge behind the upper teeth — it sounds like "nd" to English ears.',
+        cue: 'The nṟ flicks the tongue tip on the gum ridge behind the upper teeth. It sounds like "nd" to English ears.',
       },
       audio: {
         slow: 'l1u1l2_ente_slow',
@@ -96,8 +92,7 @@ export const l1u1l2: Lesson = {
       meaning: 'why',
       kind: 'word',
       articulation: {
-        diagram: 'articulations/coronal-dental.svg',
-        tip: 'The n and th share one spot: tongue tip at the back of the upper front teeth.',
+        cue: 'The n and th share one spot: tongue tip at the back of the upper front teeth.',
       },
       audio: {
         slow: 'l1u1l2_enthe_slow',
@@ -115,8 +110,7 @@ export const l1u1l2: Lesson = {
       meaning: 'will work; will be possible',
       kind: 'word',
       articulation: {
-        diagram: 'articulations/coronal-alveolar.svg',
-        tip: 'Tap the tongue tip on the gum ridge behind the upper teeth for the doubled alveolar sound — quick, like the tt in "butter".',
+        cue: 'Tap the tongue tip on the gum ridge behind the upper teeth for the doubled alveolar sound, quick, like the tt in "butter".',
       },
       audio: {
         slow: 'l1u1l2_parrum_slow',
@@ -135,8 +129,7 @@ export const l1u1l2: Lesson = {
       meaning: "don't want; not needed",
       kind: 'word',
       articulation: {
-        diagram: 'articulations/coronal-retroflex.svg',
-        tip: 'The nd curls the tongue back against the roof of the mouth — never at the teeth.',
+        cue: 'The nd curls the tongue back against the roof of the mouth, never at the teeth.',
       },
       audio: {
         slow: 'l1u1l2_venda_slow',
@@ -155,8 +148,7 @@ export const l1u1l2: Lesson = {
       meaning: 'there is; have',
       kind: 'word',
       articulation: {
-        diagram: 'articulations/coronal-retroflex.svg',
-        tip: 'Curl the tongue tip back against the roof of the mouth for the nd — one quick backward flap, not at the teeth.',
+        cue: 'Curl the tongue tip back against the roof of the mouth for the nd: one quick backward flap, not at the teeth.',
       },
       audio: {
         slow: 'l1u1l2_und_slow',

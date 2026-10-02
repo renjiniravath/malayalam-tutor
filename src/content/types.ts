@@ -24,10 +24,8 @@ export const TAG_REGISTRY = [
 export type Tag = (typeof TAG_REGISTRY)[number];
 
 export interface Articulation {
-  /** SVG tongue-position diagram, path relative to src/content/ (e.g. 'articulations/zh.svg') */
-  diagram: string;
-  /** Brief cue shown with the diagram — articulation is never text-only (PLAN.md §4) */
-  tip: string;
+  /** Brief production cue — articulation coaching is text + audio only, no visuals (PLAN.md §4). */
+  cue: string;
 }
 
 export interface Item {

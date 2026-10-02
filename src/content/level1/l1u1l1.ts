@@ -18,8 +18,7 @@ export const l1u1l1: Lesson = {
       meaning: 'rain',
       kind: 'word',
       articulation: {
-        diagram: 'articulations/zh.svg',
-        tip: 'Curl the tongue tip up and back toward the roof of the mouth, leaving a small gap, and let the air flow over it. Like an English r, but further back.',
+        cue: 'Curl the tongue tip up and back toward the roof of the mouth, leaving a small gap, and let the air flow over it. Like an English r, but further back.',
       },
       audio: {
         slow: 'l1u1l1_mazha_slow',
@@ -38,8 +37,7 @@ export const l1u1l1: Lesson = {
       meaning: 'beauty',
       kind: 'word',
       articulation: {
-        diagram: 'articulations/zh.svg',
-        tip: 'Start with a short a, then curl the tongue tip back for the zh — close to the roof, never touching.',
+        cue: 'Start with a short a, then curl the tongue tip back for the zh, close to the roof but never touching.',
       },
       audio: {
         slow: 'l1u1l1_azhaku_slow',
@@ -57,8 +55,7 @@ export const l1u1l1: Lesson = {
       meaning: 'way; route',
       kind: 'word',
       articulation: {
-        diagram: 'articulations/zh.svg',
-        tip: 'The zh comes mid-word: glide from the va straight into the curled-back zh, then release into i.',
+        cue: 'The zh comes mid-word: glide from the va straight into the curled-back zh, then release into i.',
       },
       audio: {
         slow: 'l1u1l1_vazhi_slow',

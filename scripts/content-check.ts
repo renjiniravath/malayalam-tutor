@@ -7,7 +7,8 @@
  *  - script sanity (NFC, Malayalam block only, ZWJ/ZWNJ placement)
  *  - audio manifest presence and clip-key integrity
  *  - image presence + license allowlist
- *  - articulation entries for sound-teaching items (SVG + cue, never text-only)
+ *  - articulation text cue for sound-teaching items (text + audio only,
+ *    visual diagrams tried and dropped)
  *  - duplicate spellings within a lesson
  *  - tag referential integrity
  *  - minimal-pair sanity
@@ -21,7 +22,7 @@
  * (audio generation is out of scope for M1 content authoring).
  */
 
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -146,14 +147,13 @@ function checkItem(lesson: Lesson, item: Item): void {
   if (new Set(item.tags).size !== item.tags.length) fail(where, 'duplicate tags');
 
   const soundTag = item.tags.find((t) => t.startsWith('sound:'));
-  if (soundTag === 'sound:zh' || soundTag === 'sound:coronal') {
-    // Place-of-articulation classes get tongue diagrams; gemination and vowel
-    // length are duration features and get duration drills instead (PLAN.md §4).
+  if (soundTag) {
+    // Articulation coaching is a brief text cue plus the focus audio;
+    // visual diagrams were tried and dropped (PLAN.md §4).
     if (!item.articulation) {
-      fail(where, `sound-teaching items need an articulation entry (SVG diagram + cue), never text-only`);
-    } else {
-      if (!item.articulation.tip.trim()) fail(where, 'articulation.tip must not be empty');
-      checkDiagram(where, item.articulation.diagram);
+      fail(where, `${soundTag} items need an articulation entry with a text cue (coaching is text + audio only)`);
+    } else if (!item.articulation.cue.trim()) {
+      fail(where, 'articulation.cue must not be empty');
     }
   }
   if (soundTag && (!item.audio.focus || item.audio.focus.length === 0)) {
@@ -200,7 +200,7 @@ function itemTextFields(item: Item): Array<[string, string]> {
   ];
   if (item.script) fields.push(['script', item.script]);
   for (const note of item.notes ?? []) fields.push(['note', note]);
-  if (item.articulation) fields.push(['articulation.tip', item.articulation.tip]);
+  if (item.articulation) fields.push(['articulation.cue', item.articulation.cue]);
   return fields;
 }
 
@@ -355,24 +355,6 @@ function checkCoronals(where: string, item: Item): void {
       );
     }
   });
-}
-
-// ----------------------------------------------------- articulation diagrams
-
-function checkDiagram(where: string, diagram: string): void {
-  const file = join(CONTENT_DIR, diagram);
-  if (!existsSync(file)) {
-    fail(where, `articulation diagram missing: ${diagram}`);
-    return;
-  }
-  const raw = readFileSync(file, 'utf8');
-  if (raw.length > 32_768) fail(where, `diagram SVG is over 32 KB: ${diagram}`);
-  if (!/<svg[\s>]/.test(raw) || !/<\/svg>/.test(raw)) fail(where, `diagram is not a complete SVG: ${diagram}`);
-  if (!/viewBox=/.test(raw)) fail(where, `diagram SVG needs a viewBox: ${diagram}`);
-  if (!/<title>/.test(raw)) fail(where, `diagram SVG needs a <title> for accessibility: ${diagram}`);
-  if (/<script|javascript:|\bxlink:href=|\bhref=/.test(raw)) {
-    fail(where, `diagram SVG must not reference scripts or external resources: ${diagram}`);
-  }
 }
 
 // ------------------------------------------------------------------- images

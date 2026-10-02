@@ -25,6 +25,9 @@ export const l1u1l3: Lesson = {
         focus: ['l1u1l3_ippo_focus'],
       },
       acceptedInputs: ['ippo'],
+      articulation: {
+        cue: 'Hold the doubled pp for a full beat, then release.',
+      },
       notes: ['Hold the pp twice as long as a single p. The doubled consonant is what makes the word.'],
       tags: ['sound:geminate'],
     },
@@ -41,6 +44,9 @@ export const l1u1l3: Lesson = {
         focus: ['l1u1l3_nalla_focus'],
       },
       acceptedInputs: ['nalla'],
+      articulation: {
+        cue: 'Hold the doubled ll for a full beat before finishing the word.',
+      },
       notes: ['Hold the ll in the middle for a full beat longer than a single l.'],
       tags: ['sound:geminate'],
     },
@@ -57,6 +63,9 @@ export const l1u1l3: Lesson = {
         focus: ['l1u1l3_kallam_focus'],
       },
       acceptedInputs: ['kallam'],
+      articulation: {
+        cue: 'Hold the doubled ḷḷ in the middle of the word for a full beat.',
+      },
       notes: ['Hold the ḷḷ twice as long as the single ḷ in kaḷam.'],
       tags: ['sound:geminate'],
     },
@@ -87,6 +96,9 @@ export const l1u1l3: Lesson = {
         focus: ['l1u1l3_vaaram_focus'],
       },
       acceptedInputs: ['vaaram'],
+      articulation: {
+        cue: 'Stretch the aa twice as long as a short a.',
+      },
       notes: ['Stretch the aa twice as long as the a in varam.'],
       tags: ['sound:vowel-length'],
     },
@@ -131,6 +143,9 @@ export const l1u1l3: Lesson = {
         focus: ['l1u1l3_kuudi_focus'],
       },
       acceptedInputs: ['kuudi'],
+      articulation: {
+        cue: 'Stretch the uu twice as long as a short u.',
+      },
       notes: ['Stretch the uu twice as long as the u in kudi.'],
       tags: ['sound:vowel-length'],
     },

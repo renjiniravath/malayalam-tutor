@@ -9,7 +9,6 @@ import { PlayButton } from "./PlayButton";
 interface RevealCardProps {
   item: Item;
   spriteId: string;
-  diagrams: Record<string, string>;
   revealImmediately: boolean;
   onNext: () => void;
 }
@@ -27,7 +26,7 @@ const KIND_LABEL: Record<Item["kind"], string> = {
  * The accessibility preference (revealImmediately) skips the gate.
  * Malayalam script appears passively, styled secondary, lang="ml".
  */
-export function RevealCard({ item, spriteId, diagrams, revealImmediately, onNext }: RevealCardProps) {
+export function RevealCard({ item, spriteId, revealImmediately, onNext }: RevealCardProps) {
   const [revealed, setRevealed] = useState(revealImmediately);
   const [lastRevealPref, setLastRevealPref] = useState(revealImmediately);
   const audioReady = audioEngine.available;
@@ -47,8 +46,6 @@ export function RevealCard({ item, spriteId, diagrams, revealImmediately, onNext
     await audioEngine.play(spriteId, item.audio.slow);
     setRevealed(true);
   };
-
-  const articulationSvg = item.articulation ? diagrams[item.articulation.diagram] : undefined;
 
   return (
     <div>
@@ -107,9 +104,7 @@ export function RevealCard({ item, spriteId, diagrams, revealImmediately, onNext
               ))}
             </div>
           )}
-          {item.articulation && articulationSvg && (
-            <ArticulationCard articulation={item.articulation} svg={articulationSvg} />
-          )}
+          {item.articulation && <ArticulationCard articulation={item.articulation} />}
           {item.notes && (
             <ul className="mt-4 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
               {item.notes.map((note) => (

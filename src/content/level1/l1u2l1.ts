@@ -40,6 +40,9 @@ export const l1u2l1: Lesson = {
         focus: ['l1u2l1_nalla-irippu_focus'],
       },
       acceptedInputs: ['nalla irippu'],
+      articulation: {
+        cue: 'Hold the doubled ll in nalla before moving to irippu.',
+      },
       notes: ['The stock answer to engane und?.', 'Hold the doubled ll in nalla.'],
       tags: ['sound:geminate'],
     },
@@ -56,6 +59,9 @@ export const l1u2l1: Lesson = {
         focus: ['l1u2l1_ennaa-vishesham_focus'],
       },
       acceptedInputs: ['ennaa vishesham?', 'ennaa vishesham'],
+      articulation: {
+        cue: 'Hold the doubled nn in ennaa for a full beat.',
+      },
       notes: ['The follow-up greeting among friends.', 'Hold the doubled nn in ennaa.'],
       tags: ['sound:geminate'],
     },
@@ -72,6 +78,9 @@ export const l1u2l1: Lesson = {
         focus: ['l1u2l1_onnum-illa_focus'],
       },
       acceptedInputs: ['onnum illa'],
+      articulation: {
+        cue: 'Hold the doubled nn in onnum for a full beat.',
+      },
       notes: ['The stock answer to ennaa vishesham?.', 'Hold the doubled nn in onnum.'],
       tags: ['sound:geminate'],
     },
@@ -88,6 +97,9 @@ export const l1u2l1: Lesson = {
         focus: ['l1u2l1_poyi-varatte_focus'],
       },
       acceptedInputs: ['poyi varatte'],
+      articulation: {
+        cue: 'Hold the doubled tt in varatte for a full beat.',
+      },
       notes: ['The send-off when you leave.', 'Hold the doubled tt in varatte.'],
       tags: ['sound:geminate'],
     },

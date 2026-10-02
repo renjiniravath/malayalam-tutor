@@ -39,6 +39,9 @@ export const l1u2l2: Lesson = {
         focus: ['l1u2l2_nokkam_focus'],
       },
       acceptedInputs: ['nokkam'],
+      articulation: {
+        cue: 'Hold the doubled kk for a full beat.',
+      },
       notes: ["The classic non-committal answer — let's see.", 'From nokkuka, to look. Hold the doubled kk.'],
       tags: ['sound:geminate'],
     },
@@ -70,6 +73,9 @@ export const l1u2l2: Lesson = {
         focus: ['l1u2l2_pinnalla_focus'],
       },
       acceptedInputs: ['pinnalla'],
+      articulation: {
+        cue: 'Hold both doubled sounds: nn, then ll.',
+      },
       notes: ['"What else?" — for when the answer was obvious all along.', 'Hold the doubled nn and ll.'],
       tags: ['sound:geminate'],
     },
@@ -86,6 +92,9 @@ export const l1u2l2: Lesson = {
         focus: ['l1u2l2_alle_focus'],
       },
       acceptedInputs: ['alle?', 'alle'],
+      articulation: {
+        cue: 'Hold the doubled ll at the end.',
+      },
       notes: ['Tag question stuck on the end of any statement: "nalla kaalam, alle?"', 'Hold the doubled ll.'],
       tags: ['sound:geminate'],
     },

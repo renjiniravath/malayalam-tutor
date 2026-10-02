@@ -20,14 +20,12 @@ import { TypingDrill } from "./TypingDrill";
 
 interface LessonPlayerProps {
   lesson: Lesson;
-  /** Inlined articulation SVG markup, keyed by diagram path */
-  diagrams: Record<string, string>;
 }
 
 type Phase = "gate" | "steps" | "done";
 
 /** Core lesson loop (PLAN.md §6) — gate, per-item reveal, drills, completion. */
-export function LessonPlayer({ lesson, diagrams }: LessonPlayerProps) {
+export function LessonPlayer({ lesson }: LessonPlayerProps) {
   const steps = useMemo(() => buildLessonSteps(lesson), [lesson]);
   const itemsById = useMemo(() => new Map(lesson.items.map((item) => [item.id, item])), [lesson]);
   const pairsById = useMemo(() => new Map(lesson.minimalPairs.map((pair) => [pair.id, pair])), [lesson]);
@@ -132,7 +130,6 @@ export function LessonPlayer({ lesson, diagrams }: LessonPlayerProps) {
                 key={step.itemId}
                 item={itemsById.get(step.itemId)!}
                 spriteId={lesson.spriteId}
-                diagrams={diagrams}
                 revealImmediately={prefs.revealImmediately}
                 onNext={() => advance()}
               />
