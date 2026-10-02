@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "tsx --test src/lib/progress/reconcile.test.ts",
     "content:check": "tsx scripts/content-check.ts"
   },
   "dependencies": {

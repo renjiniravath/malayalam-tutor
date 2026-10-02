@@ -27,5 +27,9 @@ export const audioManifest: {
     l1u1l1: { file: 'audio/l1u1l1.mp3' },
     l1u1l2: { file: 'audio/l1u1l2.mp3' },
     l1u1l3: { file: 'audio/l1u1l3.mp3' },
+    l1u2l1: { file: 'audio/l1u2l1.mp3' },
+    l1u2l2: { file: 'audio/l1u2l2.mp3' },
+    l1u3l1: { file: 'audio/l1u3l1.mp3' },
+    l1u3l2: { file: 'audio/l1u3l2.mp3' },
   },
 };

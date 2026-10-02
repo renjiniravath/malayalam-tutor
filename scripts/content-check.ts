@@ -54,8 +54,16 @@ function warn(where: string, message: string): void {
 // ---------------------------------------------------------------- structure
 
 function checkStructure(): void {
-  if (!Number.isInteger(contentRevision) || contentRevision < 1) {
-    fail('content', `contentRevision must be a positive integer, got ${contentRevision}`);
+  if (!Number.isInteger(contentRevision.revision) || contentRevision.revision < 1) {
+    fail('content', `contentRevision.revision must be a positive integer, got ${contentRevision.revision}`);
+  }
+  for (const id of contentRevision.removedItemIds) {
+    if (!/^[a-z0-9][a-z0-9-]*$/.test(id)) {
+      fail('content', `removedItemIds entry '${id}' must match the item-id pattern`);
+    }
+  }
+  if (new Set(contentRevision.removedItemIds).size !== contentRevision.removedItemIds.length) {
+    fail('content', 'removedItemIds has duplicates');
   }
   if (levels.length === 0) fail('content', 'no levels authored');
 
@@ -206,6 +214,14 @@ function checkScript(where: string, script: string): void {
   if (chars.length === 0) fail(where, 'script is empty — provide it or omit the field');
   chars.forEach((ch, i) => {
     if (MALAYALAM.test(ch)) return;
+    if (ch === ' ') {
+      const prev = chars[i - 1];
+      const next = chars[i + 1];
+      if (!prev || !next || !MALAYALAM.test(prev) || !MALAYALAM.test(next)) {
+        fail(where, 'script spaces must sit between Malayalam words');
+      }
+      return;
+    }
     if (ch === '‍' || ch === '‌') {
       const prev = chars[i - 1];
       const next = chars[i + 1];
@@ -222,12 +238,17 @@ function checkScript(where: string, script: string): void {
 
 /**
  * Script coronal consonants -> their romanized form. A consonant followed by
- * virama and the same consonant (a geminate) doubles the form.
+ * virama and the same consonant (a geminate) doubles the form — except the
+ * digraphs, where §9 covers the geminate with the same spelling (ങ്ങ -> ng,
+ * ഞ്ഞ -> nj, ത്ത -> tth, ദ്ധ -> ddh). Chillu letters (ൻ, ൽ, ൾ, ൺ, ർ) are the
+ * word-final forms of ന/ല/ള/ണ/ര.
  */
 const SCRIPT_CORONALS = new Map<string, string>([
   ['ഴ', 'zh'],
+  ['ഞ', 'nj'], ['ങ', 'ng'],
   ['ള', 'ḷ'], ['ണ', 'ṇ'], ['ന', 'n'], ['ല', 'l'], ['ര', 'r'],
   ['ത', 'th'], ['ദ', 'dh'], ['ട', 't'], ['ഡ', 'd'], ['റ', 'ṟ'],
+  ['ൻ', 'n'], ['ൽ', 'l'], ['ൾ', 'ḷ'], ['ൺ', 'ṇ'], ['ർ', 'r'],
 ]);
 
 function scriptCoronals(script: string): string[] {
@@ -236,8 +257,9 @@ function scriptCoronals(script: string): string[] {
     const base = SCRIPT_CORONALS.get(script[i]);
     if (!base) continue;
     if (script[i + 1] === '്' && script[i + 2] === script[i]) {
-      // digraphs geminate as tth/ddh, the rest simply double (ട്ട -> tt, റ്റ -> ṟṟ)
-      const doubled = base === 'th' ? 'tth' : base === 'dh' ? 'ddh' : base + base;
+      // digraphs geminate as tth/ddh, ng/nj keep their spelling, the rest simply double (ട്ട -> tt)
+      const doubled =
+        base === 'th' ? 'tth' : base === 'dh' ? 'ddh' : base === 'ng' || base === 'nj' ? base : base + base;
       out.push(doubled);
       i += 2;
     } else {
@@ -247,7 +269,11 @@ function scriptCoronals(script: string): string[] {
   return out;
 }
 
-/** Romanization coronal tokens, longest-first. 'nth' scans as n + th (enthaa), 'nt' as n + ṟ (nte). */
+/**
+ * Romanization coronal tokens, longest-first. 'nth' scans as n + th (enthaa),
+ * 'nt' as n + ṟ (nte), 'nj' and 'ng' as the ഞ and ങ digraphs, and 'nk' as the
+ * ങ before ക (thaankal) — all n-runs are single coronal positions.
+ */
 function romanCoronals(manglish: string): string[] {
   const s = manglish.replace(/[^a-zḷṇṟ]/gu, '');
   const out: string[] = [];
@@ -267,7 +293,10 @@ function romanCoronals(manglish: string): string[] {
     } else if (c === 'n') {
       if (s.startsWith('nth', i)) { out.push('n', 'th'); i += 3; }
       else if (s.startsWith('nt', i)) { out.push('n', 't'); i += 2; }
+      else if (s.startsWith('nj', i)) { out.push('nj'); i += 2; }
       else if (s.startsWith('nn', i)) { out.push('nn'); i += 2; }
+      else if (s.startsWith('ng', i)) { out.push('ng'); i += 2; }
+      else if (s.startsWith('nk', i)) { out.push('ng'); i += 2; }
       else { out.push('n'); i++; }
     } else if (c === 'ḷ') {
       if (s.startsWith('ḷḷ', i)) { out.push('ḷḷ'); i += 2; } else { out.push('ḷ'); i++; }
@@ -295,6 +324,7 @@ function romanCoronals(manglish: string): string[] {
  */
 const CORONAL_ALLOWED: Record<string, string[]> = {
   zh: ['zh'],
+  nj: ['nj'], ng: ['ng'],
   'ḷ': ['ḷ'], 'ḷḷ': ['ḷḷ'],
   'ṇ': ['ṇ', 'n'], 'ṇṇ': ['ṇṇ'],
   n: ['n'], nn: ['nn'],
