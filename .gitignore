@@ -21,3 +21,8 @@ audio-manifest*.json
 # OS and editor
 .DS_Store
 *.log
+
+# Next.js / TypeScript
+next-env.d.ts
+*.tsbuildinfo
+coverage/
