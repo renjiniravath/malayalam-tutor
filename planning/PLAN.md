@@ -249,7 +249,7 @@ type Level = { id: string; name: string; canDo: string[]; lessons: Lesson[]; tes
 3. Articulation text cues authored for sound items and reviewed by a native speaker for accuracy.
 4. `npm run content:check` validates structure, spelling rules, script sanity, visuals, licenses, and audio manifests.
 5. `npm run audio:gen` (incremental) generates the normal clips and derives slow/medium/focus variants; native-speaker review happens in the batch review UI; mispronunciations are fixed by editing text, voice, or regenerating.
-6. Lesson ships only when audio and diagrams pass review.
+6. Lesson ships only when audio and articulation cues pass review.
 
 ## 14. Milestones
 
