@@ -14,8 +14,7 @@ const notoMalayalam = Noto_Sans_Malayalam({
 
 export const metadata: Metadata = {
   title: "Learn Malayalam",
-  description:
-    "Learn conversational Malayalam — the way Kerala actually talks.",
+  description: "Learn conversational Malayalam, the way Kerala actually talks.",
 };
 
 export const viewport: Viewport = {
