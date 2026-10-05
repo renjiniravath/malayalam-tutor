@@ -6,10 +6,12 @@ import {
   DESIRED_RETENTION,
   LESSON_INJECTION_LIMIT,
   newCardRecord,
+  persistReview,
   ratingForAnswer,
   reviewCard,
 } from './scheduler';
-import { cardKey } from './types';
+import { cardKey, type CardRecord, type ReviewLogRecord } from './types';
+import { MemoryProgressStore, type ProgressStore } from '@/lib/progress/store';
 
 // Fixed clock: all scheduler calls take `now` explicitly (PLAN.md §7).
 const DAY = 24 * 60 * 60 * 1000;
@@ -78,5 +80,74 @@ describe('scheduler', () => {
   it('maps drill results: correct is good, wrong is again', () => {
     assert.equal(ratingForAnswer(true), 'good');
     assert.equal(ratingForAnswer(false), 'again');
+  });
+});
+
+/** A store whose writes always fail, like a blocked IndexedDB on mobile. */
+class FailingProgressStore implements ProgressStore {
+  async putCard(): Promise<void> {
+    throw new Error('storage blocked');
+  }
+  async getCard(): Promise<CardRecord | undefined> {
+    return undefined;
+  }
+  async listDue(): Promise<CardRecord[]> {
+    return [];
+  }
+  async countDue(): Promise<number> {
+    return 0;
+  }
+  async appendLog(): Promise<void> {
+    throw new Error('storage blocked');
+  }
+  async listLogs(): Promise<ReviewLogRecord[]> {
+    return [];
+  }
+}
+
+/** Records the order of write calls so the card-before-log contract is provable. */
+class OrderSpyStore extends MemoryProgressStore {
+  calls: string[] = [];
+  async putCard(record: CardRecord): Promise<void> {
+    this.calls.push('putCard');
+    return super.putCard(record);
+  }
+  async appendLog(log: ReviewLogRecord): Promise<void> {
+    this.calls.push('appendLog');
+    return super.appendLog(log);
+  }
+}
+
+describe('persistReview (advance never depends on storage)', () => {
+  it('writes the card before the log', async () => {
+    const store = new OrderSpyStore();
+    const result = reviewCard(newCardRecord('mazha', 'recognition', now), 'good', now);
+    await persistReview(store, result, () => {
+      throw new Error('onError must not fire on success');
+    });
+    assert.deepEqual(store.calls, ['putCard', 'appendLog']);
+  });
+
+  it('reports through onError and never throws when the store rejects', async () => {
+    const store = new FailingProgressStore();
+    const result = reviewCard(newCardRecord('mazha', 'recognition', now), 'good', now);
+    let reported: unknown;
+    await assert.doesNotReject(async () => {
+      await persistReview(store, result, (error) => {
+        reported = error;
+      });
+    });
+    assert.ok(reported, 'onError was called with the failure');
+  });
+
+  it('does not report on success and the card lands in the store', async () => {
+    const store = new MemoryProgressStore();
+    const result = reviewCard(newCardRecord('mazha', 'recognition', now), 'good', now);
+    let reported = false;
+    await persistReview(store, result, () => {
+      reported = true;
+    });
+    assert.equal(reported, false);
+    assert.ok(await store.getCard('mazha:recognition'));
   });
 });

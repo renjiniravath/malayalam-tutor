@@ -1,4 +1,5 @@
 import { createEmptyCard, fsrs, Rating, State, type Grade } from 'ts-fsrs';
+import type { ProgressStore } from '@/lib/progress/store';
 import { cardKey, stateName, type CardRecord, type ReviewLogRecord, type ReviewRating, type Skill } from './types';
 
 /**
@@ -80,4 +81,23 @@ export function ratingForAnswer(correct: boolean): ReviewRating {
 /** True when a new card's first review actually moved it out of the New state. */
 export function isNewCard(record: CardRecord): boolean {
   return record.fsrs.state === State.New;
+}
+
+/**
+ * Persists a review result, card first then log, and never throws:
+ * storage failures report through onError so the learner's advance is
+ * never blocked by a broken or hanging store (mobile storage pressure,
+ * blocked database). Callers fire this and forget it.
+ */
+export async function persistReview(
+  store: ProgressStore,
+  result: ReviewResult,
+  onError: (error: unknown) => void,
+): Promise<void> {
+  try {
+    await store.putCard(result.record);
+    await store.appendLog(result.log);
+  } catch (error) {
+    onError(error);
+  }
 }

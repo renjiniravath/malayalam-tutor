@@ -12,7 +12,7 @@ import {
   writePrefs,
 } from "@/lib/prefs";
 import { buildLessonSteps } from "@/lib/lesson/steps";
-import { LESSON_INJECTION_LIMIT, newCardRecord, ratingForAnswer, reviewCard } from "@/lib/fsrs/scheduler";
+import { LESSON_INJECTION_LIMIT, newCardRecord, persistReview, ratingForAnswer, reviewCard } from "@/lib/fsrs/scheduler";
 import { SKILLS, cardKey, type CardRecord } from "@/lib/fsrs/types";
 import { progressStore } from "@/lib/progress/store";
 import { AnticipationDrill } from "./AnticipationDrill";
@@ -54,6 +54,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
   const [correctCount, setCorrectCount] = useState(0);
   const [scoredCount, setScoredCount] = useState(0);
   const [warmups, setWarmups] = useState<CardRecord[]>([]);
+  const [saveWarning, setSaveWarning] = useState(false);
   const prefs = useSyncExternalStore(subscribePrefs, getPrefsSnapshot, getPrefsServerSnapshot);
   const [prefsOpen, setPrefsOpen] = useState(false);
 
@@ -98,11 +99,17 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
     else setPhase("done");
   };
 
-  const reviewWarmup = async (record: CardRecord, correct: boolean) => {
-    const { record: next, log } = reviewCard(record, ratingForAnswer(correct), new Date());
-    await progressStore.putCard(next);
-    await progressStore.appendLog(log);
+  // The learner's advance never depends on storage: the review result is
+  // persisted fire-and-forget, and a failed or hanging store only raises
+  // a quiet warning line, never a blocked Continue.
+  const reviewWarmup = (record: CardRecord, correct: boolean) => {
     advance();
+    try {
+      const result = reviewCard(record, ratingForAnswer(correct), new Date());
+      void persistReview(progressStore, result, () => setSaveWarning(true));
+    } catch {
+      setSaveWarning(true);
+    }
   };
 
   return (
@@ -177,6 +184,9 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
           {!audioReady && (
             <p className="mt-3 text-sm text-text-3">Audio is on its way. Text is revealed by tap instead.</p>
           )}
+          {saveWarning && (
+            <p className="mt-3 text-sm text-text-3">Progress could not be saved on this device.</p>
+          )}
           <div
             key={stepIndex}
             className="step-enter mt-5 rounded-3xl border border-line bg-surface p-5"
@@ -191,7 +201,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
                   .map((other) => other.meaning)
                   .slice(0, 3)}
                 spriteId={contentItems.get(warmup.itemId)!.lesson.spriteId}
-                onComplete={(correct) => void reviewWarmup(warmup, correct)}
+                onComplete={(correct) => reviewWarmup(warmup, correct)}
               />
             )}
             {step && step.kind === "reveal" && (

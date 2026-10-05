@@ -6,7 +6,7 @@ import { levels } from "@/content";
 import type { Item } from "@/content/types";
 import { MultipleChoiceDrill } from "@/components/player/MultipleChoiceDrill";
 import { TypingDrill } from "@/components/player/TypingDrill";
-import { DAILY_REVIEW_CAP, reviewCard } from "@/lib/fsrs/scheduler";
+import { DAILY_REVIEW_CAP, persistReview, reviewCard } from "@/lib/fsrs/scheduler";
 import type { CardRecord, ReviewRating } from "@/lib/fsrs/types";
 import { progressStore } from "@/lib/progress/store";
 
@@ -35,6 +35,7 @@ export default function ReviewPage() {
   const [answered, setAnswered] = useState<boolean | null>(null);
   const [reviewed, setReviewed] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
+  const [saveWarning, setSaveWarning] = useState(false);
 
   const contentIndex = useMemo(() => {
     const items = new Map<string, { item: Item; spriteId: string }>();
@@ -73,13 +74,23 @@ export default function ReviewPage() {
 
   const current = queue[index];
 
-  const grade = async (rating: ReviewRating, correct: boolean) => {
+  // Advancing never depends on storage: the review result is persisted
+  // fire-and-forget, and a failed or hanging store only raises a quiet
+  // warning line, never a blocked answer.
+  const persist = (result: ReturnType<typeof reviewCard>) => {
+    void persistReview(progressStore, result, () => setSaveWarning(true));
+  };
+
+  const grade = (rating: ReviewRating, correct: boolean) => {
     if (!current) return;
-    const { record, log } = reviewCard(current.card, rating, new Date());
-    await progressStore.putCard(record);
-    await progressStore.appendLog(log);
     setReviewed((count) => count + 1);
     if (correct) setCorrectCount((count) => count + 1);
+    advance();
+    try {
+      persist(reviewCard(current.card, rating, new Date()));
+    } catch {
+      setSaveWarning(true);
+    }
   };
 
   const advance = () => {
@@ -90,7 +101,14 @@ export default function ReviewPage() {
 
   const answer = (correct: boolean) => {
     setAnswered(correct);
-    if (!correct) void grade("again", false);
+    if (!correct) {
+      setReviewed((count) => count + 1);
+      try {
+        persist(reviewCard(current.card, "again", new Date()));
+      } catch {
+        setSaveWarning(true);
+      }
+    }
   };
 
   if (phase === "loading") {
@@ -153,6 +171,7 @@ export default function ReviewPage() {
           style={{ width: `${((index + (answered !== null ? 1 : 0)) / queue.length) * 100}%` }}
         />
       </div>
+      {saveWarning && <p className="mt-3 text-sm text-text-3">Progress could not be saved on this device.</p>}
 
       <div className="mt-5 rounded-3xl border border-line bg-surface p-5">
         <p className="text-sm font-medium text-text-2">
@@ -186,21 +205,21 @@ export default function ReviewPage() {
             <div className="mt-3 grid grid-cols-3 gap-2">
               <button
                 type="button"
-                onClick={() => void grade("hard", true).then(advance)}
+                onClick={() => grade("hard", true)}
                 className="min-h-12 rounded-2xl border border-line bg-surface-2 font-medium transition-opacity active:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
               >
                 Hard
               </button>
               <button
                 type="button"
-                onClick={() => void grade("good", true).then(advance)}
+                onClick={() => grade("good", true)}
                 className="min-h-12 rounded-2xl bg-accent font-medium text-accent-foreground transition-opacity active:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
               >
                 Good
               </button>
               <button
                 type="button"
-                onClick={() => void grade("easy", true).then(advance)}
+                onClick={() => grade("easy", true)}
                 className="min-h-12 rounded-2xl border border-line bg-surface-2 font-medium transition-opacity active:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
               >
                 Easy
