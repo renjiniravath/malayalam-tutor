@@ -22,7 +22,7 @@ const KIND_LABEL: Record<Item["kind"], string> = {
 
 /**
  * Hear-then-see (PLAN.md §6 steps 1-2): romanization and script stay
- * hidden until the item is heard — or until the learner taps reveal.
+ * hidden until the item is heard, or until the learner taps reveal.
  * The accessibility preference (revealImmediately) skips the gate.
  * Malayalam script appears passively, styled secondary, lang="ml".
  */
@@ -47,14 +47,16 @@ export function RevealCard({ item, spriteId, revealImmediately, onNext }: Reveal
     setRevealed(true);
   };
 
+  const soundTag = item.tags.find((tag) => tag.startsWith("sound:"));
+
   return (
     <div>
-      <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">{KIND_LABEL[item.kind]}</p>
+      <p className="text-sm font-medium text-text-2">{KIND_LABEL[item.kind]}</p>
       {!revealed ? (
         <div className="mt-6 flex min-h-64 flex-col items-center justify-center gap-4 text-center">
           {audioReady ? (
             <>
-              <p className="text-neutral-600 dark:text-neutral-300">Listen first</p>
+              <p className="text-text-2">Listen first</p>
               <button
                 type="button"
                 onClick={hearThenReveal}
@@ -65,14 +67,14 @@ export function RevealCard({ item, spriteId, revealImmediately, onNext }: Reveal
               <button
                 type="button"
                 onClick={() => setRevealed(true)}
-                className="inline-flex min-h-11 items-center justify-center rounded-full px-4 text-sm text-neutral-600 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:text-neutral-400"
+                className="inline-flex min-h-11 items-center justify-center rounded-full px-4 text-sm text-text-2 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
               >
                 Reveal the text now
               </button>
             </>
           ) : (
             <>
-              <p className="max-w-xs text-balance text-neutral-600 dark:text-neutral-300">
+              <p className="max-w-xs text-balance text-text-2">
                 Audio is on its way. Tap reveal to see the word.
               </p>
               <button
@@ -87,13 +89,13 @@ export function RevealCard({ item, spriteId, revealImmediately, onNext }: Reveal
         </div>
       ) : (
         <div className="mt-4">
-          <p className="text-5xl font-medium leading-tight">{item.manglish}</p>
+          <p className="text-5xl font-semibold leading-tight tracking-tight">{item.manglish}</p>
           {item.script && (
-            <p lang="ml" className="mt-1 font-malayalam text-xl text-neutral-500 dark:text-neutral-400">
+            <p lang="ml" className="mt-1 font-malayalam text-xl text-text-2">
               {item.script}
             </p>
           )}
-          <p className="mt-3 text-lg text-neutral-800 dark:text-neutral-200">{item.meaning}</p>
+          <p className="mt-3 text-lg text-foreground">{item.meaning}</p>
           {audioReady && (
             <div className="mt-4 flex flex-wrap gap-2">
               <PlayButton spriteId={spriteId} clipKey={item.audio.slow} label="Play slowly" secondary />
@@ -104,9 +106,9 @@ export function RevealCard({ item, spriteId, revealImmediately, onNext }: Reveal
               ))}
             </div>
           )}
-          {item.articulation && <ArticulationCard articulation={item.articulation} />}
+          {item.articulation && <ArticulationCard articulation={item.articulation} soundTag={soundTag} />}
           {item.notes && (
-            <ul className="mt-4 space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
+            <ul className="mt-4 space-y-1 text-sm text-text-2">
               {item.notes.map((note) => (
                 <li key={note}>{note}</li>
               ))}

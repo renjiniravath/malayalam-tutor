@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
 /*
- * Brand tokens (recalibrated from the create-next-app defaults):
- * palm green accent on green-tinted paper. Kerala is palms and backwaters,
- * so the accent is monsoon green, never purple. One accent per page.
+ * Brand tokens: palm green accent on green-tinted paper. Semantic layers
+ * give both themes a real hierarchy: background, raised surface, inset
+ * surface, hairlines, and two secondary text tiers. Never purple.
  */
 :root {
-  --background: #f5f6f2; /* green-tinted paper, never pure white */
-  --foreground: #1c241d; /* deep palm ink, never pure black */
-  --accent: #1d7044; /* palm green, saturation ~74% */
-  --accent-foreground: #f5f6f2; /* paper on accent */
+  --background: #f5f6f2;
+  --foreground: #1c241d;
+  --accent: #1d7044;
+  --accent-foreground: #f5f6f2;
+  --surface: #fcfdf9;
+  --surface-2: #eef1e9;
+  --line: #d9ded1;
+  --text-2: #4d5747;
+  --text-3: #66715b;
 }
 
 @theme inline {
@@ -17,16 +22,31 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
   --font-sans: var(--font-geist-sans);
   --font-malayalam: var(--font-noto-malayalam);
 }
 
+/*
+ * Dark mode: surfaces lift toward green-grey instead of inverting
+ * neutrals, text tiers stay distinct, and the accent brightens to keep
+ * its role as the single brand moment.
+ */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #101410;
-    --foreground: #e6eae2;
-    --accent: #4dbf83; /* brighter green for dark surfaces */
-    --accent-foreground: #101410;
+    --background: #0f140f;
+    --foreground: #e8ede3;
+    --accent: #54c98a;
+    --accent-foreground: #0d150e;
+    --surface: #161c15;
+    --surface-2: #1c241a;
+    --line: #2b3427;
+    --text-2: #a9b39f;
+    --text-3: #7d8972;
   }
 }
 
@@ -34,8 +54,9 @@
   body {
     background: var(--background);
     color: var(--foreground);
-    /* Safe-area insets: notch padding without shrinking the viewport */
-    padding-top: env(safe-area-inset-top);
+    /* Safe-area insets: side and bottom edges handled globally; the top
+       inset belongs to each screen's root so lesson headers clear the
+       status bar on Pixel Chrome in standalone display. */
     padding-right: env(safe-area-inset-right);
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
@@ -43,13 +64,17 @@
 }
 
 /*
- * Hero entrance (MOTION_INTENSITY 4): one motivated cascade on the home
- * hero — hierarchy via reveal order. Transform/opacity only, and defined
- * only when the user has not asked for reduced motion.
+ * Hero entrance (home) and step transition (player), MOTION_INTENSITY 4.
+ * The step transition is a state change cue: a new step slides up 10px
+ * and settles. Transform/opacity only, defined only when the user has
+ * not asked for reduced motion.
  */
 @media (prefers-reduced-motion: no-preference) {
   .hero-enter {
-    animation: hero-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: rise-enter 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .step-enter {
+    animation: rise-enter 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
   .hero-enter-1 { animation-delay: 0.05s; }
   .hero-enter-2 { animation-delay: 0.12s; }
@@ -57,7 +82,7 @@
   .hero-enter-4 { animation-delay: 0.26s; }
 }
 
-@keyframes hero-enter {
+@keyframes rise-enter {
   from {
     opacity: 0;
     transform: translateY(12px);

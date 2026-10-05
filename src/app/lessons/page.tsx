@@ -3,10 +3,10 @@ import { levels } from "@/content";
 
 export default function LessonsPage() {
   return (
-    <main className="mx-auto min-h-dvh w-full max-w-md px-4 py-8">
+    <main className="mx-auto min-h-[100dvh] w-full max-w-md px-4 pb-8 pt-[calc(2rem+env(safe-area-inset-top))]">
       <Link
         href="/"
-        className="inline-flex min-h-11 min-w-11 items-center rounded-full text-sm text-neutral-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:text-neutral-400"
+        className="inline-flex min-h-11 min-w-11 items-center rounded-full text-sm text-text-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
       >
         Home
       </Link>
@@ -19,10 +19,10 @@ export default function LessonsPage() {
               <li key={lesson.id}>
                 <Link
                   href={`/lessons/${lesson.id}`}
-                  className="flex min-h-16 items-center justify-between gap-3 rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 transition-opacity active:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:border-neutral-800 dark:bg-neutral-900"
+                  className="flex min-h-16 items-center justify-between gap-3 rounded-2xl border border-line bg-surface px-4 py-3 transition-opacity active:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
                 >
                   <span className="font-medium">{lesson.title}</span>
-                  <span className="shrink-0 text-sm text-neutral-500 dark:text-neutral-400">
+                  <span className="shrink-0 text-sm text-text-2">
                     {lesson.comprehensionOnly ? "Listening only" : `${lesson.items.length} items`}
                   </span>
                 </Link>

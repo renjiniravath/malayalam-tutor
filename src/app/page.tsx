@@ -20,7 +20,7 @@ export default function Home() {
     .filter((item) => item !== undefined);
 
   return (
-    <main className="mx-auto w-full max-w-md px-6 pt-12 md:max-w-4xl md:pt-20">
+    <main className="mx-auto w-full max-w-md px-6 pb-6 pt-[calc(3rem+env(safe-area-inset-top))] md:max-w-4xl md:pt-20">
       {/* Hero: left-aligned copy, right staggered script collage (split on md) */}
       <section className="md:grid md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-x-16">
         <div className="md:col-start-2 md:row-start-1">

@@ -23,7 +23,7 @@ export function PlayButton({ spriteId, clipKey, label, secondary }: PlayButtonPr
   };
 
   const base = secondary
-    ? "border border-neutral-300 text-foreground dark:border-neutral-700"
+    ? "border border-line bg-surface text-foreground"
     : "bg-foreground text-background";
   return (
     <button

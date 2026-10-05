@@ -24,10 +24,10 @@ export function AnticipationDrill({ item, spriteId, silent, onComplete }: Antici
 
   return (
     <div>
-      <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Your turn</p>
+      <p className="text-sm font-medium text-text-2">Your turn</p>
       {!revealed ? (
         <div className="mt-4 flex min-h-64 flex-col items-center justify-center gap-4 text-center">
-          <p className="max-w-xs text-balance text-xl text-neutral-800 dark:text-neutral-200">
+          <p className="max-w-xs text-balance text-xl text-foreground">
             {silent ? "Think of" : "Say"} the word for {item.meaning}
           </p>
           {audioReady && (
@@ -43,9 +43,9 @@ export function AnticipationDrill({ item, spriteId, silent, onComplete }: Antici
         </div>
       ) : (
         <div className="mt-4">
-          <p className="text-5xl font-medium leading-tight">{item.manglish}</p>
+          <p className="text-5xl font-semibold leading-tight tracking-tight">{item.manglish}</p>
           {item.script && (
-            <p lang="ml" className="mt-1 font-malayalam text-xl text-neutral-500 dark:text-neutral-400">
+            <p lang="ml" className="mt-1 font-malayalam text-xl text-text-2">
               {item.script}
             </p>
           )}

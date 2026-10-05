@@ -37,17 +37,17 @@ export function MinimalPairDrill({ pair, a, b, spriteId, onComplete }: MinimalPa
 
   return (
     <div>
-      <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+      <p className="text-sm font-medium text-text-2">
         Sound drill: {SEGMENT_LABEL[pair.segment]}
       </p>
       <div className="mt-4 flex min-h-24 flex-col items-center justify-center gap-3 text-center">
         {audioReady ? (
           <>
-            <p className="text-neutral-600 dark:text-neutral-300">Tap play, then choose the word you heard</p>
+            <p className="text-text-2">Tap play, then choose the word you heard</p>
             <PlayButton spriteId={spriteId} clipKey={clipKey} label="Play the word" />
           </>
         ) : (
-          <p className="max-w-xs text-balance text-neutral-700 dark:text-neutral-300">
+          <p className="max-w-xs text-balance text-text-2">
             Audio is on its way. Which one means {target.meaning}?
           </p>
         )}
@@ -58,11 +58,11 @@ export function MinimalPairDrill({ pair, a, b, spriteId, onComplete }: MinimalPa
           const isAnswer = item.manglish === target.manglish;
           const state = answered
             ? isAnswer
-              ? "border-green-600 bg-green-50 text-green-900 dark:border-green-500 dark:bg-green-950 dark:text-green-100"
+              ? "border-accent bg-accent/10 text-foreground"
               : isPicked
                 ? "border-red-500 bg-red-50 text-red-900 dark:border-red-400 dark:bg-red-950 dark:text-red-100"
-                : "border-neutral-200 bg-neutral-50 text-neutral-700 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300"
-            : "border-neutral-300 bg-neutral-50 text-foreground active:opacity-80 dark:border-neutral-700 dark:bg-neutral-900";
+                : "border-line bg-surface text-text-2"
+            : "border-line bg-surface text-foreground active:opacity-80";
           return (
             <button
               key={item.id}
@@ -73,7 +73,7 @@ export function MinimalPairDrill({ pair, a, b, spriteId, onComplete }: MinimalPa
             >
               <span className="text-lg font-medium">{item.manglish}</span>
               {item.script && (
-                <span lang="ml" className="font-malayalam text-lg text-neutral-500 dark:text-neutral-400">
+                <span lang="ml" className="font-malayalam text-lg text-text-2">
                   {item.script}
                 </span>
               )}

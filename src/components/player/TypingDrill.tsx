@@ -31,15 +31,15 @@ export function TypingDrill({ item, spriteId, revealImmediately, onComplete }: T
 
   return (
     <div>
-      <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Type what you learned</p>
+      <p className="text-sm font-medium text-text-2">Type what you learned</p>
       <div className="mt-4 flex min-h-20 flex-col items-center gap-3">
         {hearPrompt ? (
           <>
-            <p className="text-neutral-600 dark:text-neutral-300">Type what you hear</p>
+            <p className="text-text-2">Type what you hear</p>
             <PlayButton spriteId={spriteId} clipKey={item.audio.normal} label={`Play the word for ${item.meaning}`} />
           </>
         ) : (
-          <p className="text-balance text-center text-xl text-neutral-800 dark:text-neutral-200">
+          <p className="text-balance text-center text-xl text-foreground">
             Type the word for {item.meaning}
           </p>
         )}
@@ -59,7 +59,7 @@ export function TypingDrill({ item, spriteId, revealImmediately, onComplete }: T
           spellCheck={false}
           enterKeyHint="done"
           aria-label={hearPrompt ? "Type what you hear" : `Type the word for ${item.meaning}`}
-          className="min-h-12 w-full rounded-2xl border border-neutral-300 bg-neutral-50 px-4 text-base font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:border-neutral-700 dark:bg-neutral-900"
+          className="min-h-12 w-full rounded-2xl border border-line bg-surface-2 px-4 text-base font-medium text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
         />
         <button
           type="button"
@@ -79,7 +79,7 @@ export function TypingDrill({ item, spriteId, revealImmediately, onComplete }: T
           >
             {result ? "Correct" : `It's ${item.manglish}`}
           </p>
-          <p lang="ml" className="mt-1 font-malayalam text-lg text-neutral-500 dark:text-neutral-400">
+          <p lang="ml" className="mt-1 font-malayalam text-lg text-text-2">
             {item.script}
           </p>
           <button

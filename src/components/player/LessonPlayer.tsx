@@ -24,7 +24,12 @@ interface LessonPlayerProps {
 
 type Phase = "gate" | "steps" | "done";
 
-/** Core lesson loop (PLAN.md §6) — gate, per-item reveal, drills, completion. */
+/**
+ * Core lesson loop (PLAN.md §6): gate, per-item reveal, drills, completion.
+ * Chrome: brand wordmark row, nav + step count, display title, accent
+ * progress, quiet status lines, surface step card. Gate and completion are
+ * left-aligned offset compositions; the step card transitions on change.
+ */
 export function LessonPlayer({ lesson }: LessonPlayerProps) {
   const steps = useMemo(() => buildLessonSteps(lesson), [lesson]);
   const itemsById = useMemo(() => new Map(lesson.items.map((item) => [item.id, item])), [lesson]);
@@ -59,27 +64,30 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
   };
 
   return (
-    <main className="mx-auto min-h-dvh w-full max-w-md px-4 py-6">
+    <main className="mx-auto min-h-[100dvh] w-full max-w-md px-4 pb-6 pt-[calc(1.5rem+env(safe-area-inset-top))]">
       {phase === "gate" && (
-        <div className="flex min-h-[70dvh] flex-col items-center justify-center text-center">
-          <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Lesson</p>
-          <h1 className="mt-1 text-3xl font-bold tracking-tight">{lesson.title}</h1>
+        <div className="flex min-h-[70dvh] flex-col justify-center text-left">
+          <p lang="ml" aria-hidden="true" className="font-malayalam text-4xl leading-none">
+            മലയാളം
+          </p>
+          <p className="mt-6 text-sm font-medium text-text-2">Lesson</p>
+          <h1 className="mt-1 text-4xl font-bold tracking-tight">{lesson.title}</h1>
           {!audioReady && (
-            <p className="mt-4 max-w-xs text-balance rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-600 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400">
-              Lesson audio is on its way — you can complete this lesson without sound.
+            <p className="mt-4 max-w-xs text-balance text-text-3">
+              Lesson audio is on its way. You can complete this lesson without sound.
             </p>
           )}
           <button
             type="button"
             onClick={start}
-            className="mt-8 inline-flex min-h-14 w-full max-w-xs items-center justify-center rounded-full bg-foreground px-8 font-medium text-background transition-opacity active:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+            className="mt-8 inline-flex min-h-14 w-full max-w-xs items-center justify-center rounded-full bg-accent px-8 font-medium text-accent-foreground transition-opacity active:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
           >
             Tap to start
           </button>
           <button
             type="button"
             onClick={() => setPrefsOpen(true)}
-            className="mt-4 inline-flex min-h-11 items-center justify-center rounded-full px-4 text-sm font-medium text-neutral-600 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:text-neutral-400"
+            className="mt-4 inline-flex min-h-11 w-fit items-center justify-center rounded-full px-4 text-sm font-medium text-text-2 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
           >
             Preferences
           </button>
@@ -88,46 +96,51 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
 
       {phase === "steps" && step && (
         <div>
-          <header className="flex items-center justify-between gap-2">
-            <Link
-              href="/lessons"
-              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-sm font-medium text-neutral-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:text-neutral-400"
-            >
-              Lessons
-            </Link>
-            <h1 className="truncate text-base font-semibold">{lesson.title}</h1>
-            <button
-              type="button"
-              onClick={() => setPrefsOpen(true)}
-              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-neutral-300 px-3 text-sm font-medium transition-opacity active:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground dark:border-neutral-700"
-              aria-label="Preferences"
-            >
-              Aa
-            </button>
-          </header>
-          <div className="mt-4 flex items-center gap-3">
-            <div className="h-2 w-full overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
-              <div
-                className="h-full rounded-full bg-foreground transition-all"
-                style={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }}
-              />
+          <header>
+            <div className="flex items-center justify-between">
+              <p lang="ml" aria-hidden="true" className="font-malayalam text-xl leading-none">
+                മലയാളം
+              </p>
+              <button
+                type="button"
+                onClick={() => setPrefsOpen(true)}
+                className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-line px-3 text-sm font-medium transition-opacity active:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                aria-label="Preferences"
+              >
+                Aa
+              </button>
             </div>
-            <span className="shrink-0 text-sm tabular-nums text-neutral-500 dark:text-neutral-400">
-              {stepIndex + 1} of {steps.length}
-            </span>
-          </div>
-          {prefs.silent && (
-            <p className="mt-3 text-sm font-medium text-neutral-500 dark:text-neutral-400">Silent mode on</p>
-          )}
+            <div className="mt-4 flex items-center justify-between">
+              <Link
+                href="/lessons"
+                className="inline-flex min-h-11 min-w-11 items-center rounded-full text-sm font-medium text-text-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+              >
+                Lessons
+              </Link>
+              <span className="text-sm tabular-nums text-text-2">
+                {stepIndex + 1} of {steps.length}
+              </span>
+            </div>
+            <h1 className="mt-3 text-2xl font-bold tracking-tight">{lesson.title}</h1>
+            <div className="mt-4 flex items-center gap-3">
+              <div className="h-1.5 w-full overflow-hidden rounded-full bg-line">
+                <div
+                  className="h-full rounded-full bg-accent transition-all"
+                  style={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }}
+                />
+              </div>
+            </div>
+          </header>
+          {prefs.silent && <p className="mt-3 text-sm font-medium text-text-2">Silent mode on</p>}
           {!audioReady && (
-            <p className="mt-3 rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-2.5 text-sm text-neutral-600 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400">
-              Audio is on its way — text is revealed by tap instead.
-            </p>
+            <p className="mt-3 text-sm text-text-3">Audio is on its way. Text is revealed by tap instead.</p>
           )}
-          <div className="mt-6 rounded-3xl border border-neutral-200 bg-background p-5 dark:border-neutral-800">
+          <div
+            key={stepIndex}
+            className="step-enter mt-5 rounded-3xl border border-line bg-surface p-5"
+          >
             {step.kind === "reveal" && (
               <RevealCard
-                key={step.itemId}
                 item={itemsById.get(step.itemId)!}
                 spriteId={lesson.spriteId}
                 revealImmediately={prefs.revealImmediately}
@@ -136,7 +149,6 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
             )}
             {step.kind === "anticipation" && (
               <AnticipationDrill
-                key={`anticipation-${step.itemId}`}
                 item={itemsById.get(step.itemId)!}
                 spriteId={lesson.spriteId}
                 silent={prefs.silent}
@@ -145,7 +157,6 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
             )}
             {step.kind === "multipleChoice" && (
               <MultipleChoiceDrill
-                key={`mc-${step.drill.itemId}`}
                 item={itemsById.get(step.drill.itemId)!}
                 distractors={step.drill.distractors}
                 spriteId={lesson.spriteId}
@@ -155,7 +166,6 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
             )}
             {step.kind === "typing" && (
               <TypingDrill
-                key={`typing-${step.itemId}`}
                 item={itemsById.get(step.itemId)!}
                 spriteId={lesson.spriteId}
                 revealImmediately={prefs.revealImmediately}
@@ -164,7 +174,6 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
             )}
             {step.kind === "minimalPair" && (
               <MinimalPairDrill
-                key={`pair-${step.drill.pairId}`}
                 pair={pairsById.get(step.drill.pairId)!}
                 a={itemsById.get(step.pair.aItemId)!}
                 b={itemsById.get(step.pair.bItemId)!}
@@ -177,10 +186,13 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
       )}
 
       {phase === "done" && (
-        <div className="flex min-h-[70dvh] flex-col items-center justify-center text-center">
-          <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Lesson complete</p>
-          <h1 className="mt-1 text-3xl font-bold tracking-tight">{lesson.title}</h1>
-          <p className="mt-4 text-lg text-neutral-700 dark:text-neutral-300">
+        <div className="flex min-h-[70dvh] flex-col justify-center text-left">
+          <p lang="ml" aria-hidden="true" className="font-malayalam text-4xl leading-none">
+            മലയാളം
+          </p>
+          <p className="mt-6 text-sm font-medium text-text-2">Lesson complete</p>
+          <h1 className="mt-1 text-4xl font-bold tracking-tight">{lesson.title}</h1>
+          <p className="mt-4 text-lg tabular-nums text-text-2">
             {correctCount} of {scoredCount} correct
           </p>
           <Link

@@ -31,14 +31,14 @@ export function MultipleChoiceDrill({ item, distractors, spriteId, revealImmedia
 
   return (
     <div>
-      <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">What does it mean?</p>
+      <p className="text-sm font-medium text-text-2">What does it mean?</p>
       <div className="mt-4 flex min-h-20 flex-col items-center gap-3">
         {audioReady && (
           <PlayButton spriteId={spriteId} clipKey={item.audio.normal} label={`Play the word for ${item.meaning}`} />
         )}
         {(revealImmediately || !audioReady) && <p className="text-4xl font-medium">{item.manglish}</p>}
         {revealImmediately && item.script && (
-          <p lang="ml" className="font-malayalam text-lg text-neutral-500 dark:text-neutral-400">
+          <p lang="ml" className="font-malayalam text-lg text-text-2">
             {item.script}
           </p>
         )}
@@ -49,11 +49,11 @@ export function MultipleChoiceDrill({ item, distractors, spriteId, revealImmedia
           const isAnswer = option === item.meaning;
           const state = answered
             ? isAnswer
-              ? "border-green-600 bg-green-50 text-green-900 dark:border-green-500 dark:bg-green-950 dark:text-green-100"
+              ? "border-accent bg-accent/10 text-foreground"
               : isPicked
                 ? "border-red-500 bg-red-50 text-red-900 dark:border-red-400 dark:bg-red-950 dark:text-red-100"
-                : "border-neutral-200 bg-neutral-50 text-neutral-700 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300"
-            : "border-neutral-300 bg-neutral-50 text-foreground active:opacity-80 dark:border-neutral-700 dark:bg-neutral-900";
+                : "border-line bg-surface text-text-2"
+            : "border-line bg-surface text-foreground active:opacity-80";
           return (
             <button
               key={option}
