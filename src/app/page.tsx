@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { LEVELS } from "@/content/levels";
 import { PreferencesButton } from "@/components/PreferencesDialog";
+import { ReviewLink } from "@/components/review/ReviewLink";
 
 /**
  * Home page design read (design-taste-frontend skill, Preserve mode):
@@ -53,7 +54,10 @@ export default function Home() {
         className="animate-rise-in scroll-mt-10 border-t border-stone-200 pt-12 [animation-delay:240ms] dark:border-stone-800"
       >
         <div className="space-y-8">
-          <h2 className="text-2xl font-semibold tracking-tight">Lessons</h2>
+          <div className="flex items-center justify-between gap-4">
+            <h2 className="text-2xl font-semibold tracking-tight">Lessons</h2>
+            <ReviewLink />
+          </div>
           <ul className="space-y-6">
             {LEVELS.map((level) => (
               <li key={level.id} className="space-y-2">

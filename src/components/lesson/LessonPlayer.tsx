@@ -18,11 +18,14 @@
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import type { Lesson } from '@/content/types'
-import { buildSteps, type Outcome } from '@/lib/lesson/steps'
+import { buildSteps, type Outcome, type Step } from '@/lib/lesson/steps'
 import { audioEngine } from '@/lib/audio/engine'
 import { useLessonAudio, type AudioState } from '@/lib/audio/useLessonAudio'
 import { usePreferences } from '@/lib/preferences'
+import { getStore, recordReview } from '@/lib/fsrs/client'
+import { drillTargets } from '@/lib/fsrs/targets'
 import { PreferencesButton } from '@/components/PreferencesDialog'
+import { ReviewStep } from '@/components/review/ReviewStep'
 import { BackIcon } from '@/components/icons'
 import { DrillStep } from './DrillStep'
 import { HearRevealStep } from './HearRevealStep'
@@ -94,19 +97,37 @@ function IntroScreen({
 export function LessonPlayer({ lesson, nextLesson }: { lesson: Lesson; nextLesson?: Lesson }) {
   const { prefs, setPref } = usePreferences()
   const audio = useLessonAudio(lesson)
-  const steps = useMemo(() => buildSteps(lesson), [lesson])
+  const allSteps = useMemo(() => buildSteps(lesson), [lesson])
+  /** Built on start, once due review cards are known (PLAN.md §7 injection). */
+  const [steps, setSteps] = useState<Step[] | null>(null)
   /** -1 = intro, steps.length = complete */
   const [stepIndex, setStepIndex] = useState(-1)
   const [outcomes, setOutcomes] = useState<Outcome[]>([])
 
-  const start = () => {
+  const start = async () => {
     if (!prefs.silent) audioEngine.unlock()
+    const due = lesson.reviewSlots > 0 ? await getStore().listDue(new Date(), lesson.reviewSlots) : []
+    setSteps(buildSteps(lesson, due))
     setStepIndex(0)
   }
 
   const advance = (outcome?: Outcome) => {
     audio.stop()
     if (outcome) setOutcomes((prev) => [...prev, outcome])
+    const step = steps?.[stepIndex]
+    if (step?.kind === 'drill' && (outcome === 'correct' || outcome === 'wrong')) {
+      // Auto-scored drills grade their {itemId, skill} cards; self-assessed
+      // drills are logged by the session, never scheduled (PLAN.md §7).
+      const pairItems = (pairId: string): [string, string] | null => {
+        const pair = lesson.pairs.find((p) => p.id === pairId)
+        return pair ? [pair.aItemId, pair.bItemId] : null
+      }
+      for (const target of drillTargets(step.spec, pairItems)) {
+        void recordReview(target.itemId, target.skill, outcome === 'correct' ? 'good' : 'again').catch(
+          console.error,
+        )
+      }
+    }
     setStepIndex((index) => index + 1)
   }
 
@@ -130,12 +151,14 @@ export function LessonPlayer({ lesson, nextLesson }: { lesson: Lesson; nextLesso
     return (
       <>
         {header}
-        <IntroScreen lesson={lesson} audioState={audio.state} silent={prefs.silent} onStart={start} />
+        <IntroScreen lesson={lesson} audioState={audio.state} silent={prefs.silent} onStart={() => void start()} />
       </>
     )
   }
 
-  if (stepIndex >= steps.length) {
+  const activeSteps = steps ?? allSteps
+
+  if (stepIndex >= activeSteps.length) {
     return (
       <>
         {header}
@@ -144,7 +167,7 @@ export function LessonPlayer({ lesson, nextLesson }: { lesson: Lesson; nextLesso
     )
   }
 
-  const step = steps[stepIndex]
+  const step = activeSteps[stepIndex]
 
   return (
     <>
@@ -155,13 +178,13 @@ export function LessonPlayer({ lesson, nextLesson }: { lesson: Lesson; nextLesso
             className="h-1 flex-1 overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800"
             role="progressbar"
             aria-valuemin={1}
-            aria-valuemax={steps.length}
+            aria-valuemax={activeSteps.length}
             aria-valuenow={stepIndex + 1}
             aria-label="Lesson progress"
           >
             <div
               className="h-full rounded-full bg-amber-600 transition-[width] motion-reduce:transition-none dark:bg-amber-400"
-              style={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }}
+              style={{ width: `${((stepIndex + 1) / activeSteps.length) * 100}%` }}
             />
           </div>
           <button
@@ -177,12 +200,14 @@ export function LessonPlayer({ lesson, nextLesson }: { lesson: Lesson; nextLesso
             Silent
           </button>
           <span className="shrink-0 text-xs font-medium tabular-nums text-stone-500 dark:text-stone-400">
-            {stepIndex + 1} / {steps.length}
+            {stepIndex + 1} / {activeSteps.length}
           </span>
         </div>
       </div>
       {step.kind === 'hear' ? (
         <HearRevealStep key={step.key} item={step.item} audio={audio} onNext={() => advance()} />
+      ) : step.kind === 'review' ? (
+        <ReviewStep key={step.key} cardKey={step.cardKey} onDone={() => advance('done')} />
       ) : (
         <DrillStep
           key={step.key}

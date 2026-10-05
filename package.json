@@ -7,13 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test src/lib/progress/reconcile.test.ts",
+    "test": "tsx --test src/lib/fsrs/scheduler.test.ts src/lib/fsrs/targets.test.ts src/lib/store/db.test.ts src/lib/test/levelTest.test.ts src/lib/progress/reconcile.test.ts src/lib/lesson/steps.test.ts",
     "content:check": "tsx scripts/content-check.ts"
   },
   "dependencies": {
+    "dexie": "^4.4.6",
     "next": "16.3.8",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "ts-fsrs": "^5.4.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.3",
@@ -22,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
+    "fake-indexeddb": "^6.2.5",
     "tailwindcss": "4.3.3",
     "tsx": "^4.23.15",
     "typescript": "^5"
