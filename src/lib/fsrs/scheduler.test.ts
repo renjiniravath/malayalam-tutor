@@ -88,8 +88,14 @@ class FailingProgressStore implements ProgressStore {
   async putCard(): Promise<void> {
     throw new Error('storage blocked');
   }
+  async putCards(): Promise<void> {
+    throw new Error('storage blocked');
+  }
   async getCard(): Promise<CardRecord | undefined> {
     return undefined;
+  }
+  async listCards(): Promise<CardRecord[]> {
+    return [];
   }
   async listDue(): Promise<CardRecord[]> {
     return [];
@@ -100,8 +106,26 @@ class FailingProgressStore implements ProgressStore {
   async appendLog(): Promise<void> {
     throw new Error('storage blocked');
   }
+  async putLogs(): Promise<void> {
+    throw new Error('storage blocked');
+  }
   async listLogs(): Promise<ReviewLogRecord[]> {
     return [];
+  }
+  async appendEvent(): Promise<void> {
+    throw new Error('storage blocked');
+  }
+  async listEvents(): Promise<never[]> {
+    return [];
+  }
+  async getMeta(): Promise<undefined> {
+    return undefined;
+  }
+  async setMeta(): Promise<void> {
+    throw new Error('storage blocked');
+  }
+  async listMeta(): Promise<Record<string, unknown>> {
+    return {};
   }
 }
 

@@ -8,7 +8,7 @@ const now = new Date('2026-10-05T09:00:00.000Z');
 const DB_NAME = 'learn-malayalam-progress';
 // Dexie stores the native IndexedDB version as verno * 10.
 const NATIVE_V1 = 10;
-const NATIVE_V2 = 20;
+const NATIVE_V3 = 30;
 
 /**
  * Regression: earlier app builds left 'learn-malayalam-progress' at
@@ -76,7 +76,7 @@ describe('IndexedProgressStore open recovery', () => {
     // No rebuild: the v1 card survives the v1 -> v2 upgrade untouched.
     const stored = await store.getCard('mazha:recognition');
     assert.deepEqual(stored, existing);
-    assert.deepEqual(await rawState(), { version: NATIVE_V2, stores: ['cards', 'logs'] });
+    assert.deepEqual(await rawState(), { version: NATIVE_V3, stores: ['cards', 'events', 'logs', 'meta'] });
   });
 
   it('rebuilds when the device database is above our schema (foreign build)', async () => {
@@ -89,7 +89,7 @@ describe('IndexedProgressStore open recovery', () => {
     // Throws a VersionError without recovery; must succeed after rebuild.
     await store.putCard(record);
     assert.deepEqual(await store.getCard('mazha:recognition'), record);
-    assert.deepEqual(await rawState(), { version: NATIVE_V2, stores: ['cards', 'logs'] });
+    assert.deepEqual(await rawState(), { version: NATIVE_V3, stores: ['cards', 'events', 'logs', 'meta'] });
   });
 
   it('rebuilds at the declared version and review logs persist after recovery', async () => {
@@ -105,14 +105,14 @@ describe('IndexedProgressStore open recovery', () => {
     });
     assert.equal(reported, false);
     assert.equal((await store.listLogs()).length, 1);
-    assert.equal((await rawState()).version, NATIVE_V2);
+    assert.equal((await rawState()).version, NATIVE_V3);
   });
 
   it('a fresh install opens directly at the declared schema', async () => {
     reportDatabases([]);
     const store = new IndexedProgressStore();
     await store.putCard(newCardRecord('mazha', 'recognition', now));
-    assert.deepEqual(await rawState(), { version: NATIVE_V2, stores: ['cards', 'logs'] });
+    assert.deepEqual(await rawState(), { version: NATIVE_V3, stores: ['cards', 'events', 'logs', 'meta'] });
   });
 
   it('a store whose open rejects never blocks the advance guarantee', async () => {
@@ -120,13 +120,29 @@ describe('IndexedProgressStore open recovery', () => {
       putCard: async () => {
         throw new Error('blocked database');
       },
+      putCards: async () => {
+        throw new Error('blocked database');
+      },
       getCard: async () => undefined,
+      listCards: async () => [],
       listDue: async () => [],
       countDue: async () => 0,
       appendLog: async () => {
         throw new Error('blocked database');
       },
+      putLogs: async () => {
+        throw new Error('blocked database');
+      },
       listLogs: async () => [],
+      appendEvent: async () => {
+        throw new Error('blocked database');
+      },
+      listEvents: async () => [],
+      getMeta: async () => undefined,
+      setMeta: async () => {
+        throw new Error('blocked database');
+      },
+      listMeta: async () => ({}),
     };
     const result = reviewCard(newCardRecord('mazha', 'recognition', now), 'good', now);
     let reported: unknown;

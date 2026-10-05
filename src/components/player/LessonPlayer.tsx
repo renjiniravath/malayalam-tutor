@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { levels } from "@/content";
 import type { Lesson } from "@/content/types";
 import { audioEngine } from "@/lib/audio/engine";
+import { recordLessonComplete } from "@/lib/gamification/progress";
 import {
   getPrefsServerSnapshot,
   getPrefsSnapshot,
@@ -71,9 +72,13 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
   };
 
   // Finishing a lesson schedules cards for its items (one per skill),
-  // leaving any card that already exists untouched (PLAN.md §7).
+  // leaving any card that already exists untouched (PLAN.md §7), and
+  // records the lesson for the streak and achievements (§8). Both are
+  // best-effort: neither may block the completion screen.
+  const recordedDone = useRef(false);
   useEffect(() => {
-    if (phase !== "done") return;
+    if (phase !== "done" || recordedDone.current) return;
+    recordedDone.current = true;
     const schedule = async () => {
       const now = new Date();
       for (const item of lesson.items) {
@@ -84,7 +89,8 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
       }
     };
     void schedule();
-  }, [phase, lesson]);
+    void recordLessonComplete(progressStore, lesson.id, correctCount, scoredCount, new Date());
+  }, [phase, lesson, correctCount, scoredCount]);
 
   const updatePrefs = (next: typeof prefs) => {
     writePrefs(next);

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>Learn Malayalam icon, maskable</title>
+  <rect width="256" height="256" fill="#1d7044"/>
+  <g transform="translate(20 20) scale(0.84)">
+    <path d="M 66 172 C 66 116 108 76 162 76 C 194 76 218 90 228 112"
+      fill="none" stroke="#f5f6f2" stroke-width="20" stroke-linecap="round"/>
+    <circle cx="152" cy="98" r="15" fill="#f5f6f2"/>
+  </g>
+</svg>

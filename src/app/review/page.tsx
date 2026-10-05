@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { levels } from "@/content";
 import type { Item } from "@/content/types";
 import { MultipleChoiceDrill } from "@/components/player/MultipleChoiceDrill";
 import { TypingDrill } from "@/components/player/TypingDrill";
+import { recordReviewComplete } from "@/lib/gamification/progress";
 import { DAILY_REVIEW_CAP, persistReview, reviewCard } from "@/lib/fsrs/scheduler";
 import type { CardRecord, ReviewRating } from "@/lib/fsrs/types";
 import { progressStore } from "@/lib/progress/store";
@@ -73,6 +74,15 @@ export default function ReviewPage() {
   }, [contentIndex]);
 
   const current = queue[index];
+
+  // Completing the session records it for the streak and achievements
+  // (PLAN.md §8); ten-card sessions earn a freeze. Best-effort only.
+  const recordedDone = useRef(false);
+  useEffect(() => {
+    if (phase !== "done" || recordedDone.current || reviewed === 0) return;
+    recordedDone.current = true;
+    void recordReviewComplete(progressStore, reviewed, new Date());
+  }, [phase, reviewed]);
 
   // Advancing never depends on storage: the review result is persisted
   // fire-and-forget, and a failed or hanging store only raises a quiet
