@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { levels } from "@/content";
+import { ReviewLink } from "@/components/review/ReviewLink";
 
 export default function LessonsPage() {
   return (
@@ -10,7 +11,10 @@ export default function LessonsPage() {
       >
         Home
       </Link>
-      <h1 className="mt-4 text-3xl font-bold tracking-tight">Lessons</h1>
+      <div className="mt-4 flex items-center justify-between">
+        <h1 className="text-3xl font-bold tracking-tight">Lessons</h1>
+        <ReviewLink />
+      </div>
       {levels.map((level) => (
         <section key={level.id} className="mt-6">
           <h2 className="text-lg font-semibold">{level.name}</h2>

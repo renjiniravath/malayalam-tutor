@@ -1,7 +1,8 @@
 "use client";
 
-import { useMemo, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
+import { levels } from "@/content";
 import type { Lesson } from "@/content/types";
 import { audioEngine } from "@/lib/audio/engine";
 import {
@@ -11,7 +12,11 @@ import {
   writePrefs,
 } from "@/lib/prefs";
 import { buildLessonSteps } from "@/lib/lesson/steps";
+import { LESSON_INJECTION_LIMIT, newCardRecord, ratingForAnswer, reviewCard } from "@/lib/fsrs/scheduler";
+import { SKILLS, cardKey, type CardRecord } from "@/lib/fsrs/types";
+import { progressStore } from "@/lib/progress/store";
 import { AnticipationDrill } from "./AnticipationDrill";
+import { InjectedReview } from "./InjectedReview";
 import { MinimalPairDrill } from "./MinimalPairDrill";
 import { MultipleChoiceDrill } from "./MultipleChoiceDrill";
 import { PreferencesSheet } from "./PreferencesSheet";
@@ -26,29 +31,59 @@ type Phase = "gate" | "steps" | "done";
 
 /**
  * Core lesson loop (PLAN.md §6): gate, per-item reveal, drills, completion.
- * Chrome: brand wordmark row, nav + step count, display title, accent
- * progress, quiet status lines, surface step card. Gate and completion are
- * left-aligned offset compositions; the step card transitions on change.
+ * FSRS hooks (PLAN.md §7): due cards are injected at the start of the
+ * lesson as warm-up review, and completing the lesson schedules fresh
+ * cards for every item, one per skill.
  */
 export function LessonPlayer({ lesson }: LessonPlayerProps) {
   const steps = useMemo(() => buildLessonSteps(lesson), [lesson]);
   const itemsById = useMemo(() => new Map(lesson.items.map((item) => [item.id, item])), [lesson]);
   const pairsById = useMemo(() => new Map(lesson.minimalPairs.map((pair) => [pair.id, pair])), [lesson]);
 
+  /** Every content item, mapped for injected review (cards may point anywhere). */
+  const contentItems = useMemo(() => {
+    const map = new Map<string, { item: (typeof lesson.items)[number]; lesson: Lesson }>();
+    for (const candidate of levels.flatMap((level) => level.lessons)) {
+      for (const item of candidate.items) map.set(item.id, { item, lesson: candidate });
+    }
+    return map;
+  }, [lesson]);
+
   const [phase, setPhase] = useState<Phase>("gate");
   const [stepIndex, setStepIndex] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
   const [scoredCount, setScoredCount] = useState(0);
+  const [warmups, setWarmups] = useState<CardRecord[]>([]);
   const prefs = useSyncExternalStore(subscribePrefs, getPrefsSnapshot, getPrefsServerSnapshot);
   const [prefsOpen, setPrefsOpen] = useState(false);
 
   const audioReady = audioEngine.available;
-  const step = steps[stepIndex];
+  const totalSteps = warmups.length + steps.length;
+  const warmup = stepIndex < warmups.length ? warmups[stepIndex] : undefined;
+  const step = warmup ? undefined : steps[stepIndex - warmups.length];
 
   const start = async () => {
     await audioEngine.unlock();
+    const due = await progressStore.listDue(new Date(), LESSON_INJECTION_LIMIT);
+    setWarmups(due.filter((record) => contentItems.has(record.itemId)));
     setPhase("steps");
   };
+
+  // Finishing a lesson schedules cards for its items (one per skill),
+  // leaving any card that already exists untouched (PLAN.md §7).
+  useEffect(() => {
+    if (phase !== "done") return;
+    const schedule = async () => {
+      const now = new Date();
+      for (const item of lesson.items) {
+        for (const skill of SKILLS) {
+          const existing = await progressStore.getCard(cardKey(item.id, skill));
+          if (!existing) await progressStore.putCard(newCardRecord(item.id, skill, now));
+        }
+      }
+    };
+    void schedule();
+  }, [phase, lesson]);
 
   const updatePrefs = (next: typeof prefs) => {
     writePrefs(next);
@@ -59,8 +94,15 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
       setScoredCount((count) => count + 1);
       if (correct) setCorrectCount((count) => count + 1);
     }
-    if (stepIndex + 1 < steps.length) setStepIndex((index) => index + 1);
+    if (stepIndex + 1 < totalSteps) setStepIndex((index) => index + 1);
     else setPhase("done");
+  };
+
+  const reviewWarmup = async (record: CardRecord, correct: boolean) => {
+    const { record: next, log } = reviewCard(record, ratingForAnswer(correct), new Date());
+    await progressStore.putCard(next);
+    await progressStore.appendLog(log);
+    advance();
   };
 
   return (
@@ -94,7 +136,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
         </div>
       )}
 
-      {phase === "steps" && step && (
+      {phase === "steps" && (step || warmup) && (
         <div>
           <header>
             <div className="flex items-center justify-between">
@@ -118,7 +160,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
                 Lessons
               </Link>
               <span className="text-sm tabular-nums text-text-2">
-                {stepIndex + 1} of {steps.length}
+                {stepIndex + 1} of {totalSteps}
               </span>
             </div>
             <h1 className="mt-3 text-2xl font-bold tracking-tight">{lesson.title}</h1>
@@ -126,7 +168,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
               <div className="h-1.5 w-full overflow-hidden rounded-full bg-line">
                 <div
                   className="h-full rounded-full bg-accent transition-all"
-                  style={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }}
+                  style={{ width: `${((stepIndex + 1) / totalSteps) * 100}%` }}
                 />
               </div>
             </div>
@@ -139,7 +181,20 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
             key={stepIndex}
             className="step-enter mt-5 rounded-3xl border border-line bg-surface p-5"
           >
-            {step.kind === "reveal" && (
+            {warmup && (
+              <InjectedReview
+                item={contentItems.get(warmup.itemId)!.item}
+                skill={warmup.skill}
+                distractors={contentItems
+                  .get(warmup.itemId)!
+                  .lesson.items.filter((other) => other.id !== warmup.itemId)
+                  .map((other) => other.meaning)
+                  .slice(0, 3)}
+                spriteId={contentItems.get(warmup.itemId)!.lesson.spriteId}
+                onComplete={(correct) => void reviewWarmup(warmup, correct)}
+              />
+            )}
+            {step && step.kind === "reveal" && (
               <RevealCard
                 item={itemsById.get(step.itemId)!}
                 spriteId={lesson.spriteId}
@@ -147,7 +202,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
                 onNext={() => advance()}
               />
             )}
-            {step.kind === "anticipation" && (
+            {step && step.kind === "anticipation" && (
               <AnticipationDrill
                 item={itemsById.get(step.itemId)!}
                 spriteId={lesson.spriteId}
@@ -155,7 +210,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
                 onComplete={() => advance()}
               />
             )}
-            {step.kind === "multipleChoice" && (
+            {step && step.kind === "multipleChoice" && (
               <MultipleChoiceDrill
                 item={itemsById.get(step.drill.itemId)!}
                 distractors={step.drill.distractors}
@@ -164,7 +219,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
                 onComplete={(correct) => advance(correct)}
               />
             )}
-            {step.kind === "typing" && (
+            {step && step.kind === "typing" && (
               <TypingDrill
                 item={itemsById.get(step.itemId)!}
                 spriteId={lesson.spriteId}
@@ -172,7 +227,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
                 onComplete={(correct) => advance(correct)}
               />
             )}
-            {step.kind === "minimalPair" && (
+            {step && step.kind === "minimalPair" && (
               <MinimalPairDrill
                 pair={pairsById.get(step.drill.pairId)!}
                 a={itemsById.get(step.pair.aItemId)!}

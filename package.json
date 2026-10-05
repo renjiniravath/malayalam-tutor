@@ -7,13 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test src/lib/progress/reconcile.test.ts",
+    "test": "tsx --test \"src/lib/**/*.test.ts\"",
     "content:check": "tsx scripts/content-check.ts"
   },
   "dependencies": {
+    "dexie": "^4.4.6",
     "next": "16.3.8",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "ts-fsrs": "^5.4.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.3",
