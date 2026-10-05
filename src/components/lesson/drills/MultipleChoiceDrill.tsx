@@ -67,7 +67,7 @@ export function MultipleChoiceDrill({
   }
 
   return (
-    <div className="mx-auto flex max-w-md flex-col gap-5 px-6 pb-6 pt-8">
+    <div className="mx-auto flex w-full max-w-2xl animate-rise-in flex-col gap-5 px-6 pb-safe pt-8">
       <h2 className="text-lg font-semibold">What does it mean?</h2>
       <div className="flex flex-col items-center gap-3 rounded-xl border border-stone-200 p-5 dark:border-stone-800">
         {audio.available ? (
@@ -83,9 +83,9 @@ export function MultipleChoiceDrill({
           </button>
         ) : (
           <>
-            <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-900 dark:bg-amber-950 dark:text-amber-200">
-              {prefs.silent ? 'Silent mode' : 'Audio not generated yet'}
-            </span>
+            <p className="text-xs text-stone-500 dark:text-stone-400">
+              {prefs.silent ? 'Silent mode is on.' : 'Audio is on its way.'}
+            </p>
             <p className="text-2xl font-semibold">{item.manglish}</p>
           </>
         )}
@@ -118,7 +118,7 @@ export function MultipleChoiceDrill({
       {outcome && (
         <div className="space-y-4" role="status">
           <p className="text-base font-medium">
-            {outcome === 'correct' ? 'Correct.' : 'Not quite — the right answer is highlighted.'}
+            {outcome === 'correct' ? 'Correct.' : 'Not quite. The right answer is highlighted.'}
           </p>
           <button
             type="button"

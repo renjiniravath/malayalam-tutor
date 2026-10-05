@@ -61,7 +61,7 @@ export function AnticipationDrill({
 
   if (phase === 'think') {
     return (
-      <div className="mx-auto flex max-w-md flex-col items-center gap-6 px-6 pt-10 text-center">
+      <div className="mx-auto flex w-full max-w-2xl animate-rise-in flex-col items-center gap-6 px-6 pt-10 text-center">
         <h2 className="text-lg font-semibold">Say it aloud</h2>
         <p className="text-stone-600 dark:text-stone-300">
           You heard this one earlier. Say it before the answer comes.
@@ -90,7 +90,7 @@ export function AnticipationDrill({
   }
 
   return (
-    <div aria-live="polite" className="mx-auto flex max-w-md flex-col gap-6 px-6 pb-6 pt-8">
+    <div aria-live="polite" className="mx-auto flex w-full max-w-2xl animate-rise-in flex-col gap-6 px-6 pb-safe pt-8">
       <h2 className="text-lg font-semibold">Here it is</h2>
       <div>
         <p className="text-4xl font-semibold tracking-tight">{item.manglish}</p>
@@ -104,10 +104,10 @@ export function AnticipationDrill({
       {audio.available ? (
         <p className="text-stone-600 dark:text-stone-300">Listen and compare with your attempt.</p>
       ) : (
-        <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-200">
+        <p className="text-xs text-stone-500 dark:text-stone-400">
           {prefs.silent
-            ? 'Silent mode is on — compare in your head.'
-            : 'Audio is not generated yet — compare in your head.'}
+            ? 'Silent mode is on. Compare in your head.'
+            : 'Audio is on its way. Compare in your head.'}
         </p>
       )}
       <button

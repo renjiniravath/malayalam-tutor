@@ -79,7 +79,7 @@ export function DrillStep({
       )
     default:
       return (
-        <div className="mx-auto flex max-w-md flex-col gap-5 px-6 pb-6 pt-8">
+        <div className="mx-auto flex w-full max-w-2xl animate-rise-in flex-col gap-5 px-6 pb-safe pt-8">
           <h2 className="text-lg font-semibold">Drill</h2>
           <p className="text-stone-600 dark:text-stone-300">
             This drill type arrives in a later part of the course.

@@ -6,11 +6,13 @@
 }
 
 @utility pt-safe {
-  padding-top: env(safe-area-inset-top);
+  /* Covers notched status bars and keeps at least 1rem breathing room. */
+  padding-top: max(1rem, env(safe-area-inset-top));
 }
 
 @utility pb-safe {
-  padding-bottom: env(safe-area-inset-bottom);
+  /* Covers gesture bars and keeps at least 1.5rem breathing room. */
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
 }
 
 /* Home load-in cascade (MOTION_INTENSITY 4): opacity + transform only,

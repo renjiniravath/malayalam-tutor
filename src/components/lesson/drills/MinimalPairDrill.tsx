@@ -37,15 +37,15 @@ export function MinimalPairDrill({
 
   if (!audio.available) {
     return (
-      <div className="mx-auto flex max-w-md flex-col gap-5 px-6 pb-6 pt-8">
+      <div className="mx-auto flex w-full max-w-2xl animate-rise-in flex-col gap-5 px-6 pb-safe pt-8">
         <h2 className="text-lg font-semibold">Sound drill</h2>
         <p className="text-stone-600 dark:text-stone-300">
           This drill is about listening for the difference between two sounds.
         </p>
-        <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-200">
+        <p className="text-xs text-stone-500 dark:text-stone-400">
           {prefs.silent
-            ? 'Silent mode is on, so this drill is skipped.'
-            : 'Audio is not generated yet, so this drill is skipped.'}
+            ? 'Silent mode is on. This drill is skipped.'
+            : 'Audio is on its way. This drill is skipped.'}
         </p>
         <button
           type="button"
@@ -76,7 +76,7 @@ export function MinimalPairDrill({
   ]
 
   return (
-    <div className="mx-auto flex max-w-md flex-col gap-5 px-6 pb-6 pt-8">
+    <div className="mx-auto flex w-full max-w-2xl animate-rise-in flex-col gap-5 px-6 pb-safe pt-8">
       <h2 className="text-lg font-semibold">Which one did you hear?</h2>
       <div className="flex flex-col items-center gap-3 rounded-xl border border-stone-200 p-5 dark:border-stone-800">
         <button
@@ -121,7 +121,7 @@ export function MinimalPairDrill({
       {outcome && (
         <div className="space-y-4" role="status">
           <p className="text-base font-medium">
-            {outcome === 'correct' ? 'Correct.' : 'Not quite — the right answer is highlighted.'}
+            {outcome === 'correct' ? 'Correct.' : 'Not quite. The right answer is highlighted.'}
           </p>
           <button
             type="button"
