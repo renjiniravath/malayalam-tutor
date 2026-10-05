@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test src/lib/fsrs/scheduler.test.ts src/lib/fsrs/targets.test.ts src/lib/store/db.test.ts src/lib/test/levelTest.test.ts src/lib/progress/reconcile.test.ts src/lib/lesson/steps.test.ts",
+    "test": "tsx --test src/lib/fsrs/scheduler.test.ts src/lib/fsrs/targets.test.ts src/lib/store/db.test.ts src/lib/store/backup.test.ts src/lib/store/recovery.test.ts src/lib/streaks/streaks.test.ts src/lib/streaks/achievements.test.ts src/lib/test/levelTest.test.ts src/lib/progress/reconcile.test.ts src/lib/lesson/steps.test.ts",
     "content:check": "tsx scripts/content-check.ts"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
     "fake-indexeddb": "^6.2.5",
+    "sharp": "^0.35.5",
     "tailwindcss": "4.3.3",
     "tsx": "^4.23.15",
     "typescript": "^5"

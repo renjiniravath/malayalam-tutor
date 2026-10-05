@@ -12,7 +12,8 @@ import Link from 'next/link'
 import { BackIcon } from '@/components/icons'
 import { PreferencesButton } from '@/components/PreferencesDialog'
 import { REVIEW_CAP, ReviewSession } from '@/components/review/ReviewSession'
-import { getStore } from '@/lib/fsrs/client'
+import { getStore } from '@/lib/store/singleton'
+import { completeReviewSession } from '@/lib/progress/learning'
 
 export default function ReviewPage() {
   const [keys, setKeys] = useState<string[] | null>(null)
@@ -72,7 +73,14 @@ export default function ReviewPage() {
           </Link>
         </div>
       ) : (
-        <ReviewSession cardKeys={keys} onDone={() => setFinished(true)} />
+        <ReviewSession
+          cardKeys={keys}
+          onDone={() => {
+            setFinished(true)
+            // A finished review session earns a grace freeze (PLAN.md §8).
+            void completeReviewSession().catch(console.error)
+          }}
+        />
       )}
     </main>
   )

@@ -11,7 +11,8 @@ import { useEffect, useState } from 'react'
 import { LEVELS } from '@/content/levels'
 import type { Item } from '@/content/types'
 import type { CardRecord } from '@/lib/store/db'
-import { getStore, recordReview } from '@/lib/fsrs/client'
+import { recordReview } from '@/lib/fsrs/client'
+import { getStore } from '@/lib/store/singleton'
 import type { Grade, Skill } from '@/lib/fsrs/scheduler'
 
 /** ~10 minutes of due cards per day; overflow rolls over (PLAN.md §7). */

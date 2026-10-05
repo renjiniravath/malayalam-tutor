@@ -2,6 +2,8 @@ import Link from "next/link";
 import { LEVELS } from "@/content/levels";
 import { PreferencesButton } from "@/components/PreferencesDialog";
 import { ReviewLink } from "@/components/review/ReviewLink";
+import { InstallPrompt } from "@/components/app/InstallPrompt";
+import { HomeProgress } from "@/components/progress/HomeProgress";
 
 /**
  * Home page design read (design-taste-frontend skill, Preserve mode):
@@ -22,7 +24,10 @@ export default function Home() {
         <p lang="ml" className="font-malayalam text-2xl font-medium text-stone-500 dark:text-stone-400">
           മലയാളം
         </p>
-        <PreferencesButton />
+        <div className="flex items-center gap-2">
+          <InstallPrompt />
+          <PreferencesButton />
+        </div>
       </header>
 
       <section className="grid grid-cols-1 items-end gap-10 pt-16 md:pt-24 lg:grid-cols-12">
@@ -102,6 +107,8 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
+      <HomeProgress />
 
       <section className="animate-rise-in border-t border-stone-200 pt-12 pb-safe [animation-delay:400ms] dark:border-stone-800">
         <p className="max-w-prose text-xl font-medium text-stone-600 md:text-2xl dark:text-stone-300">

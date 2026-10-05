@@ -7,7 +7,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { getStore } from '@/lib/fsrs/client'
+import { getStore } from '@/lib/store/singleton'
 
 export function ReviewLink() {
   const [count, setCount] = useState(0)

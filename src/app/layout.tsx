@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans, Noto_Sans_Malayalam } from "next/font/google";
 import { PreferencesProvider } from "@/lib/preferences";
+import { AppBootstrap } from "@/components/app/AppBootstrap";
 import "./globals.css";
 
 const notoSans = Noto_Sans({
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${notoSans.variable} ${notoSansMalayalam.variable} h-full antialiased motion-safe:scroll-smooth motion-reduce:scroll-auto`}
     >
       <body className="min-h-full bg-stone-50 font-sans text-stone-900 dark:bg-stone-950 dark:text-stone-100">
+        <AppBootstrap />
         <PreferencesProvider>{children}</PreferencesProvider>
       </body>
     </html>

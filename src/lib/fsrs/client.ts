@@ -4,15 +4,10 @@
  * day one so FSRS parameters can be optimized on real data later).
  */
 
-import { cardKey, createStore, type CardRecord, type ProgressStore } from '@/lib/store/db'
+import { cardKey, type CardRecord } from '@/lib/store/db'
+import { getStore } from '@/lib/store/singleton'
+import { earn, recordLearningActivity } from '@/lib/progress/learning'
 import { newCard, review, type Grade, type ReviewCard, type Skill } from './scheduler'
-
-let store: ProgressStore | undefined
-
-export function getStore(): ProgressStore {
-  if (!store) store = createStore()
-  return store
-}
 
 export async function recordReview(
   itemId: string,
@@ -36,4 +31,7 @@ export async function recordReview(
   }
   await getStore().putCard(record)
   await getStore().appendLog({ cardKey: key, itemId, skill, reviewedAt: now.getTime(), log })
+  // Streaks and achievements run on real events (PLAN.md §8).
+  await recordLearningActivity(now)
+  await earn('firstReview', now)
 }
