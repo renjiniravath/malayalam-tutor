@@ -47,3 +47,19 @@ export function hasBareFirstPersonSayDo(orders: string[]): boolean {
     return tokens[1] === 'parayuva' || tokens[1] === 'cheyyuva';
   });
 }
+
+const THIRD_PERSON_SUBJECTS = ['avan', 'avaḷ', 'avar', 'ayaaḷ', 'iyaaḷ', 'addheham'];
+
+/**
+ * Native-speaker ruling: bare third-person -uva declaratives are not
+ * natural ("avan varuva"); the natural form is varunnund, or the verb
+ * needs a complement ("avan chaaya kudikkuva" is fine).
+ */
+export function hasBareThirdPersonUva(orders: string[]): boolean {
+  return orders.some((order) => {
+    const tokens = order.split(' ');
+    if (tokens.length !== 2) return false;
+    if (!THIRD_PERSON_SUBJECTS.includes(tokens[0])) return false;
+    return tokens[1].endsWith('uva');
+  });
+}

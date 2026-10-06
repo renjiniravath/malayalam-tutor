@@ -3,6 +3,7 @@ import { describe, it } from 'node:test';
 import {
   hasBareFirstPersonSayDo,
   hasBareSecondPersonUva,
+  hasBareThirdPersonUva,
   hasChettaSubject,
   SECOND_PERSON_SUBJECTS,
 } from './pragmatics';
@@ -49,5 +50,16 @@ describe('-uva pragmatics (PLAN.md §5)', () => {
     assert.equal(hasBareFirstPersonSayDo(['njan ippo varuva']), false);
     assert.equal(hasBareFirstPersonSayDo(['njan chaaya kudikkuva']), false);
     assert.equal(hasBareFirstPersonSayDo(['avan parayuva']), false);
+  });
+
+  it('flags bare third-person -uva declaratives', () => {
+    assert.equal(hasBareThirdPersonUva(['avan varuva']), true);
+    assert.equal(hasBareThirdPersonUva(['avar varuva']), true);
+    assert.equal(hasBareThirdPersonUva(['ayaaḷ varuva']), true);
+  });
+
+  it('allows third-person -uva declaratives with a complement', () => {
+    assert.equal(hasBareThirdPersonUva(['avan chaaya kudikkuva']), false);
+    assert.equal(hasBareThirdPersonUva(['avan varunnund']), false);
   });
 });

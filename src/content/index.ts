@@ -24,7 +24,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 17,
+  revision: 18,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -115,6 +115,9 @@ export const contentRevision: ContentRevision = {
     'eppozhaa',
     // Deep pass: puzha takes the zh teaching slot, azhaku drops out.
     'azhaku',
+    // Spec audit: avar's question matches the ingott pattern; the
+    // ladder gains iyaaḷ ingott varunnundo.
+    'avar-varunnundo',
   ],
 };
 

@@ -33,7 +33,12 @@ import {
   AUDIO_TIERS,
   TAG_REGISTRY,
 } from '../src/content/index';
-import { hasBareFirstPersonSayDo, hasBareSecondPersonUva, hasChettaSubject } from '../src/lib/content/pragmatics';
+import {
+  hasBareFirstPersonSayDo,
+  hasBareSecondPersonUva,
+  hasBareThirdPersonUva,
+  hasChettaSubject,
+} from '../src/lib/content/pragmatics';
 import type { Item, Lesson, MinimalPair, MinimalPairSegment } from '../src/content/types';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -115,6 +120,22 @@ function hasEmoji(text: string): boolean {
   return EMOJI_RE.test(text);
 }
 
+/**
+ * Words banned by native-speaker rulings — taught forms removed from the
+ * course. Exact matches on whole manglish tokens; the shop/store English
+ * family is banned by substring (the native word is kada).
+ */
+const BANNED_TOKENS = new Set(['azhaku', 'aunty', 'kudikkuka', 'kudi', 'shoppil', 'shoppilekk']);
+
+function checkBannedWords(where: string, item: Item): void {
+  if (BANNED_TOKENS.has(item.manglish)) {
+    fail(where, `'${item.manglish}' is banned by native-speaker ruling and must not appear in content`);
+  }
+  if (/shop|store/.test(item.manglish)) {
+    fail(where, `'${item.manglish}' uses a shop/store English word — the native word is kada`);
+  }
+}
+
 function checkItem(lesson: Lesson, item: Item): void {
   const where = `${lesson.id}/${item.id}`;
   if (!item.manglish.trim()) fail(where, 'manglish is empty');
@@ -133,6 +154,7 @@ function checkItem(lesson: Lesson, item: Item): void {
   if (item.manglish.includes('?')) {
     fail(where, `manglish must not carry '?' — the question form is in the word itself: '${item.manglish}'`);
   }
+  checkBannedWords(where, item);
   // §9 rule 1: doubled vowel runs may only be aa/ee/oo — long i is
   // written ee and long u is written oo (native-speaker rulings),
   // long e/o are always single
@@ -258,6 +280,18 @@ function checkSentence(where: string, item: Item): void {
   // say/do-type verb is not something said in conversation.
   if (hasBareFirstPersonSayDo(spec.orders)) {
     fail(where, "'njan parayuva' is not something said in conversation; give the verb a complement or drop the item");
+  }
+  // Pragmatics (PLAN.md §5): a bare third-person -uva declarative is
+  // not natural — varunnund is the statement form.
+  if (hasBareThirdPersonUva(spec.orders)) {
+    fail(where, "a bare third-person -uva declarative ('avan varuva') is not natural; use varunnund or give the verb a complement");
+  }
+  // Lexical bans from the native-speaker rulings: these words are not
+  // taught and must not come back.
+  for (const token of spec.orders.flatMap((order) => order.split(' '))) {
+    if (BANNED_TOKENS.has(token)) {
+      fail(where, `'${token}' is banned by native-speaker ruling and must not appear in content`);
+    }
   }
 }
 
