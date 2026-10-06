@@ -1,7 +1,8 @@
 /**
  * Level 2 Unit 6 — Title substitution (PLAN.md §5): addressing people
- * by title the way Kerala does. Vocatives take a comma and are never
- * the subject of a sentence.
+ * by title the way Kerala does. The vocative drops the final -n
+ * (chettan becomes chetta!) and always takes a comma; titles are
+ * never the subject of a sentence.
  */
 
 import type { Lesson } from '../../types'
@@ -10,21 +11,36 @@ export const lesson6Titles: Lesson = {
   id: 'l2u1l6',
   levelId: 'level2',
   unitId: 'unit6',
-  title: 'Aunty and chetta',
+  title: 'Chettan and chechi',
   reviewSlots: 2,
   sprite: { file: 'audio/l2u1l6.mp3' },
   items: [
     {
-      id: 'aunty',
-      manglish: 'aunty',
-      meaning: 'aunty — how you address an older woman',
+      id: 'chettan',
+      manglish: 'chettan',
+      script: 'ചേട്ടൻ',
+      meaning: 'older brother; a man older than you',
       kind: 'word',
       pos: 'noun',
       notes: [
-        'A vocative title: address her with it, with a comma in a sentence: aunty, engane und?',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'To call him, the final -n drops: chettan becomes chetta!',
+        'The vocative chetta always takes a comma in a sentence.',
       ],
-      audio: { slow: 'aunty.slow', medium: 'aunty.medium', normal: 'aunty.normal' },
+      audio: { slow: 'chettan.slow', medium: 'chettan.medium', normal: 'chettan.normal' },
+      tags: ['level:2'],
+    },
+    {
+      id: 'chechi',
+      manglish: 'chechi',
+      script: 'ചേച്ചി',
+      meaning: 'older sister; a woman older than you',
+      kind: 'word',
+      pos: 'noun',
+      notes: [
+        'The everyday title for a woman a little older than you.',
+        'The vocative keeps its form: chechi! And it takes a comma in a sentence.',
+      ],
+      audio: { slow: 'chechi.slow', medium: 'chechi.medium', normal: 'chechi.normal' },
       tags: ['level:2'],
     },
     {
@@ -42,15 +58,16 @@ export const lesson6Titles: Lesson = {
       tags: ['level:2'],
     },
     {
-      id: 'aunty-engane-und',
-      manglish: 'aunty, engane und',
-      meaning: 'aunty, how are you?',
+      id: 'chechi-engane-und',
+      manglish: 'chechi, engane und',
+      script: 'ചേച്ചി, എങ്ങനെ ഉണ്ട്',
+      meaning: 'chechi, how are you?',
       kind: 'sentence',
       segments: [
-        { token: 'aunty,', gloss: 'aunty (addressing her)' },
+        { token: 'chechi,', gloss: 'chechi (addressing her)' },
         { token: 'engane und', gloss: 'how are you?' },
       ],
-      audio: { slow: 'aunty-engane-und.slow', medium: 'aunty-engane-und.medium', normal: 'aunty-engane-und.normal' },
+      audio: { slow: 'chechi-engane-und.slow', medium: 'chechi-engane-und.medium', normal: 'chechi-engane-und.normal' },
       tags: ['level:2'],
     },
     {
@@ -66,16 +83,17 @@ export const lesson6Titles: Lesson = {
       tags: ['level:2'],
     },
     {
-      id: 'aunty-ith-kando',
-      manglish: 'aunty, ith kando',
-      meaning: 'aunty, did you see this?',
+      id: 'chechi-ith-kando',
+      manglish: 'chechi, ith kando',
+      script: 'ചേച്ചി, ഇത് കണ്ടോ',
+      meaning: 'chechi, did you see this?',
       kind: 'sentence',
       segments: [
-        { token: 'aunty,', gloss: 'aunty (addressing her)' },
+        { token: 'chechi,', gloss: 'chechi (addressing her)' },
         { token: 'ith', gloss: 'this' },
         { token: 'kando', gloss: 'did you see?' },
       ],
-      audio: { slow: 'aunty-ith-kando.slow', medium: 'aunty-ith-kando.medium', normal: 'aunty-ith-kando.normal' },
+      audio: { slow: 'chechi-ith-kando.slow', medium: 'chechi-ith-kando.medium', normal: 'chechi-ith-kando.normal' },
       tags: ['level:2'],
     },
     {
@@ -92,41 +110,44 @@ export const lesson6Titles: Lesson = {
       tags: ['level:2'],
     },
     {
-      id: 'aunty-sheri-alle',
-      manglish: 'aunty, sheri alle',
-      meaning: 'aunty, right?',
+      id: 'chechi-sheri-alle',
+      manglish: 'chechi, sheri alle',
+      script: 'ചേച്ചി, ശെരി അല്ലേ',
+      meaning: 'chechi, right?',
       kind: 'sentence',
       segments: [
-        { token: 'aunty,', gloss: 'aunty (addressing her)' },
+        { token: 'chechi,', gloss: 'chechi (addressing her)' },
         { token: 'sheri', gloss: 'right' },
         { token: 'alle', gloss: 'right? (tag)' },
       ],
-      audio: { slow: 'aunty-sheri-alle.slow', medium: 'aunty-sheri-alle.medium', normal: 'aunty-sheri-alle.normal' },
+      audio: { slow: 'chechi-sheri-alle.slow', medium: 'chechi-sheri-alle.medium', normal: 'chechi-sheri-alle.normal' },
       tags: ['level:2'],
     },
     {
-      id: 'aunty-pokunnundo',
-      manglish: 'aunty, pokunnundo',
-      meaning: 'aunty, are you going?',
+      id: 'chechi-pokunnundo',
+      manglish: 'chechi, pokunnundo',
+      script: 'ചേച്ചി, പോകുന്നുണ്ടോ',
+      meaning: 'chechi, are you going?',
       kind: 'sentence',
       segments: [
-        { token: 'aunty,', gloss: 'aunty (addressing her)' },
+        { token: 'chechi,', gloss: 'chechi (addressing her)' },
         { token: 'pokunnundo', gloss: 'are you going?' },
       ],
-      audio: { slow: 'aunty-pokunnundo.slow', medium: 'aunty-pokunnundo.medium', normal: 'aunty-pokunnundo.normal' },
+      audio: { slow: 'chechi-pokunnundo.slow', medium: 'chechi-pokunnundo.medium', normal: 'chechi-pokunnundo.normal' },
       tags: ['level:2'],
     },
     {
-      id: 'aunty-chaaya-veno',
-      manglish: 'aunty, chaaya veno',
-      meaning: 'aunty, do you want tea?',
+      id: 'chechi-chaaya-veno',
+      manglish: 'chechi, chaaya veno',
+      script: 'ചേച്ചി, ചായ വേണോ',
+      meaning: 'chechi, do you want tea?',
       kind: 'sentence',
       segments: [
-        { token: 'aunty,', gloss: 'aunty (addressing her)' },
+        { token: 'chechi,', gloss: 'chechi (addressing her)' },
         { token: 'chaaya', gloss: 'tea' },
         { token: 'veno', gloss: 'do you want?' },
       ],
-      audio: { slow: 'aunty-chaaya-veno.slow', medium: 'aunty-chaaya-veno.medium', normal: 'aunty-chaaya-veno.normal' },
+      audio: { slow: 'chechi-chaaya-veno.slow', medium: 'chechi-chaaya-veno.medium', normal: 'chechi-chaaya-veno.normal' },
       tags: ['level:2'],
     },
     {
@@ -145,10 +166,10 @@ export const lesson6Titles: Lesson = {
   ],
   pairs: [],
   drills: [
-    { kind: 'multipleChoice', itemId: 'aunty', distractors: ['chetta-ith-kando', 'aunty-engane-und', 'chetta-varunnundo'] },
-    { kind: 'multipleChoice', itemId: 'chetta-ith-kando', distractors: ['aunty-ith-kando', 'aunty-engane-und', 'chetta-varunnundo'] },
-    { kind: 'multipleChoice', itemId: 'aunty-engane-und', distractors: ['chetta-varunnundo', 'aunty-pokunnundo', 'chetta-sheri-alle'] },
-    { kind: 'multipleChoice', itemId: 'chetta-chaaya-veno', distractors: ['aunty-chaaya-veno', 'aunty-sheri-alle', 'chetta-sheri-alle'] },
+    { kind: 'multipleChoice', itemId: 'chettan', distractors: ['chechi', 'chetta-ith-kando', 'chechi-engane-und'] },
+    { kind: 'multipleChoice', itemId: 'chechi', distractors: ['chettan', 'chetta-varunnundo', 'chechi-pokunnundo'] },
+    { kind: 'multipleChoice', itemId: 'chetta-ith-kando', distractors: ['chechi-ith-kando', 'chechi-engane-und', 'chetta-varunnundo'] },
+    { kind: 'multipleChoice', itemId: 'chechi-chaaya-veno', distractors: ['chetta-chaaya-veno', 'chechi-sheri-alle', 'chetta-sheri-alle'] },
     {
       kind: 'sentenceBuilder',
       sentenceId: 'chetta-ith-kando',
@@ -157,9 +178,9 @@ export const lesson6Titles: Lesson = {
     },
     {
       kind: 'sentenceBuilder',
-      sentenceId: 'aunty-engane-und',
-      bank: ['aunty,', 'engane', 'und'],
-      acceptedInputs: ['aunty engane und'],
+      sentenceId: 'chechi-engane-und',
+      bank: ['chechi,', 'engane', 'und'],
+      acceptedInputs: ['chechi engane und'],
     },
     {
       kind: 'sentenceBuilder',
@@ -169,10 +190,11 @@ export const lesson6Titles: Lesson = {
     },
     {
       kind: 'sentenceBuilder',
-      sentenceId: 'aunty-chaaya-veno',
-      bank: ['aunty,', 'chaaya', 'veno'],
-      acceptedInputs: ['aunty chaaya veno'],
+      sentenceId: 'chechi-chaaya-veno',
+      bank: ['chechi,', 'chaaya', 'veno'],
+      acceptedInputs: ['chechi chaaya veno'],
     },
-    { kind: 'typing', itemId: 'aunty', acceptedInputs: ['aunty'] },
+    { kind: 'typing', itemId: 'chettan', acceptedInputs: ['chettan'] },
+    { kind: 'typing', itemId: 'chechi', acceptedInputs: ['chechi'] },
   ],
 }

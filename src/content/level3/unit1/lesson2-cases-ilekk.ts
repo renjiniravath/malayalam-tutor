@@ -126,17 +126,17 @@ export const lesson2CasesIlekk: Lesson = {
       tags: ['level:3'],
     },
     {
-      id: 'aunty-hotelilekk-pokuva',
-      manglish: 'aunty hotelilekk pokuva',
-      meaning: 'aunty is going to the hotel.',
+      id: 'chechi-hotelilekk-pokuva',
+      manglish: 'chechi hotelilekk pokuva',
+      meaning: 'chechi is going to the hotel.',
       kind: 'sentence',
       notes: ['No script here: the English words have no settled Malayalam spelling.'],
       segments: [
-        { token: 'aunty', gloss: 'aunty' },
+        { token: 'chechi', gloss: 'aunty' },
         { token: 'hotelilekk', gloss: 'to the hotel' },
         { token: 'pokuva', gloss: 'going' },
       ],
-      audio: { slow: 'aunty-hotelilekk-pokuva.slow', medium: 'aunty-hotelilekk-pokuva.medium', normal: 'aunty-hotelilekk-pokuva.normal' },
+      audio: { slow: 'chechi-hotelilekk-pokuva.slow', medium: 'chechi-hotelilekk-pokuva.medium', normal: 'chechi-hotelilekk-pokuva.normal' },
       tags: ['level:3'],
     },
     {
@@ -160,7 +160,7 @@ export const lesson2CasesIlekk: Lesson = {
     { kind: 'multipleChoice', itemId: 'hotelilekk', distractors: ['veettilekk', 'officilekk', 'njan-officilekk-pokuva'] },
     { kind: 'multipleChoice', itemId: 'officilekk', distractors: ['veettilekk', 'hotelilekk', 'kadayilekk'] },
     { kind: 'multipleChoice', itemId: 'kadayilekk', distractors: ['veettilekk', 'hotelilekk', 'officilekk'] },
-    { kind: 'multipleChoice', itemId: 'chetta-hotelilekk-pokunnundo', distractors: ['aunty-hotelilekk-pokuva', 'avan-hotelilekk-varunnundo', 'njan-hotelilekk-pokuva'] },
+    { kind: 'multipleChoice', itemId: 'chetta-hotelilekk-pokunnundo', distractors: ['chechi-hotelilekk-pokuva', 'avan-hotelilekk-varunnundo', 'njan-hotelilekk-pokuva'] },
     {
       kind: 'sentenceBuilder',
       sentenceId: 'njan-hotelilekk-pokuva',

@@ -128,12 +128,20 @@ const SCRIPT_TRAPS: Record<string, string> = {
   വരൂ: 'വാ',
 }
 
+/**
+ * Native-speaker-sanctioned fixed expressions that legitimately keep a
+ * formal-looking form (nannaayitt pokunnu, "it's going well"): the trap
+ * checks are skipped for these exact phrases.
+ */
+const SANCTIONED_PHRASES = new Set(['nannaayitt pokunnu'])
+const SANCTIONED_SCRIPTS = new Set(['നന്നായിട്ട് പോകുന്നു'])
+
 // ---------------------------------------------------------------------------
 // Script checks (NFC / block / ZWJ)
 // ---------------------------------------------------------------------------
 
 /** Malayalam block, plus spaces between the words of multi-word items. */
-const MALAYALAM_BLOCK = /^[ഀ-ൿ‍ ]+$/
+const MALAYALAM_BLOCK = /^[ഀ-ൿ‍ ,]+$/
 /** Vowel letters and signs — bare consonant letters have no vowel marks. */
 const HAS_VOWEL = /[അആഇഈഉഊഎഏഒഓഔാിീുൂെേൊോൈൗം]/
 const CONSONANTS = new Set('കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ')
@@ -170,7 +178,7 @@ function hasInherentA(script: string): boolean {
 
 /** token -> script must contain one of these */
 const TOKEN_TO_SCRIPT: Record<string, string[]> = {
-  zh: ['ഴ'], nj: ['ഞ'], sh: ['ശ'], ph: ['ഫ'], ng: ['ങ'], ch: ['ച'], kh: ['ഖ'],
+  zh: ['ഴ'], nj: ['ഞ'], sh: ['ശ', 'ഷ'], ph: ['ഫ'], ng: ['ങ'], ch: ['ച'], kh: ['ഖ'],
   th: ['ത'], dh: ['ദ'], t: ['ട'], d: ['ട', 'ഡ'], ṟ: ['റ'], ddh: ['ദ്ദ'],
   r: ['ര', 'റ', 'ർ'], l: ['ല', 'ൽ'], ḷ: ['ള', 'ൾ'], n: ['ന', 'ണ', 'ൻ'], ṇ: ['ണ'], m: ['മ', 'ം'],
   p: ['പ'], b: ['ബ'], k: ['ക'], g: ['ഗ'], j: ['ജ'], s: ['സ'],
@@ -186,8 +194,8 @@ const VOWEL_TOKENS = new Set(['aa', 'a', 'ee', 'e', 'i', 'oo', 'u', 'o'])
 
 /** script letter -> manglish must contain one of these */
 const SCRIPT_TO_TOKEN: Record<string, string[]> = {
-  'ഴ': ['zh'], 'ഞ': ['nj'], 'ശ': ['sh'], 'ഫ': ['ph'], 'ങ': ['ng'], 'ച': ['ch'],
-  'ത': ['th'], 'ദ': ['dh'], 'ട': ['t', 'd'], 'ഡ': ['d'], 'ര': ['r'], 'റ': ['ṟ', 'r'],
+  'ഴ': ['zh'], 'ഞ': ['nj'], 'ശ': ['sh'], 'ഷ': ['sh'], 'ഫ': ['ph'], 'ങ': ['ng'], 'ച': ['ch'],
+  'ത': ['th'], 'ദ': ['dh'], 'ട': ['t', 'd'], 'ഡ': ['d'], 'ര': ['r'],
   'ല': ['l'], 'ള': ['ḷ'], 'ന': ['n'], 'ണ': ['ṇ', 'n'], 'മ': ['m'], 'പ': ['p'], 'ബ': ['b'],
   'ക': ['k'], 'ഖ': ['kh'], 'ഗ': ['g'], 'ജ': ['j'], 'സ': ['s'], 'വ': ['v'], 'യ': ['y'], 'ഹ': ['h'],
   'ം': ['m'],
@@ -215,10 +223,11 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
   if (!MANGLISH_CHARSET.test(manglish))
     fail(ctx, `manglish has invalid characters (lowercase a-z, ḷ ṇ ṟ only): ${manglish}`)
   const hasVowel = script ? HAS_VOWEL.test(script) : false
+  const sanctionedPhrase = SANCTIONED_PHRASES.has(manglish)
   for (const word of manglish.split(' ')) {
     const tokens = tokenize(word)
     if (tokens.length === 0) fail(ctx, `cannot tokenize: ${word}`)
-    if (word in MANGLISH_TRAPS)
+    if (!sanctionedPhrase && word in MANGLISH_TRAPS)
       fail(ctx, `formal register "${word}" — use the casual "${MANGLISH_TRAPS[word]}"`)
     if (word.includes('ii')) fail(ctx, `long i is written ee (as in veedu), not ii: ${word}`)
     if (word.includes('uu')) fail(ctx, `long u is written oo (as in choodu), not uu: ${word}`)
@@ -257,15 +266,15 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
       at = script.indexOf(UVA, at + 1)
     }
   }
-  // Native-speaker ruling: njan writes the long a of ഞാൻ short
-  // (Malayalees type "njan"), so the ാ is exempt from correspondence.
-  const IRREGULAR_SCRIPT: Record<string, string> = { njan: 'ഞാൻ' }
+  // Native-speaker rulings: njan and enna write the long a short
+  // (Malayalees type "njan", "enna"), so those ാ are exempt.
+  const IRREGULAR_SCRIPT: Record<string, string> = { njan: 'ഞാൻ', enna: 'എന്നാ' }
   const irregularWords = manglish.split(' ').filter((w) => w in IRREGULAR_SCRIPT)
   const irregularALetters = new Set<number>()
   for (const w of irregularWords) {
     const at = script.indexOf(IRREGULAR_SCRIPT[w])
     if (at === -1) fail(ctx, `"${w}" needs ${IRREGULAR_SCRIPT[w]} in the script, got ${script}`)
-    irregularALetters.add(at + 1)
+    irregularALetters.add(at + IRREGULAR_SCRIPT[w].indexOf('ാ'))
   }
   // vowel doubling: aa/ee/oo must match the script's long vowel signs
   const scriptAa = countChar(script, 'ാ') + countChar(script, 'ആ') - uvaCount - irregularWords.length
@@ -297,8 +306,10 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
   // Formal-register traps match whole words: the colloquial continuous
   // question വരുന്നുണ്ടോ legitimately contains the substring വരുന്നു.
   const scriptWords = script.split(' ')
-  for (const [trap, casual] of Object.entries(SCRIPT_TRAPS)) {
-    if (scriptWords.includes(trap)) fail(ctx, `script spells the formal form ${trap} — use ${casual}`)
+  if (!SANCTIONED_SCRIPTS.has(script)) {
+    for (const [trap, casual] of Object.entries(SCRIPT_TRAPS)) {
+      if (scriptWords.includes(trap)) fail(ctx, `script spells the formal form ${trap} — use ${casual}`)
+    }
   }
 }
 

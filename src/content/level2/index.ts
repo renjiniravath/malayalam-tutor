@@ -19,7 +19,7 @@ export const LEVEL2: Level = {
     'Ask and answer yes/no questions',
     'Use tag questions and the -o particle',
     'Choose the right level of politeness',
-    'Address people by title: chetta, aunty',
+    'Address people by title: chettan, chechi',
   ],
   lessons: [
     ...L2UNIT1_LESSONS,

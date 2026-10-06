@@ -48,7 +48,10 @@ export const lesson2Coronals: Lesson = {
       },
       audio: { slow: 'rra.slow', medium: 'rra.medium', normal: 'rra.normal', focus: ['rra.focus'] },
       acceptedInputs: ['ra', 'rra'],
-      notes: ['This is the rolled r (റ). In everyday words Malayalees write it as a plain r.'],
+      notes: [
+        'This is the rolled r (റ). In everyday words Malayalees write it as a plain r.',
+        'Doubled it writes rr: rr is the held റ്റ, the tt sound in English "letter".',
+      ],
       tags: ['sound:coronal', 'level:1'],
     },
     {

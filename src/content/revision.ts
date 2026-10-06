@@ -35,5 +35,12 @@
  *       items removed; shop words become kada (kadayil, kadayilott)
  *  15 — kadayilott unified to kadayilekk (same -ilekk pattern as
  *       veettilekk, hotelilekk, officilekk)
+ *  16 — mega-round: greetings reworked (kaappi engane und kollaamo,
+ *       enna und vishesham, nannaayitt pokunnu, appo sheri bye);
+ *       puzha added and vali dropped; varunund sentence forms;
+ *       iranguva and njan veettil ninn irangi; chettan/chechi titles
+ *       with the vocative -n drop; dative experiencer avanu; njan
+ *       busil keran pokuva; new l3u2l1 (a/i distance) and l3u2l2
+ *       (question words)
  */
-export const CONTENT_REVISION = 15
+export const CONTENT_REVISION = 16
