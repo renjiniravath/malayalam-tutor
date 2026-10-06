@@ -52,10 +52,11 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'uu', script: 'ഊ', meaning: 'the long uu sound' },
   { manglish: 'u', script: 'ഉ', meaning: 'the short u sound' },
   // Level 1 Unit 1 — gemination / vowel length words
-  { manglish: 'maanam', script: 'മാനം', meaning: 'sky' },
-  { manglish: 'manam', script: 'മനം', meaning: 'mind' },
+  { manglish: 'kaalam', script: 'കാലം', meaning: 'time' },
+  { manglish: 'kalam', script: 'കലം', meaning: 'pot' },
   { manglish: 'alla', script: 'അല്ല', meaning: "isn't, not" },
-  { manglish: 'ala', script: 'അല', meaning: 'wave' },
+  { manglish: 'pala', script: 'പല', meaning: 'many' },
+  { manglish: 'pallu', script: 'പല്ല്', meaning: 'tooth' },
   { manglish: 'cheettha', script: 'ചീത്ത', meaning: 'bad' },
   // Level 1 Unit 2 — greetings & expressions
   { manglish: 'engane und', script: 'എങ്ങനെ ഉണ്ട്', meaning: 'how are you?' },
@@ -78,7 +79,6 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'avaḷ', script: 'അവൾ', meaning: 'she' },
   { manglish: 'nammaḷ', script: 'നമ്മൾ', meaning: 'we (you and me)' },
   { manglish: 'namukku', script: 'നമുക്ക്', meaning: "to us — also 'let's'" },
-  { manglish: 'nee engane und', script: 'നീ എങ്ങനെ ഉണ്ട്', meaning: 'how are you? — nee for emphasis' },
   // Level 2 Unit 1 — the -uva pattern (suffix written -ുവാ per §9 rule 6)
   { manglish: 'kudikkuva', script: 'കുടിക്കുവാ', meaning: 'drinking (right now)' },
   { manglish: 'varuva', script: 'വരുവാ', meaning: 'coming (right now)' },
@@ -127,13 +127,11 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   // Level 2 Unit 4 — politeness in context (second-person items use the
   // -unnundo question form: a bare -uva declarative reads as a command)
   // no script: the written form spells a long a that is short in speech
-  { manglish: 'chetta', meaning: 'older brother; a friendly address for men' },
+  { manglish: 'chetta', meaning: 'older brother; used to call or address a man' },
   { manglish: 'nee varunnundo', script: 'നീ വരുന്നുണ്ടോ', meaning: 'are you coming? (casual)' },
   { manglish: 'ningaḷ varunnundo', script: 'നിങ്ങൾ വരുന്നുണ്ടോ', meaning: 'are you coming? (polite)' },
   { manglish: 'thaangkaḷ varunnundo', script: 'താങ്കൾ വരുന്നുണ്ടോ', meaning: 'are you coming? (formal)' },
   { manglish: 'thaangkaḷ pokunnundo', script: 'താങ്കൾ പോകുന്നുണ്ടോ', meaning: 'are you going? (formal)' },
   { manglish: 'addheham varuva', script: 'അദ്ദേഹം വരുവാ', meaning: 'he (respectful) is coming' },
   { manglish: 'avar varuva', script: 'അവർ വരുവാ', meaning: 'they are coming; polite for he or she' },
-  // no script: the written form spells a long a that is short in speech
-  { manglish: 'chetta pokunnundo', meaning: 'are you going, chetta?' },
 ]

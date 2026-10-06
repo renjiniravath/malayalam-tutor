@@ -38,10 +38,11 @@
         "i.slow", "i.medium", "i.normal", "i.focus",
         "uu.slow", "uu.medium", "uu.normal", "uu.focus",
         "u.slow", "u.medium", "u.normal", "u.focus",
-        "maanam.slow", "maanam.medium", "maanam.normal",
-        "manam.slow", "manam.medium", "manam.normal",
+        "kaalam.slow", "kaalam.medium", "kaalam.normal",
+        "kalam.slow", "kalam.medium", "kalam.normal",
         "alla.slow", "alla.medium", "alla.normal",
-        "ala.slow", "ala.medium", "ala.normal",
+        "pala.slow", "pala.medium", "pala.normal",
+        "pallu.slow", "pallu.medium", "pallu.normal",
         "cheettha.slow", "cheettha.medium", "cheettha.normal"
       ]
     },
@@ -70,8 +71,7 @@
         "avan.slow", "avan.medium", "avan.normal",
         "aval.slow", "aval.medium", "aval.normal",
         "nammal.slow", "nammal.medium", "nammal.normal",
-        "namukku.slow", "namukku.medium", "namukku.normal",
-        "nee-engane-und.slow", "nee-engane-und.medium", "nee-engane-und.normal"
+        "namukku.slow", "namukku.medium", "namukku.normal"
       ]
     },
     "l2u1l1": {
@@ -138,8 +138,7 @@
         "thaankal-varuva.slow", "thaankal-varuva.medium", "thaankal-varuva.normal",
         "thaankal-pokuva.slow", "thaankal-pokuva.medium", "thaankal-pokuva.normal",
         "addheham-varuva.slow", "addheham-varuva.medium", "addheham-varuva.normal",
-        "avar-varuva.slow", "avar-varuva.medium", "avar-varuva.normal",
-        "chetta-pokuva.slow", "chetta-pokuva.medium", "chetta-pokuva.normal"
+        "avar-varuva.slow", "avar-varuva.medium", "avar-varuva.normal"
       ]
     }
   }
