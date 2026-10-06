@@ -2,8 +2,8 @@ import type { Lesson } from '../types';
 
 /**
  * Level 2 Unit 1 Lesson 1 — the casual present tense (PLAN.md §5).
- * The -uva chunk covers "does" and "is doing" at once; every verb here
- * is usable in a sentence immediately.
+ * The -uva chunk is the present continuous ("am drinking"); the
+ * habitual ("I drink") is the -um form, taught here as the contrast.
  */
 export const l2u1l1: Lesson = {
   id: 'l2u1l1',
@@ -16,7 +16,7 @@ export const l2u1l1: Lesson = {
       id: 'kudikkuva',
       manglish: 'kudikkuva',
       script: 'കുടിക്കുവാ',
-      meaning: 'drink; drinking',
+      meaning: 'drinking',
       kind: 'word',
       audio: {
         slow: 'l2u1l1_kudikkuva_slow',
@@ -28,14 +28,14 @@ export const l2u1l1: Lesson = {
       articulation: {
         cue: 'Hold the doubled kk in the middle.',
       },
-      notes: ['The -uva form covers "drinks" and "is drinking".'],
+      notes: ['The -uva form is the present continuous: "am drinking". The habitual is kudikkum.'],
       tags: ['sound:geminate'],
     },
     {
       id: 'varuva',
       manglish: 'varuva',
       script: 'വരുവാ',
-      meaning: 'come; coming',
+      meaning: 'coming',
       kind: 'word',
       audio: {
         slow: 'l2u1l1_varuva_slow',
@@ -43,14 +43,14 @@ export const l2u1l1: Lesson = {
         normal: 'l2u1l1_varuva_normal',
       },
       acceptedInputs: ['varuva'],
-      notes: ['The -uva form covers "comes" and "is coming".'],
+      notes: ['Present continuous: "am coming".'],
       tags: [],
     },
     {
       id: 'pokuva',
       manglish: 'pokuva',
       script: 'പോകുവാ',
-      meaning: 'go; going',
+      meaning: 'going',
       kind: 'word',
       audio: {
         slow: 'l2u1l1_pokuva_slow',
@@ -58,14 +58,14 @@ export const l2u1l1: Lesson = {
         normal: 'l2u1l1_pokuva_normal',
       },
       acceptedInputs: ['pokuva'],
-      notes: ['The -uva form covers "goes" and "is going".'],
+      notes: ['Present continuous: "am going".'],
       tags: [],
     },
     {
       id: 'cheyyuva',
       manglish: 'cheyyuva',
       script: 'ചെയ്യുവാ',
-      meaning: 'do; doing',
+      meaning: 'doing',
       kind: 'word',
       audio: {
         slow: 'l2u1l1_cheyyuva_slow',
@@ -73,14 +73,14 @@ export const l2u1l1: Lesson = {
         normal: 'l2u1l1_cheyyuva_normal',
       },
       acceptedInputs: ['cheyyuva'],
-      notes: ['The -uva form of cheyyu, to do.'],
+      notes: ['Present continuous: "am doing".'],
       tags: [],
     },
     {
       id: 'parayuva',
       manglish: 'parayuva',
       script: 'പറയുവാ',
-      meaning: 'say; will say',
+      meaning: 'saying',
       kind: 'word',
       audio: {
         slow: 'l2u1l1_parayuva_slow',
@@ -88,14 +88,14 @@ export const l2u1l1: Lesson = {
         normal: 'l2u1l1_parayuva_normal',
       },
       acceptedInputs: ['parayuva'],
-      notes: ['The -uva form of parayu, to say.'],
+      notes: ['Present continuous: "am saying".'],
       tags: [],
     },
     {
       id: 'kazhikkuva',
       manglish: 'kazhikkuva',
       script: 'കഴിക്കുവാ',
-      meaning: 'eat; eating',
+      meaning: 'eating',
       kind: 'word',
       audio: {
         slow: 'l2u1l1_kazhikkuva_slow',
@@ -103,14 +103,14 @@ export const l2u1l1: Lesson = {
         normal: 'l2u1l1_kazhikkuva_normal',
       },
       acceptedInputs: ['kazhikkuva'],
-      notes: ['The -uva form covers "eats" and "is eating".'],
+      notes: ['Present continuous: "am eating".'],
       tags: [],
     },
     {
       id: 'irikkuva',
       manglish: 'irikkuva',
       script: 'ഇരിക്കുവാ',
-      meaning: 'sit; sitting',
+      meaning: 'sitting',
       kind: 'word',
       audio: {
         slow: 'l2u1l1_irikkuva_slow',
@@ -122,14 +122,14 @@ export const l2u1l1: Lesson = {
       articulation: {
         cue: 'Hold the doubled kk in the middle.',
       },
-      notes: ['The -uva form covers "sits" and "is sitting".'],
+      notes: ['Present continuous: "am sitting".'],
       tags: ['sound:geminate'],
     },
     {
       id: 'vaanguva',
       manglish: 'vaanguva',
       script: 'വാങ്ങുവാ',
-      meaning: 'buy; buying',
+      meaning: 'buying',
       kind: 'word',
       audio: {
         slow: 'l2u1l1_vaanguva_slow',
@@ -137,14 +137,33 @@ export const l2u1l1: Lesson = {
         normal: 'l2u1l1_vaanguva_normal',
       },
       acceptedInputs: ['vaanguva'],
-      notes: ['The -uva form covers "buys" and "is buying".'],
+      notes: ['Present continuous: "am buying".'],
       tags: [],
+    },
+    {
+      id: 'kudikkum',
+      manglish: 'kudikkum',
+      script: 'കുടിക്കും',
+      meaning: 'drink; drinks',
+      kind: 'word',
+      audio: {
+        slow: 'l2u1l1_kudikkum_slow',
+        medium: 'l2u1l1_kudikkum_medium',
+        normal: 'l2u1l1_kudikkum_normal',
+        focus: ['l2u1l1_kudikkum_focus'],
+      },
+      acceptedInputs: ['kudikkum'],
+      articulation: {
+        cue: 'Hold the doubled kk in the middle.',
+      },
+      notes: ['The habitual -um form: what you drink in general, not right now.'],
+      tags: ['sound:geminate'],
     },
     {
       id: 'njan-chaaya-kudikkuva',
       manglish: 'njan chaaya kudikkuva',
       script: 'ഞാൻ ചായ കുടിക്കുവാ',
-      meaning: 'I drink tea',
+      meaning: 'I am drinking tea',
       kind: 'sentence',
       audio: {
         slow: 'l2u1l1_njan-chaaya-kudikkuva_slow',
@@ -157,10 +176,33 @@ export const l2u1l1: Lesson = {
         parts: [
           { word: 'njan', meaning: 'I' },
           { word: 'chaaya', meaning: 'tea' },
-          { word: 'kudikkuva', meaning: 'drink, drinking' },
+          { word: 'kudikkuva', meaning: 'drinking' },
         ],
       },
-      notes: ['Subject first, then the rest, then the verb. The -uva form needs no "am".'],
+      notes: ['Right now, in progress. The habitual "I drink tea" is njan chaaya kudikkum.'],
+      tags: [],
+    },
+    {
+      id: 'njan-chaaya-kudikkum',
+      manglish: 'njan chaaya kudikkum',
+      script: 'ഞാൻ ചായ കുടിക്കും',
+      meaning: 'I drink tea',
+      kind: 'sentence',
+      audio: {
+        slow: 'l2u1l1_njan-chaaya-kudikkum_slow',
+        medium: 'l2u1l1_njan-chaaya-kudikkum_medium',
+        normal: 'l2u1l1_njan-chaaya-kudikkum_normal',
+      },
+      sentence: {
+        bank: ['njan', 'chaaya', 'kudikkum', 'kudikkuva'],
+        orders: ['njan chaaya kudikkum'],
+        parts: [
+          { word: 'njan', meaning: 'I' },
+          { word: 'chaaya', meaning: 'tea' },
+          { word: 'kudikkum', meaning: 'drink, drinks (habitual)' },
+        ],
+      },
+      notes: ['The habitual: what you drink in general.'],
       tags: [],
     },
     {
@@ -179,7 +221,7 @@ export const l2u1l1: Lesson = {
         orders: ['avan varuva'],
         parts: [
           { word: 'avan', meaning: 'he' },
-          { word: 'varuva', meaning: 'come, coming' },
+          { word: 'varuva', meaning: 'coming' },
         ],
       },
       notes: ['No "is" needed: varuva already carries the tense.'],
@@ -188,15 +230,17 @@ export const l2u1l1: Lesson = {
   ],
   minimalPairs: [],
   drills: [
-    { kind: 'multipleChoice', itemId: 'kudikkuva', distractors: ['come; coming', 'go; going', 'do; doing'] },
-    { kind: 'multipleChoice', itemId: 'varuva', distractors: ['drink; drinking', 'go; going', 'say; will say'] },
-    { kind: 'multipleChoice', itemId: 'pokuva', distractors: ['drink; drinking', 'come; coming', 'eat; eating'] },
-    { kind: 'multipleChoice', itemId: 'cheyyuva', distractors: ['say; will say', 'sit; sitting', 'buy; buying'] },
-    { kind: 'multipleChoice', itemId: 'parayuva', distractors: ['do; doing', 'eat; eating', 'come; coming'] },
-    { kind: 'multipleChoice', itemId: 'kazhikkuva', distractors: ['drink; drinking', 'sit; sitting', 'buy; buying'] },
-    { kind: 'multipleChoice', itemId: 'irikkuva', distractors: ['eat; eating', 'go; going', 'say; will say'] },
-    { kind: 'multipleChoice', itemId: 'vaanguva', distractors: ['do; doing', 'come; coming', 'drink; drinking'] },
+    { kind: 'multipleChoice', itemId: 'kudikkuva', distractors: ['coming', 'going', 'doing'] },
+    { kind: 'multipleChoice', itemId: 'varuva', distractors: ['drinking', 'going', 'saying'] },
+    { kind: 'multipleChoice', itemId: 'pokuva', distractors: ['drinking', 'coming', 'eating'] },
+    { kind: 'multipleChoice', itemId: 'cheyyuva', distractors: ['saying', 'sitting', 'buying'] },
+    { kind: 'multipleChoice', itemId: 'parayuva', distractors: ['doing', 'eating', 'coming'] },
+    { kind: 'multipleChoice', itemId: 'kazhikkuva', distractors: ['drinking', 'sitting', 'buying'] },
+    { kind: 'multipleChoice', itemId: 'irikkuva', distractors: ['eating', 'going', 'saying'] },
+    { kind: 'multipleChoice', itemId: 'vaanguva', distractors: ['doing', 'coming', 'drinking'] },
+    { kind: 'multipleChoice', itemId: 'kudikkum', distractors: ['drinking', 'eating', 'saying'] },
     { kind: 'sentenceBuilder', itemId: 'njan-chaaya-kudikkuva', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'njan-chaaya-kudikkum', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'avan-varuva', mode: 'bank' },
   ],
   reviewSlots: 0,

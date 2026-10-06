@@ -22,7 +22,19 @@ export interface ContentRevision {
   removedItemIds: string[];
 }
 
-export const contentRevision: ContentRevision = { revision: 3, removedItemIds: [] };
+export const contentRevision: ContentRevision = {
+  revision: 4,
+  removedItemIds: [
+    // Native-speaker corrections re-keyed these items under their corrected spellings.
+    'kettiyo',
+    'varunno',
+    'ningal-varunno',
+    'avan-varunno',
+    'nii-varunno',
+    'njan-chaaya-venam',
+    'njan-veedu-pokuva',
+  ],
+};
 
 /** Every item id in current content — the key set progress reconciles against. */
 export function currentItemIds(): string[] {

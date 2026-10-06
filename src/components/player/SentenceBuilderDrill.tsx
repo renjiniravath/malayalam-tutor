@@ -52,6 +52,11 @@ export function SentenceBuilderDrill({ item, spriteId, mode, revealImmediately, 
     setAssembly((current) => current.filter((_, i) => i !== index));
   };
 
+  const undo = () => {
+    if (checked !== null) return;
+    setAssembly((current) => current.slice(0, -1));
+  };
+
   const submit = () => {
     if (checked !== null) return;
     setChecked(mode === 'bank' ? checkAssembly(assembly, spec) : checkTypedSentence(typed, spec));
@@ -83,25 +88,32 @@ export function SentenceBuilderDrill({ item, spriteId, mode, revealImmediately, 
                   type="button"
                   onClick={() => removeToken(index)}
                   disabled={checked !== null}
-                  className="min-h-11 rounded-2xl border border-line bg-surface px-3 text-lg font-medium transition-opacity active:opacity-80 disabled:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                  aria-label={`Remove ${word}`}
+                  className="min-h-11 rounded-2xl border border-line bg-surface px-3 text-lg font-medium underline decoration-dotted underline-offset-4 transition-opacity active:opacity-80 disabled:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
                 >
                   {word}
                 </button>
               ))}
             </p>
+            {assembly.length > 0 && checked === null && (
+              <p className="mt-1 text-xs text-text-3">Tap a word above to send it back.</p>
+            )}
           </div>
           <div className="mt-3 flex flex-wrap gap-2">
-            {bank.map((token) => (
-              <button
-                key={token}
-                type="button"
-                onClick={() => addToken(token)}
-                disabled={checked !== null}
-                className="min-h-11 rounded-full border border-line bg-surface px-4 text-base font-medium transition-opacity active:opacity-80 disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
-              >
-                {token}
-              </button>
-            ))}
+            {bank.map((token) => {
+              const used = assembly.includes(token);
+              return (
+                <button
+                  key={token}
+                  type="button"
+                  onClick={() => addToken(token)}
+                  disabled={checked !== null || used}
+                  className="min-h-11 rounded-full border border-line bg-surface px-4 text-base font-medium transition-opacity active:opacity-80 disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                >
+                  {token}
+                </button>
+              );
+            })}
           </div>
         </>
       ) : (
@@ -134,14 +146,24 @@ export function SentenceBuilderDrill({ item, spriteId, mode, revealImmediately, 
       )}
 
       {mode === 'bank' && (
-        <button
-          type="button"
-          onClick={submit}
-          disabled={checked !== null || assembly.length === 0}
-          className="mt-4 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-foreground px-8 font-medium text-background transition-opacity active:opacity-80 disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
-        >
-          Check
-        </button>
+        <div className="mt-4 flex items-stretch gap-2">
+          <button
+            type="button"
+            onClick={undo}
+            disabled={checked !== null || assembly.length === 0}
+            className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full border border-line px-6 font-medium transition-opacity active:opacity-80 disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+          >
+            Undo
+          </button>
+          <button
+            type="button"
+            onClick={submit}
+            disabled={checked !== null || assembly.length === 0}
+            className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-foreground px-8 font-medium text-background transition-opacity active:opacity-80 disabled:opacity-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+          >
+            Check
+          </button>
+        </div>
       )}
 
       {checked !== null && (
