@@ -14,7 +14,7 @@ export const l1u2l1: Lesson = {
   items: [
     {
       id: 'engane-und',
-      manglish: 'engane und?',
+      manglish: 'engane und',
       script: 'എങ്ങനെ ഉണ്ട്',
       meaning: 'how are you?',
       kind: 'expression',
@@ -23,7 +23,7 @@ export const l1u2l1: Lesson = {
         medium: 'l1u2l1_engane-und_medium',
         normal: 'l1u2l1_engane-und_normal',
       },
-      acceptedInputs: ['engane und?', 'engane und'],
+      acceptedInputs: ['engane und'],
       notes: ['The everyday "how are you?" — no hello needed first.'],
       tags: [],
     },
@@ -48,7 +48,7 @@ export const l1u2l1: Lesson = {
     },
     {
       id: 'ennaa-vishesham',
-      manglish: 'ennaa vishesham?',
+      manglish: 'ennaa vishesham',
       script: 'എന്നാ വിശേഷം',
       meaning: "what's up?",
       kind: 'expression',
@@ -58,7 +58,7 @@ export const l1u2l1: Lesson = {
         normal: 'l1u2l1_ennaa-vishesham_normal',
         focus: ['l1u2l1_ennaa-vishesham_focus'],
       },
-      acceptedInputs: ['ennaa vishesham?', 'ennaa vishesham'],
+      acceptedInputs: ['ennaa vishesham'],
       articulation: {
         cue: 'Hold the doubled nn in ennaa for a full beat.',
       },

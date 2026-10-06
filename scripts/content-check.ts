@@ -2,7 +2,7 @@
  * Content linter — npm run content:check.
  *
  * Enforces the authoring rules from CLAUDE.md and PLAN.md:
- *  - romanization per §9 (lowercase only, no ee/oo, doubling rules,
+ *  - romanization per §9 (lowercase only, no ii/oo, doubling rules,
  *    dental/retroflex/alveolar place cross-checked against the script field)
  *  - script sanity (NFC, Malayalam block only, ZWJ/ZWNJ placement)
  *  - audio manifest presence and clip-key integrity
@@ -16,7 +16,7 @@
  * The vowel-length part of §9 (long a/i/u always doubled) cannot be derived
  * from spelling alone — colloquial spellings shorten final vowels (pokuva,
  * venda) by convention — so it is verified in native-speaker review; the
- * deterministic subset (no ee/oo, only aa/ii/uu doubles, no caps) is here.
+ * deterministic subset (no ii/oo, only aa/ee/uu doubles, no caps) is here.
  *
  * While the audio manifest is 'pending', duration/overlap checks are skipped
  * (audio generation is out of scope for M1 content authoring).
@@ -128,10 +128,16 @@ function checkItem(lesson: Lesson, item: Item): void {
   // §9 charset: romanization letters, the display diacritics, space, punctuation
   const bad = item.manglish.match(/[^a-z ḷṇṟ'.,?!-]/gu);
   if (bad) fail(where, `manglish has characters outside the §9 spec: ${[...new Set(bad)].join(' ')}`);
-  // §9 rule 1: doubled vowel runs may only be aa/ii/uu — long e/o are always single
+  // Native-speaker ruling: manglish tokens never carry '?' — the question
+  // is carried by word shape (varunnundo) and the English meaning.
+  if (item.manglish.includes('?')) {
+    fail(where, `manglish must not carry '?' — the question form is in the word itself: '${item.manglish}'`);
+  }
+  // §9 rule 1: doubled vowel runs may only be aa/ee/uu — long i is
+  // written ee (native-speaker ruling), long e/o are always single
   for (const m of item.manglish.matchAll(/(a{2,}|e{2,}|i{2,}|o{2,}|u{2,})/g)) {
-    if (m[0] !== 'aa' && m[0] !== 'ii' && m[0] !== 'uu') {
-      fail(where, `'${m[0]}' is not a §9 spelling — long a/i/u are written aa/ii/uu, long e/o are written single`);
+    if (m[0] !== 'aa' && m[0] !== 'ee' && m[0] !== 'uu') {
+      fail(where, `'${m[0]}' is not a §9 spelling — long a/i/u are written aa/ee/uu, long e/o are written single`);
     }
   }
 
@@ -237,7 +243,7 @@ function checkSentence(where: string, item: Item): void {
   if (hasBareSecondPersonUva(spec.orders)) {
     fail(
       where,
-      'a bare second-person -uva declarative reads like a command; use the question form (nii varunnundo?) or re-person the sentence',
+      'a bare second-person -uva declarative reads like a command; use the question form (nee varunnundo) or re-person the sentence',
     );
   }
   // Pragmatics (PLAN.md §5): 'chetta' is a vocative address, never a

@@ -10,7 +10,7 @@ const rec = (itemId: string, skill: Skill = 'recognition', state: unknown = { du
   state,
 });
 
-const CURRENT = ['njan', 'nii', 'ningaḷ', 'thaankaḷ', 'sheri'];
+const CURRENT = ['njan', 'nee', 'ningaḷ', 'thaankaḷ', 'sheri'];
 
 describe('reconcileProgress', () => {
   it('keeps records whose items are still in content, state untouched', () => {

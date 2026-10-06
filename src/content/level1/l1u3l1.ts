@@ -2,7 +2,7 @@ import type { Lesson } from '../types';
 
 /**
  * Level 1 Unit 3 Lesson 1 — I and you. Politeness is the point here:
- * the nii / ningaḷ / thaankaḷ ladder is a first-class early module
+ * the nee / ningaḷ / thaankaḷ ladder is a first-class early module
  * (PLAN.md §5, §8) — ningaḷ is the safe default with strangers.
  */
 export const l1u3l1: Lesson = {
@@ -30,7 +30,7 @@ export const l1u3l1: Lesson = {
     },
     {
       id: 'nee',
-      manglish: 'nii',
+      manglish: 'nee',
       script: 'നീ',
       meaning: 'you (intimate)',
       kind: 'word',
@@ -40,7 +40,7 @@ export const l1u3l1: Lesson = {
         medium: 'l1u3l1_nee_medium',
         normal: 'l1u3l1_nee_normal',
       },
-      acceptedInputs: ['nii', 'nee'],
+      acceptedInputs: ['nee'],
       notes: ['For close friends, family, and kids.', 'With strangers or elders, use ningaḷ.'],
       tags: [],
     },

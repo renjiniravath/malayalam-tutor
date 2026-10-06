@@ -23,7 +23,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 4,
+  revision: 5,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -33,6 +33,14 @@ export const contentRevision: ContentRevision = {
     'nii-varunno',
     'njan-chaaya-venam',
     'njan-veedu-pokuva',
+    // Final rulings: long i is written ee (not ii), and the retired
+    // vowel-length pair varam/vaaram was replaced by aadi/adi.
+    'niyyo',
+    'niyyum',
+    'nii-varunnundo',
+    'njan-viittil-pokuva',
+    'varam',
+    'vaaram',
   ],
 };
 

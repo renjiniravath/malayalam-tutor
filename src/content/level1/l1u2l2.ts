@@ -81,7 +81,7 @@ export const l1u2l2: Lesson = {
     },
     {
       id: 'alle',
-      manglish: 'alle?',
+      manglish: 'alle',
       script: 'അല്ലേ',
       meaning: "right? (isn't it?)",
       kind: 'expression',
@@ -91,7 +91,7 @@ export const l1u2l2: Lesson = {
         normal: 'l1u2l2_alle_normal',
         focus: ['l1u2l2_alle_focus'],
       },
-      acceptedInputs: ['alle?', 'alle'],
+      acceptedInputs: ['alle'],
       articulation: {
         cue: 'Hold the doubled ll at the end.',
       },

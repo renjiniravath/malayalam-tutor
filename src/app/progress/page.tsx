@@ -185,8 +185,8 @@ export default function ProgressPage() {
               {data.streak.pausedUntil !== undefined
                 ? `Paused until ${data.streak.pausedUntil}. Your streak is safe.`
                 : data.streak.freezes > 0
-                  ? `A missed day uses a freeze automatically. ${data.streak.freezes} saved.`
-                  : 'Finish a ten-card review to earn a freeze. A missed day without one simply restarts.'}
+                  ? `Missed a day? A freeze covers it. ${data.streak.freezes} saved.`
+                  : 'Finish a ten-card review to earn a freeze. Pause keeps the streak safe without using a freeze.'}
             </p>
           </div>
           {data.streak.pausedUntil === undefined ? (

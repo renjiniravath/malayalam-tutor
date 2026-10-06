@@ -145,7 +145,7 @@ export function PreferencesSheet({ prefs, onChange, onClose }: PreferencesSheetP
         <div className="mt-4 flex flex-col gap-3">
           <ToggleRow
             label="Silent mode"
-            description="Practice without speaking out loud. Think, then reveal."
+            description="No sound anywhere. Think, then reveal."
             checked={prefs.silent}
             onChange={(silent) => onChange({ ...prefs, silent })}
           />

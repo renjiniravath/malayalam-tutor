@@ -43,7 +43,7 @@ export const l2u1l2: Lesson = {
     },
     {
       id: 'aano',
-      manglish: 'aano?',
+      manglish: 'aano',
       script: 'ആണോ',
       meaning: 'is it?',
       kind: 'word',
@@ -52,7 +52,7 @@ export const l2u1l2: Lesson = {
         medium: 'l2u1l2_aano_medium',
         normal: 'l2u1l2_aano_normal',
       },
-      acceptedInputs: ['aano?', 'aano'],
+      acceptedInputs: ['aano'],
       notes: ['Turns the statement into a question: ready aano?'],
       tags: [],
     },
@@ -157,7 +157,7 @@ export const l2u1l2: Lesson = {
     },
     {
       id: 'ningal-ready-aano',
-      manglish: 'ningaḷ ready aano?',
+      manglish: 'ningaḷ ready aano',
       script: 'നിങ്ങൾ റെഡി ആണോ',
       meaning: 'are you ready?',
       kind: 'sentence',
@@ -167,12 +167,12 @@ export const l2u1l2: Lesson = {
         normal: 'l2u1l2_ningal-ready-aano_normal',
       },
       sentence: {
-        bank: ['ningaḷ', 'ready', 'aano?', 'athe'],
-        orders: ['ningaḷ ready aano?'],
+        bank: ['ningaḷ', 'ready', 'aano', 'athe'],
+        orders: ['ningaḷ ready aano'],
         parts: [
           { word: 'ningaḷ', meaning: 'you' },
           { word: 'ready', meaning: 'ready' },
-          { word: 'aano?', meaning: 'is it?' },
+          { word: 'aano', meaning: 'is it?' },
         ],
       },
       notes: ['Aano on the end turns the statement into the question.'],

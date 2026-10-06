@@ -24,7 +24,7 @@ export const l2u1l4: Lesson = {
         normal: 'l2u1l4_njan-ippo-varuva_normal',
       },
       sentence: {
-        bank: ['njan', 'ippo', 'varuva', 'pokatte?'],
+        bank: ['njan', 'ippo', 'varuva', 'pokatte'],
         orders: ['njan ippo varuva'],
         parts: [
           { word: 'njan', meaning: 'I' },
@@ -59,26 +59,26 @@ export const l2u1l4: Lesson = {
       tags: [],
     },
     {
-      id: 'njan-viittil-pokuva',
-      manglish: 'njan viittil pokuva',
+      id: 'njan-veettil-pokuva',
+      manglish: 'njan veettil pokuva',
       script: 'ഞാൻ വീട്ടിൽ പോകുവാ',
       meaning: 'I am going home',
       kind: 'sentence',
       audio: {
-        slow: 'l2u1l4_njan-viittil-pokuva_slow',
-        medium: 'l2u1l4_njan-viittil-pokuva_medium',
-        normal: 'l2u1l4_njan-viittil-pokuva_normal',
+        slow: 'l2u1l4_njan-veettil-pokuva_slow',
+        medium: 'l2u1l4_njan-veettil-pokuva_medium',
+        normal: 'l2u1l4_njan-veettil-pokuva_normal',
       },
       sentence: {
-        bank: ['njan', 'viittil', 'pokuva', 'varuva'],
-        orders: ['njan viittil pokuva'],
+        bank: ['njan', 'veettil', 'pokuva', 'varuva'],
+        orders: ['njan veettil pokuva'],
         parts: [
           { word: 'njan', meaning: 'I' },
-          { word: 'viittil', meaning: 'to home (viidu plus -il)' },
+          { word: 'veettil', meaning: 'to home (veedu plus -il)' },
           { word: 'pokuva', meaning: 'going' },
         ],
       },
-      notes: ['The sandhi: viidu plus -il becomes viittil, with the retroflex d doubled.'],
+      notes: ['The sandhi: veedu plus -il becomes veettil, with the retroflex d doubled.'],
       tags: [],
     },
     {
@@ -93,7 +93,7 @@ export const l2u1l4: Lesson = {
         normal: 'l2u1l4_nammal-ippo-pokuva_normal',
       },
       sentence: {
-        bank: ['nammaḷ', 'ippo', 'pokuva', 'varatte?'],
+        bank: ['nammaḷ', 'ippo', 'pokuva', 'varatte'],
         orders: ['nammaḷ ippo pokuva'],
         parts: [
           { word: 'nammaḷ', meaning: 'we (you and me)' },
@@ -106,7 +106,7 @@ export const l2u1l4: Lesson = {
     },
     {
       id: 'avan-varunundo',
-      manglish: 'avan varunnundo?',
+      manglish: 'avan varunnundo',
       script: 'അവൻ വരുന്നുണ്ടോ',
       meaning: 'is he coming?',
       kind: 'sentence',
@@ -116,36 +116,39 @@ export const l2u1l4: Lesson = {
         normal: 'l2u1l4_avan-varunundo_normal',
       },
       sentence: {
-        bank: ['avan', 'varunnundo?', 'veno?'],
-        orders: ['avan varunnundo?'],
+        bank: ['avan', 'varunnundo', 'veno'],
+        orders: ['avan varunnundo'],
         parts: [
           { word: 'avan', meaning: 'he' },
-          { word: 'varunnundo?', meaning: 'coming?' },
+          { word: 'varunnundo', meaning: 'coming?' },
         ],
       },
       notes: ['Checking on someone: avan varunnundo?'],
       tags: [],
     },
     {
-      id: 'nii-varunundo',
-      manglish: 'nii varunnundo?',
+      id: 'nee-varunundo',
+      manglish: 'nee varunnundo',
       script: 'നീ വരുന്നുണ്ടോ',
       meaning: 'are you coming?',
       kind: 'sentence',
       audio: {
-        slow: 'l2u1l4_nii-varunundo_slow',
-        medium: 'l2u1l4_nii-varunundo_medium',
-        normal: 'l2u1l4_nii-varunundo_normal',
+        slow: 'l2u1l4_nee-varunundo_slow',
+        medium: 'l2u1l4_nee-varunundo_medium',
+        normal: 'l2u1l4_nee-varunundo_normal',
       },
       sentence: {
-        bank: ['nii', 'varunnundo?', 'pokatte?'],
-        orders: ['nii varunnundo?'],
+        bank: ['nee', 'varunnundo', 'pokatte'],
+        orders: ['nee varunnundo'],
         parts: [
-          { word: 'nii', meaning: 'you (intimate)' },
-          { word: 'varunnundo?', meaning: 'coming?' },
+          { word: 'nee', meaning: 'you (intimate)' },
+          { word: 'varunnundo', meaning: 'coming?' },
         ],
       },
-      notes: ['The casual invite with nii.'],
+      notes: [
+        'The casual invite with nee.',
+        'A bare second-person -uva declarative reads like a command, so questions use varunnundo.',
+      ],
       tags: [],
     },
     {
@@ -228,7 +231,7 @@ export const l2u1l4: Lesson = {
         normal: 'l2u1l4_njan-parayuva_normal',
       },
       sentence: {
-        bank: ['njan', 'parayuva', 'ketto?'],
+        bank: ['njan', 'parayuva', 'ketto'],
         orders: ['njan parayuva'],
         parts: [
           { word: 'njan', meaning: 'I' },
@@ -243,10 +246,10 @@ export const l2u1l4: Lesson = {
   drills: [
     { kind: 'sentenceBuilder', itemId: 'njan-ippo-varuva', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'avan-chaaya-kudikkuva', mode: 'bank' },
-    { kind: 'sentenceBuilder', itemId: 'njan-viittil-pokuva', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'njan-veettil-pokuva', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'nammal-ippo-pokuva', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'avan-varunundo', mode: 'bank' },
-    { kind: 'sentenceBuilder', itemId: 'nii-varunundo', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'nee-varunundo', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'enikk-chaaya-venam', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'athu-venda', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'njan-ready-alla', mode: 'bank' },
