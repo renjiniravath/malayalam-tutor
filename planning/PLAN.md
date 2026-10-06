@@ -160,7 +160,7 @@ Accessibility (WCAG 2.2 AA target): everything keyboard-navigable; the anticipat
 
 | Sound | Spelling | | Sound | Spelling |
 |---|---|---|---|---|
-| long a/i/u | **always double**: `aa ii uu` (`chaaya`, `veedu`, `kaapi`) | | ഴ | `zh` |
+| long a/i/u | **always double**: `aa ee oo` (`chaaya`, `veedu`, `koodi`) — long i is `ee`, long u is `oo` (native-speaker rulings) | | ഴ | `zh` |
 | long e/o | **always single**: `e o` (`pokuva`, `ippo`, `chechi`) — matches Malayalee typing; audio disambiguates | | ഞ (ഞ്ഞ) | `nj` |
 | dental ത / ദ | `th` / `dh` | | ശ | `sh` |
 | retroflex ട / ഡ | `t` / `d` | | ഫ | `ph` |
