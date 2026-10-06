@@ -23,7 +23,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 7,
+  revision: 8,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -50,6 +50,9 @@ export const contentRevision: ContentRevision = {
     // replacing kallam/kalam.
     'kallam',
     'kalam',
+    // Beginner-sentence rule: untaught slots use English — kaapi illa
+    // became coffee illa.
+    'kaapi-illa',
   ],
 };
 
