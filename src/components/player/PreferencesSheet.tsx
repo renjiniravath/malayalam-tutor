@@ -166,7 +166,9 @@ export function PreferencesSheet({ prefs, onChange, onClose }: PreferencesSheetP
               ) : (
                 <>
                   {streak.count === 0 ? "No streak yet." : `Streak: ${streak.count} ${streak.count === 1 ? "day" : "days"}.`}
-                  {streak.freezes > 0 && ` ${streak.freezes} ${streak.freezes === 1 ? "freeze" : "freezes"} saved.`}
+                  {streak.freezes > 0
+                    ? ` ${streak.freezes} ${streak.freezes === 1 ? "freeze" : "freezes"} saved. A missed day uses one automatically.`
+                    : " Finish a ten-card review to earn a freeze."}
                 </>
               )}
             </p>

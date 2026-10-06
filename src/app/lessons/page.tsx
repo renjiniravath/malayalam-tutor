@@ -13,7 +13,15 @@ export default function LessonsPage() {
       </Link>
       <div className="mt-4 flex items-center justify-between">
         <h1 className="text-3xl font-bold tracking-tight">Lessons</h1>
-        <ReviewLink />
+        <div className="flex items-center gap-4">
+          <Link
+            href="/progress"
+            className="inline-flex min-h-11 items-center rounded-full text-sm font-medium text-text-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+          >
+            Progress
+          </Link>
+          <ReviewLink />
+        </div>
       </div>
       {levels.map((level) => (
         <section key={level.id} className="mt-6">
