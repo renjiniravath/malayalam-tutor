@@ -24,7 +24,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 15,
+  revision: 16,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -106,10 +106,13 @@ export const contentRevision: ContentRevision = {
     'aunty-chaaya-veno',
     'njan-busilekk-pokuva',
     // Gap-fill: plan spellings — enna und vishesham (single a),
-    // nannaayitt pokunnu (double aa), eppozhaa (double aa).
+    // nannaayitt pokunnu (double aa), eppozhaa (double aa). The
+    // spelling rulings then reverted nannaayitt and eppozha to their
+    // earlier ids, which are current again; only the intermediate
+    // double-aa ids stay removed.
     'ennaa-und-vishesham',
-    'nannayitt-pokunnu',
-    'eppozha',
+    'nannaayitt-pokunnu',
+    'eppozhaa',
   ],
 };
 

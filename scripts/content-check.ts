@@ -311,6 +311,13 @@ const SCRIPT_CORONALS = new Map<string, string>([
 function scriptCoronals(script: string): string[] {
   const out: string[] = [];
   for (let i = 0; i < script.length; i++) {
+    // The ഷ്ട cluster spells shtt (native-speaker ruling: ishttamilla) —
+    // the shta sequence doubles the t in romanization.
+    if (script[i] === 'ഷ' && script[i + 1] === '്' && script[i + 2] === 'ട') {
+      out.push('tt');
+      i += 2;
+      continue;
+    }
     const base = SCRIPT_CORONALS.get(script[i]);
     if (!base) continue;
     if (script[i + 1] === '്' && script[i + 2] === script[i]) {

@@ -2,7 +2,7 @@ import type { Lesson } from '../types';
 
 /**
  * Level 2 Unit 3 Lesson 2 — the question words (PLAN.md §5): entha,
- * etha, engane, enthina, eppozhaa, evide. With engane und and evide
+ * etha, engane, enthina, eppozha, evide. With engane und and evide
  * covered, these complete the everyday question set.
  */
 export const l2u3l2: Lesson = {
@@ -73,17 +73,17 @@ export const l2u3l2: Lesson = {
       tags: [],
     },
     {
-      id: 'eppozhaa',
-      manglish: 'eppozhaa',
+      id: 'eppozha',
+      manglish: 'eppozha',
       script: 'എപ്പോഴാ',
       meaning: 'when',
       kind: 'word',
       audio: {
-        slow: 'l2u3l2_eppozhaa_slow',
-        medium: 'l2u3l2_eppozhaa_medium',
-        normal: 'l2u3l2_eppozhaa_normal',
+        slow: 'l2u3l2_eppozha_slow',
+        medium: 'l2u3l2_eppozha_medium',
+        normal: 'l2u3l2_eppozha_normal',
       },
-      acceptedInputs: ['eppozhaa'],
+      acceptedInputs: ['eppozha'],
       notes: ['When — the question form of ippo, now.'],
       tags: [],
     },
@@ -175,7 +175,7 @@ export const l2u3l2: Lesson = {
     { kind: 'multipleChoice', itemId: 'etha', distractors: ['what', 'when', 'where'] },
     { kind: 'multipleChoice', itemId: 'engane-word', distractors: ['what', 'when', 'where'] },
     { kind: 'multipleChoice', itemId: 'enthina', distractors: ['what', 'how', 'where'] },
-    { kind: 'multipleChoice', itemId: 'eppozhaa', distractors: ['what', 'how', 'why'] },
+    { kind: 'multipleChoice', itemId: 'eppozha', distractors: ['what', 'how', 'why'] },
     { kind: 'multipleChoice', itemId: 'evide', distractors: ['what', 'which', 'why'] },
     { kind: 'sentenceBuilder', itemId: 'athu-entha', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'athu-etha', mode: 'bank' },
