@@ -66,7 +66,7 @@ Malayalam-specific principles (from `research-malayalam.md`):
 All levels use English-alphabet romanization; Malayalam script is shown passively (secondary) after each audio reveal. Can-do statements follow CEFR framing. Unit item counts are targets; word lists below are **shorthand ASCII** (shipped content uses strict §9 spellings, e.g. `chaaya`, `veedu`, `kaashu`, `veḷḷam`). Each unit = 1–3 lessons of 5–10 minutes.
 
 ### Level 1 — Sounds & Words (Building Blocks) · ~80 items, 10 lessons
-**Can do:** recognize and produce the four hard sound classes; greet; use ~40 highest-frequency nouns, ~10 core verbs (as casual present forms) — note: `kudi` alone does NOT mean "drink": standalone `kudi` means drinking as a habit/liquor (or a dwelling); the verb is `kudikkuva` (native-speaker ruling 2026-10-06), and pronouns; use ~10 everyday expressions.
+**Can do:** recognize and produce the four hard sound classes; greet; use ~40 highest-frequency nouns, ~10 core verbs (as casual present forms) — note: `kudi` alone does NOT mean "drink": standalone `kudi` means drinking as a habit/liquor (or a dwelling); the verb is `kudikkuva`; `kudikkuka` is the formal directive form ("drink!" addressed to someone) and is NOT taught now (native-speaker rulings 2026-10-06), and pronouns; use ~10 everyday expressions.
 
 Units:
 1. **First sounds** (3 lessons, comprehension-only — no speaking yet) — ഴ, dental/retroflex/alveolar, gemination, vowel length. Sound-focus clips + minimal-pair discrimination + **text articulation cues for ഴ and the coronal series** (no visuals).
