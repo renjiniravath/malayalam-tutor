@@ -53,7 +53,7 @@ const GRAPHEMES = [
   'tth', 'ddh', 'nth', 'nt',
   'zh', 'nj', 'sh', 'ph', 'ng', 'ch', 'kh', 'th', 'dh',
   'tt', 'kk', 'pp', 'mm', 'nn', 'll', 'ḷḷ',
-  'aa', 'ee', 'uu',
+  'aa', 'ee', 'oo',
   'ḷ', 'ṇ', 'ṟ',
 ]
 
@@ -86,7 +86,7 @@ function tokenize(word: string): string[] {
 }
 
 const GEMINATE_CLUSTERS = /(tth|ddh|tt|kk|pp|mm|nn|ll|ḷḷ)/
-const LONG_VOWELS = /(aa|ee|uu)/
+const LONG_VOWELS = /(aa|ee|oo)/
 const CORONALS = /(th|t|ṟ)/
 
 function hasSegmentFeature(manglish: string, segment: Segment): boolean {
@@ -179,10 +179,10 @@ const TOKEN_TO_SCRIPT: Record<string, string[]> = {
   nn: ['ന്ന'], ll: ['ല്ല'], ḷḷ: ['ള്ള'], nth: ['ന്ത'], nt: ['ന്റ'],
   aa: ['ആ', 'ാ'], a: ['അ', 'ആ', 'ാ', 'ം', 'െ'], ee: ['ഈ', 'ീ'],
   e: ['എ', 'ഏ', 'െ', 'േ'], i: ['ഇ', 'ഈ', 'ി', 'ീ'],
-  uu: ['ഊ', 'ൂ'], u: ['ഉ', 'ഊ', 'ു', 'ൂ', '്'], o: ['ഒ', 'ഓ', 'ൊ', 'ോ'],
+  oo: ['ഊ', 'ൂ'], u: ['ഉ', 'ഊ', 'ു', 'ൂ', '്'], o: ['ഒ', 'ഓ', 'ൊ', 'ോ'],
 }
 
-const VOWEL_TOKENS = new Set(['aa', 'a', 'ee', 'e', 'i', 'uu', 'u', 'o'])
+const VOWEL_TOKENS = new Set(['aa', 'a', 'ee', 'e', 'i', 'oo', 'u', 'o'])
 
 /** script letter -> manglish must contain one of these */
 const SCRIPT_TO_TOKEN: Record<string, string[]> = {
@@ -192,7 +192,7 @@ const SCRIPT_TO_TOKEN: Record<string, string[]> = {
   'ക': ['k'], 'ഖ': ['kh'], 'ഗ': ['g'], 'ജ': ['j'], 'സ': ['s'], 'വ': ['v'], 'യ': ['y'], 'ഹ': ['h'],
   'ം': ['m'],
   'ാ': ['aa'], 'ആ': ['aa'], 'അ': ['a'], 'ി': ['i'], 'ഈ': ['ee'], 'ഇ': ['i'], 'ീ': ['ee'],
-  'ു': ['u'], 'ൂ': ['uu'], 'ഉ': ['u'], 'ഊ': ['uu'],
+  'ു': ['u'], 'ൂ': ['oo'], 'ഉ': ['u'], 'ഊ': ['oo'],
   'എ': ['e'], 'ഏ': ['e'], 'ഒ': ['o'], 'ഓ': ['o'], 'െ': ['e'], 'േ': ['e'], 'ൊ': ['o'], 'ോ': ['o'],
 }
 
@@ -221,7 +221,7 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
     if (word in MANGLISH_TRAPS)
       fail(ctx, `formal register "${word}" — use the casual "${MANGLISH_TRAPS[word]}"`)
     if (word.includes('ii')) fail(ctx, `long i is written ee (as in veedu), not ii: ${word}`)
-    if (word.includes('oo')) fail(ctx, `long u is written uu, not oo: ${word}`)
+    if (word.includes('uu')) fail(ctx, `long u is written oo (as in choodu), not uu: ${word}`)
     if (!script) continue
     for (const token of tokens) {
       const targets = TOKEN_TO_SCRIPT[token]
@@ -267,16 +267,16 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
     if (at === -1) fail(ctx, `"${w}" needs ${IRREGULAR_SCRIPT[w]} in the script, got ${script}`)
     irregularALetters.add(at + 1)
   }
-  // vowel doubling: aa/ee/uu must match the script's long vowel signs
+  // vowel doubling: aa/ee/oo must match the script's long vowel signs
   const scriptAa = countChar(script, 'ാ') + countChar(script, 'ആ') - uvaCount - irregularWords.length
   const scriptEe = countChar(script, 'ീ') + countChar(script, 'ഈ')
-  const scriptUu = countChar(script, 'ൂ') + countChar(script, 'ഊ')
+  const scriptOo = countChar(script, 'ൂ') + countChar(script, 'ഊ')
   if (countChar(manglish, 'aa') !== scriptAa)
     fail(ctx, `aa count ${countChar(manglish, 'aa')} != script long-a count ${scriptAa}: ${script}`)
   if (countChar(manglish, 'ee') !== scriptEe)
     fail(ctx, `ee count ${countChar(manglish, 'ee')} != script long-i count ${scriptEe}: ${script}`)
-  if (countChar(manglish, 'uu') !== scriptUu)
-    fail(ctx, `uu count ${countChar(manglish, 'uu')} != script long-u count ${scriptUu}: ${script}`)
+  if (countChar(manglish, 'oo') !== scriptOo)
+    fail(ctx, `oo count ${countChar(manglish, 'oo')} != script long-u count ${scriptOo}: ${script}`)
   // script letters must all be covered by the manglish
   for (let i = 0; i < script.length; i++) {
     const ch = script[i]

@@ -6,8 +6,8 @@
  * correspondence, letter mappings). Adding or changing a shipped spelling
  * means updating this file — that is the review gate.
  *
- * Spelling conventions (PLAN.md §9): long a -> aa, long i -> ee
- * (Malayalee typing, as in `veedu`), long u -> uu, long e/o single;
+ * Spelling conventions (PLAN.md §9): long a -> aa, long i -> ee,
+ * long u -> oo (Malayalee typing, as in `choodu`), long e/o single;
  * `th` dental vs `t` retroflex; geminates doubled (`tt` = ട്ട, `tth` = ത്ത);
  * `kh` for the aspirate ഖ (`sukham`); word-final chillus (ൻ, ൾ) keep their
  * plain letters. Entries without a script follow §9 rule 6 (omit when the
@@ -49,7 +49,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'a', script: 'അ', meaning: 'the short a sound' },
   { manglish: 'ee', script: 'ഈ', meaning: 'the long ee sound' },
   { manglish: 'i', script: 'ഇ', meaning: 'the short i sound' },
-  { manglish: 'uu', script: 'ഊ', meaning: 'the long uu sound' },
+  { manglish: 'oo', script: 'ഊ', meaning: 'the long oo sound' },
   { manglish: 'u', script: 'ഉ', meaning: 'the short u sound' },
   // Level 1 Unit 1 — gemination / vowel length words
   { manglish: 'aadi', script: 'ആടി', meaning: 'swing' },

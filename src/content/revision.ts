@@ -25,5 +25,7 @@
  *  11 — athe aanu and athu sheri, ketto removed (they do not make
  *       sense); chaaya taught as a word; "njan every day chaaya
  *       kudikkum" uses an English slot for the untaught time phrase
+ *  12 — long u is written oo (not uu): checker, dictionary, and the
+ *       u/oo sound items updated; no kudi/koodi pair exists to remove
  */
-export const CONTENT_REVISION = 11
+export const CONTENT_REVISION = 12
