@@ -195,6 +195,9 @@ export function HearRevealStep({
       </div>
       <p className="text-lg text-stone-700 dark:text-stone-300">{item.meaning}</p>
       {item.segments && <WordBreakdown segments={item.segments} />}
+      {item.alsoIn && (
+        <p className="text-sm text-stone-500 dark:text-stone-400">Also in {item.alsoIn}.</p>
+      )}
       {item.articulation && (
         <ArticulationView articulation={item.articulation} sound={item.manglish} />
       )}

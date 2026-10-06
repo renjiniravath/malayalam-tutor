@@ -77,8 +77,8 @@ export default function ReviewPage() {
           cardKeys={keys}
           onDone={() => {
             setFinished(true)
-            // A finished review session earns a grace freeze (PLAN.md §8).
-            void completeReviewSession().catch(console.error)
+            // A finished review of ten or more cards earns a grace freeze.
+            if (keys.length >= 10) void completeReviewSession().catch(console.error)
           }}
         />
       )}

@@ -57,7 +57,7 @@ const GRAPHEMES = [
   'ḷ', 'ṇ', 'ṟ',
 ]
 
-const MANGLISH_CHARSET = /^[a-z ḷṇṟ]+$/
+const MANGLISH_CHARSET = /^[a-z ḷṇṟ,]+$/
 
 /** Letters that may stand alone; c, f, q, w, x, z only appear in digraphs. */
 const SINGLE_LETTERS = /[aeioubdghjklmnprstvyḷṇṟ]/
@@ -73,6 +73,10 @@ function tokenize(word: string): string[] {
       i += grapheme.length
     } else if (SINGLE_LETTERS.test(word[i])) {
       tokens.push(word[i])
+      i += 1
+    } else if (word[i] === ',') {
+      // the vocative comma (chetta, pokunnundo) carries no script
+      tokens.push(',')
       i += 1
     } else {
       return []
@@ -253,8 +257,18 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
       at = script.indexOf(UVA, at + 1)
     }
   }
+  // Native-speaker ruling: njan writes the long a of ഞാൻ short
+  // (Malayalees type "njan"), so the ാ is exempt from correspondence.
+  const IRREGULAR_SCRIPT: Record<string, string> = { njan: 'ഞാൻ' }
+  const irregularWords = manglish.split(' ').filter((w) => w in IRREGULAR_SCRIPT)
+  const irregularALetters = new Set<number>()
+  for (const w of irregularWords) {
+    const at = script.indexOf(IRREGULAR_SCRIPT[w])
+    if (at === -1) fail(ctx, `"${w}" needs ${IRREGULAR_SCRIPT[w]} in the script, got ${script}`)
+    irregularALetters.add(at + 1)
+  }
   // vowel doubling: aa/ee/uu must match the script's long vowel signs
-  const scriptAa = countChar(script, 'ാ') + countChar(script, 'ആ') - uvaCount
+  const scriptAa = countChar(script, 'ാ') + countChar(script, 'ആ') - uvaCount - irregularWords.length
   const scriptEe = countChar(script, 'ീ') + countChar(script, 'ഈ')
   const scriptUu = countChar(script, 'ൂ') + countChar(script, 'ഊ')
   if (countChar(manglish, 'aa') !== scriptAa)
@@ -267,7 +281,7 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
   for (let i = 0; i < script.length; i++) {
     const ch = script[i]
     if (ch === '്') continue
-    if (uvaALetters.has(i)) continue
+    if (uvaALetters.has(i) || irregularALetters.has(i)) continue
     const options = SCRIPT_TO_TOKEN[ch]
     if (!options) continue
     if (!options.some((t) => manglish.includes(t)))
@@ -500,7 +514,7 @@ function main(): void {
           fail(ctx, `license ${license.license} is not allowlisted (${LICENSE_ALLOWLIST.join(', ')})`)
       }
 
-      scanForEmoji(item.manglish + item.meaning + (item.script ?? '') + (item.notes ?? []).join(' '), ctx)
+      scanForEmoji(item.manglish + item.meaning + (item.script ?? '') + (item.notes ?? []).join(' ') + (item.alsoIn ?? ''), ctx)
     }
   }
 

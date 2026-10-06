@@ -157,6 +157,11 @@ export function SentenceBuilderDrill({
             ) : (
               <>
                 Not quite. It is <span className="font-semibold">{item.manglish}</span>.
+                {item.script && (
+                  <span className="mt-1 block text-lg text-stone-600 dark:text-stone-300" lang="ml">
+                    {item.script}
+                  </span>
+                )}
               </>
             )}
           </p>

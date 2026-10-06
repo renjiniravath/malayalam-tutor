@@ -22,9 +22,27 @@ export const lesson4Politeness: Lesson = {
       pos: 'noun',
       notes: [
         'A vocative: you use it to call or address someone, never as the subject of a sentence.',
+        'In a sentence the vocative takes a comma: chetta, pokunnundo?',
         'No script here: the written form spells a long a that is short in speech.',
       ],
       audio: { slow: 'chetta.slow', medium: 'chetta.medium', normal: 'chetta.normal' },
+      tags: ['level:2'],
+    },
+    {
+      id: 'chetta-pokunnundo',
+      manglish: 'chetta, pokunnundo',
+      meaning: 'chetta, are you going?',
+      kind: 'sentence',
+      acceptedInputs: ['chetta pokunundo'],
+      notes: [
+        'The vocative chetta gets a comma: you are addressing him, not naming him.',
+        'No script here: the written form spells a long a that is short in speech.',
+      ],
+      segments: [
+        { token: 'chetta,', gloss: 'chetta (addressing him)' },
+        { token: 'pokunnundo', gloss: 'are you going?' },
+      ],
+      audio: { slow: 'chetta-pokunnundo.slow', medium: 'chetta-pokunnundo.medium', normal: 'chetta-pokunnundo.normal' },
       tags: ['level:2'],
     },
     {
@@ -115,8 +133,15 @@ export const lesson4Politeness: Lesson = {
   pairs: [],
   drills: [
     { kind: 'multipleChoice', itemId: 'chetta', distractors: ['nee-varuva', 'avar-varuva', 'addheham-varuva'] },
+    { kind: 'multipleChoice', itemId: 'chetta-pokunnundo', distractors: ['nee-varuva', 'avar-varuva', 'addheham-varuva'] },
     { kind: 'multipleChoice', itemId: 'addheham-varuva', distractors: ['nee-varuva', 'avar-varuva', 'ningal-varuva'] },
     { kind: 'multipleChoice', itemId: 'avar-varuva', distractors: ['addheham-varuva', 'ningal-varuva', 'thaankal-varuva'] },
+    {
+      kind: 'sentenceBuilder',
+      sentenceId: 'chetta-pokunnundo',
+      bank: ['chetta,', 'pokunnundo'],
+      acceptedInputs: ['chetta pokunundo'],
+    },
     {
       kind: 'sentenceBuilder',
       sentenceId: 'nee-varuva',

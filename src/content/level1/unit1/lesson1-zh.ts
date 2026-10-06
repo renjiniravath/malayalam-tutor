@@ -44,6 +44,7 @@ export const lesson1Zh: Lesson = {
       script: 'മഴ',
       meaning: 'rain',
       kind: 'word',
+      alsoIn: 'mazhakkaalam, the rainy season',
       audio: { slow: 'mazha.slow', medium: 'mazha.medium', normal: 'mazha.normal' },
       tags: ['sound:zh', 'level:1'],
     },

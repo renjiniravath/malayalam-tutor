@@ -12,7 +12,10 @@
  *       habitual, dative venam, ketto, niyyum, sandhi, varunnundo)
  *   6 — second-person -uva pragmatics: bare declaratives read as
  *       commands, so second-person items use the -unnundo question form
- *   7 — vocative fix (chetta is address-only) and current-day minimal
- *       pairs (kaalam/kalam, pala/pallu); pro-drop pronoun item dropped
+ *   7 — vocative fix (chetta is address-only) and provisional minimal
+ *       pair replacements; pro-drop pronoun item dropped
+ *   8 — final native-speaker rulings: njan (not njaan); aadi/adi and
+ *       puḷḷi/puli minimal pairs; chetta vocative takes a comma
+ *       (chetta, pokunnundo?); nokkum habitual added
  */
-export const CONTENT_REVISION = 7
+export const CONTENT_REVISION = 8

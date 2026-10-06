@@ -71,12 +71,12 @@ export const lesson2Copula: Lesson = {
     },
     {
       id: 'njan-ready-aa',
-      manglish: 'njaan ready aa',
+      manglish: 'njan ready aa',
       meaning: 'I am ready.',
       kind: 'sentence',
       notes: ['No script here: the English word has no settled Malayalam spelling.'],
       segments: [
-        { token: 'njaan', gloss: 'I' },
+        { token: 'njan', gloss: 'I' },
         { token: 'ready', gloss: 'ready' },
         { token: 'aa', gloss: 'am (the linking word)' },
       ],
@@ -144,7 +144,7 @@ export const lesson2Copula: Lesson = {
       meaning: 'want, need',
       kind: 'word',
       pos: 'verb',
-      notes: ['Wanting takes enikk (to me), never njaan.'],
+      notes: ['Wanting takes enikk (to me), never njan.'],
       audio: { slow: 'venam.slow', medium: 'venam.medium', normal: 'venam.normal' },
       tags: ['level:2'],
     },
@@ -187,8 +187,8 @@ export const lesson2Copula: Lesson = {
     {
       kind: 'sentenceBuilder',
       sentenceId: 'njan-ready-aa',
-      bank: ['njaan', 'ready', 'aa'],
-      acceptedInputs: ['njaan ready aa'],
+      bank: ['njan', 'ready', 'aa'],
+      acceptedInputs: ['njan ready aa'],
     },
     {
       kind: 'sentenceBuilder',

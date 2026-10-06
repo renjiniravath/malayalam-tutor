@@ -16,13 +16,12 @@ export const lesson1Pronouns: Lesson = {
   items: [
     {
       id: 'njan',
-      manglish: 'njaan',
+      manglish: 'njan',
       script: 'ഞാൻ',
       meaning: 'I',
       kind: 'word',
       pos: 'pronoun',
-      acceptedInputs: ['njan'],
-      notes: ['Usually dropped when the meaning is clear: engane und? already means "how are you?" — the njaan is understood.'],
+      notes: ['Usually dropped when the meaning is clear: engane und? already means "how are you?" — the njan is understood.'],
       audio: { slow: 'njan.slow', medium: 'njan.medium', normal: 'njan.normal' },
       tags: ['level:1'],
     },
@@ -33,6 +32,7 @@ export const lesson1Pronouns: Lesson = {
       meaning: 'you (casual)',
       kind: 'word',
       pos: 'pronoun',
+      alsoIn: 'neeyyo ("you?") and neeyyum ("you too")',
       notes: ['For friends and kids. With elders or strangers use ningaḷ or thaangkaḷ.'],
       audio: { slow: 'nee.slow', medium: 'nee.medium', normal: 'nee.normal' },
       tags: ['level:1'],

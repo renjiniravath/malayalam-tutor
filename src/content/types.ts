@@ -78,6 +78,8 @@ export interface Item {
   segments?: { token: string; gloss: string }[]
   /** Formal-form notes, politeness, usage. */
   notes?: string[]
+  /** "Also in ..." reinforcement line, shown after reveal. */
+  alsoIn?: string
   tags: string[]
 }
 

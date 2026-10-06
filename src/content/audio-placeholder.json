@@ -38,11 +38,11 @@
         "i.slow", "i.medium", "i.normal", "i.focus",
         "uu.slow", "uu.medium", "uu.normal", "uu.focus",
         "u.slow", "u.medium", "u.normal", "u.focus",
-        "kaalam.slow", "kaalam.medium", "kaalam.normal",
-        "kalam.slow", "kalam.medium", "kalam.normal",
+        "aadi.slow", "aadi.medium", "aadi.normal",
+        "adi.slow", "adi.medium", "adi.normal",
         "alla.slow", "alla.medium", "alla.normal",
-        "pala.slow", "pala.medium", "pala.normal",
-        "pallu.slow", "pallu.medium", "pallu.normal",
+        "pulli.slow", "pulli.medium", "pulli.normal",
+        "puli.slow", "puli.medium", "puli.normal",
         "cheettha.slow", "cheettha.medium", "cheettha.normal"
       ]
     },
@@ -90,6 +90,7 @@
         "avan-parayuva.slow", "avan-parayuva.medium", "avan-parayuva.normal",
         "nammal-pokuva.slow", "nammal-pokuva.medium", "nammal-pokuva.normal",
         "kudikkum.slow", "kudikkum.medium", "kudikkum.normal",
+        "nokkum.slow", "nokkum.medium", "nokkum.normal",
         "veedu.slow", "veedu.medium", "veedu.normal",
         "njan-chaaya-kudikkum.slow", "njan-chaaya-kudikkum.medium", "njan-chaaya-kudikkum.normal",
         "njan-veettil-pokuva.slow", "njan-veettil-pokuva.medium", "njan-veettil-pokuva.normal"
@@ -133,6 +134,7 @@
       "sprite": "audio/l2u1l4.mp3",
       "clips": [
         "chetta.slow", "chetta.medium", "chetta.normal",
+        "chetta-pokunnundo.slow", "chetta-pokunnundo.medium", "chetta-pokunnundo.normal",
         "nee-varuva.slow", "nee-varuva.medium", "nee-varuva.normal",
         "ningal-varuva.slow", "ningal-varuva.medium", "ningal-varuva.normal",
         "thaankal-varuva.slow", "thaankal-varuva.medium", "thaankal-varuva.normal",

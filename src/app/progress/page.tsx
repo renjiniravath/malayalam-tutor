@@ -161,7 +161,7 @@ export default function ProgressPage() {
             {data && data.streak.freezes > 0
               ? `${data.streak.freezes} ${data.streak.freezes === 1 ? 'freeze' : 'freezes'} ready.`
               : 'No freezes yet.'}{' '}
-            Missed a day? A freeze covers it. Finishing a review session earns one. Pause keeps the
+            Missed a day? A freeze covers it. Finishing a ten-card review earns one. Pause keeps the
             streak safe without using a freeze.
           </p>
         </section>

@@ -98,7 +98,7 @@ test('reconciles against the real content bundle', () => {
   const realIds = ALL_ITEMS.map((item) => item.id)
   assert.ok(realIds.includes('engane-und'))
   assert.ok(realIds.includes('njan'))
-  assert.ok(realIds.includes('kaalam'))
+  assert.ok(realIds.includes('aadi'))
   const result = reconcileProgress(
     [card('engane-und', 'recognition', 1), card('removed-item', 'recognition', 1)],
     [archived('ayyo', 'recognition', 1, 2)],

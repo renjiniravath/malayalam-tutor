@@ -58,7 +58,7 @@ test('the review log carries the full ts-fsrs record', () => {
 })
 
 test('recognition and production cards decay independently', () => {
-  const recognition = review(newCard('njaan', 'recognition', T0), 'good', T0)
-  const production = review(newCard('njaan', 'production', T0), 'again', T0)
+  const recognition = review(newCard('njan', 'recognition', T0), 'good', T0)
+  const production = review(newCard('njan', 'production', T0), 'again', T0)
   assert.notEqual(recognition.card.card.due.getTime(), production.card.card.due.getTime())
 })
