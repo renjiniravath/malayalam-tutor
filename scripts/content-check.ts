@@ -168,7 +168,7 @@ function hasInherentA(script: string): boolean {
 const TOKEN_TO_SCRIPT: Record<string, string[]> = {
   zh: ['ഴ'], nj: ['ഞ'], sh: ['ശ'], ph: ['ഫ'], ng: ['ങ'], ch: ['ച'], kh: ['ഖ'],
   th: ['ത'], dh: ['ദ'], t: ['ട'], d: ['ട', 'ഡ'], ṟ: ['റ'], ddh: ['ദ്ദ'],
-  r: ['ര', 'റ'], l: ['ല'], ḷ: ['ള', 'ൾ'], n: ['ന', 'ണ', 'ൻ'], ṇ: ['ണ'], m: ['മ', 'ം'],
+  r: ['ര', 'റ'], l: ['ല', 'ൽ'], ḷ: ['ള', 'ൾ'], n: ['ന', 'ണ', 'ൻ'], ṇ: ['ണ'], m: ['മ', 'ം'],
   p: ['പ'], b: ['ബ'], k: ['ക'], g: ['ഗ'], j: ['ജ'], s: ['സ'],
   v: ['വ'], y: ['യ'], h: ['ഹ'],
   tt: ['ട്ട'], tth: ['ത്ത'], kk: ['ക്ക'], pp: ['പ്പ'], mm: ['മ്മ'],
@@ -211,9 +211,7 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
   if (!MANGLISH_CHARSET.test(manglish))
     fail(ctx, `manglish has invalid characters (lowercase a-z, ḷ ṇ ṟ only): ${manglish}`)
   const hasVowel = script ? HAS_VOWEL.test(script) : false
-  const words = manglish.split(' ')
-  for (let wordIndex = 0; wordIndex < words.length; wordIndex++) {
-    const word = words[wordIndex]
+  for (const word of manglish.split(' ')) {
     const tokens = tokenize(word)
     if (tokens.length === 0) fail(ctx, `cannot tokenize: ${word}`)
     if (word in MANGLISH_TRAPS)
@@ -221,12 +219,7 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
     if (word.includes('ii')) fail(ctx, `long i is written ee (as in veedu), not ii: ${word}`)
     if (word.includes('oo')) fail(ctx, `long u is written uu, not oo: ${word}`)
     if (!script) continue
-    // Colloquial -iyo contracts to a final ോ in writing (PLAN.md §9
-    // rule 6, kettiyo -> കേട്ടോ): the spoken i and y drop from the script.
-    const iyoContracted =
-      wordIndex === words.length - 1 && word.endsWith('iyo') && script.endsWith('ോ')
     for (const token of tokens) {
-      if (iyoContracted && (token === 'i' || token === 'y')) continue
       const targets = TOKEN_TO_SCRIPT[token]
       if (!targets) continue
       if (VOWEL_TOKENS.has(token) && !hasVowel) continue
@@ -287,8 +280,11 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
     fail(ctx, `word-final virama is spelled with a final u: ${manglish}`)
   if (manglish.endsWith('u') && !script.endsWith('്') && !/[ഉഊു]/.test(script))
     fail(ctx, `final u needs a final virama, ു, ഉ, or ഊ in the script: ${script}`)
+  // Formal-register traps match whole words: the colloquial continuous
+  // question വരുന്നുണ്ടോ legitimately contains the substring വരുന്നു.
+  const scriptWords = script.split(' ')
   for (const [trap, casual] of Object.entries(SCRIPT_TRAPS)) {
-    if (script.includes(trap)) fail(ctx, `script spells the formal form ${trap} — use ${casual}`)
+    if (scriptWords.includes(trap)) fail(ctx, `script spells the formal form ${trap} — use ${casual}`)
   }
 }
 

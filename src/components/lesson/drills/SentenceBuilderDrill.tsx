@@ -111,13 +111,18 @@ export function SentenceBuilderDrill({
               type="button"
               onClick={() => remove(index)}
               disabled={outcome !== null}
-              className="inline-flex min-h-11 items-center rounded-full bg-stone-900 px-4 text-sm font-medium text-stone-50 outline-2 outline-offset-2 outline-stone-900 hover:bg-stone-700 focus-visible:outline active:bg-stone-700 dark:bg-stone-100 dark:text-stone-900 dark:outline-stone-100 dark:hover:bg-stone-300 dark:active:bg-stone-300"
+              aria-label={`${token}. Tap to send back to the bank.`}
+              title="Send back to the bank"
+              className="inline-flex min-h-11 items-center rounded-full border-2 border-dashed border-amber-700 px-4 text-sm font-medium text-amber-700 outline-2 outline-offset-2 outline-stone-900 hover:bg-amber-50 focus-visible:outline active:bg-amber-100 dark:border-amber-400 dark:text-amber-400 dark:outline-stone-100 dark:hover:bg-amber-950 dark:active:bg-amber-900"
             >
               {token}
             </button>
           ))
         )}
       </div>
+      <p className="-mt-3 text-xs text-stone-500 dark:text-stone-400">
+        Tap an assembled word to send it back to the bank.
+      </p>
 
       <div className="flex flex-wrap gap-2" role="group" aria-label="Word bank">
         {unused.map((token) => (

@@ -8,5 +8,7 @@
  *   2 — Units 2-3 added (greetings & expressions, pronouns)
  *   3 — articulation entries became brief text cues (visual diagrams dropped)
  *   4 — Level 2 added (First Sentences, four lessons)
+ *   5 — native-speaker corrections to Level 2 (continuous glosses, -um
+ *       habitual, dative venam, ketto, niyyum, sandhi, varunnundo)
  */
-export const CONTENT_REVISION = 4
+export const CONTENT_REVISION = 5
