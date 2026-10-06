@@ -24,7 +24,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 14,
+  revision: 15,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -105,6 +105,11 @@ export const contentRevision: ContentRevision = {
     'aunty-ready-aano',
     'aunty-chaaya-veno',
     'njan-busilekk-pokuva',
+    // Gap-fill: plan spellings — enna und vishesham (single a),
+    // nannaayitt pokunnu (double aa), eppozhaa (double aa).
+    'ennaa-und-vishesham',
+    'nannayitt-pokunnu',
+    'eppozha',
   ],
 };
 
