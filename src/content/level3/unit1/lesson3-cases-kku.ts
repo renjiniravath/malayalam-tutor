@@ -60,7 +60,7 @@ export const lesson3CasesKku: Lesson = {
     },
     {
       id: 'avanu-chaaya-ishttamilla',
-      manglish: 'avanu chaaya ishtamilla',
+      manglish: 'avanu chaaya ishttamilla',
       script: 'അവന് ചായ ഇഷ്ടമില്ല',
       meaning: 'he does not like tea.',
       kind: 'sentence',
@@ -68,7 +68,7 @@ export const lesson3CasesKku: Lesson = {
       segments: [
         { token: 'avanu', gloss: 'to him' },
         { token: 'chaaya', gloss: 'tea' },
-        { token: 'ishtamilla', gloss: 'is not liked' },
+        { token: 'ishttamilla', gloss: 'is not liked' },
       ],
       audio: { slow: 'avanu-chaaya-ishttamilla.slow', medium: 'avanu-chaaya-ishttamilla.medium', normal: 'avanu-chaaya-ishttamilla.normal' },
       tags: ['level:3'],
@@ -182,8 +182,8 @@ export const lesson3CasesKku: Lesson = {
     {
       kind: 'sentenceBuilder',
       sentenceId: 'avanu-chaaya-ishttamilla',
-      bank: ['avanu', 'chaaya', 'ishtamilla'],
-      acceptedInputs: ['avanu chaaya ishtamilla'],
+      bank: ['avanu', 'chaaya', 'ishttamilla'],
+      acceptedInputs: ['avanu chaaya ishttamilla'],
     },
     { kind: 'multipleChoice', itemId: 'ninakk-sheri-aano', distractors: ['enikk-sheri-aa', 'ninakk-chaaya-veno', 'enikk-venam'] },
     {

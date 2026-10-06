@@ -42,5 +42,8 @@
  *       with the vocative -n drop; dative experiencer avanu; njan
  *       busil keran pokuva; new l3u2l1 (a/i distance) and l3u2l2
  *       (question words)
+ *  17 — spelling rulings: nannayitt (single a) sanctioned; ishttamilla
+ *       (double t) sanctioned; question words plain (entha, etha,
+ *       enthina, eppozha)
  */
-export const CONTENT_REVISION = 16
+export const CONTENT_REVISION = 17

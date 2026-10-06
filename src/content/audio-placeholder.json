@@ -53,7 +53,7 @@
         "kaappi-engane-und-kollaamo.slow", "kaappi-engane-und-kollaamo.medium", "kaappi-engane-und-kollaamo.normal",
         "sukham.slow", "sukham.medium", "sukham.normal",
         "ennaa-vishesham.slow", "ennaa-vishesham.medium", "ennaa-vishesham.normal",
-        "nannaayitt-pokunnu.slow", "nannaayitt-pokunnu.medium", "nannaayitt-pokunnu.normal",
+        "nannayitt-pokunnu.slow", "nannayitt-pokunnu.medium", "nannayitt-pokunnu.normal",
         "vishesham-onnum-illa.slow", "vishesham-onnum-illa.medium", "vishesham-onnum-illa.normal",
         "seri.slow", "seri.medium", "seri.normal",
         "nokkam.slow", "nokkam.medium", "nokkam.normal",
@@ -248,14 +248,14 @@
     "l3u2l2": {
       "sprite": "audio/l3u2l2.mp3",
       "clips": [
-        "enthaa.slow", "enthaa.medium", "enthaa.normal",
-        "ethaa.slow", "ethaa.medium", "ethaa.normal",
+        "entha.slow", "entha.medium", "entha.normal",
+        "etha.slow", "etha.medium", "etha.normal",
         "engane.slow", "engane.medium", "engane.normal",
-        "enthinaa.slow", "enthinaa.medium", "enthinaa.normal",
-        "eppozhaa.slow", "eppozhaa.medium", "eppozhaa.normal",
+        "enthina.slow", "enthina.medium", "enthina.normal",
+        "eppozha.slow", "eppozha.medium", "eppozha.normal",
         "evide.slow", "evide.medium", "evide.normal",
         "evide-aa.slow", "evide-aa.medium", "evide-aa.normal",
-        "ethaa-bus.slow", "ethaa-bus.medium", "ethaa-bus.normal"
+        "etha-bus.slow", "etha-bus.medium", "etha-bus.normal"
       ]
     }
   }

@@ -118,7 +118,17 @@ const MANGLISH_TRAPS: Record<string, string> = {
   kittunnu: 'kittuva',
   ippol: 'ippo',
   varoo: 'vaa',
-  entha: 'enthaa',
+}
+
+/** Sanctioned words whose long ാ writes short (native-speaker rulings). */
+const IRREGULAR_WORDS: Record<string, string> = {
+  njan: 'ഞാൻ',
+  enna: 'എന്നാ',
+  nannayitt: 'നന്നായിട്ട്',
+  entha: 'എന്താ',
+  etha: 'ഏതാ',
+  enthina: 'എന്തിനാ',
+  eppozha: 'എപ്പോഴാ',
 }
 
 const SCRIPT_TRAPS: Record<string, string> = {
@@ -130,10 +140,10 @@ const SCRIPT_TRAPS: Record<string, string> = {
 
 /**
  * Native-speaker-sanctioned fixed expressions that legitimately keep a
- * formal-looking form (nannaayitt pokunnu, "it's going well"): the trap
+ * formal-looking form (nannayitt pokunnu, "it's going well"): the trap
  * checks are skipped for these exact phrases.
  */
-const SANCTIONED_PHRASES = new Set(['nannaayitt pokunnu'])
+const SANCTIONED_PHRASES = new Set(['nannayitt pokunnu'])
 const SANCTIONED_SCRIPTS = new Set(['നന്നായിട്ട് പോകുന്നു'])
 
 // ---------------------------------------------------------------------------
@@ -236,6 +246,8 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
       const targets = TOKEN_TO_SCRIPT[token]
       if (!targets) continue
       if (VOWEL_TOKENS.has(token) && !hasVowel) continue
+      // Sanctioned double-t: ishttamilla writes the ഷ്ട cluster as tt.
+      if (token === 'tt' && word === 'ishttamilla' && script.includes('ഷ്ട')) continue
       if (targets.some((t) => script.includes(t))) continue
       if (token === 'a' && hasInherentA(script)) continue
       fail(ctx, `"${token}" needs ${targets.join(' or ')} in the script, got ${script}`)
@@ -248,6 +260,8 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
   for (const [rom, conj] of GEMINATE_PAIRS) {
     const hasRom = allTokens.includes(rom)
     const hasConj = script.includes(conj)
+    // Sanctioned double-t: ishttamilla writes the ഷ്ട cluster as tt.
+    if (rom === 'tt' && manglish.split(' ').includes('ishttamilla') && script.includes('ഷ്ട')) continue
     if (hasRom !== hasConj) fail(ctx, `${rom} ${hasRom ? 'needs' : 'not matched by'} ${conj}: ${script}`)
   }
   // Colloquial -uva verbs write the suffix as -ുവാ (PLAN.md §9 rule 6,
@@ -266,15 +280,14 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
       at = script.indexOf(UVA, at + 1)
     }
   }
-  // Native-speaker rulings: njan and enna write the long a short
-  // (Malayalees type "njan", "enna"), so those ാ are exempt.
-  const IRREGULAR_SCRIPT: Record<string, string> = { njan: 'ഞാൻ', enna: 'എന്നാ' }
-  const irregularWords = manglish.split(' ').filter((w) => w in IRREGULAR_SCRIPT)
+  // Native-speaker rulings: words whose long ാ writes short (njan,
+  // enna, nannayitt, and the plain question words).
+  const irregularWords = manglish.split(' ').filter((w) => w in IRREGULAR_WORDS)
   const irregularALetters = new Set<number>()
   for (const w of irregularWords) {
-    const at = script.indexOf(IRREGULAR_SCRIPT[w])
-    if (at === -1) fail(ctx, `"${w}" needs ${IRREGULAR_SCRIPT[w]} in the script, got ${script}`)
-    irregularALetters.add(at + IRREGULAR_SCRIPT[w].indexOf('ാ'))
+    const at = script.indexOf(IRREGULAR_WORDS[w])
+    if (at === -1) fail(ctx, `"${w}" needs ${IRREGULAR_WORDS[w]} in the script, got ${script}`)
+    irregularALetters.add(at + IRREGULAR_WORDS[w].indexOf('ാ'))
   }
   // vowel doubling: aa/ee/oo must match the script's long vowel signs
   const scriptAa = countChar(script, 'ാ') + countChar(script, 'ആ') - uvaCount - irregularWords.length
