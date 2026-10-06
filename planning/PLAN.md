@@ -84,6 +84,7 @@ Units:
 - Tag questions: `alle?` (`athu sheri alle?` "that's correct, right?"), `ketto` / `kettayirunno` "did you hear?" (`kettiyo` is not a word); the `-o` particle: `niyyo?` "you?" (for "you too?" use `niyyum?`)
 - Dative for wanting: `enikk chaaya venam` "I want tea" — `njan chaaya venam` is wrong
 - Sandhi: `veedu` + `-il` → `veettil` (`njan veettil pokuva` "I am going home") — the retroflex d doubles before `-il`
+- **Pragmatics of `-uva`**: declarative statements are natural in first and third person (`njan varuva` "I am coming", `avan varuva` "he is coming"); bare second-person declaratives (`nee varuva`, `thaangal pokuva`) read command-like and are avoided — second person uses questions (`nii varunnundo?` "are you coming?") or the imperative
 - Politeness in context: `nee` vs `ningal` vs `taankal`; the third-person ladder (`ayaan`, `iyaal`, `addeham`, honorific `avar`); title substitution (`Aunty`, `Chetta`)
 
 ### Level 3 — Cases & Connectors (Beginner+) · ~60 items, 6 lessons
