@@ -60,7 +60,10 @@ export const lesson2CasesIlekk: Lesson = {
       manglish: 'njan hotelilekk pokuva',
       meaning: 'I am going to the hotel.',
       kind: 'sentence',
-      notes: ['-ilekk is the pointed "to": hotelilekk, to the hotel.'],
+      notes: [
+        '-ilekk is the pointed "to": hotelilekk, to the hotel.',
+        'No script here: the English word has no settled Malayalam spelling.',
+      ],
       segments: [
         { token: 'njan', gloss: 'I' },
         { token: 'hotelilekk', gloss: 'to the hotel' },
@@ -126,17 +129,17 @@ export const lesson2CasesIlekk: Lesson = {
       tags: ['level:3'],
     },
     {
-      id: 'chechi-hotelilekk-pokuva',
-      manglish: 'chechi hotelilekk pokuva',
-      meaning: 'chechi is going to the hotel.',
+      id: 'avan-hotelilekk-pokuva',
+      manglish: 'avan hotelilekk pokuva',
+      meaning: 'he is going to the hotel.',
       kind: 'sentence',
       notes: ['No script here: the English words have no settled Malayalam spelling.'],
       segments: [
-        { token: 'chechi', gloss: 'aunty' },
+        { token: 'avan', gloss: 'he' },
         { token: 'hotelilekk', gloss: 'to the hotel' },
         { token: 'pokuva', gloss: 'going' },
       ],
-      audio: { slow: 'chechi-hotelilekk-pokuva.slow', medium: 'chechi-hotelilekk-pokuva.medium', normal: 'chechi-hotelilekk-pokuva.normal' },
+      audio: { slow: 'avan-hotelilekk-pokuva.slow', medium: 'avan-hotelilekk-pokuva.medium', normal: 'avan-hotelilekk-pokuva.normal' },
       tags: ['level:3'],
     },
     {
@@ -160,7 +163,7 @@ export const lesson2CasesIlekk: Lesson = {
     { kind: 'multipleChoice', itemId: 'hotelilekk', distractors: ['veettilekk', 'officilekk', 'njan-officilekk-pokuva'] },
     { kind: 'multipleChoice', itemId: 'officilekk', distractors: ['veettilekk', 'hotelilekk', 'kadayilekk'] },
     { kind: 'multipleChoice', itemId: 'kadayilekk', distractors: ['veettilekk', 'hotelilekk', 'officilekk'] },
-    { kind: 'multipleChoice', itemId: 'chetta-hotelilekk-pokunnundo', distractors: ['chechi-hotelilekk-pokuva', 'avan-hotelilekk-varunnundo', 'njan-hotelilekk-pokuva'] },
+    { kind: 'multipleChoice', itemId: 'chetta-hotelilekk-pokunnundo', distractors: ['avan-hotelilekk-pokuva', 'avan-hotelilekk-varunnundo', 'njan-hotelilekk-pokuva'] },
     {
       kind: 'sentenceBuilder',
       sentenceId: 'njan-hotelilekk-pokuva',

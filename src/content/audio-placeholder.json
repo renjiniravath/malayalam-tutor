@@ -193,7 +193,7 @@
         "njan-busil-und.slow", "njan-busil-und.medium", "njan-busil-und.normal",
         "njan-busil-keran-pokuva.slow", "njan-busil-keran-pokuva.medium", "njan-busil-keran-pokuva.normal",
         "chaaya-veettil-und.slow", "chaaya-veettil-und.medium", "chaaya-veettil-und.normal",
-        "chechi-officil-und.slow", "chechi-officil-und.medium", "chechi-officil-und.normal"
+        "avan-officil-und.slow", "avan-officil-und.medium", "avan-officil-und.normal"
       ]
     },
     "l3u1l2": {
@@ -208,7 +208,7 @@
         "njan-veettilekk-pokuva.slow", "njan-veettilekk-pokuva.medium", "njan-veettilekk-pokuva.normal",
         "avan-hotelilekk-varunnundo.slow", "avan-hotelilekk-varunnundo.medium", "avan-hotelilekk-varunnundo.normal",
         "njan-kadayilekk-pokuva.slow", "njan-kadayilekk-pokuva.medium", "njan-kadayilekk-pokuva.normal",
-        "chechi-hotelilekk-pokuva.slow", "chechi-hotelilekk-pokuva.medium", "chechi-hotelilekk-pokuva.normal",
+        "avan-hotelilekk-pokuva.slow", "avan-hotelilekk-pokuva.medium", "avan-hotelilekk-pokuva.normal",
         "chetta-hotelilekk-pokunnundo.slow", "chetta-hotelilekk-pokunnundo.medium", "chetta-hotelilekk-pokunnundo.normal"
       ]
     },
@@ -223,7 +223,7 @@
         "njan-jolikku-pokuva.slow", "njan-jolikku-pokuva.medium", "njan-jolikku-pokuva.normal",
         "ninakk-chaaya-veno.slow", "ninakk-chaaya-veno.medium", "ninakk-chaaya-veno.normal",
         "chetta-jolikku-pokunnundo.slow", "chetta-jolikku-pokunnundo.medium", "chetta-jolikku-pokunnundo.normal",
-        "chechi-jolikku-pokuva.slow", "chechi-jolikku-pokuva.medium", "chechi-jolikku-pokuva.normal",
+        "avan-jolikku-pokuva.slow", "avan-jolikku-pokuva.medium", "avan-jolikku-pokuva.normal",
         "enikk-sheri-aa.slow", "enikk-sheri-aa.medium", "enikk-sheri-aa.normal",
         "ninakk-sheri-aano.slow", "ninakk-sheri-aano.medium", "ninakk-sheri-aano.normal",
         "enikk-venam.slow", "enikk-venam.medium", "enikk-venam.normal"
@@ -240,6 +240,7 @@
         "ingane.slow", "ingane.medium", "ingane.normal",
         "appo.slow", "appo.medium", "appo.normal",
         "ippo.slow", "ippo.medium", "ippo.normal",
+        "njan-angott-varuva.slow", "njan-angott-varuva.medium", "njan-angott-varuva.normal",
         "njangal.slow", "njangal.medium", "njangal.normal",
         "ente.slow", "ente.medium", "ente.normal",
         "ninte.slow", "ninte.medium", "ninte.normal"
@@ -255,7 +256,8 @@
         "eppozha.slow", "eppozha.medium", "eppozha.normal",
         "evide.slow", "evide.medium", "evide.normal",
         "evide-aa.slow", "evide-aa.medium", "evide-aa.normal",
-        "etha-bus.slow", "etha-bus.medium", "etha-bus.normal"
+        "etha-bus.slow", "etha-bus.medium", "etha-bus.normal",
+        "nee-chaaya-kudikkumello-alle.slow", "nee-chaaya-kudikkumello-alle.medium", "nee-chaaya-kudikkumello-alle.normal"
       ]
     }
   }

@@ -37,7 +37,7 @@ export const lesson6Titles: Lesson = {
       kind: 'word',
       pos: 'noun',
       notes: [
-        'The everyday title for a woman a little older than you.',
+        'It is the everyday title for a woman a little older than you.',
         'The vocative keeps its form: chechi! And it takes a comma in a sentence.',
       ],
       audio: { slow: 'chechi.slow', medium: 'chechi.medium', normal: 'chechi.normal' },

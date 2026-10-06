@@ -59,7 +59,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'cheettha', script: 'ചീത്ത', meaning: 'bad' },
   // Level 1 Unit 2 — greetings & expressions
   { manglish: 'engane und', script: 'എങ്ങനെ ഉണ്ട്', meaning: 'how is it? (also how are you?)' },
-  { manglish: 'kaappi engane und, kollaamo', script: 'കാപ്പി എങ്ങനെ ഉണ്ട്, കൊല്ലാമോ', meaning: 'how is the coffee, is it good?' },
+  { manglish: 'kaappi engane und, koḷḷaamo', script: 'കാപ്പി എങ്ങനെ ഉണ്ട്, കൊള്ളാമോ', meaning: 'how is the coffee, is it good?' },
   { manglish: 'sukham', script: 'സുഖം', meaning: 'fine, well' },
   { manglish: 'enna und vishesham', script: 'എന്നാ ഉണ്ട് വിശേഷം', meaning: "what's up?" },
   { manglish: 'nannayitt pokunnu', script: 'നന്നായിട്ട് പോകുന്നു', meaning: "it's going well" },
@@ -112,7 +112,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'njan okay aanu', meaning: 'I am fine.' },
   { manglish: 'athu sheri aa', script: 'അത് ശെരി ആ', meaning: "that's correct" },
   // no script: the English word has no settled Malayalam spelling
-  { manglish: 'avan teacher aa', meaning: 'He is a teacher.' },
+  { manglish: 'avan oru school teacher aanu', meaning: 'He is a school teacher.' },
   { manglish: 'ready aano', meaning: 'ready? (question form)' },
   { manglish: 'chaaya illa', script: 'ചായ ഇല്ല', meaning: "there's no tea" },
   { manglish: 'venam', script: 'വേണം', meaning: 'want, need' },
@@ -176,7 +176,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'njan busil und', meaning: 'I am on the bus.' },
   { manglish: 'njan busil keran pokuva', meaning: 'I am going to board the bus.' },
   { manglish: 'chaaya veettil und', script: 'ചായ വീട്ടിൽ ഉണ്ട്', meaning: 'there is tea at home.' },
-  { manglish: 'chechi officil und', meaning: 'chechi is at the office.' },
+  { manglish: 'avan officil und', meaning: 'he is at the office.' },
   // Level 3 Unit 1 — cases: -ilekk
   { manglish: 'veettilekk', script: 'വീട്ടിലേക്ക്', meaning: 'to home (veedu + ilekk)' },
   { manglish: 'hotelilekk', meaning: 'to the hotel (hotel + ilekk)' },
@@ -187,7 +187,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'njan veettilekk pokuva', script: 'ഞാൻ വീട്ടിലേക്ക് പോകുവാ', meaning: 'I am going home (with -ilekk).' },
   { manglish: 'avan hotelilekk varunnundo', meaning: 'is he coming to the hotel?' },
   { manglish: 'njan kadayilekk pokuva', script: 'ഞാൻ കടയിലേക്ക് പോകുവാ', meaning: 'I am going to the shop.' },
-  { manglish: 'chechi hotelilekk pokuva', meaning: 'chechi is going to the hotel.' },  { manglish: 'chetta, hotelilekk pokunnundo', meaning: 'chetta, are you going to the hotel?' },
+  { manglish: 'avan hotelilekk pokuva', meaning: 'he is going to the hotel.' },  { manglish: 'chetta, hotelilekk pokunnundo', meaning: 'chetta, are you going to the hotel?' },
   // Level 3 Unit 1 — cases: -kku
   { manglish: 'jolikku', script: 'ജോലിക്ക്', meaning: 'to work (joli + kku)' },
   { manglish: 'enikk', script: 'എനിക്ക്', meaning: 'to me' },
@@ -197,7 +197,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'njan jolikku pokuva', script: 'ഞാൻ ജോലിക്ക് പോകുവാ', meaning: 'I am going to work.' },
   { manglish: 'ninakk chaaya veno', script: 'നിനക്ക് ചായ വേണോ', meaning: 'do you want tea? (casual)' },
   { manglish: 'chetta, jolikku pokunnundo', meaning: 'chetta, are you going to work?' },
-  { manglish: 'chechi jolikku pokuva', script: 'ചേച്ചി ജോലിക്ക് പോകുവാ', meaning: 'chechi is going to work.' },
+  { manglish: 'avan jolikku pokuva', script: 'അവൻ ജോലിക്ക് പോകുവാ', meaning: 'he is going to work.' },
   { manglish: 'enikk sheri aa', script: 'എനിക്ക് ശെരി ആ', meaning: 'fine by me.' },
   { manglish: 'ninakk sheri aano', script: 'നിനക്ക് ശെരി ആണോ', meaning: 'is that fine with you? (casual)' },
   { manglish: 'enikk venam', script: 'എനിക്ക് വേണം', meaning: 'I want it.' },
@@ -210,6 +210,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'ingane', script: 'ഇങ്ങനെ', meaning: 'like this' },
   { manglish: 'appo', script: 'അപ്പോ', meaning: 'then; so' },
   { manglish: 'ippo', script: 'ഇപ്പോ', meaning: 'now' },
+  { manglish: 'njan angott varuva', script: 'ഞാൻ അങ്ങോട്ട് വരുവാ', meaning: 'I am coming there.' },
   { manglish: 'njangaḷ', script: 'ഞങ്ങൾ', meaning: 'we (not you)' },
   { manglish: 'ente', script: 'എന്റെ', meaning: 'my' },
   { manglish: 'ninte', script: 'നിന്റെ', meaning: 'your (casual)' },
@@ -222,4 +223,5 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'evide', script: 'എവിടെ', meaning: 'where?' },
   { manglish: 'evide aa', script: 'എവിടെ ആ', meaning: 'where is it?' },
   { manglish: 'etha bus', meaning: 'which bus?' },
+  { manglish: 'nee chaaya kudikkumello, alle', meaning: 'you drink tea, right?' },
 ]

@@ -131,6 +131,18 @@ const IRREGULAR_WORDS: Record<string, string> = {
   eppozha: 'എപ്പോഴാ',
 }
 
+/**
+ * Spellings retired by native-speaker rulings: any of these as a whole
+ * word in a manglish field is a content error.
+ */
+const BANNED_WORDS = new Set([
+  'njaan', 'enthaa', 'eppozhaa', 'kudikkuka', 'kudi',
+  'shoppil', 'aunty', 'vali', 'azhaku', 'kettiyo',
+])
+
+/** Second-person pronouns: their items must use the -unnundo question form. */
+const SECOND_PERSON = new Set(['nee', 'ningaḷ', 'thaangkaḷ'])
+
 const SCRIPT_TRAPS: Record<string, string> = {
   പോകുന്നു: 'പോകുവാ',
   വരുന്നു: 'വരുവാ',
@@ -239,6 +251,7 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
     if (tokens.length === 0) fail(ctx, `cannot tokenize: ${word}`)
     if (!sanctionedPhrase && word in MANGLISH_TRAPS)
       fail(ctx, `formal register "${word}" — use the casual "${MANGLISH_TRAPS[word]}"`)
+    if (BANNED_WORDS.has(word)) fail(ctx, `banned spelling "${word}" (retired by native-speaker ruling)`)
     if (word.includes('ii')) fail(ctx, `long i is written ee (as in veedu), not ii: ${word}`)
     if (word.includes('uu')) fail(ctx, `long u is written oo (as in choodu), not uu: ${word}`)
     if (!script) continue
@@ -473,6 +486,17 @@ function main(): void {
         if (entry.script !== item.script) fail(ctx, `script must match the dictionary: ${entry.script}`)
         if (entry.meaning !== item.meaning)
           fail(ctx, `meaning must match the dictionary: "${entry.meaning}"`)
+      }
+
+      // second-person pragmatics: a bare -uva declarative reads as a
+      // command, so second-person sentences use the -unnundo question form.
+      if (item.kind === 'sentence') {
+        const words = item.manglish.split(' ')
+        const hasSecondPerson = words.some((w) => SECOND_PERSON.has(w))
+        const hasBareUva = words.some((w) => w.endsWith('uva'))
+        const hasQuestion = words.some((w) => w.includes('unnundo'))
+        if (hasSecondPerson && hasBareUva && !hasQuestion)
+          fail(ctx, 'second-person sentences use the -unnundo question form, not a bare -uva declarative')
       }
 
       // tags

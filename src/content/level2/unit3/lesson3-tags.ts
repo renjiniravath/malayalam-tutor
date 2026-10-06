@@ -184,7 +184,7 @@ export const lesson3Tags: Lesson = {
       bank: ['athu', 'sheri', 'alle'],
       acceptedInputs: ['athu sheri alle'],
     },
-    { kind: 'typing', itemId: 'kettiyo', acceptedInputs: ['kettiyo'] },
+    { kind: 'typing', itemId: 'kettiyo' },
     { kind: 'typing', itemId: 'niyyo', acceptedInputs: ['niyyo'] },
   ],
 }

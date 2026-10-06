@@ -23,7 +23,7 @@ export const lesson1Zh: Lesson = {
         cue: 'Curl the tongue tip up and back and let air flow over it — a soft, buzzy r.',
       },
       audio: { slow: 'zha.slow', medium: 'zha.medium', normal: 'zha.normal', focus: ['zha.focus'] },
-      notes: ['The sound in mazha (rain) and vazhi (way).'],
+      notes: ['It is the sound in mazha (rain) and vazhi (way).'],
       tags: ['sound:zh', 'level:1'],
     },
     {
@@ -83,7 +83,7 @@ export const lesson1Zh: Lesson = {
       meaning: 'river',
       kind: 'word',
       pos: 'noun',
-      notes: ['The word in many place names.'],
+      notes: ['It is the word in many place names.'],
       audio: { slow: 'puzha.slow', medium: 'puzha.medium', normal: 'puzha.normal' },
       tags: ['sound:zh', 'level:1'],
     },

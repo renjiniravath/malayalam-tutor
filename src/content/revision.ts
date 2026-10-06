@@ -45,5 +45,11 @@
  *  17 — spelling rulings: nannayitt (single a) sanctioned; ishttamilla
  *       (double t) sanctioned; question words plain (entha, etha,
  *       enthina, eppozha)
+ *  18 — deep-pass audit: koḷḷaamo corrected (not kollaamo, "can I
+ *       kill"); avan oru school teacher aanu; chechi declarative
+ *       subjects re-personed to avan; njan angott varuva and nee
+ *       chaaya kudikkumello, alle added; kettiyo acceptedInput
+ *       removed; checker gains banned-word traps and the bare
+ *       second-person -uva ban; side notes completed
  */
-export const CONTENT_REVISION = 17
+export const CONTENT_REVISION = 18

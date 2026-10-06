@@ -117,14 +117,19 @@ export const lesson2Copula: Lesson = {
     },
     {
       id: 'avan-teacher-aa',
-      manglish: 'avan teacher aa',
-      meaning: 'He is a teacher.',
+      manglish: 'avan oru school teacher aanu',
+      meaning: 'He is a school teacher.',
       kind: 'sentence',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
+      notes: [
+        'Copula statements about people take the article oru (a): avan oru teacher aanu.',
+        'No script here: the English words have no settled Malayalam spelling.',
+      ],
       segments: [
         { token: 'avan', gloss: 'he' },
+        { token: 'oru', gloss: 'a (the article)' },
+        { token: 'school', gloss: 'school' },
         { token: 'teacher', gloss: 'teacher' },
-        { token: 'aa', gloss: 'is' },
+        { token: 'aanu', gloss: 'is' },
       ],
       audio: { slow: 'avan-teacher-aa.slow', medium: 'avan-teacher-aa.medium', normal: 'avan-teacher-aa.normal' },
       tags: ['level:2'],
@@ -217,8 +222,8 @@ export const lesson2Copula: Lesson = {
     {
       kind: 'sentenceBuilder',
       sentenceId: 'avan-teacher-aa',
-      bank: ['avan', 'teacher', 'aa'],
-      acceptedInputs: ['avan teacher aa'],
+      bank: ['avan', 'oru', 'school', 'teacher', 'aanu'],
+      acceptedInputs: ['avan oru school teacher aanu'],
     },
     {
       kind: 'sentenceBuilder',
