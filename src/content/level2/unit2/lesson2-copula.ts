@@ -84,6 +84,24 @@ export const lesson2Copula: Lesson = {
       tags: ['level:2'],
     },
     {
+      id: 'njan-okay-aanu',
+      manglish: 'njan okay aanu',
+      meaning: 'I am fine.',
+      kind: 'sentence',
+      notes: [
+        'The everyday answer to engane und?. Not njan sheri: that means "I correct".',
+        'English words are normal in casual sentences: okay, ready, teacher.',
+        'No script here: the English word has no settled Malayalam spelling.',
+      ],
+      segments: [
+        { token: 'njan', gloss: 'I' },
+        { token: 'okay', gloss: 'okay' },
+        { token: 'aanu', gloss: 'is' },
+      ],
+      audio: { slow: 'njan-okay-aanu.slow', medium: 'njan-okay-aanu.medium', normal: 'njan-okay-aanu.normal' },
+      tags: ['level:2'],
+    },
+    {
       id: 'athu-sheri-aa',
       manglish: 'athu sheri aa',
       script: 'അത് ശെരി ആ',
@@ -215,7 +233,14 @@ export const lesson2Copula: Lesson = {
       acceptedInputs: ['chaaya illa'],
     },
     { kind: 'multipleChoice', itemId: 'venam', distractors: ['aanu', 'aano', 'illa'] },
+    { kind: 'multipleChoice', itemId: 'njan-okay-aanu', distractors: ['njan-ready-aa', 'sheri-aanu', 'avan-teacher-aa'] },
     { kind: 'multipleChoice', itemId: 'avan-varunnundo', distractors: ['enikk-chaaya-venam', 'ready-aano', 'chaaya-illa'] },
+    {
+      kind: 'sentenceBuilder',
+      sentenceId: 'njan-okay-aanu',
+      bank: ['njan', 'okay', 'aanu'],
+      acceptedInputs: ['njan okay aanu'],
+    },
     {
       kind: 'sentenceBuilder',
       sentenceId: 'enikk-chaaya-venam',

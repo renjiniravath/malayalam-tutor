@@ -104,6 +104,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'illa', script: 'ഇല്ല', meaning: 'no, there is not' },
   { manglish: 'sheri aanu', script: 'ശെരി ആണ്', meaning: "it's fine, it's right" },
   { manglish: 'njan ready aa', meaning: 'I am ready.' },
+  { manglish: 'njan okay aanu', meaning: 'I am fine.' },
   { manglish: 'athu sheri aa', script: 'അത് ശെരി ആ', meaning: "that's correct" },
   // no script: the English word has no settled Malayalam spelling
   { manglish: 'avan teacher aa', meaning: 'He is a teacher.' },

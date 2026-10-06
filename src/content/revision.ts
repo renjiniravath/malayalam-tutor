@@ -17,5 +17,7 @@
  *   8 — final native-speaker rulings: njan (not njaan); aadi/adi and
  *       puḷḷi/puli minimal pairs; chetta vocative takes a comma
  *       (chetta, pokunnundo?); nokkum habitual added
+ *   9 — "I am fine" is njan okay aanu (njan sheri means "I correct");
+ *       no bare first-person declaratives from parayuva/cheyyuva
  */
-export const CONTENT_REVISION = 8
+export const CONTENT_REVISION = 9
