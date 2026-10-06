@@ -23,7 +23,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 9,
+  revision: 10,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -57,6 +57,9 @@ export const contentRevision: ContentRevision = {
     // slot has no pair; kuudi re-keyed as koodi (long u = oo).
     'kudi',
     'kuudi',
+    // Ruling: kudikkuka is the formal directive form and is not
+    // taught now — learners get kudikkuva and kudikkum only.
+    'kudikkuka',
   ],
 };
 
