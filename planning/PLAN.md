@@ -78,10 +78,12 @@ Units:
 ### Level 2 — First Sentences · ~80 items, 8 lessons
 **Can do:** understand and say simple present-tense sentences built from Level 1 words; ask and answer yes/no questions.
 
-- The **present-tense pattern** (`-uva`) made explicit, using the Level 1 verb chunks: `njan chaaya kudikkuva`, `avan varuva`
+- The **present-continuous pattern** (`-uva`): `njan chaaya kudikkuva` = "I am drinking tea" (NOT "I drink tea" — the habitual is `-um`: `njan chaaya kudikkum` "I drink tea"). Using the Level 1 verb chunks: `njan parayuva` "I am saying", `avan varuva` "he is coming" (more colloquial question: `avan varunundo?` "is he coming?")
 - The **copula**: `aanu` / `aano` ("X is Y" — `njan ready aa`), and yes/no answers: `athe`, `alla`, `illa` (moved here from Level 4 — dialogues depend on them)
 - **Every new word in a sentence is explained** — word-by-word breakdown on a tap
-- Tag questions (`alle?`, `kettiyo?`), the `-o` particle (`niyyo?`)
+- Tag questions: `alle?` (`athu sheri alle?` "that's correct, right?"), `ketto` / `kettayirunno` "did you hear?" (`kettiyo` is not a word); the `-o` particle: `niyyo?` "you?" (for "you too?" use `niyyum?`)
+- Dative for wanting: `enikk chaaya venam` "I want tea" — `njan chaaya venam` is wrong
+- Sandhi: `veedu` + `-il` → `veettil` (`njan veettil pokuva` "I am going home") — the retroflex d doubles before `-il`
 - Politeness in context: `nee` vs `ningal` vs `taankal`; the third-person ladder (`ayaan`, `iyaal`, `addeham`, honorific `avar`); title substitution (`Aunty`, `Chetta`)
 
 ### Level 3 — Cases & Connectors (Beginner+) · ~60 items, 6 lessons
