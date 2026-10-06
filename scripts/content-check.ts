@@ -33,6 +33,7 @@ import {
   AUDIO_TIERS,
   TAG_REGISTRY,
 } from '../src/content/index';
+import { hasBareSecondPersonUva } from '../src/lib/content/pragmatics';
 import type { Item, Lesson, MinimalPair, MinimalPairSegment } from '../src/content/types';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -230,6 +231,14 @@ function checkSentence(where: string, item: Item): void {
   }
   if (!words.every((word) => spec.parts.some((part) => part.word === word))) {
     fail(where, 'sentence.parts must cover every word of the first accepted order');
+  }
+  // Pragmatics (PLAN.md §5): a bare second-person -uva declarative reads
+  // like a command; the second person must use the question form.
+  if (hasBareSecondPersonUva(spec.orders)) {
+    fail(
+      where,
+      'a bare second-person -uva declarative reads like a command; use the question form (nii varunnundo?) or re-person the sentence',
+    );
   }
 }
 
