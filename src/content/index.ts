@@ -24,7 +24,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 11,
+  revision: 12,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -73,6 +73,19 @@ export const contentRevision: ContentRevision = {
     'nammal-hottelilekk-pokuva',
     'officekku',
     'avan-officekku-pokuva',
+    // Rulings on politeness and cases: question forms for the ladder
+    // (ayaaḷ/addheham/avar), the iyaaḷ copula item dropped, chetta
+    // njan ippo varuva dropped, and the shop words became the native
+    // kada (kadayil, kadayilott).
+    'ayaal-varuva',
+    'iyaal-ready-aanu',
+    'addheham-varuva',
+    'avar-varuva',
+    'chetta-njan-ippo-varuva',
+    'shoppil',
+    'njan-shoppil-pokuva',
+    'shoppilekk',
+    'avan-shoppilekk-pokuva',
   ],
 };
 

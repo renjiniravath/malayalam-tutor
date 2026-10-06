@@ -96,30 +96,6 @@ export const l2u2l2: Lesson = {
       tags: [],
     },
     {
-      id: 'chetta-njan-ippo-varuva',
-      manglish: 'chetta, njan ippo varuva',
-      script: 'ചേട്ടാ ഞാൻ ഇപ്പോ വരുവാ',
-      meaning: 'chetta, I am coming now',
-      kind: 'sentence',
-      audio: {
-        slow: 'l2u2l2_chetta-njan-ippo-varuva_slow',
-        medium: 'l2u2l2_chetta-njan-ippo-varuva_medium',
-        normal: 'l2u2l2_chetta-njan-ippo-varuva_normal',
-      },
-      sentence: {
-        bank: ['chetta,', 'njan', 'ippo', 'varuva', 'pokuva'],
-        orders: ['chetta, njan ippo varuva'],
-        parts: [
-          { word: 'chetta,', meaning: 'older brother; a friendly address for men' },
-          { word: 'njan', meaning: 'I' },
-          { word: 'ippo', meaning: 'now' },
-          { word: 'varuva', meaning: 'coming' },
-        ],
-      },
-      notes: ['First person keeps the plain -uva; chetta stays the address up front.'],
-      tags: [],
-    },
-    {
       id: 'aunty-ready-aano',
       manglish: 'aunty, ready aano',
       script: 'ആന്റി റെഡി ആണോ',
@@ -195,7 +171,6 @@ export const l2u2l2: Lesson = {
     { kind: 'multipleChoice', itemId: 'aunty', distractors: ['older brother; a friendly address for men', 'chetta, are you coming?', 'are you busy?'] },
     { kind: 'sentenceBuilder', itemId: 'chetta-varunnundo', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'chetta-coffee-veno', mode: 'bank' },
-    { kind: 'sentenceBuilder', itemId: 'chetta-njan-ippo-varuva', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'aunty-ready-aano', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'aunty-chaaya-veno', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ningal-busy-aano', mode: 'bank' },

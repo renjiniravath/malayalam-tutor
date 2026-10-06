@@ -8,7 +8,7 @@ export const level3: Level = {
   name: 'Level 3 — Places and Cases',
   canDo: [
     'Put places on the map: -il for in and at, -kku for to and for, -ilekk for heading to.',
-    'Attach Malayalam case suffixes to English words the way Kerala talks: officil, jolikku, shoppil, busil, hotelilekk.',
+    'Attach Malayalam case suffixes to English words the way Kerala talks: officil, jolikku, busil, hotelilekk — and the native kada.',
     'Build the everyday frame: person + place + verb.',
   ],
   lessons: [l3u1l1, l3u1l2, l3u1l3],
