@@ -30,5 +30,8 @@
  *  13 — Level 2 lessons 5-6 (third-person ladder, title substitution)
  *       and Level 3 lessons 1-3 (cases: -il, -ilekk, -kku with English
  *       word assimilation) added
+ *  14 — rulings on politeness/cases: ingott question forms for
+ *       ayaaḷ/addheham; avar varunnundo question form; iyaaḷ copula
+ *       items removed; shop words become kada (kadayil, kadayilott)
  */
-export const CONTENT_REVISION = 13
+export const CONTENT_REVISION = 14

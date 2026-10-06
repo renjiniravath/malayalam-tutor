@@ -45,6 +45,17 @@ export const lesson2CasesIlekk: Lesson = {
       tags: ['level:3'],
     },
     {
+      id: 'kadayilott',
+      manglish: 'kadayilott',
+      script: 'കടയിലോട്ട്',
+      meaning: 'to the shop (kada + ilott)',
+      kind: 'word',
+      pos: 'noun',
+      notes: ['-ott is the pointed "to": kada (shop) + ilott = kadayilott.'],
+      audio: { slow: 'kadayilott.slow', medium: 'kadayilott.medium', normal: 'kadayilott.normal' },
+      tags: ['level:3'],
+    },
+    {
       id: 'njan-hotelilekk-pokuva',
       manglish: 'njan hotelilekk pokuva',
       meaning: 'I am going to the hotel.',
@@ -101,17 +112,17 @@ export const lesson2CasesIlekk: Lesson = {
       tags: ['level:3'],
     },
     {
-      id: 'njan-shoppilekk-pokuva',
-      manglish: 'njan shoppilekk pokuva',
+      id: 'njan-kadayilott-pokuva',
+      manglish: 'njan kadayilott pokuva',
+      script: 'ഞാൻ കടയിലോട്ട് പോകുവാ',
       meaning: 'I am going to the shop.',
       kind: 'sentence',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
       segments: [
         { token: 'njan', gloss: 'I' },
-        { token: 'shoppilekk', gloss: 'to the shop' },
+        { token: 'kadayilott', gloss: 'to the shop' },
         { token: 'pokuva', gloss: 'going' },
       ],
-      audio: { slow: 'njan-shoppilekk-pokuva.slow', medium: 'njan-shoppilekk-pokuva.medium', normal: 'njan-shoppilekk-pokuva.normal' },
+      audio: { slow: 'njan-kadayilott-pokuva.slow', medium: 'njan-kadayilott-pokuva.medium', normal: 'njan-kadayilott-pokuva.normal' },
       tags: ['level:3'],
     },
     {
@@ -147,7 +158,8 @@ export const lesson2CasesIlekk: Lesson = {
   drills: [
     { kind: 'multipleChoice', itemId: 'veettilekk', distractors: ['hotelilekk', 'officilekk', 'njan-hotelilekk-pokuva'] },
     { kind: 'multipleChoice', itemId: 'hotelilekk', distractors: ['veettilekk', 'officilekk', 'njan-officilekk-pokuva'] },
-    { kind: 'multipleChoice', itemId: 'officilekk', distractors: ['veettilekk', 'hotelilekk', 'aunty-hotelilekk-pokuva'] },
+    { kind: 'multipleChoice', itemId: 'officilekk', distractors: ['veettilekk', 'hotelilekk', 'kadayilott'] },
+    { kind: 'multipleChoice', itemId: 'kadayilott', distractors: ['veettilekk', 'hotelilekk', 'officilekk'] },
     { kind: 'multipleChoice', itemId: 'chetta-hotelilekk-pokunnundo', distractors: ['aunty-hotelilekk-pokuva', 'avan-hotelilekk-varunnundo', 'njan-hotelilekk-pokuva'] },
     {
       kind: 'sentenceBuilder',
