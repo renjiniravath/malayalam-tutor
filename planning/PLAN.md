@@ -78,7 +78,7 @@ Units:
 ### Level 2 — First Sentences · ~80 items, 8 lessons
 **Can do:** understand and say simple present-tense sentences built from Level 1 words; ask and answer yes/no questions.
 
-- The **present-continuous pattern** (`-uva`): `njan chaaya kudikkuva` = "I am drinking tea" (NOT "I drink tea" — the habitual is `-um`: `njan chaaya kudikkum` "I drink tea"). Using the Level 1 verb chunks: `njan parayuva` "I am saying", `avan varuva` "he is coming" (more colloquial question: `avan varunundo?` "is he coming?")
+- The **present-continuous pattern** (`-uva`): `njan chaaya kudikkuva` = "I am drinking tea" (NOT "I drink tea" — the habitual is `-um`: `njan chaaya kudikkum` "I drink tea"; same for `nokkuva` (continuous "looking") vs `nokkum` (habitual "looks") — native-speaker confirmation). Using the Level 1 verb chunks: `njan parayuva` "I am saying", `avan varuva` "he is coming" (more colloquial question: `avan varunundo?` "is he coming?")
 - The **copula**: `aanu` / `aano` ("X is Y" — `njan ready aa`), and yes/no answers: `athe`, `alla`, `illa` (moved here from Level 4 — dialogues depend on them)
 - **Every new word in a sentence is explained** — word-by-word breakdown on a tap
 - Tag questions: `alle?` (`athu sheri alle?` "that's correct, right?"), `ketto` / `kettayirunno` "did you hear?" (`kettiyo` is not a word); the `-o` particle: `niyyo?` "you?" (for "you too?" use `niyyum?`)
@@ -169,7 +169,7 @@ Accessibility (WCAG 2.2 AA target): everything keyboard-navigable; the anticipat
 | റ (rare) | `ṟ` in sound-teaching items; `r` in colloquial words (`choru`, `parayuva`) | | colloquial voicing | ട/ഡ written `d` when pronounced so (`veedu`, `evide`, `und`) |
 
 Rules:
-1. Long a/i/u always doubled; long e/o never doubled (deliberate — matches how Malayalees actually type; `content:check` enforces it).
+1. Long a/i/u always doubled; long e/o never doubled (deliberate — matches how Malayalees actually type; `content:check` enforces it). Long i is written `ee` (`nee`, `veedu`), never `ii` — native-speaker ruling 2026-10-06. `njaan` is written `njan` (same ruling).
 2. Dental vs retroflex always distinguished (`th` vs `t`).
 3. ള and ണ are common sounds (`veḷḷam`, `veṇṇa`), not rare — dedicated symbols in the **display layer**.
 4. Never use capitalization as a phonemic signal (mobile auto-capitalize).
