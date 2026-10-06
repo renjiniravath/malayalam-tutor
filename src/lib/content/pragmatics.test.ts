@@ -1,6 +1,11 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { hasBareSecondPersonUva, hasChettaSubject, SECOND_PERSON_SUBJECTS } from './pragmatics';
+import {
+  hasBareFirstPersonSayDo,
+  hasBareSecondPersonUva,
+  hasChettaSubject,
+  SECOND_PERSON_SUBJECTS,
+} from './pragmatics';
 
 describe('-uva pragmatics (PLAN.md §5)', () => {
   it('flags bare second-person -uva declaratives as command-like', () => {
@@ -32,5 +37,17 @@ describe('-uva pragmatics (PLAN.md §5)', () => {
   it('allows chetta as a vocative in an addressed question', () => {
     assert.equal(hasChettaSubject(['chetta, ith kando']), false);
     assert.equal(hasChettaSubject(['avan varuva']), false);
+  });
+
+  it('flags bare first-person parayuva/cheyyuva declaratives', () => {
+    assert.equal(hasBareFirstPersonSayDo(['njan parayuva']), true);
+    assert.equal(hasBareFirstPersonSayDo(['njan cheyyuva']), true);
+    assert.equal(hasBareFirstPersonSayDo(['nammaḷ parayuva']), true);
+  });
+
+  it('allows first-person -uva declaratives with a complement or other verbs', () => {
+    assert.equal(hasBareFirstPersonSayDo(['njan ippo varuva']), false);
+    assert.equal(hasBareFirstPersonSayDo(['njan chaaya kudikkuva']), false);
+    assert.equal(hasBareFirstPersonSayDo(['avan parayuva']), false);
   });
 });

@@ -32,3 +32,18 @@ export function hasBareSecondPersonUva(orders: string[]): boolean {
 export function hasChettaSubject(orders: string[]): boolean {
   return orders.some((order) => order.split(' ').includes('chetta'));
 }
+
+/**
+ * Native-speaker ruling: bare first-person declaratives from say/do-type
+ * verbs do not work in conversation ("njan parayuva" is not something
+ * said; it needs an object or is dropped). Only the bare two-word form
+ * is flagged — a verb with a complement is a different construction.
+ */
+export function hasBareFirstPersonSayDo(orders: string[]): boolean {
+  return orders.some((order) => {
+    const tokens = order.split(' ');
+    if (tokens.length !== 2) return false;
+    if (tokens[0] !== 'njan' && tokens[0] !== 'nammaḷ') return false;
+    return tokens[1] === 'parayuva' || tokens[1] === 'cheyyuva';
+  });
+}

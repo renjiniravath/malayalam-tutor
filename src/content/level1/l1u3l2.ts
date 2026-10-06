@@ -3,7 +3,7 @@ import type { Lesson } from '../types';
 /**
  * Level 1 Unit 3 Lesson 2 — he, she, and the inclusive we. Ends with the
  * pro-drop note: subjects are dropped when clear, and verbs never change
- * for the person (PLAN.md §5, §8) — so sheri alone is a full answer.
+ * for the person (PLAN.md §5, §8) — so okay aanu alone is a full answer.
  */
 export const l1u3l2: Lesson = {
   id: 'l1u3l2',
@@ -77,20 +77,20 @@ export const l1u3l2: Lesson = {
       tags: [],
     },
     {
-      id: 'njan-sheri',
-      manglish: 'njan sheri',
-      script: 'ഞാൻ ശെരി',
+      id: 'njan-okay-aanu',
+      manglish: 'njan okay aanu',
+      script: 'ഞാൻ ഓക്കേ ആണു',
       meaning: 'I am fine',
       kind: 'phrase',
       audio: {
-        slow: 'l1u3l2_njan-sheri_slow',
-        medium: 'l1u3l2_njan-sheri_medium',
-        normal: 'l1u3l2_njan-sheri_normal',
+        slow: 'l1u3l2_njan-okay-aanu_slow',
+        medium: 'l1u3l2_njan-okay-aanu_medium',
+        normal: 'l1u3l2_njan-okay-aanu_normal',
       },
-      acceptedInputs: ['njan sheri', 'njan seri', 'sheri'],
+      acceptedInputs: ['njan okay aanu'],
       notes: [
-        'Malayalis drop the subject when it is clear — just sheri is a full answer.',
-        'Verbs never change for the person — sheri works for I, you, he, she, we.',
+        'Malayalis drop the subject when it is clear — just okay aanu is a full answer.',
+        'Verbs never change for the person — aanu works for I, you, he, she, we.',
       ],
       tags: [],
     },
@@ -101,7 +101,7 @@ export const l1u3l2: Lesson = {
     { kind: 'multipleChoice', itemId: 'aval', distractors: ['he', "let's; to us", 'I am fine'] },
     { kind: 'multipleChoice', itemId: 'nammal', distractors: ['he', 'she', "let's; to us"] },
     { kind: 'multipleChoice', itemId: 'namukku', distractors: ['we (you and me)', 'she', 'I am fine'] },
-    { kind: 'multipleChoice', itemId: 'njan-sheri', distractors: ['he', 'she', "let's; to us"] },
+    { kind: 'multipleChoice', itemId: 'njan-okay-aanu', distractors: ['he', 'she', "let's; to us"] },
   ],
   reviewSlots: 0,
   spriteId: 'l1u3l2',

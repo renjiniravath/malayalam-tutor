@@ -33,7 +33,7 @@ import {
   AUDIO_TIERS,
   TAG_REGISTRY,
 } from '../src/content/index';
-import { hasBareSecondPersonUva, hasChettaSubject } from '../src/lib/content/pragmatics';
+import { hasBareFirstPersonSayDo, hasBareSecondPersonUva, hasChettaSubject } from '../src/lib/content/pragmatics';
 import type { Item, Lesson, MinimalPair, MinimalPairSegment } from '../src/content/types';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -250,6 +250,11 @@ function checkSentence(where: string, item: Item): void {
   // sentence subject; the addressed question writes it with a comma.
   if (hasChettaSubject(spec.orders)) {
     fail(where, "'chetta' is a vocative, never a sentence subject; write the addressed question ('chetta, ith kando?') or drop it");
+  }
+  // Pragmatics (PLAN.md §5): a bare first-person declarative from a
+  // say/do-type verb is not something said in conversation.
+  if (hasBareFirstPersonSayDo(spec.orders)) {
+    fail(where, "'njan parayuva' is not something said in conversation; give the verb a complement or drop the item");
   }
 }
 

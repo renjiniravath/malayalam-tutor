@@ -23,7 +23,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 5,
+  revision: 6,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -41,6 +41,11 @@ export const contentRevision: ContentRevision = {
     'njan-viittil-pokuva',
     'varam',
     'vaaram',
+    // Native-speaker corrections: 'njan parayuva' is not said in
+    // conversation, and 'njan sheri' means "I correct" — the fine
+    // answer is njan okay aanu.
+    'njan-parayuva',
+    'njan-sheri',
   ],
 };
 

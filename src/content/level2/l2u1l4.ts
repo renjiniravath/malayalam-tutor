@@ -219,28 +219,6 @@ export const l2u1l4: Lesson = {
       notes: ['The negative copula: alla replaces aa.'],
       tags: [],
     },
-    {
-      id: 'njan-parayuva',
-      manglish: 'njan parayuva',
-      script: 'ഞാൻ പറയുവാ',
-      meaning: 'I am saying',
-      kind: 'sentence',
-      audio: {
-        slow: 'l2u1l4_njan-parayuva_slow',
-        medium: 'l2u1l4_njan-parayuva_medium',
-        normal: 'l2u1l4_njan-parayuva_normal',
-      },
-      sentence: {
-        bank: ['njan', 'parayuva', 'ketto'],
-        orders: ['njan parayuva'],
-        parts: [
-          { word: 'njan', meaning: 'I' },
-          { word: 'parayuva', meaning: 'saying' },
-        ],
-      },
-      notes: ['The continuous form of parayu: I am saying.'],
-      tags: [],
-    },
   ],
   minimalPairs: [],
   drills: [
@@ -253,7 +231,6 @@ export const l2u1l4: Lesson = {
     { kind: 'sentenceBuilder', itemId: 'enikk-chaaya-venam', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'athu-venda', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'njan-ready-alla', mode: 'bank' },
-    { kind: 'sentenceBuilder', itemId: 'njan-parayuva', mode: 'bank' },
   ],
   reviewSlots: 0,
   spriteId: 'l2u1l4',
