@@ -144,7 +144,7 @@ export const l2u1l1: Lesson = {
       id: 'kudikkum',
       manglish: 'kudikkum',
       script: 'കുടിക്കും',
-      meaning: 'drink; drinks',
+      meaning: 'drinks (sometimes)',
       kind: 'word',
       audio: {
         slow: 'l2u1l1_kudikkum_slow',
@@ -179,14 +179,14 @@ export const l2u1l1: Lesson = {
           { word: 'kudikkuva', meaning: 'drinking' },
         ],
       },
-      notes: ['Right now, in progress. The habitual "I drink tea" is njan chaaya kudikkum.'],
+      notes: ['Right now, in progress. The habitual "I drink tea sometimes" is njan chaaya kudikkum.'],
       tags: [],
     },
     {
       id: 'njan-chaaya-kudikkum',
       manglish: 'njan chaaya kudikkum',
       script: 'ഞാൻ ചായ കുടിക്കും',
-      meaning: 'I drink tea',
+      meaning: 'I drink tea sometimes',
       kind: 'sentence',
       audio: {
         slow: 'l2u1l1_njan-chaaya-kudikkum_slow',
@@ -199,10 +199,10 @@ export const l2u1l1: Lesson = {
         parts: [
           { word: 'njan', meaning: 'I' },
           { word: 'chaaya', meaning: 'tea' },
-          { word: 'kudikkum', meaning: 'drink, drinks (habitual)' },
+          { word: 'kudikkum', meaning: 'drinks (sometimes)' },
         ],
       },
-      notes: ['The habitual: what you drink in general.'],
+      notes: ['The habitual: what you drink in general, not right now.'],
       tags: [],
     },
     {

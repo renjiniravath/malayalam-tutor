@@ -23,7 +23,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 6,
+  revision: 7,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -46,6 +46,10 @@ export const contentRevision: ContentRevision = {
     // answer is njan okay aanu.
     'njan-parayuva',
     'njan-sheri',
+    // Final ruling: the geminate minimal-pair slot is ila/illa,
+    // replacing kallam/kalam.
+    'kallam',
+    'kalam',
   ],
 };
 
