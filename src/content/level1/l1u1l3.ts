@@ -120,7 +120,7 @@ export const l1u1l3: Lesson = {
       id: 'kudi',
       manglish: 'kudi',
       script: 'കുടി',
-      meaning: 'a drink; drinking',
+      meaning: 'drinking habit (liquor)',
       kind: 'word',
       audio: {
         slow: 'l1u1l3_kudi_slow',
@@ -128,6 +128,7 @@ export const l1u1l3: Lesson = {
         normal: 'l1u1l3_kudi_normal',
       },
       acceptedInputs: ['kudi'],
+      notes: ['Also means a dwelling.', 'For "to drink" the verb is kudikkuva.'],
       tags: [],
     },
     {
@@ -179,12 +180,12 @@ export const l1u1l3: Lesson = {
   drills: [
     { kind: 'multipleChoice', itemId: 'ippo', distractors: ['good', 'leaf', 'hit'] },
     { kind: 'multipleChoice', itemId: 'nalla', distractors: ['now', 'no; none', 'together; also'] },
-    { kind: 'multipleChoice', itemId: 'aadi', distractors: ['hit', 'now', 'a drink; drinking'] },
+    { kind: 'multipleChoice', itemId: 'aadi', distractors: ['hit', 'now', 'drinking habit (liquor)'] },
     { kind: 'multipleChoice', itemId: 'adi', distractors: ['swing', 'good', 'together; also'] },
     { kind: 'multipleChoice', itemId: 'ila', distractors: ['no; none', 'now', 'good'] },
     { kind: 'multipleChoice', itemId: 'illa-pair', distractors: ['leaf', 'swing', 'hit'] },
     { kind: 'multipleChoice', itemId: 'kudi', distractors: ['together; also', 'leaf', 'now'] },
-    { kind: 'multipleChoice', itemId: 'kuudi', distractors: ['a drink; drinking', 'swing', 'no; none'] },
+    { kind: 'multipleChoice', itemId: 'kuudi', distractors: ['drinking habit (liquor)', 'swing', 'no; none'] },
     { kind: 'minimalPair', pairId: 'l1u1-p-ila-illa' },
     { kind: 'minimalPair', pairId: 'l1u1-p-aadi-adi' },
     { kind: 'minimalPair', pairId: 'l1u1-p-kudi-kuudi' },
