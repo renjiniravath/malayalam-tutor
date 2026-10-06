@@ -27,5 +27,8 @@
  *       kudikkum" uses an English slot for the untaught time phrase
  *  12 — long u is written oo (not uu): checker, dictionary, and the
  *       u/oo sound items updated; no kudi/koodi pair exists to remove
+ *  13 — Level 2 lessons 5-6 (third-person ladder, title substitution)
+ *       and Level 3 lessons 1-3 (cases: -il, -ilekk, -kku with English
+ *       word assimilation) added
  */
-export const CONTENT_REVISION = 12
+export const CONTENT_REVISION = 13

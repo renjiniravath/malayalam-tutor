@@ -145,6 +145,81 @@
         "addheham-varuva.slow", "addheham-varuva.medium", "addheham-varuva.normal",
         "avar-varuva.slow", "avar-varuva.medium", "avar-varuva.normal"
       ]
+    },
+    "l2u1l5": {
+      "sprite": "audio/l2u1l5.mp3",
+      "clips": [
+        "ayaal.slow", "ayaal.medium", "ayaal.normal",
+        "iyaal.slow", "iyaal.medium", "iyaal.normal",
+        "addheham.slow", "addheham.medium", "addheham.normal",
+        "avar.slow", "avar.medium", "avar.normal",
+        "ayaal-varunnundo.slow", "ayaal-varunnundo.medium", "ayaal-varunnundo.normal",
+        "addheham-varunnundo.slow", "addheham-varunnundo.medium", "addheham-varunnundo.normal",
+        "iyaal-teacher-aa.slow", "iyaal-teacher-aa.medium", "iyaal-teacher-aa.normal",
+        "avar-varunnundo.slow", "avar-varunnundo.medium", "avar-varunnundo.normal",
+        "ayaal-pokunnundo.slow", "ayaal-pokunnundo.medium", "ayaal-pokunnundo.normal",
+        "addheham-pokunnundo.slow", "addheham-pokunnundo.medium", "addheham-pokunnundo.normal"
+      ]
+    },
+    "l2u1l6": {
+      "sprite": "audio/l2u1l6.mp3",
+      "clips": [
+        "aunty.slow", "aunty.medium", "aunty.normal",
+        "chetta-ith-kando.slow", "chetta-ith-kando.medium", "chetta-ith-kando.normal",
+        "aunty-engane-und.slow", "aunty-engane-und.medium", "aunty-engane-und.normal",
+        "chetta-varunnundo.slow", "chetta-varunnundo.medium", "chetta-varunnundo.normal",
+        "aunty-ith-kando.slow", "aunty-ith-kando.medium", "aunty-ith-kando.normal",
+        "chetta-sheri-alle.slow", "chetta-sheri-alle.medium", "chetta-sheri-alle.normal",
+        "aunty-sheri-alle.slow", "aunty-sheri-alle.medium", "aunty-sheri-alle.normal",
+        "aunty-pokunnundo.slow", "aunty-pokunnundo.medium", "aunty-pokunnundo.normal",
+        "aunty-chaaya-veno.slow", "aunty-chaaya-veno.medium", "aunty-chaaya-veno.normal",
+        "chetta-chaaya-veno.slow", "chetta-chaaya-veno.medium", "chetta-chaaya-veno.normal"
+      ]
+    },
+    "l3u1l1": {
+      "sprite": "audio/l3u1l1.mp3",
+      "clips": [
+        "veettil.slow", "veettil.medium", "veettil.normal",
+        "officil.slow", "officil.medium", "officil.normal",
+        "shoppil.slow", "shoppil.medium", "shoppil.normal",
+        "busil.slow", "busil.medium", "busil.normal",
+        "njan-officil-pokuva.slow", "njan-officil-pokuva.medium", "njan-officil-pokuva.normal",
+        "njan-veettil-und.slow", "njan-veettil-und.medium", "njan-veettil-und.normal",
+        "avan-shoppil-und.slow", "avan-shoppil-und.medium", "avan-shoppil-und.normal",
+        "njan-busil-und.slow", "njan-busil-und.medium", "njan-busil-und.normal",
+        "chaaya-veettil-und.slow", "chaaya-veettil-und.medium", "chaaya-veettil-und.normal",
+        "aunty-officil-und.slow", "aunty-officil-und.medium", "aunty-officil-und.normal"
+      ]
+    },
+    "l3u1l2": {
+      "sprite": "audio/l3u1l2.mp3",
+      "clips": [
+        "veettilekk.slow", "veettilekk.medium", "veettilekk.normal",
+        "hotelilekk.slow", "hotelilekk.medium", "hotelilekk.normal",
+        "officilekk.slow", "officilekk.medium", "officilekk.normal",
+        "njan-hotelilekk-pokuva.slow", "njan-hotelilekk-pokuva.medium", "njan-hotelilekk-pokuva.normal",
+        "njan-officilekk-pokuva.slow", "njan-officilekk-pokuva.medium", "njan-officilekk-pokuva.normal",
+        "njan-veettilekk-pokuva.slow", "njan-veettilekk-pokuva.medium", "njan-veettilekk-pokuva.normal",
+        "avan-hotelilekk-varunnundo.slow", "avan-hotelilekk-varunnundo.medium", "avan-hotelilekk-varunnundo.normal",
+        "njan-shoppilekk-pokuva.slow", "njan-shoppilekk-pokuva.medium", "njan-shoppilekk-pokuva.normal",
+        "aunty-hotelilekk-pokuva.slow", "aunty-hotelilekk-pokuva.medium", "aunty-hotelilekk-pokuva.normal",
+        "chetta-hotelilekk-pokunnundo.slow", "chetta-hotelilekk-pokunnundo.medium", "chetta-hotelilekk-pokunnundo.normal"
+      ]
+    },
+    "l3u1l3": {
+      "sprite": "audio/l3u1l3.mp3",
+      "clips": [
+        "jolikku.slow", "jolikku.medium", "jolikku.normal",
+        "enikk.slow", "enikk.medium", "enikk.normal",
+        "ninakk.slow", "ninakk.medium", "ninakk.normal",
+        "njan-jolikku-pokuva.slow", "njan-jolikku-pokuva.medium", "njan-jolikku-pokuva.normal",
+        "ninakk-chaaya-veno.slow", "ninakk-chaaya-veno.medium", "ninakk-chaaya-veno.normal",
+        "chetta-jolikku-pokunnundo.slow", "chetta-jolikku-pokunnundo.medium", "chetta-jolikku-pokunnundo.normal",
+        "aunty-jolikku-pokuva.slow", "aunty-jolikku-pokuva.medium", "aunty-jolikku-pokuva.normal",
+        "enikk-sheri-aa.slow", "enikk-sheri-aa.medium", "enikk-sheri-aa.normal",
+        "ninakk-sheri-aano.slow", "ninakk-sheri-aano.medium", "ninakk-sheri-aano.normal",
+        "enikk-venam.slow", "enikk-venam.medium", "enikk-venam.normal"
+      ]
     }
   }
 }

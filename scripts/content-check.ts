@@ -59,8 +59,8 @@ const GRAPHEMES = [
 
 const MANGLISH_CHARSET = /^[a-z ḷṇṟ,]+$/
 
-/** Letters that may stand alone; c, f, q, w, x, z only appear in digraphs. */
-const SINGLE_LETTERS = /[aeioubdghjklmnprstvyḷṇṟ]/
+/** Letters that may stand alone; c, f, q, w, x, z appear in English words. */
+const SINGLE_LETTERS = /[aeioubdcfghjklmnpqrstvwxyzḷṇṟ]/
 
 /** Tokenize a single manglish word; empty array means an invalid character. */
 function tokenize(word: string): string[] {
@@ -172,7 +172,7 @@ function hasInherentA(script: string): boolean {
 const TOKEN_TO_SCRIPT: Record<string, string[]> = {
   zh: ['ഴ'], nj: ['ഞ'], sh: ['ശ'], ph: ['ഫ'], ng: ['ങ'], ch: ['ച'], kh: ['ഖ'],
   th: ['ത'], dh: ['ദ'], t: ['ട'], d: ['ട', 'ഡ'], ṟ: ['റ'], ddh: ['ദ്ദ'],
-  r: ['ര', 'റ'], l: ['ല', 'ൽ'], ḷ: ['ള', 'ൾ'], n: ['ന', 'ണ', 'ൻ'], ṇ: ['ണ'], m: ['മ', 'ം'],
+  r: ['ര', 'റ', 'ർ'], l: ['ല', 'ൽ'], ḷ: ['ള', 'ൾ'], n: ['ന', 'ണ', 'ൻ'], ṇ: ['ണ'], m: ['മ', 'ം'],
   p: ['പ'], b: ['ബ'], k: ['ക'], g: ['ഗ'], j: ['ജ'], s: ['സ'],
   v: ['വ'], y: ['യ'], h: ['ഹ'],
   tt: ['ട്ട'], tth: ['ത്ത'], kk: ['ക്ക'], pp: ['പ്പ'], mm: ['മ്മ'],

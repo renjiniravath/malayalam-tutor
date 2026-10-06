@@ -13,7 +13,7 @@ export const SOUND_TAGS = [
 
 export type SoundTag = (typeof SOUND_TAGS)[number]
 
-export const LEVEL_TAGS = ['level:1', 'level:2'] as const
+export const LEVEL_TAGS = ['level:1', 'level:2', 'level:3'] as const
 
 export const KNOWN_TAGS: readonly string[] = [...SOUND_TAGS, ...LEVEL_TAGS]
 
