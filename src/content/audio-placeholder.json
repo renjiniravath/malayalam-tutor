@@ -92,7 +92,9 @@
         "kudikkum.slow", "kudikkum.medium", "kudikkum.normal",
         "nokkum.slow", "nokkum.medium", "nokkum.normal",
         "veedu.slow", "veedu.medium", "veedu.normal",
+        "chaaya.slow", "chaaya.medium", "chaaya.normal",
         "njan-chaaya-kudikkum.slow", "njan-chaaya-kudikkum.medium", "njan-chaaya-kudikkum.normal",
+        "njan-every-day-chaaya-kudikkum.slow", "njan-every-day-chaaya-kudikkum.medium", "njan-every-day-chaaya-kudikkum.normal",
         "njan-veettil-pokuva.slow", "njan-veettil-pokuva.medium", "njan-veettil-pokuva.normal"
       ]
     },
@@ -102,7 +104,6 @@
         "aanu.slow", "aanu.medium", "aanu.normal",
         "aano.slow", "aano.medium", "aano.normal",
         "athe.slow", "athe.medium", "athe.normal",
-        "athe-aanu.slow", "athe-aanu.medium", "athe-aanu.normal",
         "illa.slow", "illa.medium", "illa.normal",
         "sheri-aanu.slow", "sheri-aanu.medium", "sheri-aanu.normal",
         "njan-ready-aa.slow", "njan-ready-aa.medium", "njan-ready-aa.normal",
@@ -129,7 +130,6 @@
         "athu-alle.slow", "athu-alle.medium", "athu-alle.normal",
         "ippo-alle.slow", "ippo-alle.medium", "ippo-alle.normal",
         "athu-sheri-alle.slow", "athu-sheri-alle.medium", "athu-sheri-alle.normal",
-        "athu-sheri-ketto.slow", "athu-sheri-ketto.medium", "athu-sheri-ketto.normal",
         "niyyo-varuva.slow", "niyyo-varuva.medium", "niyyo-varuva.normal"
       ]
     },

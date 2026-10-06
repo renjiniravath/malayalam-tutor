@@ -22,5 +22,8 @@
  *  10 — habitual -um glosses use "sometimes"; geminate pair is
  *       ila/illa; function words get sentence contexts with full
  *       glosses (athe aanu, athu sheri ketto)
+ *  11 — athe aanu and athu sheri, ketto removed (they do not make
+ *       sense); chaaya taught as a word; "njan every day chaaya
+ *       kudikkum" uses an English slot for the untaught time phrase
  */
-export const CONTENT_REVISION = 10
+export const CONTENT_REVISION = 11

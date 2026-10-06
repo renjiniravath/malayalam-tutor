@@ -133,7 +133,7 @@ const SCRIPT_TRAPS: Record<string, string> = {
 // ---------------------------------------------------------------------------
 
 /** Malayalam block, plus spaces between the words of multi-word items. */
-const MALAYALAM_BLOCK = /^[ഀ-ൿ ,]+$/
+const MALAYALAM_BLOCK = /^[ഀ-ൿ‍ ]+$/
 /** Vowel letters and signs — bare consonant letters have no vowel marks. */
 const HAS_VOWEL = /[അആഇഈഉഊഎഏഒഓഔാിീുൂെേൊോൈൗം]/
 const CONSONANTS = new Set('കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ')
