@@ -379,6 +379,8 @@ function romanCoronals(manglish: string): string[] {
  *  - ണ -> n in that same collapse (und, venda)
  *  - റ -> t in ന്റെ (ente), r in colloquial words (choru)
  *  - റ്റ -> tt in colloquial typings (kaattu, pattum)
+ *  - ട്ട -> t in English loans, which keep their English single t
+ *    (native-speaker ruling: hotelil, hotelilekk)
  */
 const CORONAL_ALLOWED: Record<string, string[]> = {
   zh: ['zh'],
@@ -390,7 +392,7 @@ const CORONAL_ALLOWED: Record<string, string[]> = {
   r: ['r'], rr: ['rr'],
   th: ['th'], tth: ['tth'],
   dh: ['dh'], ddh: ['ddh'],
-  t: ['t', 'd'], tt: ['tt', 'd'],
+  t: ['t', 'd'], tt: ['tt', 'd', 't'],
   d: ['d'], dd: ['dd'],
   'ṟ': ['ṟ', 'r', 't'], 'ṟṟ': ['ṟṟ', 'rr', 'tt'],
 };

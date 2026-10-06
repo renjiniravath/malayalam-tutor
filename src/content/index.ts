@@ -24,7 +24,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 10,
+  revision: 11,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -61,6 +61,18 @@ export const contentRevision: ContentRevision = {
     // Ruling: kudikkuka is the formal directive form and is not
     // taught now — learners get kudikkuva and kudikkum only.
     'kudikkuka',
+    // Rulings on L2U2/L3U1: njan busil varuva became njan angott
+    // varuva; nee chaaya kudikkum became the tag form kudikkumello,
+    // alle; hotel keeps its English single t; officekku dropped
+    // (officilekk is the to-form).
+    'njan-busil-varuva',
+    'nee-chaaya-kudikkum',
+    'hottelil',
+    'hottelilekk',
+    'njan-hottelilekk-pokuva',
+    'nammal-hottelilekk-pokuva',
+    'officekku',
+    'avan-officekku-pokuva',
   ],
 };
 
