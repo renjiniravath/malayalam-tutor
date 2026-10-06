@@ -43,7 +43,7 @@ export const l2u1l1: Lesson = {
         normal: 'l2u1l1_varuva_normal',
       },
       acceptedInputs: ['varuva'],
-      notes: ['Present continuous: "am coming".'],
+      notes: ['Present continuous: "am coming".', 'Its natural sentence: njan angott varuva, I am coming there.'],
       tags: [],
     },
     {
