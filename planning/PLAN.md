@@ -85,7 +85,7 @@ Units:
 - Dative for wanting: `enikk chaaya venam` "I want tea" — `njan chaaya venam` is wrong
 - Sandhi: `veedu` + `-il` → `veettil` (`njan veettil pokuva` "I am going home") — the retroflex d doubles before `-il`
 - **Pragmatics of `-uva`**: declarative statements are natural in first and third person (`njan varuva` "I am coming", `avan varuva` "he is coming"); bare second-person declaratives (`nee varuva`, `thaangal pokuva`) read command-like and are avoided — second person uses questions (`nii varunnundo?` "are you coming?") or the imperative
-- Politeness in context: `nee` vs `ningal` vs `taankal`; the third-person ladder (`ayaan`, `iyaal`, `addeham`, honorific `avar`); title substitution (`Aunty`, `Chetta`)
+- Politeness in context: `nee` vs `ningal` vs `taankal`; the third-person ladder (`ayaan`, `iyaal`, `addeham`, honorific `avar`); title substitution (`Aunty`, `Chetta`) — **note: `chetta`/`chechi` are vocatives (summoning), used in addressed questions (`chetta, ith kando?` "chetta, did you see this?"), never as sentence subjects in declaratives
 
 ### Level 3 — Cases & Connectors (Beginner+) · ~60 items, 6 lessons
 **Can do:** attach case suffixes to English and Malayalam words to say where, where-to, whose, for-whom.
