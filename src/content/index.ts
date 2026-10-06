@@ -24,7 +24,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 12,
+  revision: 13,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -86,6 +86,10 @@ export const contentRevision: ContentRevision = {
     'njan-shoppil-pokuva',
     'shoppilekk',
     'avan-shoppilekk-pokuva',
+    // Refinement: kadayilott became kadayilekk for consistency with
+    // the -ilekk lesson pattern.
+    'kadayilott',
+    'avan-kadayilott-pokuva',
   ],
 };
 
