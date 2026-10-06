@@ -78,8 +78,8 @@ Units:
 ### Level 2 — First Sentences · ~80 items, 8 lessons
 **Can do:** understand and say simple present-tense sentences built from Level 1 words; ask and answer yes/no questions.
 
-- The **present-continuous pattern** (`-uva`): `njan chaaya kudikkuva` = "I am drinking tea" (NOT "I drink tea" — the habitual is `-um`: `njan chaaya kudikkum` "I drink tea"; same for `nokkuva` (continuous "looking") vs `nokkum` (habitual "looks") — native-speaker confirmation). Using the Level 1 verb chunks: `njan parayuva` "I am saying", `avan varuva` "he is coming" (more colloquial question: `avan varunundo?` "is he coming?")
-- The **copula**: `aanu` / `aano` ("X is Y" — `njan ready aa`), and yes/no answers: `athe`, `alla`, `illa` (moved here from Level 4 — dialogues depend on them)
+- The **present-continuous pattern** (`-uva`): `njan chaaya kudikkuva` = "I am drinking tea" (NOT "I drink tea" — the habitual is `-um`: `njan chaaya kudikkum` "I drink tea"; same for `nokkuva` (continuous "looking") vs `nokkum` (habitual "looks") — native-speaker confirmation). Using the Level 1 verb chunks: `avan varuva` "he is coming" (more colloquial question: `avan varunundo?` "is he coming?"). Not every verb chunks into a bare first-person sentence: `njan parayuva` "I am saying" is unnatural on its own — keep parayuva/cheyyuva as word items, not standalone declaratives
+- The **copula**: `aanu` / `aano` ("X is Y" — `njan ready aa`, `njan okay aanu` "I am fine"), and yes/no answers: `athe`, `alla`, `illa` (moved here from Level 4 — dialogues depend on them). `njan sheri` is wrong ("I correct") — mixing English words into Malayalam sentences is the register, so `njan okay aanu` is exactly right
 - **Every new word in a sentence is explained** — word-by-word breakdown on a tap
 - Tag questions: `alle?` (`athu sheri alle?` "that's correct, right?"), `ketto` / `kettayirunno` "did you hear?" (`kettiyo` is not a word); the `-o` particle: `niyyo?` "you?" (for "you too?" use `niyyum?`)
 - Dative for wanting: `enikk chaaya venam` "I want tea" — `njan chaaya venam` is wrong
