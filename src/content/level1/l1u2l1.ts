@@ -99,9 +99,9 @@ export const l1u2l1: Lesson = {
       },
       acceptedInputs: ['enna und vishesham'],
       articulation: {
-        cue: 'Hold the doubled nn in ennaa for a full beat.',
+        cue: 'Hold the doubled nn in enna for a full beat.',
       },
-      notes: ['The follow-up greeting among friends.', 'Hold the doubled nn in ennaa.'],
+      notes: ['The follow-up greeting among friends.', 'Hold the doubled nn in enna.'],
       tags: ['sound:geminate'],
     },
     {

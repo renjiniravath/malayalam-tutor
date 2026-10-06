@@ -79,7 +79,7 @@ export const l2u1l4: Lesson = {
           { word: 'pokuva', meaning: 'going' },
         ],
       },
-      notes: ['The sandhi: veedu plus -il becomes veettil, with the retroflex d doubled.'],
+      notes: ['The sandhi: veedu (house) plus -il becomes veettil, with the retroflex d doubled.'],
       tags: [],
     },
     {

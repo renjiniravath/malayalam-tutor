@@ -31,24 +31,6 @@ export const l1u1l1: Lesson = {
       tags: ['sound:zh'],
     },
     {
-      id: 'azhaku',
-      manglish: 'azhaku',
-      script: 'അഴക്',
-      meaning: 'beauty',
-      kind: 'word',
-      articulation: {
-        cue: 'Start with a short a, then curl the tongue tip back for the zh, close to the roof but never touching.',
-      },
-      audio: {
-        slow: 'l1u1l1_azhaku_slow',
-        medium: 'l1u1l1_azhaku_medium',
-        normal: 'l1u1l1_azhaku_normal',
-        focus: ['l1u1l1_azhaku_focus'],
-      },
-      acceptedInputs: ['azhaku'],
-      tags: ['sound:zh'],
-    },
-    {
       id: 'puzha',
       manglish: 'puzha',
       script: 'പുഴ',
@@ -89,10 +71,9 @@ export const l1u1l1: Lesson = {
   ],
   minimalPairs: [],
   drills: [
-    { kind: 'multipleChoice', itemId: 'mazha', distractors: ['beauty', 'way; route', 'river'] },
-    { kind: 'multipleChoice', itemId: 'azhaku', distractors: ['rain', 'way; route', 'river'] },
-    { kind: 'multipleChoice', itemId: 'puzha', distractors: ['rain', 'beauty', 'way; route'] },
-    { kind: 'multipleChoice', itemId: 'vazhi', distractors: ['rain', 'beauty', 'river'] },
+    { kind: 'multipleChoice', itemId: 'mazha', distractors: ['river', 'way; route'] },
+    { kind: 'multipleChoice', itemId: 'puzha', distractors: ['rain', 'way; route'] },
+    { kind: 'multipleChoice', itemId: 'vazhi', distractors: ['rain', 'river'] },
   ],
   reviewSlots: 0,
   spriteId: 'l1u1l1',

@@ -73,7 +73,7 @@ export const l2u1l3: Lesson = {
       articulation: {
         cue: 'Hold the doubled tt.',
       },
-      notes: ['The everyday tag on shared news. The fuller form is kettayirunno?.'],
+      notes: ['The everyday tag on shared news. The fuller form is kettayirunno? (did you hear? — about the past).'],
       tags: ['sound:geminate'],
     },
     {
@@ -92,7 +92,7 @@ export const l2u1l3: Lesson = {
       articulation: {
         cue: 'Hold the doubled nn.',
       },
-      notes: ['The colloquial -o question on varunnundu: "coming?"'],
+      notes: ['The colloquial -o question on varunnund: "coming?"'],
       tags: ['sound:geminate'],
     },
     {

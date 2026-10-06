@@ -47,7 +47,7 @@ export const l2u2l2: Lesson = {
       },
       notes: [
         'The final -n drops when you summon: chettan becomes chetta!',
-        'A vocative only: it calls someone, never stands as the subject. Say chetta, ith kando — with the comma.',
+        'A vocative only: it calls someone, never stands as the subject. Say chetta, ith kando (chetta, did you see this?) — with the comma.',
       ],
       tags: ['sound:geminate'],
     },

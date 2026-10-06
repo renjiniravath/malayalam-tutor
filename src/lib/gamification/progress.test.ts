@@ -28,7 +28,7 @@ describe('sound mastery and can-do (real logs only)', () => {
     const zhItems = level1.lessons
       .flatMap((lesson) => lesson.items)
       .filter((item) => item.tags.includes('sound:zh'));
-    assert.equal(zhItems.length, 4);
+    assert.equal(zhItems.length, 3);
 
     const partial = soundMastery(level1, zhItems.slice(0, 2).map((item) => log(item.id)));
     const zh = partial.find((sound) => sound.tag === 'sound:zh')!;

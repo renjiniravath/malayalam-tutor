@@ -107,7 +107,7 @@ export const l3u1l3: Lesson = {
         normal: 'l3u1l3_avan-officeilekk-pokuva_normal',
       },
       sentence: {
-        bank: ['avan', 'officeilekk', 'pokuva', 'officekku'],
+        bank: ['avan', 'officeilekk', 'pokuva', 'officil'],
         orders: ['avan officeilekk pokuva'],
         parts: [
           { word: 'avan', meaning: 'he' },

@@ -24,7 +24,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 16,
+  revision: 17,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -113,6 +113,8 @@ export const contentRevision: ContentRevision = {
     'ennaa-und-vishesham',
     'nannaayitt-pokunnu',
     'eppozhaa',
+    // Deep pass: puzha takes the zh teaching slot, azhaku drops out.
+    'azhaku',
   ],
 };
 
