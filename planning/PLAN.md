@@ -70,7 +70,7 @@ All levels use English-alphabet romanization; Malayalam script is shown passivel
 
 Units:
 1. **First sounds** (3 lessons, comprehension-only — no speaking yet) — ഴ, dental/retroflex/alveolar, gemination, vowel length. Sound-focus clips + minimal-pair discrimination + **text articulation cues for ഴ and the coronal series** (no visuals).
-2. **Greetings & expressions** (~10 items) — `engane und?`, `ennaa vishesham?`, `seri`, `nokkam`, `ayyo`, `pinnalla`, `alle?`, `poyi varatte`.
+2. **Greetings & expressions** (~10 items) — `engane und?` "how is it? (also how are you?)" (example: `kaappi engane und, koḷḷaamo?` "how is the coffee, is it good?"); `enna und vishesham?` "what's up?" (`ennaa vishesham` is incomplete); `nannayitt pokunnu` "it's going well" (single-a sanctioned exception; NOT `nalla irippu`); `appo sheri, bye` (NOT `poyi varatte`); `seri`, `nokkam`, `ayyo`, `pinnalla`, `alle?`. `puzha` (river) is the zh teaching word. `ishttamilla` spelled with double t (`avanu chaaya ishttamilla`). Question words plain: `entha`, `etha`, `enthina`, `eppozha` (no doubled aa — native-speaker rulings 2026-10-06).
 3. **Pronouns** — `njan`, `nee`, `ningal`, `taankal`, `avan`, `aval`, `nammal`, `namukku`, plus pro-drop.
 4. **High-frequency nouns** (visuals) — food/drink (`vellam`, `chaya`, `kaapi`, `choru`), people (`amma`, `achan`, `chechi`, `kuttikal`), home/city (`veedu`, `joli`, `kashu`, `vazhi`), ~40 items.
 5. **Core verbs** (action visuals) — taught as **casual present-tense chunks** usable in sentences immediately: `pokuva`, `varuva`, `cheyyuva`, `parayuva`, `kudikkuva`, `kazhikkuva`, `irikkuva`, `kodukkuva`, `edukkuva`, `vaanguva`, `nokkuva`, `kittuva` — with the root noted (`pok`) for later pattern work.
