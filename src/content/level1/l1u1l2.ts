@@ -64,7 +64,10 @@ export const l1u1l2: Lesson = {
         focus: ['l1u1l2_kaarru_focus'],
       },
       acceptedInputs: ['kaarru', 'kaattu'],
-      notes: ['Colloquially typed "kaattu" — the ṟṟ marks the doubled alveolar tap.'],
+      notes: [
+        'The doubled ṟṟ is the റ്റ sound — people type it as rr, so kaaṟṟu shows up as kaarru.',
+        'Colloquially typed "kaattu" too — the ṟṟ marks the doubled alveolar tap.',
+      ],
       tags: ['sound:coronal'],
     },
     {

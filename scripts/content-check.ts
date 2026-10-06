@@ -182,8 +182,10 @@ function checkItem(lesson: Lesson, item: Item): void {
   }
 
   if (item.acceptedInputs) {
-    const folded = foldAscii(item.manglish);
-    if (!item.acceptedInputs.includes(folded)) {
+    // Punctuation is not phonemic: the comparison drops it, matching the
+    // runtime input layer ('appo sheri, bye' accepts 'appo sheri bye').
+    const folded = foldAscii(item.manglish).replace(/[,.'?]/g, '');
+    if (!item.acceptedInputs.some((input) => input.replace(/[,.'?]/g, '') === folded)) {
       fail(where, `acceptedInputs must include '${folded}' (the diacritic-folded spelling of '${item.manglish}')`);
     }
     for (const input of item.acceptedInputs) {

@@ -24,7 +24,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 13,
+  revision: 14,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -90,6 +90,21 @@ export const contentRevision: ContentRevision = {
     // the -ilekk lesson pattern.
     'kadayilott',
     'avan-kadayilott-pokuva',
+    // Mega-round: puzha replaces vali; greetings reworked (nannayitt
+    // pokunnu, ennaa und vishesham, appo sheri bye); avan varunnund;
+    // njan veettil ninn irangi; nammal veettil pokuva; chettan/chechi
+    // replace aunty; busil keran pokuva replaces busilekk pokuva.
+    'vali',
+    'nalla-irippu',
+    'ennaa-vishesham',
+    'poyi-varatte',
+    'avan-varuva',
+    'njan-ippo-varuva',
+    'nammal-ippo-pokuva',
+    'aunty',
+    'aunty-ready-aano',
+    'aunty-chaaya-veno',
+    'njan-busilekk-pokuva',
   ],
 };
 

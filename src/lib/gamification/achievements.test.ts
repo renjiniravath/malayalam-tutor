@@ -73,7 +73,7 @@ describe('achievements (wired to real events)', () => {
       .flatMap((lesson) => lesson.items)
       .filter((item) => item.tags.includes('sound:zh'))
       .map((item) => item.id);
-    assert.equal(zhIds.length, 3);
+    assert.equal(zhIds.length, 4);
 
     const partial = evaluateAchievements(input({ logs: zhIds.slice(0, 2).map(logFor) }), new Set());
     assert.ok(!partial.some((u) => u.id === 'zh-master'));

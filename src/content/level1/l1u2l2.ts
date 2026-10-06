@@ -95,7 +95,7 @@ export const l1u2l2: Lesson = {
       articulation: {
         cue: 'Hold the doubled ll at the end.',
       },
-      notes: ['Tag question stuck on the end of any statement: "nalla kaalam, alle?"', 'Hold the doubled ll.'],
+      notes: ['Tag question stuck on the end of any statement: "nalla, alle?"', 'Hold the doubled ll.'],
       tags: ['sound:geminate'],
     },
   ],
