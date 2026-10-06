@@ -1,6 +1,7 @@
 import { ACHIEVEMENTS, evaluateAchievements } from './achievements';
 import { awardFreeze, emptyStreak, pauseStreak, registerActivity, resumeStreak, type StreakState } from './streak';
 import { XP_REWARDS } from './xp';
+import { generateId } from '@/lib/ids';
 import type { ProgressStore } from '@/lib/progress/store';
 
 /**
@@ -58,8 +59,10 @@ async function checkAchievements(store: ProgressStore, now: Date): Promise<void>
 async function guard(task: () => Promise<void>): Promise<void> {
   try {
     await task();
-  } catch {
-    // Gamification state is best-effort; the lesson flow never waits on it.
+  } catch (error) {
+    // Gamification state is best-effort; the lesson flow never waits on
+    // it, but a failure must be visible in the console, never silent.
+    console.warn('gamification: progress was not recorded', error);
   }
 }
 
@@ -74,7 +77,7 @@ export function recordLessonComplete(
   return guard(async () => {
     const perfect = total > 0 && correct === total;
     await store.appendEvent({
-      id: crypto.randomUUID(),
+      id: generateId(),
       type: 'lesson-complete',
       at: now,
       data: { lessonId, correct, total, perfect },
@@ -91,7 +94,7 @@ export function recordLessonComplete(
 export function recordReviewComplete(store: ProgressStore, reviewed: number, now: Date): Promise<void> {
   return guard(async () => {
     await store.appendEvent({
-      id: crypto.randomUUID(),
+      id: generateId(),
       type: 'review-complete',
       at: now,
       data: { reviewed },

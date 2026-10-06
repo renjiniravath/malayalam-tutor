@@ -1,5 +1,6 @@
 import { createEmptyCard, fsrs, Rating, State, type Grade } from 'ts-fsrs';
 import type { ProgressStore } from '@/lib/progress/store';
+import { generateId } from '@/lib/ids';
 import { cardKey, stateName, type CardRecord, type ReviewLogRecord, type ReviewRating, type Skill } from './types';
 
 /**
@@ -54,7 +55,7 @@ export function reviewCard(record: CardRecord, rating: ReviewRating, now: Date):
   const result = scheduler.next(record.fsrs, now, RATING[rating]);
   const fsrs = result.card;
   const log: ReviewLogRecord = {
-    id: crypto.randomUUID(),
+    id: generateId(),
     cardKey: record.key,
     itemId: record.itemId,
     skill: record.skill,
