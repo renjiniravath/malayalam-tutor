@@ -2,7 +2,7 @@
  * Content linter — npm run content:check.
  *
  * Enforces the authoring rules from CLAUDE.md and PLAN.md:
- *  - romanization per §9 (lowercase only, no ii/oo, doubling rules,
+ *  - romanization per §9 (lowercase only, no ii/uu, doubling rules,
  *    dental/retroflex/alveolar place cross-checked against the script field)
  *  - script sanity (NFC, Malayalam block only, ZWJ/ZWNJ placement)
  *  - audio manifest presence and clip-key integrity
@@ -16,7 +16,7 @@
  * The vowel-length part of §9 (long a/i/u always doubled) cannot be derived
  * from spelling alone — colloquial spellings shorten final vowels (pokuva,
  * venda) by convention — so it is verified in native-speaker review; the
- * deterministic subset (no ii/oo, only aa/ee/uu doubles, no caps) is here.
+ * deterministic subset (no ii/uu, only aa/ee/oo doubles, no caps) is here.
  *
  * While the audio manifest is 'pending', duration/overlap checks are skipped
  * (audio generation is out of scope for M1 content authoring).
@@ -133,11 +133,12 @@ function checkItem(lesson: Lesson, item: Item): void {
   if (item.manglish.includes('?')) {
     fail(where, `manglish must not carry '?' — the question form is in the word itself: '${item.manglish}'`);
   }
-  // §9 rule 1: doubled vowel runs may only be aa/ee/uu — long i is
-  // written ee (native-speaker ruling), long e/o are always single
+  // §9 rule 1: doubled vowel runs may only be aa/ee/oo — long i is
+  // written ee and long u is written oo (native-speaker rulings),
+  // long e/o are always single
   for (const m of item.manglish.matchAll(/(a{2,}|e{2,}|i{2,}|o{2,}|u{2,})/g)) {
-    if (m[0] !== 'aa' && m[0] !== 'ee' && m[0] !== 'uu') {
-      fail(where, `'${m[0]}' is not a §9 spelling — long a/i/u are written aa/ee/uu, long e/o are written single`);
+    if (m[0] !== 'aa' && m[0] !== 'ee' && m[0] !== 'oo') {
+      fail(where, `'${m[0]}' is not a §9 spelling — long a/i/u are written aa/ee/oo, long e/o are written single`);
     }
   }
 

@@ -23,7 +23,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 8,
+  revision: 9,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -53,6 +53,10 @@ export const contentRevision: ContentRevision = {
     // Beginner-sentence rule: untaught slots use English — kaapi illa
     // became coffee illa.
     'kaapi-illa',
+    // Final rulings: standalone kudi is dropped and the u/oo pair
+    // slot has no pair; kuudi re-keyed as koodi (long u = oo).
+    'kudi',
+    'kuudi',
   ],
 };
 

@@ -32,6 +32,21 @@ export const l2u1l1: Lesson = {
       tags: ['sound:geminate'],
     },
     {
+      id: 'kudikkuka',
+      manglish: 'kudikkuka',
+      script: 'കുടിക്കുക',
+      meaning: 'to drink',
+      kind: 'word',
+      audio: {
+        slow: 'l2u1l1_kudikkuka_slow',
+        medium: 'l2u1l1_kudikkuka_medium',
+        normal: 'l2u1l1_kudikkuka_normal',
+      },
+      acceptedInputs: ['kudikkuka'],
+      notes: ['The plain verb. The casual "is drinking" form is kudikkuva, and the habit form is kudikkum.'],
+      tags: [],
+    },
+    {
       id: 'varuva',
       manglish: 'varuva',
       script: 'വരുവാ',
@@ -171,7 +186,7 @@ export const l2u1l1: Lesson = {
       articulation: {
         cue: 'Hold the doubled kk in the middle.',
       },
-      notes: ['The habitual -um form: what you drink in general, not right now.'],
+      notes: ['The habitual -um form: what you drink in general, not right now.', 'The same form is the plain future: will drink.'],
       tags: ['sound:geminate'],
     },
     {
@@ -279,6 +294,7 @@ export const l2u1l1: Lesson = {
     { kind: 'multipleChoice', itemId: 'irikkuva', distractors: ['eating', 'going', 'saying'] },
     { kind: 'multipleChoice', itemId: 'vaanguva', distractors: ['doing', 'coming', 'drinking'] },
     { kind: 'multipleChoice', itemId: 'kudikkum', distractors: ['drinking', 'eating', 'saying'] },
+    { kind: 'multipleChoice', itemId: 'kudikkuka', distractors: ['drinking', 'coming', 'going'] },
     { kind: 'multipleChoice', itemId: 'chaaya', distractors: ['drinking', 'coming', 'going'] },
     { kind: 'sentenceBuilder', itemId: 'njan-chaaya-kudikkuva', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'njan-chaaya-kudikkum', mode: 'bank' },
