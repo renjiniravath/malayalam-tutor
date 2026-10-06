@@ -2,11 +2,12 @@
 
 import type { Item } from "@/content/types";
 import { MultipleChoiceDrill } from "./MultipleChoiceDrill";
+import { SentenceBuilderDrill } from "./SentenceBuilderDrill";
 import { TypingDrill } from "./TypingDrill";
 
 interface InjectedReviewProps {
   item: Item;
-  skill: "recognition" | "production";
+  skill: "recognition" | "production" | "sentence";
   distractors: string[];
   spriteId: string;
   onComplete: (correct: boolean) => void;
@@ -15,8 +16,9 @@ interface InjectedReviewProps {
 /**
  * A due review card injected into the lesson flow (PLAN.md §7: review is
  * interleaved into lessons). Reuses the drill mechanics: recognition
- * answers by meaning, production by typing. The caller maps the result
- * onto FSRS (correct = good, wrong = again) and reschedules the card.
+ * answers by meaning, production by typing, and sentence cards are
+ * rebuilt by typing. The caller maps the result onto FSRS (correct =
+ * good, wrong = again) and reschedules the card.
  */
 export function InjectedReview({ item, skill, distractors, spriteId, onComplete }: InjectedReviewProps) {
   return (
@@ -28,6 +30,14 @@ export function InjectedReview({ item, skill, distractors, spriteId, onComplete 
             item={item}
             distractors={distractors}
             spriteId={spriteId}
+            revealImmediately={false}
+            onComplete={onComplete}
+          />
+        ) : skill === "sentence" ? (
+          <SentenceBuilderDrill
+            item={item}
+            spriteId={spriteId}
+            mode="typing"
             revealImmediately={false}
             onComplete={onComplete}
           />

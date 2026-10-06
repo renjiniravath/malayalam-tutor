@@ -186,6 +186,10 @@ function checkItem(lesson: Lesson, item: Item): void {
 
   if (item.notes && item.notes.some((n) => !n.trim())) fail(where, 'notes must be non-empty strings');
 
+  if (item.kind === 'sentence') {
+    checkSentence(where, item);
+  }
+
   if (item.image) {
     checkImage(where, item.image);
   } else if (item.kind === 'word' && (item.pos === 'noun' || item.pos === 'verb')) {
@@ -201,7 +205,32 @@ function itemTextFields(item: Item): Array<[string, string]> {
   if (item.script) fields.push(['script', item.script]);
   for (const note of item.notes ?? []) fields.push(['note', note]);
   if (item.articulation) fields.push(['articulation.cue', item.articulation.cue]);
+  for (const part of item.sentence?.parts ?? []) fields.push(['sentence part', part.meaning]);
   return fields;
+}
+
+/**
+ * Sentence items carry the builder drill data: a word bank, at least
+ * one accepted order, and a word-by-word breakdown covering the words
+ * of the first order (the tap-to-breakdown interaction).
+ */
+function checkSentence(where: string, item: Item): void {
+  const spec = item.sentence;
+  if (!spec) {
+    fail(where, "kind 'sentence' items need a sentence spec (bank, orders, parts)");
+    return;
+  }
+  if (spec.bank.length < 2) fail(where, `sentence.bank needs at least 2 tokens, got ${spec.bank.length}`);
+  if (spec.orders.length < 1) fail(where, 'sentence.orders needs at least one accepted order');
+  if (new Set(spec.bank).size !== spec.bank.length) fail(where, 'sentence.bank has duplicate tokens');
+  if (new Set(spec.orders).size !== spec.orders.length) fail(where, 'sentence.orders has duplicates');
+  const words = spec.orders[0].split(' ');
+  if (!words.every((word) => spec.bank.includes(word))) {
+    fail(where, 'every word of the first accepted order must appear in the bank');
+  }
+  if (!words.every((word) => spec.parts.some((part) => part.word === word))) {
+    fail(where, 'sentence.parts must cover every word of the first accepted order');
+  }
 }
 
 // ------------------------------------------------------------------- script
@@ -457,6 +486,13 @@ function checkDrills(lesson: Lesson): void {
     } else if (drill.kind === 'minimalPair') {
       if (!lesson.minimalPairs.some((p) => p.id === drill.pairId)) {
         fail(lesson.id, `drill references missing pair '${drill.pairId}'`);
+      }
+    } else if (drill.kind === 'sentenceBuilder') {
+      const target = lesson.items.find((i) => i.id === drill.itemId);
+      if (!target) {
+        fail(lesson.id, `drill references missing item '${drill.itemId}'`);
+      } else if (target.kind !== 'sentence' || !target.sentence) {
+        fail(lesson.id, `sentenceBuilder drill '${drill.itemId}' needs a sentence item with a sentence spec`);
       }
     }
   }

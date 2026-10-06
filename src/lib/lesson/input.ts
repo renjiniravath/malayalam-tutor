@@ -17,9 +17,10 @@ export function foldInput(raw: string): string {
 
 export function matchesAcceptedInput(raw: string, acceptedInputs: string[]): boolean {
   const folded = foldInput(raw);
-  if (acceptedInputs.includes(folded)) return true;
+  const candidates = acceptedInputs.map((accepted) => foldInput(accepted));
+  if (candidates.includes(folded)) return true;
   if (folded.length < 4) return false;
-  return acceptedInputs.some((accepted) => damerauLevenshtein(folded, accepted) <= 1);
+  return candidates.some((accepted) => damerauLevenshtein(folded, accepted) <= 1);
 }
 
 /** Damerau-Levenshtein: distance 1 also covers transposed neighbors ("mazah"). */

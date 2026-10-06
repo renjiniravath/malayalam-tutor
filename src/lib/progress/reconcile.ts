@@ -1,3 +1,5 @@
+import type { Skill } from '@/lib/fsrs/types';
+
 /**
  * contentRevision reconciliation (PLAN.md §11): maps stored progress records
  * — keyed {itemId, skill} — onto the current content bundle.
@@ -13,9 +15,6 @@
  * from the content bundle. This module stays pure so the mapping is testable
  * without touching content.
  */
-
-/** Per-skill cards: recognition and production are tracked separately (PLAN.md §11). */
-export type Skill = 'recognition' | 'production';
 
 export interface ProgressRecord {
   itemId: string;

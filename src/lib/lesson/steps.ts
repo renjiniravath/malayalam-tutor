@@ -12,22 +12,26 @@ import type { Lesson, MinimalPair, DrillSpec } from '@/content/types';
 
 export type MultipleChoiceDrill = Extract<DrillSpec, { kind: 'multipleChoice' }>;
 export type MinimalPairDrill = Extract<DrillSpec, { kind: 'minimalPair' }>;
+export type SentenceBuilderDrill = Extract<DrillSpec, { kind: 'sentenceBuilder' }>;
 
 export type LessonStep =
   | { kind: 'reveal'; itemId: string }
   | { kind: 'anticipation'; itemId: string }
   | { kind: 'multipleChoice'; drill: MultipleChoiceDrill }
   | { kind: 'minimalPair'; drill: MinimalPairDrill; pair: MinimalPair }
+  | { kind: 'sentenceBuilder'; drill: SentenceBuilderDrill }
   | { kind: 'typing'; itemId: string };
 
 export function buildLessonSteps(lesson: Lesson): LessonStep[] {
   const steps: LessonStep[] = [];
   const mcByItem = new Map<string, MultipleChoiceDrill>();
+  const sbByItem = new Map<string, SentenceBuilderDrill>();
   const pairsById = new Map(lesson.minimalPairs.map((p) => [p.id, p]));
   const pairDrills: MinimalPairDrill[] = [];
 
   for (const drill of lesson.drills) {
     if (drill.kind === 'multipleChoice') mcByItem.set(drill.itemId, drill);
+    else if (drill.kind === 'sentenceBuilder') sbByItem.set(drill.itemId, drill);
     else pairDrills.push(drill);
   }
 
@@ -39,6 +43,8 @@ export function buildLessonSteps(lesson: Lesson): LessonStep[] {
     if (item.acceptedInputs && item.acceptedInputs.length > 0) {
       steps.push({ kind: 'typing', itemId: item.id });
     }
+    const sb = sbByItem.get(item.id);
+    if (sb) steps.push({ kind: 'sentenceBuilder', drill: sb });
   }
 
   for (const drill of pairDrills) {

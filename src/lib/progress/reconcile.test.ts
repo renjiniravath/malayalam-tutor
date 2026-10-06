@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { contentRevision, currentItemIds } from '@/content';
-import { reconcileProgress, type ProgressRecord, type Skill } from './reconcile';
+import { reconcileProgress, type ProgressRecord } from './reconcile';
+import type { Skill } from '@/lib/fsrs/types';
 
 const rec = (itemId: string, skill: Skill = 'recognition', state: unknown = { due: 1 }): ProgressRecord => ({
   itemId,

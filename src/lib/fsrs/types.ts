@@ -8,9 +8,18 @@ import type { Card } from 'ts-fsrs';
  * shape is sync-ready; ts-fsrs specifics stay at the scheduler boundary.
  */
 
-export type Skill = 'recognition' | 'production';
+export type Skill = 'recognition' | 'production' | 'sentence';
 
-export const SKILLS: Skill[] = ['recognition', 'production'];
+export const SKILLS: Skill[] = ['recognition', 'production', 'sentence'];
+
+/**
+ * Which skills a content item is scheduled under (PLAN.md §7): sentences
+ * are drilled by building and typing, so they get a single sentence
+ * card; words and phrases decay as recognition and production.
+ */
+export function skillsForKind(kind: 'word' | 'phrase' | 'sentence' | 'expression'): Skill[] {
+  return kind === 'sentence' ? ['sentence'] : ['recognition', 'production'];
+}
 
 export type ReviewRating = 'again' | 'hard' | 'good' | 'easy';
 

@@ -10,7 +10,7 @@ import {
   ratingForAnswer,
   reviewCard,
 } from './scheduler';
-import { cardKey, type CardRecord, type ReviewLogRecord } from './types';
+import { cardKey, skillsForKind, type CardRecord, type ReviewLogRecord } from './types';
 import { MemoryProgressStore, type ProgressStore } from '@/lib/progress/store';
 
 // Fixed clock: all scheduler calls take `now` explicitly (PLAN.md §7).
@@ -80,6 +80,12 @@ describe('scheduler', () => {
   it('maps drill results: correct is good, wrong is again', () => {
     assert.equal(ratingForAnswer(true), 'good');
     assert.equal(ratingForAnswer(false), 'again');
+  });
+
+  it('schedules sentences under the sentence skill, other items under recognition and production', () => {
+    assert.deepEqual(skillsForKind('sentence'), ['sentence']);
+    assert.deepEqual(skillsForKind('word'), ['recognition', 'production']);
+    assert.deepEqual(skillsForKind('phrase'), ['recognition', 'production']);
   });
 });
 

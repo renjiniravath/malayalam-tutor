@@ -14,7 +14,7 @@ import {
 } from "@/lib/prefs";
 import { buildLessonSteps } from "@/lib/lesson/steps";
 import { LESSON_INJECTION_LIMIT, newCardRecord, persistReview, ratingForAnswer, reviewCard } from "@/lib/fsrs/scheduler";
-import { SKILLS, cardKey, type CardRecord } from "@/lib/fsrs/types";
+import { skillsForKind, cardKey, type CardRecord } from "@/lib/fsrs/types";
 import { progressStore } from "@/lib/progress/store";
 import { AnticipationDrill } from "./AnticipationDrill";
 import { InjectedReview } from "./InjectedReview";
@@ -22,6 +22,7 @@ import { MinimalPairDrill } from "./MinimalPairDrill";
 import { MultipleChoiceDrill } from "./MultipleChoiceDrill";
 import { PreferencesSheet } from "./PreferencesSheet";
 import { RevealCard } from "./RevealCard";
+import { SentenceBuilderDrill } from "./SentenceBuilderDrill";
 import { TypingDrill } from "./TypingDrill";
 
 interface LessonPlayerProps {
@@ -82,7 +83,7 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
     const schedule = async () => {
       const now = new Date();
       for (const item of lesson.items) {
-        for (const skill of SKILLS) {
+        for (const skill of skillsForKind(item.kind)) {
           const existing = await progressStore.getCard(cardKey(item.id, skill));
           if (!existing) await progressStore.putCard(newCardRecord(item.id, skill, now));
         }
@@ -239,6 +240,15 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
               <TypingDrill
                 item={itemsById.get(step.itemId)!}
                 spriteId={lesson.spriteId}
+                revealImmediately={prefs.revealImmediately}
+                onComplete={(correct) => advance(correct)}
+              />
+            )}
+            {step && step.kind === "sentenceBuilder" && (
+              <SentenceBuilderDrill
+                item={itemsById.get(step.drill.itemId)!}
+                spriteId={lesson.spriteId}
+                mode={step.drill.mode}
                 revealImmediately={prefs.revealImmediately}
                 onComplete={(correct) => advance(correct)}
               />

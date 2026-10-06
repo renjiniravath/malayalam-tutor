@@ -1,6 +1,6 @@
 import { contentRevision, currentItemIds } from '@/content';
 import { reconcileProgress } from './reconcile';
-import type { CardRecord, ReviewLogRecord, Skill } from '@/lib/fsrs/types';
+import { SKILLS, type CardRecord, type ReviewLogRecord } from '@/lib/fsrs/types';
 import type { ProgressEvent, ProgressStore } from './store';
 
 /**
@@ -37,8 +37,6 @@ export async function buildBackup(store: ProgressStore, now: Date): Promise<Back
     meta: await store.listMeta(),
   };
 }
-
-const SKILLS: Skill[] = ['recognition', 'production'];
 
 function isCardRecord(value: unknown): value is CardRecord {
   const record = value as CardRecord;

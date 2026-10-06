@@ -5,6 +5,7 @@ import type { Item } from "@/content/types";
 import { audioEngine } from "@/lib/audio/engine";
 import { ArticulationCard } from "./ArticulationCard";
 import { PlayButton } from "./PlayButton";
+import { WordBreakdown } from "./WordBreakdown";
 
 interface RevealCardProps {
   item: Item;
@@ -96,6 +97,7 @@ export function RevealCard({ item, spriteId, revealImmediately, onNext }: Reveal
             </p>
           )}
           <p className="mt-3 text-lg text-foreground">{item.meaning}</p>
+          {item.sentence && <WordBreakdown words={item.sentence.orders[0].split(' ')} parts={item.sentence.parts} />}
           {audioReady && (
             <div className="mt-4 flex flex-wrap gap-2">
               <PlayButton spriteId={spriteId} clipKey={item.audio.slow} label="Play slowly" secondary />

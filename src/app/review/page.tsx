@@ -5,6 +5,7 @@ import Link from "next/link";
 import { levels } from "@/content";
 import type { Item } from "@/content/types";
 import { MultipleChoiceDrill } from "@/components/player/MultipleChoiceDrill";
+import { SentenceBuilderDrill } from "@/components/player/SentenceBuilderDrill";
 import { TypingDrill } from "@/components/player/TypingDrill";
 import { recordReviewComplete } from "@/lib/gamification/progress";
 import { DAILY_REVIEW_CAP, persistReview, reviewCard } from "@/lib/fsrs/scheduler";
@@ -185,7 +186,11 @@ export default function ReviewPage() {
 
       <div className="mt-5 rounded-3xl border border-line bg-surface p-5">
         <p className="text-sm font-medium text-text-2">
-          {current.card.skill === "recognition" ? "Recognize the word" : "Produce the word"}: do you remember this?
+          {current.card.skill === "recognition"
+            ? "Recognize the word"
+            : current.card.skill === "sentence"
+              ? "Rebuild the sentence"
+              : "Produce the word"}: do you remember this?
         </p>
         {answered === null && (
           <div className="mt-4">
@@ -195,6 +200,15 @@ export default function ReviewPage() {
                 item={current.item}
                 distractors={current.distractors}
                 spriteId={current.spriteId}
+                revealImmediately={false}
+                onComplete={answer}
+              />
+            ) : current.card.skill === "sentence" ? (
+              <SentenceBuilderDrill
+                key={current.card.key}
+                item={current.item}
+                spriteId={current.spriteId}
+                mode="typing"
                 revealImmediately={false}
                 onComplete={answer}
               />

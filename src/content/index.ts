@@ -1,7 +1,8 @@
 import type { Level } from './types';
 import { level1 } from './level1';
+import { level2 } from './level2';
 
-export { level1 };
+export { level1, level2 };
 export { audioManifest } from './audio/manifest';
 export { imageManifest } from './images/manifest';
 export * from './types';
@@ -21,7 +22,7 @@ export interface ContentRevision {
   removedItemIds: string[];
 }
 
-export const contentRevision: ContentRevision = { revision: 2, removedItemIds: [] };
+export const contentRevision: ContentRevision = { revision: 3, removedItemIds: [] };
 
 /** Every item id in current content — the key set progress reconciles against. */
 export function currentItemIds(): string[] {
@@ -30,4 +31,4 @@ export function currentItemIds(): string[] {
   );
 }
 
-export const levels: Level[] = [level1];
+export const levels: Level[] = [level1, level2];

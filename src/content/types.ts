@@ -52,9 +52,27 @@ export interface Item {
   };
   /** Forgiving ASCII answers for typing drills — diacritic-folded, lowercase, never require diacritics */
   acceptedInputs?: string[];
+  /** Sentence structure for kind: 'sentence' — word bank, accepted orders, word-by-word gloss */
+  sentence?: SentenceSpec;
   /** Formal-form, politeness, and usage notes */
   notes?: string[];
   tags: Tag[];
+}
+
+export interface SentencePart {
+  /** One manglish token of the sentence */
+  word: string;
+  /** Its English gloss in this sentence (the tap-to-breakdown text) */
+  meaning: string;
+}
+
+export interface SentenceSpec {
+  /** Tokens offered in the word bank; may include one or two distractors */
+  bank: string[];
+  /** Accepted token orders, each a full sentence spelling (alternate word orders) */
+  orders: string[];
+  /** Word-by-word breakdown for the tap interaction; covers the tokens of the accepted orders */
+  parts: SentencePart[];
 }
 
 export type MinimalPairSegment = 'zh' | 'coronal' | 'geminate' | 'vowelLength';
@@ -73,7 +91,8 @@ export interface MinimalPair {
 /** Drill kinds used by the comprehension-only first lessons (more arrive with the player, M2) */
 export type DrillSpec =
   | { kind: 'multipleChoice'; itemId: string; distractors: string[] }
-  | { kind: 'minimalPair'; pairId: string };
+  | { kind: 'minimalPair'; pairId: string }
+  | { kind: 'sentenceBuilder'; itemId: string; mode: 'bank' | 'typing' };
 
 export interface Lesson {
   /** e.g. 'l1u1l1' */
