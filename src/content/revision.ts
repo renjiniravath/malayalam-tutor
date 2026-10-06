@@ -10,5 +10,7 @@
  *   4 — Level 2 added (First Sentences, four lessons)
  *   5 — native-speaker corrections to Level 2 (continuous glosses, -um
  *       habitual, dative venam, ketto, niyyum, sandhi, varunnundo)
+ *   6 — second-person -uva pragmatics: bare declaratives read as
+ *       commands, so second-person items use the -unnundo question form
  */
-export const CONTENT_REVISION = 5
+export const CONTENT_REVISION = 6

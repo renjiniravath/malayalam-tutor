@@ -123,16 +123,17 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'athu alle', script: 'അത് അല്ലേ', meaning: 'that, right?' },
   { manglish: 'ippo alle', script: 'ഇപ്പോ അല്ലേ', meaning: 'now, right?' },
   { manglish: 'athu sheri alle', script: 'അത് ശെരി അല്ലേ', meaning: "that's correct, right?" },
-  { manglish: 'neeyyum varuva', script: 'നീയും വരുവാ', meaning: 'are you coming too?' },
-  // Level 2 Unit 4 — politeness in context
+  { manglish: 'neeyyum varunnundo', script: 'നീയും വരുന്നുണ്ടോ', meaning: 'are you coming too?' },
+  // Level 2 Unit 4 — politeness in context (second-person items use the
+  // -unnundo question form: a bare -uva declarative reads as a command)
   // no script: the written form spells a long a that is short in speech
   { manglish: 'chetta', meaning: 'older brother; a friendly address for men' },
-  { manglish: 'nee varuva', script: 'നീ വരുവാ', meaning: 'you (casual) are coming' },
-  { manglish: 'ningaḷ varuva', script: 'നിങ്ങൾ വരുവാ', meaning: 'you (polite) are coming' },
-  { manglish: 'thaangkaḷ varuva', script: 'താങ്കൾ വരുവാ', meaning: 'you (formal) are coming' },
-  { manglish: 'thaangkaḷ pokuva', script: 'താങ്കൾ പോകുവാ', meaning: 'you (formal) are going' },
+  { manglish: 'nee varunnundo', script: 'നീ വരുന്നുണ്ടോ', meaning: 'are you coming? (casual)' },
+  { manglish: 'ningaḷ varunnundo', script: 'നിങ്ങൾ വരുന്നുണ്ടോ', meaning: 'are you coming? (polite)' },
+  { manglish: 'thaangkaḷ varunnundo', script: 'താങ്കൾ വരുന്നുണ്ടോ', meaning: 'are you coming? (formal)' },
+  { manglish: 'thaangkaḷ pokunnundo', script: 'താങ്കൾ പോകുന്നുണ്ടോ', meaning: 'are you going? (formal)' },
   { manglish: 'addheham varuva', script: 'അദ്ദേഹം വരുവാ', meaning: 'he (respectful) is coming' },
   { manglish: 'avar varuva', script: 'അവർ വരുവാ', meaning: 'they are coming; polite for he or she' },
   // no script: the written form spells a long a that is short in speech
-  { manglish: 'chetta pokuva', meaning: 'chetta is going' },
+  { manglish: 'chetta pokunnundo', meaning: 'are you going, chetta?' },
 ]

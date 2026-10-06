@@ -130,13 +130,14 @@ export const lesson3Tags: Lesson = {
     },
     {
       id: 'niyyo-varuva',
-      manglish: 'neeyyum varuva',
-      script: 'നീയും വരുവാ',
+      manglish: 'neeyyum varunnundo',
+      script: 'നീയും വരുന്നുണ്ടോ',
       meaning: 'are you coming too?',
       kind: 'sentence',
+      acceptedInputs: ['niyyum varunundo'],
       segments: [
         { token: 'neeyyum', gloss: 'you too?' },
-        { token: 'varuva', gloss: 'coming' },
+        { token: 'varunnundo', gloss: 'is coming?' },
       ],
       audio: { slow: 'niyyo-varuva.slow', medium: 'niyyo-varuva.medium', normal: 'niyyo-varuva.normal' },
       tags: ['level:2'],
@@ -174,8 +175,8 @@ export const lesson3Tags: Lesson = {
     {
       kind: 'sentenceBuilder',
       sentenceId: 'niyyo-varuva',
-      bank: ['neeyyum', 'varuva'],
-      acceptedInputs: ['niyyum varuva'],
+      bank: ['neeyyum', 'varunnundo'],
+      acceptedInputs: ['niyyum varunundo'],
     },
     {
       kind: 'sentenceBuilder',
