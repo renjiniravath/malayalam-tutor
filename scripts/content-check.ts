@@ -33,7 +33,7 @@ import {
   AUDIO_TIERS,
   TAG_REGISTRY,
 } from '../src/content/index';
-import { hasBareSecondPersonUva } from '../src/lib/content/pragmatics';
+import { hasBareSecondPersonUva, hasChettaSubject } from '../src/lib/content/pragmatics';
 import type { Item, Lesson, MinimalPair, MinimalPairSegment } from '../src/content/types';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -239,6 +239,11 @@ function checkSentence(where: string, item: Item): void {
       where,
       'a bare second-person -uva declarative reads like a command; use the question form (nii varunnundo?) or re-person the sentence',
     );
+  }
+  // Pragmatics (PLAN.md §5): 'chetta' is a vocative address, never a
+  // sentence subject; the addressed question writes it with a comma.
+  if (hasChettaSubject(spec.orders)) {
+    fail(where, "'chetta' is a vocative, never a sentence subject; write the addressed question ('chetta, ith kando?') or drop it");
   }
 }
 

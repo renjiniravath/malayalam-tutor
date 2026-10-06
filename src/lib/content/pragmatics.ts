@@ -21,3 +21,13 @@ export function hasBareSecondPersonUva(orders: string[]): boolean {
     return tokens.some((token) => token.endsWith('uva'));
   });
 }
+
+/**
+ * 'chetta' is a vocative, never a sentence subject: it is used only to
+ * summon or address someone in an addressed question ("chetta, ith
+ * kando?"). An addressed question writes the vocative with a comma, so
+ * a bare 'chetta' token in an order is the subject misuse.
+ */
+export function hasChettaSubject(orders: string[]): boolean {
+  return orders.some((order) => order.split(' ').includes('chetta'));
+}

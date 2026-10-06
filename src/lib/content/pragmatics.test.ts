@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { hasBareSecondPersonUva, SECOND_PERSON_SUBJECTS } from './pragmatics';
+import { hasBareSecondPersonUva, hasChettaSubject, SECOND_PERSON_SUBJECTS } from './pragmatics';
 
 describe('-uva pragmatics (PLAN.md §5)', () => {
   it('flags bare second-person -uva declaratives as command-like', () => {
@@ -22,5 +22,15 @@ describe('-uva pragmatics (PLAN.md §5)', () => {
 
   it('covers all three second-person subjects', () => {
     assert.deepEqual(SECOND_PERSON_SUBJECTS, ['nii', 'ningaḷ', 'thaankaḷ']);
+  });
+
+  it('flags chetta used as a sentence subject', () => {
+    assert.equal(hasChettaSubject(['chetta pokuva']), true);
+    assert.equal(hasChettaSubject(['chetta varunnundo?']), true);
+  });
+
+  it('allows chetta as a vocative in an addressed question', () => {
+    assert.equal(hasChettaSubject(['chetta, ith kando?']), false);
+    assert.equal(hasChettaSubject(['avan varuva']), false);
   });
 });
