@@ -33,5 +33,7 @@
  *  14 — rulings on politeness/cases: ingott question forms for
  *       ayaaḷ/addheham; avar varunnundo question form; iyaaḷ copula
  *       items removed; shop words become kada (kadayil, kadayilott)
+ *  15 — kadayilott unified to kadayilekk (same -ilekk pattern as
+ *       veettilekk, hotelilekk, officilekk)
  */
-export const CONTENT_REVISION = 14
+export const CONTENT_REVISION = 15

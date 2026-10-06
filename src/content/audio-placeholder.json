@@ -196,12 +196,12 @@
         "veettilekk.slow", "veettilekk.medium", "veettilekk.normal",
         "hotelilekk.slow", "hotelilekk.medium", "hotelilekk.normal",
         "officilekk.slow", "officilekk.medium", "officilekk.normal",
-        "kadayilott.slow", "kadayilott.medium", "kadayilott.normal",
+        "kadayilekk.slow", "kadayilekk.medium", "kadayilekk.normal",
         "njan-hotelilekk-pokuva.slow", "njan-hotelilekk-pokuva.medium", "njan-hotelilekk-pokuva.normal",
         "njan-officilekk-pokuva.slow", "njan-officilekk-pokuva.medium", "njan-officilekk-pokuva.normal",
         "njan-veettilekk-pokuva.slow", "njan-veettilekk-pokuva.medium", "njan-veettilekk-pokuva.normal",
         "avan-hotelilekk-varunnundo.slow", "avan-hotelilekk-varunnundo.medium", "avan-hotelilekk-varunnundo.normal",
-        "njan-kadayilott-pokuva.slow", "njan-kadayilott-pokuva.medium", "njan-kadayilott-pokuva.normal",
+        "njan-kadayilekk-pokuva.slow", "njan-kadayilekk-pokuva.medium", "njan-kadayilekk-pokuva.normal",
         "aunty-hotelilekk-pokuva.slow", "aunty-hotelilekk-pokuva.medium", "aunty-hotelilekk-pokuva.normal",
         "chetta-hotelilekk-pokunnundo.slow", "chetta-hotelilekk-pokunnundo.medium", "chetta-hotelilekk-pokunnundo.normal"
       ]
