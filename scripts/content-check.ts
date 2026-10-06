@@ -330,7 +330,9 @@ function scriptCoronals(script: string): string[] {
  * ങ before ക (thaankal) — all n-runs are single coronal positions.
  */
 function romanCoronals(manglish: string): string[] {
-  const s = manglish.replace(/[^a-zḷṇṟ]/gu, '');
+  // Scan word by word: stripping spaces would merge cross-word runs
+  // ('njan jolikku' would scan as nj + nj).
+  const s = manglish.toLowerCase().split(/[^a-zḷṇṟ]+/u).join('.');
   const out: string[] = [];
   let i = 0;
   while (i < s.length) {
@@ -342,7 +344,8 @@ function romanCoronals(manglish: string): string[] {
       else if (s.startsWith('tt', i)) { out.push('tt'); i += 2; }
       else { out.push('t'); i++; }
     } else if (c === 'd') {
-      if (s.startsWith('dh', i)) { out.push('dh'); i += 2; }
+      if (s.startsWith('ddh', i)) { out.push('ddh'); i += 3; }
+      else if (s.startsWith('dh', i)) { out.push('dh'); i += 2; }
       else if (s.startsWith('dd', i)) { out.push('dd'); i += 2; }
       else { out.push('d'); i++; }
     } else if (c === 'n') {
@@ -386,7 +389,7 @@ const CORONAL_ALLOWED: Record<string, string[]> = {
   l: ['l'], ll: ['ll'],
   r: ['r'], rr: ['rr'],
   th: ['th'], tth: ['tth'],
-  dh: ['dh'],
+  dh: ['dh'], ddh: ['ddh'],
   t: ['t', 'd'], tt: ['tt', 'd'],
   d: ['d'], dd: ['dd'],
   'ṟ': ['ṟ', 'r', 't'], 'ṟṟ': ['ṟṟ', 'rr', 'tt'],
