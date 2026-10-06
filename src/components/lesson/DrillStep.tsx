@@ -13,6 +13,7 @@ import { itemById } from '@/lib/lesson/steps'
 import { AnticipationDrill } from './drills/AnticipationDrill'
 import { MinimalPairDrill } from './drills/MinimalPairDrill'
 import { MultipleChoiceDrill } from './drills/MultipleChoiceDrill'
+import { SentenceBuilderDrill } from './drills/SentenceBuilderDrill'
 import { TypingDrill } from './drills/TypingDrill'
 
 type LessonAudio = ReturnType<typeof useLessonAudio>
@@ -63,6 +64,16 @@ export function DrillStep({
       return (
         <TypingDrill
           item={item(spec.itemId)}
+          acceptedInputs={spec.acceptedInputs}
+          audio={audio}
+          onDone={onDone}
+        />
+      )
+    case 'sentenceBuilder':
+      return (
+        <SentenceBuilderDrill
+          item={item(spec.sentenceId)}
+          bank={spec.bank}
           acceptedInputs={spec.acceptedInputs}
           audio={audio}
           onDone={onDone}

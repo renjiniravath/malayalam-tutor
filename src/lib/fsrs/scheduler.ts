@@ -17,7 +17,7 @@ import {
   type ReviewLog,
 } from 'ts-fsrs'
 
-export type Skill = 'recognition' | 'production'
+export type Skill = 'recognition' | 'production' | 'sentence'
 
 /** The four-grade feedback ladder. */
 export type Grade = 'again' | 'hard' | 'good' | 'easy'

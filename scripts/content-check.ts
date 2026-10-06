@@ -50,7 +50,7 @@ function warn(ctx: string, msg: string): void {
  * ന്ത. Geminates and long vowels collapse into one token.
  */
 const GRAPHEMES = [
-  'tth', 'nth', 'nt',
+  'tth', 'ddh', 'nth', 'nt',
   'zh', 'nj', 'sh', 'ph', 'ng', 'ch', 'kh', 'th', 'dh',
   'tt', 'kk', 'pp', 'mm', 'nn', 'll', 'ḷḷ',
   'aa', 'ee', 'uu',
@@ -81,7 +81,7 @@ function tokenize(word: string): string[] {
   return tokens
 }
 
-const GEMINATE_CLUSTERS = /(tth|tt|kk|pp|mm|nn|ll|ḷḷ)/
+const GEMINATE_CLUSTERS = /(tth|ddh|tt|kk|pp|mm|nn|ll|ḷḷ)/
 const LONG_VOWELS = /(aa|ee|uu)/
 const CORONALS = /(th|t|ṟ)/
 
@@ -167,7 +167,7 @@ function hasInherentA(script: string): boolean {
 /** token -> script must contain one of these */
 const TOKEN_TO_SCRIPT: Record<string, string[]> = {
   zh: ['ഴ'], nj: ['ഞ'], sh: ['ശ'], ph: ['ഫ'], ng: ['ങ'], ch: ['ച'], kh: ['ഖ'],
-  th: ['ത'], dh: ['ദ'], t: ['ട'], d: ['ട', 'ഡ'], ṟ: ['റ'],
+  th: ['ത'], dh: ['ദ'], t: ['ട'], d: ['ട', 'ഡ'], ṟ: ['റ'], ddh: ['ദ്ദ'],
   r: ['ര', 'റ'], l: ['ല'], ḷ: ['ള', 'ൾ'], n: ['ന', 'ണ', 'ൻ'], ṇ: ['ണ'], m: ['മ', 'ം'],
   p: ['പ'], b: ['ബ'], k: ['ക'], g: ['ഗ'], j: ['ജ'], s: ['സ'],
   v: ['വ'], y: ['യ'], h: ['ഹ'],
@@ -194,7 +194,7 @@ const SCRIPT_TO_TOKEN: Record<string, string[]> = {
 
 /** geminate token <-> script conjunct */
 const GEMINATE_PAIRS: Array<[string, string]> = [
-  ['tt', 'ട്ട'], ['tth', 'ത്ത'], ['kk', 'ക്ക'], ['pp', 'പ്പ'],
+  ['tt', 'ട്ട'], ['tth', 'ത്ത'], ['ddh', 'ദ്ദ'], ['kk', 'ക്ക'], ['pp', 'പ്പ'],
   ['mm', 'മ്മ'], ['nn', 'ന്ന'], ['ll', 'ല്ല'], ['ḷḷ', 'ള്ള'],
 ]
 
@@ -211,7 +211,9 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
   if (!MANGLISH_CHARSET.test(manglish))
     fail(ctx, `manglish has invalid characters (lowercase a-z, ḷ ṇ ṟ only): ${manglish}`)
   const hasVowel = script ? HAS_VOWEL.test(script) : false
-  for (const word of manglish.split(' ')) {
+  const words = manglish.split(' ')
+  for (let wordIndex = 0; wordIndex < words.length; wordIndex++) {
+    const word = words[wordIndex]
     const tokens = tokenize(word)
     if (tokens.length === 0) fail(ctx, `cannot tokenize: ${word}`)
     if (word in MANGLISH_TRAPS)
@@ -219,7 +221,12 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
     if (word.includes('ii')) fail(ctx, `long i is written ee (as in veedu), not ii: ${word}`)
     if (word.includes('oo')) fail(ctx, `long u is written uu, not oo: ${word}`)
     if (!script) continue
+    // Colloquial -iyo contracts to a final ോ in writing (PLAN.md §9
+    // rule 6, kettiyo -> കേട്ടോ): the spoken i and y drop from the script.
+    const iyoContracted =
+      wordIndex === words.length - 1 && word.endsWith('iyo') && script.endsWith('ോ')
     for (const token of tokens) {
+      if (iyoContracted && (token === 'i' || token === 'y')) continue
       const targets = TOKEN_TO_SCRIPT[token]
       if (!targets) continue
       if (VOWEL_TOKENS.has(token) && !hasVowel) continue
@@ -237,8 +244,24 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
     const hasConj = script.includes(conj)
     if (hasRom !== hasConj) fail(ctx, `${rom} ${hasRom ? 'needs' : 'not matched by'} ${conj}: ${script}`)
   }
+  // Colloquial -uva verbs write the suffix as -ുവാ (PLAN.md §9 rule 6,
+  // pokuva -> പോകുവാ): that final ാ is spoken short, so it is exempt
+  // from long-vowel correspondence and script coverage.
+  const UVA = 'ുവാ'
+  const uvaWords = manglish.split(' ').filter((w) => w.endsWith('uva')).length
+  const uvaCount = Math.min(uvaWords, countChar(script, UVA))
+  const uvaALetters = new Set<number>()
+  if (uvaCount > 0) {
+    let at = script.indexOf(UVA)
+    let found = 0
+    while (at !== -1 && found < uvaCount) {
+      uvaALetters.add(at + 2)
+      found++
+      at = script.indexOf(UVA, at + 1)
+    }
+  }
   // vowel doubling: aa/ee/uu must match the script's long vowel signs
-  const scriptAa = countChar(script, 'ാ') + countChar(script, 'ആ')
+  const scriptAa = countChar(script, 'ാ') + countChar(script, 'ആ') - uvaCount
   const scriptEe = countChar(script, 'ീ') + countChar(script, 'ഈ')
   const scriptUu = countChar(script, 'ൂ') + countChar(script, 'ഊ')
   if (countChar(manglish, 'aa') !== scriptAa)
@@ -248,8 +271,10 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
   if (countChar(manglish, 'uu') !== scriptUu)
     fail(ctx, `uu count ${countChar(manglish, 'uu')} != script long-u count ${scriptUu}: ${script}`)
   // script letters must all be covered by the manglish
-  for (const ch of script) {
+  for (let i = 0; i < script.length; i++) {
+    const ch = script[i]
     if (ch === '്') continue
+    if (uvaALetters.has(i)) continue
     const options = SCRIPT_TO_TOKEN[ch]
     if (!options) continue
     if (!options.some((t) => manglish.includes(t)))
@@ -441,6 +466,21 @@ function main(): void {
           fail(ctx, 'sound items need at least one focus clip')
       }
 
+      // word-by-word breakdown (PLAN.md §5): Level 2 sentences carry it
+      if (item.kind === 'sentence' && levelTags[0] === 'level:2') {
+        if (!item.segments || item.segments.length === 0) {
+          fail(ctx, 'level 2 sentence items need word-by-word segments')
+        } else {
+          if (item.segments.map((s) => s.token).join(' ') !== item.manglish)
+            fail(ctx, 'segments must reconstruct the manglish exactly')
+          for (const segment of item.segments) {
+            if (!segment.token.trim() || !segment.gloss.trim())
+              fail(ctx, 'segment token and gloss must be non-empty')
+            scanForEmoji(segment.token + segment.gloss, ctx)
+          }
+        }
+      }
+
       // audio refs must be <itemId>.<tier>
       const refs: string[] = []
       for (const tier of ['slow', 'medium', 'normal'] as const) {
@@ -533,9 +573,22 @@ function main(): void {
         case 'wordToImage':
           if (!itemIds.has(drill.itemId)) fail(ctx, `item ${drill.itemId} is not in this lesson`)
           break
-        case 'sentenceBuilder':
+        case 'sentenceBuilder': {
+          if (!itemIds.has(drill.sentenceId)) fail(ctx, `sentence ${drill.sentenceId} is not in this lesson`)
+          const sentence = lesson.items.find((i) => i.id === drill.sentenceId)
+          if (sentence && sentence.kind !== 'sentence')
+            fail(ctx, `sentenceBuilder target ${drill.sentenceId} must be a sentence item`)
+          if (!drill.bank || drill.bank.length === 0) fail(ctx, 'sentenceBuilder needs a word bank')
+          if (!drill.acceptedInputs || drill.acceptedInputs.length === 0)
+            fail(ctx, 'sentenceBuilder needs acceptedInputs')
+          const words = sentence ? sentence.manglish.split(' ') : []
+          for (const token of drill.bank) {
+            if (!words.includes(token)) fail(ctx, `bank token "${token}" is not a word of the sentence`)
+          }
+          break
+        }
         case 'dialogueRolePlay':
-          break // sentence/dialogue content arrives in later milestones
+          break // dialogue content arrives in a later milestone
       }
     }
   }

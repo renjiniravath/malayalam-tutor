@@ -5,5 +5,6 @@
 
 import type { Level } from './types'
 import { LEVEL1 } from './level1'
+import { LEVEL2 } from './level2'
 
-export const LEVELS: readonly Level[] = [LEVEL1]
+export const LEVELS: readonly Level[] = [LEVEL1, LEVEL2]

@@ -71,6 +71,11 @@ export interface Item {
   audio: ItemAudio
   /** Forgiving ASCII answers for typing drills (diacritic-folded, case-insensitive). */
   acceptedInputs?: string[]
+  /**
+   * Word-by-word breakdown for sentence items (PLAN.md §5: every new
+   * word in a sentence is explained). Tokens reconstruct the manglish.
+   */
+  segments?: { token: string; gloss: string }[]
   /** Formal-form notes, politeness, usage. */
   notes?: string[]
   tags: string[]

@@ -12,15 +12,27 @@ export interface CardTarget {
   skill: Skill
 }
 
+/**
+ * `kindOf` resolves an item's kind so sentence items grade their
+ * 'sentence' card from the typing variant too.
+ */
 export function drillTargets(
   spec: DrillSpec,
   pairItems: (pairId: string) => [string, string] | null,
+  kindOf: (itemId: string) => string | undefined,
 ): CardTarget[] {
   switch (spec.kind) {
     case 'multipleChoice':
       return [{ itemId: spec.itemId, skill: 'recognition' }]
     case 'typing':
-      return [{ itemId: spec.itemId, skill: 'production' }]
+      return [
+        {
+          itemId: spec.itemId,
+          skill: kindOf(spec.itemId) === 'sentence' ? 'sentence' : 'production',
+        },
+      ]
+    case 'sentenceBuilder':
+      return [{ itemId: spec.sentenceId, skill: 'sentence' }]
     case 'minimalPair': {
       const pair = pairItems(spec.pairId)
       if (!pair) return []

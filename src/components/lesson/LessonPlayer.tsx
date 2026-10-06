@@ -126,7 +126,9 @@ export function LessonPlayer({ lesson, nextLesson }: { lesson: Lesson; nextLesso
         const pair = lesson.pairs.find((p) => p.id === pairId)
         return pair ? [pair.aItemId, pair.bItemId] : null
       }
-      for (const target of drillTargets(step.spec, pairItems)) {
+      const kindOf = (itemId: string): string | undefined =>
+        lesson.items.find((i) => i.id === itemId)?.kind
+      for (const target of drillTargets(step.spec, pairItems, kindOf)) {
         void recordReview(target.itemId, target.skill, outcome === 'correct' ? 'good' : 'again').catch(
           console.error,
         )

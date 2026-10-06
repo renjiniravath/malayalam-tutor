@@ -42,6 +42,16 @@ function Prompt({ card, item }: { card: CardRecord; item: Item }) {
       </div>
     )
   }
+  if (card.skill === 'sentence') {
+    return (
+      <div className="text-center">
+        <p className="text-xs font-semibold tracking-wide text-amber-700 dark:text-amber-400">
+          Say the sentence
+        </p>
+        <p className="mt-4 text-2xl font-medium">{item.meaning}</p>
+      </div>
+    )
+  }
   return (
     <div className="text-center">
       <p className="text-xs font-semibold tracking-wide text-amber-700 dark:text-amber-400">
@@ -145,7 +155,11 @@ export function ReviewSession({
     <div aria-live="polite" className="mx-auto flex w-full max-w-2xl animate-rise-in flex-col gap-6 px-6 pb-safe pt-8">
       <div className="flex items-center justify-between text-xs font-medium tabular-nums text-stone-500 dark:text-stone-400">
         <span>
-          {card.skill === 'production' ? 'Production' : 'Recognition'} review
+          {card.skill === 'production'
+            ? 'Production review'
+            : card.skill === 'sentence'
+              ? 'Sentence review'
+              : 'Recognition review'}
         </span>
         <span>
           {index + 1} / {cards.length}

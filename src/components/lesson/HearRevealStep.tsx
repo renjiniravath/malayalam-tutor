@@ -19,6 +19,46 @@ import { ArticulationView } from './ArticulationView'
 
 type LessonAudio = ReturnType<typeof useLessonAudio>
 
+/**
+ * Word-by-word breakdown (PLAN.md §5): each word of a sentence is a
+ * chip; tapping reveals its gloss. Every new word is explained on the
+ * learner's own tap, never up front.
+ */
+function WordBreakdown({ segments }: { segments: { token: string; gloss: string }[] }) {
+  const [revealed, setRevealed] = useState<Set<string>>(new Set())
+  const toggle = (token: string) => {
+    setRevealed((prev) => {
+      const next = new Set(prev)
+      if (next.has(token)) next.delete(token)
+      else next.add(token)
+      return next
+    })
+  }
+  return (
+    <div className="flex flex-wrap gap-2">
+      {segments.map((segment) => {
+        const shown = revealed.has(segment.token)
+        return (
+          <button
+            key={segment.token}
+            type="button"
+            onClick={() => toggle(segment.token)}
+            aria-expanded={shown}
+            className={`inline-flex min-h-11 items-center gap-1.5 rounded-full border-2 px-3.5 text-sm outline-2 outline-offset-2 outline-stone-900 focus-visible:outline dark:outline-stone-100 ${
+              shown
+                ? 'border-amber-700 text-amber-700 dark:border-amber-400 dark:text-amber-400'
+                : 'border-stone-300 text-stone-700 hover:border-stone-400 dark:border-stone-700 dark:text-stone-300 dark:hover:border-stone-600'
+            }`}
+          >
+            <span className="font-medium">{segment.token}</span>
+            {shown && <span className="font-normal opacity-80">{segment.gloss}</span>}
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
 function AudioNote({ audio, silent }: { audio: LessonAudio; silent: boolean }) {
   if (silent) return <p className="text-xs text-stone-500 dark:text-stone-400">Silent mode is on.</p>
   if (audio.state === 'loading')
@@ -154,6 +194,7 @@ export function HearRevealStep({
         )}
       </div>
       <p className="text-lg text-stone-700 dark:text-stone-300">{item.meaning}</p>
+      {item.segments && <WordBreakdown segments={item.segments} />}
       {item.articulation && (
         <ArticulationView articulation={item.articulation} sound={item.manglish} />
       )}

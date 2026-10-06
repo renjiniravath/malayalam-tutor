@@ -7,5 +7,6 @@
  *   1 — Unit 1 shipped (revision tracking starts here)
  *   2 — Units 2-3 added (greetings & expressions, pronouns)
  *   3 — articulation entries became brief text cues (visual diagrams dropped)
+ *   4 — Level 2 added (First Sentences, four lessons)
  */
-export const CONTENT_REVISION = 3
+export const CONTENT_REVISION = 4

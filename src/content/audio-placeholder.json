@@ -73,6 +73,64 @@
         "namukku.slow", "namukku.medium", "namukku.normal",
         "nee-engane-und.slow", "nee-engane-und.medium", "nee-engane-und.normal"
       ]
+    },
+    "l2u1l1": {
+      "sprite": "audio/l2u1l1.mp3",
+      "clips": [
+        "kudikkuva.slow", "kudikkuva.medium", "kudikkuva.normal",
+        "varuva.slow", "varuva.medium", "varuva.normal",
+        "pokuva.slow", "pokuva.medium", "pokuva.normal",
+        "parayuva.slow", "parayuva.medium", "parayuva.normal",
+        "kazhikkuva.slow", "kazhikkuva.medium", "kazhikkuva.normal",
+        "nokkuva.slow", "nokkuva.medium", "nokkuva.normal",
+        "njan-chaaya-kudikkuva.slow", "njan-chaaya-kudikkuva.medium", "njan-chaaya-kudikkuva.normal",
+        "njan-pokuva.slow", "njan-pokuva.medium", "njan-pokuva.normal",
+        "njan-varuva.slow", "njan-varuva.medium", "njan-varuva.normal",
+        "avan-varuva.slow", "avan-varuva.medium", "avan-varuva.normal",
+        "avan-parayuva.slow", "avan-parayuva.medium", "avan-parayuva.normal",
+        "nammal-pokuva.slow", "nammal-pokuva.medium", "nammal-pokuva.normal"
+      ]
+    },
+    "l2u1l2": {
+      "sprite": "audio/l2u1l2.mp3",
+      "clips": [
+        "aanu.slow", "aanu.medium", "aanu.normal",
+        "aano.slow", "aano.medium", "aano.normal",
+        "athe.slow", "athe.medium", "athe.normal",
+        "illa.slow", "illa.medium", "illa.normal",
+        "sheri-aanu.slow", "sheri-aanu.medium", "sheri-aanu.normal",
+        "njan-ready-aa.slow", "njan-ready-aa.medium", "njan-ready-aa.normal",
+        "athu-sheri-aa.slow", "athu-sheri-aa.medium", "athu-sheri-aa.normal",
+        "avan-teacher-aa.slow", "avan-teacher-aa.medium", "avan-teacher-aa.normal",
+        "ready-aano.slow", "ready-aano.medium", "ready-aano.normal",
+        "chaaya-illa.slow", "chaaya-illa.medium", "chaaya-illa.normal"
+      ]
+    },
+    "l2u1l3": {
+      "sprite": "audio/l2u1l3.mp3",
+      "clips": [
+        "kettiyo.slow", "kettiyo.medium", "kettiyo.normal",
+        "niyyo.slow", "niyyo.medium", "niyyo.normal",
+        "sheriyalle.slow", "sheriyalle.medium", "sheriyalle.normal",
+        "chaaya-alle.slow", "chaaya-alle.medium", "chaaya-alle.normal",
+        "pokuva-alle.slow", "pokuva-alle.medium", "pokuva-alle.normal",
+        "athu-alle.slow", "athu-alle.medium", "athu-alle.normal",
+        "ippo-alle.slow", "ippo-alle.medium", "ippo-alle.normal",
+        "niyyo-varuva.slow", "niyyo-varuva.medium", "niyyo-varuva.normal"
+      ]
+    },
+    "l2u1l4": {
+      "sprite": "audio/l2u1l4.mp3",
+      "clips": [
+        "chetta.slow", "chetta.medium", "chetta.normal",
+        "nee-varuva.slow", "nee-varuva.medium", "nee-varuva.normal",
+        "ningal-varuva.slow", "ningal-varuva.medium", "ningal-varuva.normal",
+        "thaankal-varuva.slow", "thaankal-varuva.medium", "thaankal-varuva.normal",
+        "thaankal-pokuva.slow", "thaankal-pokuva.medium", "thaankal-pokuva.normal",
+        "addheham-varuva.slow", "addheham-varuva.medium", "addheham-varuva.normal",
+        "avar-varuva.slow", "avar-varuva.medium", "avar-varuva.normal",
+        "chetta-pokuva.slow", "chetta-pokuva.medium", "chetta-pokuva.normal"
+      ]
     }
   }
 }
