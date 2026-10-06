@@ -91,7 +91,7 @@ Units:
 **Can do:** attach case suffixes to English and Malayalam words to say where, where-to, whose, for-whom.
 
 - `-il` (in/at), `-ilekk` (to), `-kku` (to/for), `-nte` (of), `-um` (also/and), `-aayi` (as/with), `-il ninnu` (from)
-- **Suffix assimilation with English words** as the flagship pattern: `officil`, `jolikku` (fast speech `jolikk`), `shoppil`, `busil`, `hotelilekk`
+- **Suffix assimilation with English words** as the flagship pattern: `officil`, `jolikku` (fast speech `jolikk`), `shoppil`, `busil`, `hotelilekk` (hotel, single t — native-speaker ruling). `-ilekk` is the right "to" form for English words (`officilekk`, never `officekku`). Tag-question habitals for second person: `nee chaaya kudikkumello, alle?` "you drink tea, right?" — bare `nee chaaya kudikkum` without context is bad. `njan angott varuva` "I am coming there" is the natural varuva sentence
 - Frame drills: `[word] + [suffix] + [verb]` — `njan officil pokuva`
 
 ### Level 4 — Making Sentences (Intermediate) · ~85 items, 8 lessons
