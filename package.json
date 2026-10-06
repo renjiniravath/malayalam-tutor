@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test src/lib/fsrs/scheduler.test.ts src/lib/fsrs/targets.test.ts src/lib/store/db.test.ts src/lib/store/backup.test.ts src/lib/store/recovery.test.ts src/lib/streaks/streaks.test.ts src/lib/streaks/achievements.test.ts src/lib/test/levelTest.test.ts src/lib/progress/reconcile.test.ts src/lib/lesson/steps.test.ts",
+    "test": "tsx --test src/lib/fsrs/scheduler.test.ts src/lib/fsrs/targets.test.ts src/lib/store/db.test.ts src/lib/store/backup.test.ts src/lib/store/recovery.test.ts src/lib/streaks/streaks.test.ts src/lib/streaks/achievements.test.ts src/lib/xp/xp.test.ts src/lib/progress/mastery.test.ts src/lib/progress/dashboard.test.ts src/lib/test/levelTest.test.ts src/lib/progress/reconcile.test.ts src/lib/lesson/steps.test.ts",
     "content:check": "tsx scripts/content-check.ts"
   },
   "dependencies": {

@@ -9,7 +9,14 @@ import { LEVELS } from '@/content/levels'
 import { CONTENT_REVISION } from '@/content/revision'
 import { reconcileProgress } from '@/lib/progress/reconcile'
 import { EMPTY_STREAK, type StreakState } from '@/lib/streaks/streaks'
-import type { AchievementRecord, CardRecord, ProgressStore, ReviewLogRecord } from './db'
+import { EMPTY_XP, type XpState } from '@/lib/xp/xp'
+import type {
+  AchievementRecord,
+  CardRecord,
+  LessonCompletionRecord,
+  ProgressStore,
+  ReviewLogRecord,
+} from './db'
 
 export interface BackupPayload {
   format: 'learn-malayalam-backup'
@@ -20,6 +27,9 @@ export interface BackupPayload {
   reviewLogs: Omit<ReviewLogRecord, 'id'>[]
   streak: StreakState
   achievements: AchievementRecord[]
+  /** Added in M10; absent in older backups. */
+  xp?: XpState
+  completedLessons?: LessonCompletionRecord[]
 }
 
 export interface ImportSummary {
@@ -42,6 +52,8 @@ export async function exportProgress(store: ProgressStore, now: Date = new Date(
     reviewLogs: await store.listLogs(),
     streak: (await store.getStreak()) ?? EMPTY_STREAK,
     achievements: await store.listAchievements(),
+    xp: (await store.getXp()) ?? EMPTY_XP,
+    completedLessons: await store.listLessons(),
   }
 }
 
@@ -139,6 +151,14 @@ export async function importProgress(store: ProgressStore, raw: string): Promise
   for (const achievement of payload.achievements) {
     if (typeof achievement.id === 'string' && typeof achievement.earnedAt === 'number') {
       await store.putAchievement(achievement)
+    }
+  }
+  if (payload.xp && typeof payload.xp.total === 'number') {
+    await store.putXp({ total: payload.xp.total })
+  }
+  for (const lesson of payload.completedLessons ?? []) {
+    if (typeof lesson.id === 'string' && typeof lesson.completedAt === 'number') {
+      await store.putLesson(lesson)
     }
   }
 

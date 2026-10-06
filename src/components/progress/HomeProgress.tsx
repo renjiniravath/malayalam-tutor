@@ -8,6 +8,7 @@
  */
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 import type { AchievementRecord } from '@/lib/store/db'
 import { exportProgress, importProgress } from '@/lib/store/backup'
 import { getStore } from '@/lib/store/singleton'
@@ -92,7 +93,15 @@ export function HomeProgress() {
   return (
     <section className="border-t border-stone-200 pt-12 dark:border-stone-800">
       <div className="space-y-6">
-        <h2 className="text-2xl font-semibold tracking-tight">Progress</h2>
+        <div className="flex items-center justify-between gap-4">
+          <h2 className="text-2xl font-semibold tracking-tight">Progress</h2>
+          <Link
+            href="/progress"
+            className="inline-flex min-h-11 items-center rounded-full border-2 border-stone-200 px-4 text-sm font-medium text-stone-700 outline-2 outline-offset-2 outline-stone-900 hover:border-stone-400 focus-visible:outline active:bg-stone-100 dark:border-stone-800 dark:text-stone-300 dark:outline-stone-100 dark:hover:border-stone-600 dark:active:bg-stone-900"
+          >
+            Dashboard
+          </Link>
+        </div>
 
         <div className="flex flex-wrap items-center gap-3">
           <span className="text-sm text-stone-600 dark:text-stone-300">

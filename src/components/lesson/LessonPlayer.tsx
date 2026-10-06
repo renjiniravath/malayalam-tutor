@@ -26,6 +26,8 @@ import { recordReview } from '@/lib/fsrs/client'
 import { getStore } from '@/lib/store/singleton'
 import { drillTargets } from '@/lib/fsrs/targets'
 import { earn, recordLearningActivity } from '@/lib/progress/learning'
+import { awardXp } from '@/lib/xp/award'
+import { XP_AMOUNTS } from '@/lib/xp/xp'
 import { PreferencesButton } from '@/components/PreferencesDialog'
 import { ReviewStep } from '@/components/review/ReviewStep'
 import { BackIcon } from '@/components/icons'
@@ -134,11 +136,13 @@ export function LessonPlayer({ lesson, nextLesson }: { lesson: Lesson; nextLesso
     const allOutcomes = outcome ? [...outcomes, outcome] : outcomes
     const finished = stepIndex + 1 >= (steps?.length ?? allSteps.length)
     if (finished) {
-      // Achievements and streaks run on real events (PLAN.md §8).
+      // Achievements, streaks, and XP run on real events (PLAN.md §8).
       if (allOutcomes.length > 0 && !allOutcomes.includes('wrong')) {
         void earn('perfectLesson').catch(console.error)
       }
       void recordLearningActivity().catch(console.error)
+      void awardXp(XP_AMOUNTS.lesson).catch(console.error)
+      void getStore().putLesson({ id: lesson.id, completedAt: Date.now() }).catch(console.error)
     }
   }
 

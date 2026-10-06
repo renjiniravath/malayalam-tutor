@@ -12,6 +12,7 @@
 import Dexie, { type EntityTable } from 'dexie'
 import type { Card, ReviewLog } from 'ts-fsrs'
 import type { StreakState } from '@/lib/streaks/streaks'
+import type { XpState } from '@/lib/xp/xp'
 
 export interface CardRecord {
   /** `${itemId}:${skill}` — the card key (PLAN.md §7). */
@@ -49,6 +50,8 @@ class LearnMalayalamDb extends Dexie {
   reviewLogs!: EntityTable<ReviewLogRecord, 'id'>
   streak!: EntityTable<{ id: string; state: StreakState }, 'id'>
   achievements!: EntityTable<AchievementRecord, 'id'>
+  xp!: EntityTable<XpState & { id: string }, 'id'>
+  lessons!: EntityTable<LessonCompletionRecord, 'id'>
 
   constructor(name: string) {
     super(name)
@@ -62,7 +65,21 @@ class LearnMalayalamDb extends Dexie {
       streak: '&id',
       achievements: '&id',
     })
+    this.version(3).stores({
+      cards: '&key, dueAt, updatedAt',
+      reviewLogs: '++id, cardKey, reviewedAt',
+      streak: '&id',
+      achievements: '&id',
+      xp: '&id',
+      lessons: '&id',
+    })
   }
+}
+
+export interface LessonCompletionRecord {
+  /** Lesson id. */
+  id: string
+  completedAt: number
 }
 
 export interface ProgressStore {
@@ -79,6 +96,10 @@ export interface ProgressStore {
   putStreak(state: StreakState): Promise<void>
   listAchievements(): Promise<AchievementRecord[]>
   putAchievement(record: AchievementRecord): Promise<void>
+  getXp(): Promise<XpState | undefined>
+  putXp(state: XpState): Promise<void>
+  listLessons(): Promise<LessonCompletionRecord[]>
+  putLesson(record: LessonCompletionRecord): Promise<void>
   /** Wipes progress data — used by backup import before restoring. */
   clearAll(): Promise<void>
 }
@@ -89,6 +110,8 @@ function memoryStore(): ProgressStore {
   const logs: ReviewLogRecord[] = []
   let streak: StreakState | undefined
   const achievements = new Map<string, AchievementRecord>()
+  let xp: XpState | undefined
+  const lessons = new Map<string, LessonCompletionRecord>()
   return {
     getCard: async (key) => cards.get(key),
     putCard: async (record) => void cards.set(record.key, record),
@@ -105,11 +128,17 @@ function memoryStore(): ProgressStore {
     putStreak: async (state) => void (streak = state),
     listAchievements: async () => [...achievements.values()],
     putAchievement: async (record) => void achievements.set(record.id, record),
+    getXp: async () => xp,
+    putXp: async (state) => void (xp = state),
+    listLessons: async () => [...lessons.values()],
+    putLesson: async (record) => void lessons.set(record.id, record),
     clearAll: async () => {
       cards.clear()
       logs.length = 0
       streak = undefined
       achievements.clear()
+      xp = undefined
+      lessons.clear()
     },
   }
 }
@@ -170,10 +199,25 @@ export function createStore(name: string = PROGRESS_DB_NAME): ProgressStore {
     putStreak: (state) => db.streak.put({ id: 'current', state }).then(() => undefined),
     listAchievements: () => db.achievements.toArray(),
     putAchievement: (record) => db.achievements.put(record).then(() => undefined),
+    getXp: async () => (await db.xp.get('current')) ?? undefined,
+    putXp: (state) => db.xp.put({ id: 'current', ...state }).then(() => undefined),
+    listLessons: () => db.lessons.toArray(),
+    putLesson: (record) => db.lessons.put(record).then(() => undefined),
     clearAll: async () => {
-      await db.transaction('rw', db.cards, db.reviewLogs, db.streak, db.achievements, async () => {
-        await Promise.all([db.cards.clear(), db.reviewLogs.clear(), db.streak.clear(), db.achievements.clear()])
-      })
+      await db.transaction(
+        'rw',
+        [db.cards, db.reviewLogs, db.streak, db.achievements, db.xp, db.lessons],
+        async () => {
+          await Promise.all([
+            db.cards.clear(),
+            db.reviewLogs.clear(),
+            db.streak.clear(),
+            db.achievements.clear(),
+            db.xp.clear(),
+            db.lessons.clear(),
+          ])
+        },
+      )
     },
   }
 
@@ -190,6 +234,10 @@ export function createStore(name: string = PROGRESS_DB_NAME): ProgressStore {
     putStreak: (state) => runQuery((s) => s.putStreak(state)),
     listAchievements: () => runQuery((s) => s.listAchievements()),
     putAchievement: (record) => runQuery((s) => s.putAchievement(record)),
+    getXp: () => runQuery((s) => s.getXp()),
+    putXp: (state) => runQuery((s) => s.putXp(state)),
+    listLessons: () => runQuery((s) => s.listLessons()),
+    putLesson: (record) => runQuery((s) => s.putLesson(record)),
     clearAll: () => runQuery((s) => s.clearAll()),
   }
 }

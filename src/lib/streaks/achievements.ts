@@ -33,3 +33,38 @@ export function newlyEarned(
   if (events.streak >= 7 && !has.has('sevenDayStreak')) out.push('sevenDayStreak')
   return out
 }
+
+export interface AchievementProgress {
+  id: AchievementId
+  title: string
+  description: string
+  /** Real progress toward the target; never a decorative fraction. */
+  progress: number
+  target: number
+  earned: boolean
+}
+
+/** Display states: earned, in-progress (progress above zero), or not yet. */
+export function achievementProgress(
+  events: AchievementEvents,
+  earned: readonly AchievementId[],
+): AchievementProgress[] {
+  const earnedSet = new Set(earned)
+  const raw = (id: AchievementId): { progress: number; target: number } => {
+    switch (id) {
+      case 'firstReview':
+        return { progress: Math.min(events.reviewCount, 1), target: 1 }
+      case 'perfectLesson':
+        return { progress: Math.min(events.perfectLessons, 1), target: 1 }
+      case 'sevenDayStreak':
+        return { progress: Math.min(events.streak, 7), target: 7 }
+    }
+  }
+  return (Object.keys(ACHIEVEMENTS) as AchievementId[]).map((id) => ({
+    id,
+    title: ACHIEVEMENTS[id].title,
+    description: ACHIEVEMENTS[id].description,
+    ...raw(id),
+    earned: earnedSet.has(id),
+  }))
+}

@@ -6,6 +6,8 @@
 
 import { getStore } from '@/lib/store/singleton'
 import { ACHIEVEMENTS, type AchievementId } from '@/lib/streaks/achievements'
+import { awardXp } from '@/lib/xp/award'
+import { XP_AMOUNTS } from '@/lib/xp/xp'
 import {
   addFreezes,
   EMPTY_STREAK,
@@ -21,6 +23,10 @@ export async function recordLearningActivity(now: Date = new Date()): Promise<St
   const current = (await store.getStreak()) ?? EMPTY_STREAK
   const next = recordActivity(current, now)
   await store.putStreak(next)
+  if (next.lastLearningDay !== current.lastLearningDay) {
+    // A new streak day is a real learning behavior (PLAN.md §8).
+    void awardXp(XP_AMOUNTS.streakDay).catch(console.error)
+  }
   if (next.current >= 7) await earn('sevenDayStreak', now)
   return next
 }
@@ -56,6 +62,7 @@ export async function earn(id: AchievementId, now: Date = new Date()): Promise<v
   const earned = await store.listAchievements()
   if (earned.some((a) => a.id === id)) return
   await store.putAchievement({ id, earnedAt: now.getTime() })
+  void awardXp(XP_AMOUNTS.achievement).catch(console.error)
 }
 
 export function achievementTitle(id: AchievementId): string {
