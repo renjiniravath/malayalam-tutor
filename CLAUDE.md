@@ -10,7 +10,7 @@ Full plan: `planning/PLAN.md`. Research: `planning/research-language-learning.md
 
 - **Casual register is primary.** Always use daily conversational Manglish: `pokuva` not `pokunnu`, `ippo` not `ippol`, `vaa` not `varoo`. Formal/written forms appear only as a secondary note.
 - **Romanization** (audio is the source of truth; full spec in PLAN.md §9):
-  - Long **a/i/u** are always doubled: `aa`, `ee`, `uu` (`chaaya`, `veedu`, `kaapi`) — long i is written `ee`, the way Malayalees type (`nee`, `veedu`), never `ii`
+  - Long **a/i/u** are always doubled: `aa`, `ee`, `oo` (`chaaya`, `veedu`, `koodi`) — long i is written `ee` and long u is written `oo`, the way Malayalees type (`nee`, `veedu`, `koodi`), never `ii`/`uu`
   - Long **e/o** are never doubled: `e`, `o` (`pokuva`, `ippo`, `chechi`) — matches how Malayalees type
   - Gemination is a doubled consonant: `kk`, `pp`, `tt`, `mm`
   - `th` = dental ത, plain `t` = retroflex ട (so `tth` = ത്ത, `tt` = ട്ട); same pattern for `dh`/`d`

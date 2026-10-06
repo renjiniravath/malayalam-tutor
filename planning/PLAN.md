@@ -169,7 +169,7 @@ Accessibility (WCAG 2.2 AA target): everything keyboard-navigable; the anticipat
 | റ (rare) | `ṟ` in sound-teaching items; `r` in colloquial words (`choru`, `parayuva`) | | colloquial voicing | ട/ഡ written `d` when pronounced so (`veedu`, `evide`, `und`) |
 
 Rules:
-1. Long a/i/u always doubled; long e/o never doubled (deliberate — matches how Malayalees actually type; `content:check` enforces it). Long i is written `ee` (`nee`, `veedu`), never `ii` — native-speaker ruling 2026-10-06. `njaan` is written `njan` (same ruling).
+1. Long a/i/u always doubled; long e/o never doubled (deliberate — matches how Malayalees actually type; `content:check` enforces it). Long i is written `ee` (`nee`, `veedu`), long u is written `oo` (`koodi`) — never `ii`/`uu`. `njaan` is written `njan` (native-speaker rulings 2026-10-06).
 2. Dental vs retroflex always distinguished (`th` vs `t`).
 3. ള and ണ are common sounds (`veḷḷam`, `veṇṇa`), not rare — dedicated symbols in the **display layer**.
 4. Never use capitalization as a phonemic signal (mobile auto-capitalize).
