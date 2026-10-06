@@ -133,7 +133,7 @@ const SCRIPT_TRAPS: Record<string, string> = {
 // ---------------------------------------------------------------------------
 
 /** Malayalam block, plus spaces between the words of multi-word items. */
-const MALAYALAM_BLOCK = /^[ഀ-ൿ‍ ]+$/
+const MALAYALAM_BLOCK = /^[ഀ-ൿ ,]+$/
 /** Vowel letters and signs — bare consonant letters have no vowel marks. */
 const HAS_VOWEL = /[അആഇഈഉഊഎഏഒഓഔാിീുൂെേൊോൈൗം]/
 const CONSONANTS = new Set('കഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ')
@@ -406,8 +406,6 @@ function main(): void {
 
   // ---- items ---------------------------------------------------------------
   const itemsById = new Map<string, Item>()
-  const manglishSeen = new Map<string, string>()
-  const scriptSeen = new Map<string, string>()
   const pairSegmentsByItem = new Map<string, Set<Segment>>()
   for (const { pair } of pairs) {
     for (const itemId of [pair.aItemId, pair.bItemId]) {
@@ -420,6 +418,11 @@ function main(): void {
   for (const lesson of lessons) {
     const levelMatch = lesson.levelId.match(/^level(\d+)$/)
     const expectedLevelTag = `level:${levelMatch?.[1] ?? '?'}`
+    // Spelling duplicates confuse drill distractors, which draw on the
+    // lesson they are in — so uniqueness is per lesson. The same word
+    // may be taught again in a later lesson (illa in l1u1l3 and l2u1l2).
+    const manglishSeen = new Map<string, string>()
+    const scriptSeen = new Map<string, string>()
     for (const item of lesson.items) {
       const ctx = `lesson:${lesson.id}/${item.id}`
       if (!/^[a-z0-9-]+$/.test(item.id)) fail(ctx, `item id must be an ASCII slug: ${item.id}`)

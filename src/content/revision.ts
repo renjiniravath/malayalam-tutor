@@ -19,5 +19,8 @@
  *       (chetta, pokunnundo?); nokkum habitual added
  *   9 — "I am fine" is njan okay aanu (njan sheri means "I correct");
  *       no bare first-person declaratives from parayuva/cheyyuva
+ *  10 — habitual -um glosses use "sometimes"; geminate pair is
+ *       ila/illa; function words get sentence contexts with full
+ *       glosses (athe aanu, athu sheri ketto)
  */
-export const CONTENT_REVISION = 9
+export const CONTENT_REVISION = 10

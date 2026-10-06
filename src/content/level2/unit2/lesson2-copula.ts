@@ -47,6 +47,19 @@ export const lesson2Copula: Lesson = {
       tags: ['level:2'],
     },
     {
+      id: 'athe-aanu',
+      manglish: 'athe aanu',
+      script: 'അതെ ആണ്',
+      meaning: 'yes, it is.',
+      kind: 'sentence',
+      segments: [
+        { token: 'athe', gloss: 'yes' },
+        { token: 'aanu', gloss: 'is' },
+      ],
+      audio: { slow: 'athe-aanu.slow', medium: 'athe-aanu.medium', normal: 'athe-aanu.normal' },
+      tags: ['level:2'],
+    },
+    {
       id: 'illa',
       manglish: 'illa',
       script: 'ഇല്ല',
@@ -201,6 +214,13 @@ export const lesson2Copula: Lesson = {
     { kind: 'multipleChoice', itemId: 'aanu', distractors: ['aano', 'athe', 'illa'] },
     { kind: 'multipleChoice', itemId: 'aano', distractors: ['aanu', 'athe', 'illa'] },
     { kind: 'multipleChoice', itemId: 'athe', distractors: ['aanu', 'aano', 'illa'] },
+    { kind: 'multipleChoice', itemId: 'athe-aanu', distractors: ['sheri-aanu', 'ready-aano', 'chaaya-illa'] },
+    {
+      kind: 'sentenceBuilder',
+      sentenceId: 'athe-aanu',
+      bank: ['athe', 'aanu'],
+      acceptedInputs: ['athe aanu'],
+    },
     { kind: 'multipleChoice', itemId: 'illa', distractors: ['aanu', 'aano', 'athe'] },
     {
       kind: 'sentenceBuilder',

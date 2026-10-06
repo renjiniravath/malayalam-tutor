@@ -55,8 +55,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'aadi', script: 'ആടി', meaning: 'swing' },
   { manglish: 'adi', script: 'അടി', meaning: 'hit' },
   { manglish: 'alla', script: 'അല്ല', meaning: "isn't, not" },
-  { manglish: 'puḷḷi', script: 'പുള്ളി', meaning: 'dot, spot' },
-  { manglish: 'puli', script: 'പുലി', meaning: 'tiger, leopard' },
+  { manglish: 'ila', script: 'ഇല', meaning: 'leaf' },
   { manglish: 'cheettha', script: 'ചീത്ത', meaning: 'bad' },
   // Level 1 Unit 2 — greetings & expressions
   { manglish: 'engane und', script: 'എങ്ങനെ ഉണ്ട്', meaning: 'how are you?' },
@@ -92,15 +91,16 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'avan varuva', script: 'അവൻ വരുവാ', meaning: 'He is coming.' },
   { manglish: 'avan parayuva', script: 'അവൻ പറയുവാ', meaning: 'He is saying.' },
   { manglish: 'nammaḷ pokuva', script: 'നമ്മൾ പോകുവാ', meaning: 'We are going.' },
-  { manglish: 'kudikkum', script: 'കുടിക്കും', meaning: 'drinks (usually, the habit)' },
-  { manglish: 'nokkum', script: 'നോക്കും', meaning: 'looks (usually, the habit)' },
+  { manglish: 'kudikkum', script: 'കുടിക്കും', meaning: 'drinks (sometimes, the habit)' },
+  { manglish: 'nokkum', script: 'നോക്കും', meaning: 'looks (sometimes, the habit)' },
   { manglish: 'veedu', script: 'വീട്', meaning: 'home, house' },
-  { manglish: 'njan chaaya kudikkum', script: 'ഞാൻ ചായ കുടിക്കും', meaning: 'I drink tea (usually).' },
+  { manglish: 'njan chaaya kudikkum', script: 'ഞാൻ ചായ കുടിക്കും', meaning: 'I drink tea sometimes.' },
   { manglish: 'njan veettil pokuva', script: 'ഞാൻ വീട്ടിൽ പോകുവാ', meaning: 'I am going home.' },
   // Level 2 Unit 2 — the copula and yes/no answers
   { manglish: 'aanu', script: 'ആണ്', meaning: 'is (statement)' },
   { manglish: 'aano', script: 'ആണോ', meaning: 'is it? (question)' },
   { manglish: 'athe', script: 'അതെ', meaning: 'yes (answering a question)' },
+  { manglish: 'athe aanu', script: 'അതെ ആണ്', meaning: 'yes, it is.' },
   { manglish: 'illa', script: 'ഇല്ല', meaning: 'no, there is not' },
   { manglish: 'sheri aanu', script: 'ശെരി ആണ്', meaning: "it's fine, it's right" },
   { manglish: 'njan ready aa', meaning: 'I am ready.' },
@@ -125,6 +125,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'athu alle', script: 'അത് അല്ലേ', meaning: 'that, right?' },
   { manglish: 'ippo alle', script: 'ഇപ്പോ അല്ലേ', meaning: 'now, right?' },
   { manglish: 'athu sheri alle', script: 'അത് ശെരി അല്ലേ', meaning: "that's correct, right?" },
+  { manglish: 'athu sheri, ketto', script: 'അത് ശെരി, കേട്ടോ', meaning: "that's right, you hear? (tag)" },
   { manglish: 'neeyyum varunnundo', script: 'നീയും വരുന്നുണ്ടോ', meaning: 'are you coming too?' },
   // Level 2 Unit 4 — politeness in context (second-person items use the
   // -unnundo question form: a bare -uva declarative reads as a command)
