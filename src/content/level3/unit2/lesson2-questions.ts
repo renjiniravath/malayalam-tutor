@@ -31,7 +31,7 @@ export const lesson2Questions: Lesson = {
       meaning: 'which?',
       kind: 'word',
       pos: 'pronoun',
-      notes: ['It means which one? ithil etha ishttapette? — which among these did you like?'],
+      notes: ['It means which one? ithil etha ishttappette? — which among these did you like?'],
       audio: { slow: 'etha.slow', medium: 'etha.medium', normal: 'etha.normal' },
       tags: ['level:3'],
     },
@@ -109,6 +109,20 @@ export const lesson2Questions: Lesson = {
       tags: ['level:3'],
     },
     {
+      id: 'ithil-etha-ishttappette',
+      manglish: 'ithil etha ishttappette',
+      script: 'ഇതിൽ ഏതാ ഇഷ്ടപ്പെട്ടേ',
+      meaning: 'which among these did you like?',
+      kind: 'sentence',
+      segments: [
+        { token: 'ithil', gloss: 'among these' },
+        { token: 'etha', gloss: 'which?' },
+        { token: 'ishttappette', gloss: 'did you like' },
+      ],
+      audio: { slow: 'ithil-etha-ishttappette.slow', medium: 'ithil-etha-ishttappette.medium', normal: 'ithil-etha-ishttappette.normal' },
+      tags: ['level:3'],
+    },
+    {
       id: 'nee-chaaya-kudikkumello-alle',
       manglish: 'nee chaaya kudikkumello, alle',
       meaning: 'you drink tea, right?',
@@ -150,6 +164,12 @@ export const lesson2Questions: Lesson = {
       sentenceId: 'etha-bus',
       bank: ['etha', 'bus'],
       acceptedInputs: ['etha bus'],
+    },
+    {
+      kind: 'sentenceBuilder',
+      sentenceId: 'ithil-etha-ishttappette',
+      bank: ['ithil', 'etha', 'ishttappette'],
+      acceptedInputs: ['ithil etha ishttappette'],
     },
     {
       kind: 'sentenceBuilder',

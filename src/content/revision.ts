@@ -58,6 +58,9 @@
  *       struck from learner copy; ni accepted for nee; athe answers
  *       aano; ninakk chaaya veno is the offer form; iranguva/irangi
  *       explained; eppo = eppozha with the e-/i-/a- pattern; hotel means
- *       eatery; glosses say "off to work"
+ *       eatery
+ *  20 — ithil etha ishttappette? taught as an item in the question-words
+ *       lesson (replacing the confusing athu etha phrasing); the
+ *       jolikku pokuva glosses stay literal, so the two builds match
  */
-export const CONTENT_REVISION = 19
+export const CONTENT_REVISION = 20

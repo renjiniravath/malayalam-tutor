@@ -77,7 +77,7 @@ export const lesson3CasesKku: Lesson = {
       id: 'njan-jolikku-pokuva',
       manglish: 'njan jolikku pokuva',
       script: 'ഞാൻ ജോലിക്ക് പോകുവാ',
-      meaning: "I'm off to work.",
+      meaning: 'I am going to work.',
       kind: 'sentence',
       notes: ['This is the frame: [who] + [place with -kku] + [verb].'],
       segments: [
@@ -121,7 +121,7 @@ export const lesson3CasesKku: Lesson = {
       id: 'avan-jolikku-pokuva',
       manglish: 'avan jolikku pokuva',
       script: 'അവൻ ജോലിക്ക് പോകുവാ',
-      meaning: "he's off to work.",
+      meaning: 'he is going to work.',
       kind: 'sentence',
       segments: [
         { token: 'avan', gloss: 'he' },
