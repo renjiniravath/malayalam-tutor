@@ -33,7 +33,10 @@ export const l2u1l4: Lesson = {
           { word: 'irangi', meaning: 'left; set off' },
         ],
       },
-      notes: ['The on-my-way message: ninn marks "from", irangi is the leaving word iranguva in the past.'],
+      notes: [
+        'The on-my-way message: ninn marks "from".',
+        'Iranguva is the leaving word (present: setting off), and irangi is its past — "I left".',
+      ],
       tags: [],
     },
     {
@@ -79,7 +82,7 @@ export const l2u1l4: Lesson = {
           { word: 'pokuva', meaning: 'going' },
         ],
       },
-      notes: ['The sandhi: veedu (house) plus -il becomes veettil, with the retroflex d doubled.'],
+      notes: ['veedu + -il becomes veettil — the d doubles.'],
       tags: [],
     },
     {
@@ -146,6 +149,7 @@ export const l2u1l4: Lesson = {
           { word: 'varunnundo', meaning: 'coming?' },
         ],
       },
+      acceptedInputs: ['nee varunnundo', 'ni varunnundo'],
       notes: [
         'The casual invite with nee.',
         'A bare second-person -uva declarative reads like a command, so questions use varunnundo.',

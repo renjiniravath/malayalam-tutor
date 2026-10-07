@@ -24,7 +24,10 @@ export const l3u1l3: Lesson = {
         normal: 'l3u1l3_hotelilekk_normal',
       },
       acceptedInputs: ['hotelilekk', 'hottelilekk'],
-      notes: ['-ilekk points the direction: heading to the hotel.'],
+      notes: [
+        '-ilekk points the direction: heading to the hotel.',
+        'In Kerala a hotel means an eatery — think restaurant, not a place to sleep.',
+      ],
       tags: [],
     },
     {

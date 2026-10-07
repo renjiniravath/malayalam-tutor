@@ -24,7 +24,7 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 18,
+  revision: 19,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -51,8 +51,9 @@ export const contentRevision: ContentRevision = {
     // replacing kallam/kalam.
     'kallam',
     'kalam',
-    // Beginner-sentence rule: untaught slots use English — kaapi illa
-    // became coffee illa.
+    // Beginner-sentence rule: the kaapi illa id retired when the item
+    // moved to the English slot; the kaappi ruling later brought the
+    // Malayalam word back, under the unchanged coffee-illa id.
     'kaapi-illa',
     // Final rulings: standalone kudi is dropped and the u/oo pair
     // slot has no pair; kuudi re-keyed as koodi (long u = oo).
@@ -118,6 +119,10 @@ export const contentRevision: ContentRevision = {
     // Spec audit: avar's question matches the ingott pattern; the
     // ladder gains iyaaḷ ingott varunnundo.
     'avar-varunnundo',
+    // Near/far ruling: nammal is not part of the i-/a- paradigm, so the
+    // near/far pair item is gone — nammal itself is taught with the
+    // pronouns in L1U3L2 (id 'nammal').
+    'nammal-pair',
   ],
 };
 

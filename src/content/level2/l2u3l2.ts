@@ -84,7 +84,10 @@ export const l2u3l2: Lesson = {
         normal: 'l2u3l2_eppozha_normal',
       },
       acceptedInputs: ['eppozha'],
-      notes: ['When — the question form of ippo, now.'],
+      notes: [
+        'When — eppozha and eppo are the same word; eppo is the shorter everyday form.',
+        'The pattern: e- asks (eppozha, evide, etha), i- points near (ippo, ivide), a- points far (appo, avide).',
+      ],
       tags: [],
     },
     {
@@ -126,9 +129,9 @@ export const l2u3l2: Lesson = {
     },
     {
       id: 'athu-etha',
-      manglish: 'athu etha',
-      script: 'അത് ഏതാ',
-      meaning: 'which one is that?',
+      manglish: 'ithil etha ishttapette',
+      script: 'ഇതിൽ ഏതാ ഇഷ്ടപ്പെട്ടേ',
+      meaning: 'which among these did you like?',
       kind: 'sentence',
       audio: {
         slow: 'l2u3l2_athu-etha_slow',
@@ -136,14 +139,15 @@ export const l2u3l2: Lesson = {
         normal: 'l2u3l2_athu-etha_normal',
       },
       sentence: {
-        bank: ['athu', 'etha', 'entha', 'evide'],
-        orders: ['athu etha'],
+        bank: ['ithil', 'etha', 'ishttapette', 'entha'],
+        orders: ['ithil etha ishttapette'],
         parts: [
-          { word: 'athu', meaning: 'that (thing)' },
+          { word: 'ithil', meaning: 'among these' },
           { word: 'etha', meaning: 'which' },
+          { word: 'ishttapette', meaning: 'did you like?' },
         ],
       },
-      notes: ['Choosing between things.'],
+      notes: ['Choosing among things right in front of you: ithil, among these.'],
       tags: [],
     },
     {

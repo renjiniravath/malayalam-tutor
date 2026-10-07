@@ -85,7 +85,7 @@ export const l2u2l2: Lesson = {
           { word: 'varunnundo', meaning: 'coming?' },
         ],
       },
-      notes: ['Chettan as a subject is fine — it is the call form chetta that must never be one.'],
+      notes: ['Asking the chettan himself, chetta, varunnundo? works too — the next item covers exactly that.'],
       tags: [],
     },
     {
@@ -112,8 +112,8 @@ export const l2u2l2: Lesson = {
     },
     {
       id: 'chetta-coffee-veno',
-      manglish: 'chetta, coffee veno',
-      script: 'ചേട്ടാ കോഫി വേണോ',
+      manglish: 'chetta, kaappi veno',
+      script: 'ചേട്ടാ കാപ്പി വേണോ',
       meaning: 'chetta, do you want coffee?',
       kind: 'sentence',
       audio: {
@@ -122,15 +122,15 @@ export const l2u2l2: Lesson = {
         normal: 'l2u2l2_chetta-coffee-veno_normal',
       },
       sentence: {
-        bank: ['chetta,', 'coffee', 'veno', 'chaaya'],
-        orders: ['chetta, coffee veno'],
+        bank: ['chetta,', 'kaappi', 'veno', 'chaaya'],
+        orders: ['chetta, kaappi veno'],
         parts: [
           { word: 'chetta,', meaning: 'chetta! — the call form of chettan' },
-          { word: 'coffee', meaning: 'coffee' },
+          { word: 'kaappi', meaning: 'coffee' },
           { word: 'veno', meaning: 'want?, do you want?' },
         ],
       },
-      notes: ['Coffee is an English slot — beginner sentences use English until the Malayalam word is taught.'],
+      notes: ['Kaappi is the Malayalam word for coffee — the same one from the greetings lesson.'],
       tags: [],
     },
     {
@@ -168,7 +168,7 @@ export const l2u2l2: Lesson = {
         normal: 'l2u2l2_chechi-chaaya-veno_normal',
       },
       sentence: {
-        bank: ['chechi,', 'chaaya', 'veno', 'coffee'],
+        bank: ['chechi,', 'chaaya', 'veno', 'kaappi'],
         orders: ['chechi, chaaya veno'],
         parts: [
           { word: 'chechi,', meaning: 'older sister; the everyday address for women' },

@@ -188,7 +188,6 @@ export const l2u2l1: Lesson = {
           { word: 'varunnundo', meaning: 'coming?' },
         ],
       },
-      notes: ['The question form again: a bare thaankaḷ varuva would read like a command.'],
       tags: [],
     },
     {
@@ -212,6 +211,7 @@ export const l2u2l1: Lesson = {
           { word: 'alle', meaning: 'right?' },
         ],
       },
+      acceptedInputs: ['nee chaaya kudikkumello alle', 'ni chaaya kudikkumello alle'],
       notes: ['The tag form: kudikkumello states it gently, alle asks for the quick yes.'],
       tags: [],
     },

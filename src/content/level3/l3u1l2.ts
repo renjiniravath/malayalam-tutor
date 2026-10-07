@@ -194,7 +194,7 @@ export const l3u1l2: Lesson = {
       id: 'nammal-jolikku-pokuva',
       manglish: 'nammaḷ jolikku pokuva',
       script: 'നമ്മൾ ജോലിക്ക് പോകുവാ',
-      meaning: 'we are going to work',
+      meaning: "we're off to work",
       kind: 'sentence',
       audio: {
         slow: 'l3u1l2_nammal-jolikku-pokuva_slow',

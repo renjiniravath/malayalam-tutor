@@ -40,8 +40,12 @@ export const l1u3l1: Lesson = {
         medium: 'l1u3l1_nee_medium',
         normal: 'l1u3l1_nee_normal',
       },
-      acceptedInputs: ['nee'],
-      notes: ['For close friends, family, and kids.', 'With strangers or elders, use ningaḷ.'],
+      acceptedInputs: ['nee', 'ni'],
+      notes: [
+        'For close friends, family, and kids.',
+        'With strangers or elders, use ningaḷ.',
+        'Also written ni.',
+      ],
       tags: [],
     },
     {

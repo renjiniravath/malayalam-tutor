@@ -83,7 +83,7 @@ export const l2u1l2: Lesson = {
         normal: 'l2u1l2_athe_normal',
       },
       acceptedInputs: ['athe'],
-      notes: ['Yes to a question that used aanu: athe, ready aa.'],
+      notes: ['Yes to a question that used aano: athe, ready aa.'],
       tags: [],
     },
     {
@@ -241,8 +241,8 @@ export const l2u1l2: Lesson = {
     },
     {
       id: 'coffee-illa',
-      manglish: 'coffee illa',
-      script: 'കോഫി ഇല്ല',
+      manglish: 'kaappi illa',
+      script: 'കാപ്പി ഇല്ല',
       meaning: "there's no coffee",
       kind: 'sentence',
       audio: {
@@ -251,14 +251,14 @@ export const l2u1l2: Lesson = {
         normal: 'l2u1l2_coffee-illa_normal',
       },
       sentence: {
-        bank: ['coffee', 'illa', 'athe'],
-        orders: ['coffee illa'],
+        bank: ['kaappi', 'illa', 'athe'],
+        orders: ['kaappi illa'],
         parts: [
-          { word: 'coffee', meaning: 'coffee' },
+          { word: 'kaappi', meaning: 'coffee' },
           { word: 'illa', meaning: 'no; none' },
         ],
       },
-      notes: ['Coffee is English here — new slots in beginner sentences use English until the Malayalam word is taught.'],
+      notes: ['Kaappi is the Malayalam word for coffee — the same one from the greetings lesson.'],
       tags: [],
     },
   ],

@@ -103,7 +103,10 @@ export const l3u1l1: Lesson = {
       articulation: {
         cue: 'Hold the doubled tt before the -il.',
       },
-      notes: ['Hotel keeps its English single t in writing; the script doubles it.'],
+      notes: [
+        'Hotel keeps its English single t in writing; the script doubles it.',
+        'In Kerala a hotel means an eatery — think restaurant, not a place to sleep.',
+      ],
       tags: ['sound:geminate'],
     },
     {
@@ -149,7 +152,7 @@ export const l3u1l1: Lesson = {
           { word: 'varuva', meaning: 'coming' },
         ],
       },
-      notes: ['Angott points the way: coming there, not riding the bus.'],
+      notes: ['Angott points the way: coming there.'],
       tags: [],
     },
     {
