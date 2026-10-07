@@ -129,7 +129,7 @@ export const l2u3l2: Lesson = {
     },
     {
       id: 'athu-etha',
-      manglish: 'ithil etha ishttapette',
+      manglish: 'ithil etha ishttappette',
       script: 'ഇതിൽ ഏതാ ഇഷ്ടപ്പെട്ടേ',
       meaning: 'which among these did you like?',
       kind: 'sentence',
@@ -139,12 +139,12 @@ export const l2u3l2: Lesson = {
         normal: 'l2u3l2_athu-etha_normal',
       },
       sentence: {
-        bank: ['ithil', 'etha', 'ishttapette', 'entha'],
-        orders: ['ithil etha ishttapette'],
+        bank: ['ithil', 'etha', 'ishttappette', 'entha'],
+        orders: ['ithil etha ishttappette'],
         parts: [
           { word: 'ithil', meaning: 'among these' },
           { word: 'etha', meaning: 'which' },
-          { word: 'ishttapette', meaning: 'did you like?' },
+          { word: 'ishttappette', meaning: 'did you like?' },
         ],
       },
       notes: ['Choosing among things right in front of you: ithil, among these.'],
