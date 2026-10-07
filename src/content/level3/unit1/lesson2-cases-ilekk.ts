@@ -30,7 +30,10 @@ export const lesson2CasesIlekk: Lesson = {
       meaning: 'to the hotel (hotel + ilekk)',
       kind: 'word',
       pos: 'noun',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
+      notes: [
+        'In Kerala, hotel colloquially means a restaurant or eatery, not a place to sleep.',
+        'No script here: the English word has no settled Malayalam spelling.',
+      ],
       audio: { slow: 'hotelilekk.slow', medium: 'hotelilekk.medium', normal: 'hotelilekk.normal' },
       tags: ['level:3'],
     },

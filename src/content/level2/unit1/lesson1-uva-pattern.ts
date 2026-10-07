@@ -248,7 +248,7 @@ export const lesson1UvaPattern: Lesson = {
       script: 'ഞാൻ വീട്ടിൽ പോകുവാ',
       meaning: 'I am going home.',
       kind: 'sentence',
-      notes: ['Sandhi: veedu + il joins into veettil, the d doubles before -il.'],
+      notes: ['veedu + -il becomes veettil — the d doubles.'],
       segments: [
         { token: 'njan', gloss: 'I' },
         { token: 'veettil', gloss: 'home (veedu + il, to home)' },
@@ -263,6 +263,7 @@ export const lesson1UvaPattern: Lesson = {
       script: 'ഞാൻ വീട്ടിൽ നിന്ന് ഇറങ്ങി',
       meaning: 'I just left home.',
       kind: 'sentence',
+      notes: ['iranguva is the leaving word (present: setting off); irangi is its past: "I left".'],
       segments: [
         { token: 'njan', gloss: 'I' },
         { token: 'veettil', gloss: 'home (veedu + il)' },

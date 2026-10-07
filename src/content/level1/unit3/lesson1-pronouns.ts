@@ -32,8 +32,12 @@ export const lesson1Pronouns: Lesson = {
       meaning: 'you (casual)',
       kind: 'word',
       pos: 'pronoun',
+      acceptedInputs: ['ni'],
       alsoIn: 'neeyyo ("you?") and neeyyum ("you too")',
-      notes: ['For friends and kids. With elders or strangers use ningaḷ or thaangkaḷ.'],
+      notes: [
+        'For friends and kids. With elders or strangers use ningaḷ or thaangkaḷ.',
+        'Also written ni.',
+      ],
       audio: { slow: 'nee.slow', medium: 'nee.medium', normal: 'nee.normal' },
       tags: ['level:1'],
     },

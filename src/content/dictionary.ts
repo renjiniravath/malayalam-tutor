@@ -194,14 +194,14 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'ninakk', script: 'നിനക്ക്', meaning: 'to you (casual)' },
   { manglish: 'avanu', script: 'അവന്', meaning: 'to him' },
   { manglish: 'avanu chaaya ishttamilla', script: 'അവന് ചായ ഇഷ്ടമില്ല', meaning: 'he does not like tea.' },
-  { manglish: 'njan jolikku pokuva', script: 'ഞാൻ ജോലിക്ക് പോകുവാ', meaning: 'I am going to work.' },
+  { manglish: 'njan jolikku pokuva', script: 'ഞാൻ ജോലിക്ക് പോകുവാ', meaning: "I'm off to work." },
   { manglish: 'ninakk chaaya veno', script: 'നിനക്ക് ചായ വേണോ', meaning: 'do you want tea? (casual)' },
   { manglish: 'chetta, jolikku pokunnundo', meaning: 'chetta, are you going to work?' },
-  { manglish: 'avan jolikku pokuva', script: 'അവൻ ജോലിക്ക് പോകുവാ', meaning: 'he is going to work.' },
+  { manglish: 'avan jolikku pokuva', script: 'അവൻ ജോലിക്ക് പോകുവാ', meaning: "he's off to work." },
   { manglish: 'enikk sheri aa', script: 'എനിക്ക് ശെരി ആ', meaning: 'fine by me.' },
   { manglish: 'ninakk sheri aano', script: 'നിനക്ക് ശെരി ആണോ', meaning: 'is that fine with you? (casual)' },
   { manglish: 'enikk venam', script: 'എനിക്ക് വേണം', meaning: 'I want it.' },
-  // Level 3 Unit 2 — the a/i distance paradigm
+  // Level 2 Unit 5 — the a/i distance paradigm (moved from Level 3)
   { manglish: 'avide', script: 'അവിടെ', meaning: 'there' },
   { manglish: 'ivide', script: 'ഇവിടെ', meaning: 'here' },
   { manglish: 'ivan', script: 'ഇവൻ', meaning: 'this guy (near)' },

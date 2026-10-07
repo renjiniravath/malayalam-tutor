@@ -23,6 +23,7 @@ export const lesson4Politeness: Lesson = {
       notes: [
         'A vocative: you use it to call or address someone, never as the subject of a sentence.',
         'In a sentence the vocative takes a comma: chetta, pokunnundo?',
+        'Asking the chettan himself, the vocative question is fine: chetta, varunnundo. The Chettan and chechi lesson covers exactly that.',
         'No script here: the written form spells a long a that is short in speech.',
       ],
       audio: { slow: 'chetta.slow', medium: 'chetta.medium', normal: 'chetta.normal' },
@@ -51,7 +52,7 @@ export const lesson4Politeness: Lesson = {
       script: 'നീ വരുന്നുണ്ടോ',
       meaning: 'are you coming? (casual)',
       kind: 'sentence',
-      acceptedInputs: ['nee varunundo'],
+      acceptedInputs: ['nee varunundo', 'ni varunundo'],
       notes: ['A bare second-person -uva reads like a command, so questions use varunnundo.'],
       segments: [
         { token: 'nee', gloss: 'you (casual)' },
@@ -148,7 +149,7 @@ export const lesson4Politeness: Lesson = {
       kind: 'sentenceBuilder',
       sentenceId: 'nee-varuva',
       bank: ['nee', 'varunnundo'],
-      acceptedInputs: ['nee varunundo'],
+      acceptedInputs: ['nee varunundo', 'ni varunundo'],
     },
     {
       kind: 'sentenceBuilder',

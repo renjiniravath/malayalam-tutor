@@ -31,7 +31,7 @@ A boot.dev-style web app: the student progresses through levels, earns XP, and p
 - Formal/literary register as the base — casual Manglish is primary
 - Accounts, sync, social features — local-first progress (but see §11: durability is treated as a hard requirement)
 - Runtime TTS or Web Speech API dependence
-- Native-speaker articulation **video** — articulation coaching ships as SVG tongue-position diagrams + sound-focus audio (video is a later-version candidate)
+- Native-speaker articulation **video** — articulation coaching ships as a brief text cue + sound-focus audio (visual diagrams and video are dropped)
 
 ## 4. Design principles (from research)
 
@@ -54,7 +54,7 @@ A boot.dev-style web app: the student progresses through levels, earns XP, and p
 Malayalam-specific principles (from `research-malayalam.md`):
 
 - **Pronunciation is sequenced by perceptual difficulty**, not alphabet order: ഴ (zh) first, then dental/retroflex/alveolar, then gemination, then vowel length. These four get slow audio + minimal-pair drills.
-- **Articulation coaching is diagram + audio, never text-only.** The ICPhS study found learners "were not able to identify the categories well based on abstract descriptions" — so tongue-position coaching uses **SVG diagrams** for ഴ and the coronal series (place of articulation) plus sound-focus clips; gemination and vowel length are *duration* features and get duration drills, not tongue diagrams. Diagrams appear **passively** during the comprehension-only first lessons; motor practice starts when the Repeat drill unlocks.
+- **Articulation coaching is a brief text cue + audio.** Early visual tongue diagrams were tried and dropped as confusing; the cue names the gesture in plain words ("curl the tongue tip up and back, let air flow over it") and the sound-focus clips do the teaching. Gemination and vowel length are *duration* features and get duration drills, not tongue cues. Cues appear **passively** during the comprehension-only first lessons; motor practice starts when the Repeat drill unlocks.
 - **The core teachable pattern is suffix assimilation into English nouns**: `office → officil`, `joli → jolikku` (fast speech: `jolikk`). Teach this early — it is the actual mechanic of Manglish and immediately usable.
 - **Verbs don't agree for person/gender/number** — say this explicitly; it removes a burden English speakers expect.
 - **Colloquial forms are the primary forms**: `pokuva` not `pokunnu`; `vaa` not `varoo`; `ippo`, `enthaa`; tag questions (`alle?`, `kettiyo?`) and the `-o` particle appear early (Level 1, expressions unit; Level 2, in sentences) — they carry most conversational turn-taking.
@@ -66,11 +66,11 @@ Malayalam-specific principles (from `research-malayalam.md`):
 All levels use English-alphabet romanization; Malayalam script is shown passively (secondary) after each audio reveal. Can-do statements follow CEFR framing. Unit item counts are targets; word lists below are **shorthand ASCII** (shipped content uses strict §9 spellings, e.g. `chaaya`, `veedu`, `kaashu`, `veḷḷam`). Each unit = 1–3 lessons of 5–10 minutes.
 
 ### Level 1 — Sounds & Words (Building Blocks) · ~80 items, 10 lessons
-**Can do:** recognize and produce the four hard sound classes; greet; use ~40 highest-frequency nouns, ~10 core verbs (as casual present forms), and pronouns; use ~10 everyday expressions.
+**Can do:** recognize and produce the four hard sound classes; greet; use ~40 highest-frequency nouns, ~10 core verbs (as casual present forms) — note: `kudi` alone does NOT mean "drink": standalone `kudi` means drinking as a habit/liquor (or a dwelling); the verb is `kudikkuva`; `kudikkuka` is the formal directive form ("drink!" addressed to someone) and is NOT taught now (native-speaker rulings 2026-10-06), and pronouns; use ~10 everyday expressions.
 
 Units:
-1. **First sounds** (3 lessons, comprehension-only — no speaking yet) — ഴ, dental/retroflex/alveolar, gemination, vowel length. Sound-focus clips + minimal-pair discrimination + **SVG tongue-position diagrams for ഴ and the coronal series** (passive viewing at this stage).
-2. **Greetings & expressions** (~10 items) — `engane und?`, `ennaa vishesham?`, `seri`, `nokkam`, `ayyo`, `pinnalla`, `alle?`, `poyi varatte`.
+1. **First sounds** (3 lessons, comprehension-only — no speaking yet) — ഴ, dental/retroflex/alveolar, gemination, vowel length. Sound-focus clips + minimal-pair discrimination + **text articulation cues for ഴ and the coronal series** (no visuals).
+2. **Greetings & expressions** (~10 items) — `engane und?` "how is it? (also how are you?)" (example: `kaappi engane und, koḷḷaamo?` "how is the coffee, is it good?"); `enna und vishesham?` "what's up?" (`ennaa vishesham` is incomplete); `nannayitt pokunnu` "it's going well" (single-a sanctioned exception; NOT `nalla irippu`); `appo sheri, bye` (NOT `poyi varatte`); `seri`, `nokkam`, `ayyo`, `pinnalla`, `alle?`. `puzha` (river) is the zh teaching word. `ishttamilla` spelled with double t (`avanu chaaya ishttamilla`). Question words plain: `entha`, `etha`, `enthina`, `eppozha` (no doubled aa — native-speaker rulings 2026-10-06). Tag questions need real context to be sentences: `nalla kaappi, alle?` "nice coffee, right?" — bare `nalla, alle` is not a sentence (native-speaker ruling 2026-10-07).
 3. **Pronouns** — `njan`, `nee`, `ningal`, `taankal`, `avan`, `aval`, `nammal`, `namukku`, plus pro-drop.
 4. **High-frequency nouns** (visuals) — food/drink (`vellam`, `chaya`, `kaapi`, `choru`), people (`amma`, `achan`, `chechi`, `kuttikal`), home/city (`veedu`, `joli`, `kashu`, `vazhi`), ~40 items.
 5. **Core verbs** (action visuals) — taught as **casual present-tense chunks** usable in sentences immediately: `pokuva`, `varuva`, `cheyyuva`, `parayuva`, `kudikkuva`, `kazhikkuva`, `irikkuva`, `kodukkuva`, `edukkuva`, `vaanguva`, `nokkuva`, `kittuva` — with the root noted (`pok`) for later pattern work.
@@ -78,18 +78,25 @@ Units:
 ### Level 2 — First Sentences · ~80 items, 8 lessons
 **Can do:** understand and say simple present-tense sentences built from Level 1 words; ask and answer yes/no questions.
 
-- The **present-tense pattern** (`-uva`) made explicit, using the Level 1 verb chunks: `njan chaaya kudikkuva`, `avan varuva`
-- The **copula**: `aanu` / `aano` ("X is Y" — `njan ready aa`), and yes/no answers: `athe`, `alla`, `illa` (moved here from Level 4 — dialogues depend on them)
-- **Every new word in a sentence is explained** — word-by-word breakdown on a tap
-- Tag questions (`alle?`, `kettiyo?`), the `-o` particle (`niyyo?`)
-- Politeness in context: `nee` vs `ningal` vs `taankal`; the third-person ladder (`ayaan`, `iyaal`, `addeham`, honorific `avar`); title substitution (`Aunty`, `Chetta`)
+- The **present-continuous pattern** (`-uva`): `njan chaaya kudikkuva` = "I am drinking tea" (NOT "I drink tea" — the habitual is `-um`: `njan chaaya kudikkum` "I drink tea sometimes"; same for `nokkuva` (continuous "looking") vs `nokkum` (habitual "looks") — native-speaker confirmation. Gloss habituals as "sometimes" ("I drink tea sometimes") so drink/drinks cannot be misread as a noun. Using the Level 1 verb chunks: `avan varuva` "he is coming" (more colloquial question: `avan varunundo?` "is he coming?"). Not every verb chunks into a bare first-person sentence: `njan parayuva` "I am saying" is unnatural on its own — keep parayuva/cheyyuva as word items, not standalone declaratives
+- The **copula**: `aanu` / `aano` ("X is Y" — `njan ready aa`, `njan okay aanu` "I am fine"), and yes/no answers: `athe`, `alla`, `illa` (moved here from Level 4 — dialogues depend on them). `njan sheri` is wrong ("I correct") — mixing English words into Malayalam sentences is the register, so `njan okay aanu` is exactly right. `athe` ("yes") answers a question that used **`aano`** — `aano` is the question form and `aanu` is the statement/answer form (native-speaker ruling 2026-10-07). Coffee is `kaappi` everywhere — later lessons never fall back to the English word `coffee` (native-speaker ruling 2026-10-07)
+- **Every new word in a sentence is explained** — word-by-word breakdown on a tap. Function words (`aanu`, `ille`, `um`) are best taught inside example sentences whose other words may not be taught yet — in that case every word in the example carries its meaning in the breakdown. **Beginner-sentence rule (native-speaker 2026-10-06): when a sentence needs many words to make sense, the not-yet-taught slots use ENGLISH words** — `njan every day chaaya kudikkum` "I drink tea every day" is the beginner form. Side-note sentences in word lessons must make COMPLETE sense even when their words are untaught (native-speaker rule); the full Malayalam `njan ella divasavum chaaya kudikkum` is a later-lesson sentence. `athu sheri, ketto` and `athe aanu` were struck as not making sense
+- Tag questions: `alle?` (`athu sheri alle?` "that's correct, right?"), `ketto` / `kettayirunno` "did you hear?" (`kettiyo` is not a word); the `-o` particle: `niyyo?` "you?" (for "you too?" use `niyyum?`)
+- Dative for wanting: `enikk chaaya venam` "I want tea" — `njan chaaya venam` is wrong. An **offer** takes the dative of the person asked: `ninakk chaaya veno?` "do you want tea?" — `enikk chaaya veno` would mean "do I want tea?", which is absurd (native-speaker ruling 2026-10-07)
+- `veedu` + `-il` → `veettil` (`njan veettil pokuva` "I am going home") — the retroflex d doubles before `-il`. **Explain this in plain English; never use the word "sandhi" in learner copy** (native-speaker ruling 2026-10-07: `chandi` means butt, and the jargon confuses learners)
+- **Pragmatics of `-uva`**: declarative statements are natural in first and third person (`njan varuva` is weak — use `njan veettil ninn irangi` "I just left home"; `avan varunund` "he is coming" (NOT `avan varuva`); `varuva` is not a good `-uva` teaching word — `kudikkuva` is; `nammal veetil pokuva` "we are going home" (NOT `nammal ippo pokuva`); `iranguva` is the leaving word (present: setting off) and its past is `irangi` (`njan veettil ninn irangi` "I just left home") — keep the two distinct in explanations (native-speaker ruling 2026-10-07); `njan angott varuva` gets a plain explanation with no bus/boarding tangent (native-speaker ruling 2026-10-07); `njan busilekk pokuva` is wrong — `njan busil keran pokuva` "I am going to board the bus" (`keruka` = climb on)); bare second-person declaratives (`nee varuva`, `thaangal pokuva`) read command-like and are avoided — second person uses questions (`nii varunnundo?` "are you coming?") or the imperative, and an explanation built on a `thaankal varuva` sentence was struck as nonsensical (native-speaker ruling 2026-10-07)
+- Politeness in context: `nee` vs `ningal` vs `taankal`; the third-person ladder (`ayaan`, `iyaal`, `addeham`, honorific `avar`); title substitution — **`chettan`/`chechi` are the words; the vocative drops the final -n** (`chettan` → `chetta!`, like `harikuttan` → `harikuttaa!`). `chechi` is the female counterpart. "Aunty" is only used for someone your uncle's age; adults do not call people aunty/uncle — teach chettan/chechi, not aunty. Asking the chettan himself, the vocative question is fine: `chetta, varunnundo?` "chetta, are you coming?" (native-speaker ruling 2026-10-07). **Order:** the near/far lesson (i- = near, a- = far, e- = question — `ivide/avide`, `ippo/appo`, `ivan/ivaḷ`) comes **before** this ladder, so `iyaal`/`ayaal` read as the familiar i-/a- plus `-aal` (native-speaker ruling 2026-10-07) — **note: `chetta`/`chechi` are vocatives (summoning), used in addressed questions (`chetta, ith kando?` "chetta, did you see this?"), never as sentence subjects in declaratives
 
 ### Level 3 — Cases & Connectors (Beginner+) · ~60 items, 6 lessons
 **Can do:** attach case suffixes to English and Malayalam words to say where, where-to, whose, for-whom.
 
 - `-il` (in/at), `-ilekk` (to), `-kku` (to/for), `-nte` (of), `-um` (also/and), `-aayi` (as/with), `-il ninnu` (from)
-- **Suffix assimilation with English words** as the flagship pattern: `officil`, `jolikku` (fast speech `jolikk`), `shoppil`, `busil`, `hotelilekk`
+- **Suffix assimilation with English words** as the flagship pattern: `officil`, `jolikku` (fast speech `jolikk`), `shoppil` (shop words are taught as native `kada` — `kadayil`, `kadayilekk`; use `-ilekk` for consistency with the lesson's own suffix pattern, not `-ilott`), `busil`, `hotelilekk` (hotel, single t — native-speaker ruling). `-ilekk` is the right "to" form for English words (`officilekk`, never `officekku`). Tag-question habitals for second person: `nee chaaya kudikkumello, alle?` "you drink tea, right?" — bare `nee chaaya kudikkum` without context is bad. `njan angott varuva` "I am coming there" is the natural varuva sentence (`va` = come; `varuva` stays a word item). Copula statements about people need the article: `avan oru school teacher aanu` "he is a school teacher" — bare `avan teacher aa` is robotic
 - Frame drills: `[word] + [suffix] + [verb]` — `njan officil pokuva`
+- `hotel` colloquially means **restaurant/eatery** in Kerala — say so, or learners picture a hotel and are puzzled by all the banging (native-speaker ruling 2026-10-07)
+- Question words: `eppo` and `eppozha` are the same word — mention both, and note that **e- is the question marker** the way **i- points near** and **a- points far** (native-speaker ruling 2026-10-07). `athu etha` is confusing — teach `ithil etha ishttapette?` "which among these did you like?" instead
+- **Glosses are natural English:** `nammal jolikku pokuva` is "we're off to work", never the literal "we are going to work" (native-speaker ruling 2026-10-07)
+- **Near/far** (formerly a Level 3 lesson) is taught before the third-person ladder — see Level 2 politeness. `nammal` is not part of near/far; it belongs to the pronoun lesson (native-speaker ruling 2026-10-07)
 
 ### Level 4 — Making Sentences (Intermediate) · ~85 items, 8 lessons
 **Can do:** build small original sentences from learned words; use past and future patterns; negate fully; ask wh-questions.
@@ -157,7 +164,7 @@ Accessibility (WCAG 2.2 AA target): everything keyboard-navigable; the anticipat
 
 | Sound | Spelling | | Sound | Spelling |
 |---|---|---|---|---|
-| long a/i/u | **always double**: `aa ii uu` (`chaaya`, `veedu`, `kaapi`) | | ഴ | `zh` |
+| long a/i/u | **always double**: `aa ee oo` (`chaaya`, `veedu`, `koodi`) — long i is `ee`, long u is `oo` (native-speaker rulings) | | ഴ | `zh` |
 | long e/o | **always single**: `e o` (`pokuva`, `ippo`, `chechi`) — matches Malayalee typing; audio disambiguates | | ഞ (ഞ്ഞ) | `nj` |
 | dental ത / ദ | `th` / `dh` | | ശ | `sh` |
 | retroflex ട / ഡ | `t` / `d` | | ഫ | `ph` |
@@ -166,7 +173,8 @@ Accessibility (WCAG 2.2 AA target): everything keyboard-navigable; the anticipat
 | റ (rare) | `ṟ` in sound-teaching items; `r` in colloquial words (`choru`, `parayuva`) | | colloquial voicing | ട/ഡ written `d` when pronounced so (`veedu`, `evide`, `und`) |
 
 Rules:
-1. Long a/i/u always doubled; long e/o never doubled (deliberate — matches how Malayalees actually type; `content:check` enforces it).
+1. Long a/i/u always doubled; long e/o never doubled (deliberate — matches how Malayalees actually type; `content:check` enforces it). Long i is written `ee` (`nee`, `veedu`), long u is written `oo` (`koodi`) — never `ii`/`uu`. `njaan` is written `njan` (native-speaker rulings 2026-10-06).
+   - `ni` is an accepted alternate spelling of `nee` — more common than `nee` in casual typing (native-speaker ruling 2026-10-07). Accept it in the input layer and mention it on the item; the display layer keeps `nee`.
 2. Dental vs retroflex always distinguished (`th` vs `t`).
 3. ള and ണ are common sounds (`veḷḷam`, `veṇṇa`), not rare — dedicated symbols in the **display layer**.
 4. Never use capitalization as a phonemic signal (mobile auto-capitalize).
@@ -182,7 +190,7 @@ Rules:
 - **Post-process every clip**: trim the leading/trailing silence TTS adds (untamed, it desynchronizes anticipation pauses) and loudness-normalize (EBU R128, ~-16 LUFS) so tiers are level-matched.
 - **Audio sprites**: per lesson, one MP3 + JSON offset table — gapless playback, fewer files, content-hashed filenames with long-lived cache headers (avoid `public/`'s `max-age=0` revalidation on every play). **Each sprite includes clips for the lesson's review pool** (items from 3–5 lessons back), so injected reviews need no cross-lesson loading.
 - **Sound-focus clips** for the four hard sound classes (segment-level holds).
-- **Native-speaker review gate**: every clip **and every articulation diagram** is reviewed by a native Malayalam speaker before shipping. TTS accuracy on colloquial forms is not guaranteed. The pipeline is **incremental** (hash text/voice/settings; skip unchanged clips) and review happens in a small keyboard-driven batch review UI — the full pass is ~2.5 h of audio, which realistically costs **10+ h of reviewer time** per pass, so human review (not spend) is the bottleneck.
+- **Native-speaker review gate**: every clip **and every articulation cue** is reviewed by a native Malayalam speaker before shipping. TTS accuracy on colloquial forms is not guaranteed. The pipeline is **incremental** (hash text/voice/settings; skip unchanged clips) and review happens in a small keyboard-driven batch review UI — the full pass is ~2.5 h of audio, which realistically costs **10+ h of reviewer time** per pass, so human review (not spend) is the bottleneck.
 - **Cost is a non-issue**: ~60k characters for the entire v1 curriculum is cents to ~$1 at any candidate provider; even 50 regeneration passes won't register.
 - Audio files are **build artifacts, not committed to git** — `npm run audio:gen` regenerates them from content.
 
@@ -213,7 +221,7 @@ type Item = {
   kind: 'word' | 'phrase' | 'sentence' | 'expression'
   pos?: 'noun' | 'verb' | 'pronoun' | 'particle' | 'suffix' | 'other'
   image?: string             // illustration asset (license record in a sibling manifest)
-  articulation?: { diagram: string; tip: string }  // required for sound:* items (diagram + brief cue, never text-only)
+  articulation?: { cue: string }  // required for sound:* items (text cue only, no visuals)
   audio: { slow: string; medium: string; normal: string; focus?: string[] } // offsets into lesson sprite
   acceptedInputs?: string[]  // forgiving ASCII answers (diacritic-folded, case-insensitive)
   notes?: string[]           // formal form, politeness, usage notes
@@ -246,18 +254,18 @@ type Level = { id: string; name: string; canDo: string[]; lessons: Lesson[]; tes
 
 1. **Source**: dialogues and sentences are patterned on modern Malayalam cinema and real conversation (rewritten/adapted — no copyrighted audio or scripts reused verbatim). This sourcing step is what keeps the register authentic.
 2. Native Malayalam speaker(s) author or review a lesson file: romanization per §9, **script per §9 rule 6** (colloquial spelling, native sign-off), meanings, notes, visuals with license records.
-3. Articulation diagrams (SVG) authored for sound items and reviewed by a native speaker for accuracy.
+3. Articulation text cues authored for sound items and reviewed by a native speaker for accuracy.
 4. `npm run content:check` validates structure, spelling rules, script sanity, visuals, licenses, and audio manifests.
 5. `npm run audio:gen` (incremental) generates the normal clips and derives slow/medium/focus variants; native-speaker review happens in the batch review UI; mispronunciations are fixed by editing text, voice, or regenerating.
-6. Lesson ships only when audio and diagrams pass review.
+6. Lesson ships only when audio and articulation cues pass review.
 
 ## 14. Milestones
 
 | Milestone | Contents |
 |---|---|
 | M0 | Scaffold (Next.js + TS + Tailwind v4 pinned) **deployed as hello-world on Vercel** (cache headers, file caps validated early); **audio provider spike**: reference clips in colloquial Manglish from Bulbul V3 / Google WaveNet / Chirp 3 HD, native-speaker listen test, provider-terms check |
-| M1 | Content format finalized + `content:check` (incl. script sanity, license checks); image sourcing + license tracking + styling treatment + credits page; full audio pipeline (normal → derive → trim/normalize → sprites) with incremental generation + batch review UI; **Level 1 units 1–2 authored, including SVG articulation diagrams** |
-| M2 | Core lesson player: tap-to-start audio unlock, Web Audio sprites, anticipation / multiple-choice / minimal-pair / speak-and-compare / typing drills, reveal-after-hear (romanization + passive script), articulation display, silent mode, a11y preferences; **Level 1 units 3–5 authored**; contentRevision reconciliation |
+| M1 | Content format finalized + `content:check` (incl. script sanity, license checks); image sourcing + license tracking + styling treatment + credits page; full audio pipeline (normal → derive → trim/normalize → sprites) with incremental generation + batch review UI; **Level 1 units 1–2 authored, including text articulation cues** |
+| M2 | Core lesson player: tap-to-start audio unlock, Web Audio sprites, anticipation / multiple-choice / minimal-pair / speak-and-compare / typing drills, reveal-after-hear (romanization + passive script), articulation cue (text), silent mode, a11y preferences; **Level 1 units 3–5 authored**; contentRevision reconciliation |
 | M3 | Tests + FSRS (per-skill cards, review logs, review injection, mistakes, **TestSpec incl. pronunciation section**, daily review cap) + **PWA/install + `storage.persist()` + JSON export/import**; streak/achievement logic with injectable-clock tests |
 | M4 | Gamification polish: XP/levels/ranks, grace + pause, achievements UI, progress dashboard |
 | M5 | Sentence-builder drill; Levels 2–4 content; **private beta** + analytics + Sentry |
@@ -271,8 +279,8 @@ type Level = { id: string; name: string; canDo: string[]; lessons: Lesson[]; tes
 | Romanized-only text harms pronunciation learning | Audio-first UI: text and script hidden until heard; slow/medium/normal tiers; minimal-pair drills; research-validated |
 | **Passive script reintroduces the formal register** | §9 rule 6: script spells the colloquial form, native sign-off per item, formal spelling only behind a "written form" badge |
 | TTS mispronounces colloquial Manglish | M0 provider spike with native-speaker listen test; review gate on every clip; incremental regeneration keeps re-review cheap |
-| Retroflex/ഴ/gemination are genuinely hard for English speakers | Sequenced by difficulty, articulation diagrams + sound-focus clips, discrimination drills, per-sound mastery tracking |
-| **Articulation diagrams are inaccurate** | Diagrams limited to place-of-articulation (ഴ, coronals); native-speaker review gate; text cues kept brief (abstract descriptions demonstrably fail) |
+| Retroflex/ഴ/gemination are genuinely hard for English speakers | Sequenced by difficulty, text articulation cues + sound-focus clips, discrimination drills, per-sound mastery tracking |
+| **Articulation cues fail to teach alone** | Cues paired with sound-focus clips; native-speaker review gate; visual diagrams dropped as confusing |
 | Human audio review is the bottleneck (~2.5 h audio ≈ 10+ h reviewer time per full pass) | Incremental `audio:gen` + keyboard-driven batch review UI; cost is irrelevant, reviewer time is not |
 | **Image license violation** | Allowlist (CC0/PD, CC BY; SA as-is; no ND), per-asset license records, content:check enforcement, generated credits page |
 | **Script font/rendering failure** | Noto Sans Malayalam (OFL), `lang="ml"`, NFC/ZWJ linting, fallback stack |
@@ -287,7 +295,7 @@ type Level = { id: string; name: string; canDo: string[]; lessons: Lesson[]; tes
 ## 16. Owner decisions (recorded)
 
 1. **Name & tagline**: "Learn Malayalam — the way Kerala actually talks." (Name-availability check at M6.)
-2. **Articulation coaching**: in v1 as SVG tongue-position diagrams + sound-focus audio (no video).
+2. **Articulation coaching**: in v1 as text cues + sound-focus audio (no visuals).
 3. **Proverbs**: none — retracted; everyday conversational expressions only.
 4. **Script display**: passive in v1, colloquial spelling, hidden until heard; reading/writing lessons remain a later version.
 5. **Visuals**: free images, license-tracked, unified by a styling treatment (runtime/build filters).

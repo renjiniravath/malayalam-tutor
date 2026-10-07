@@ -129,7 +129,10 @@ export const lesson1Greetings: Lesson = {
       script: 'അല്ലേ',
       meaning: "isn't it? (tag question)",
       kind: 'expression',
-      notes: ['Tag questions keep the conversation moving — they ask for a quick yes.'],
+      notes: [
+        'Tag questions keep the conversation moving — they ask for a quick yes.',
+        'The tag needs a real sentence in front of it: nalla kaappi, alle? — nice coffee, right?',
+      ],
       audio: { slow: 'alle.slow', medium: 'alle.medium', normal: 'alle.normal' },
       tags: ['level:1'],
     },

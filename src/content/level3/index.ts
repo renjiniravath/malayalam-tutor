@@ -14,7 +14,6 @@ export const LEVEL3: Level = {
     'Say where things are and where you are going',
     'Attach -il, -ilekk, and -kku to English words',
     'Build three-word frames: who + place + verb',
-    'Tell near from far: a- words vs i- words',
     'Ask with the question words',
   ],
   lessons: [...L3UNIT1_LESSONS, ...L3UNIT2_LESSONS],

@@ -1,15 +1,20 @@
 /**
- * Level 3 Unit 2 Lesson 1 — The a/i distance paradigm (PLAN.md §5):
- * a- words point AWAY, i- words point NEAR. Same consonant frame,
- * one vowel decides the distance.
+ * Level 2 Unit 5 — The a/i distance paradigm (PLAN.md §5): a- words
+ * point AWAY, i- words point NEAR. Same consonant frame, one vowel
+ * decides the distance. Taught before the third-person ladder, so
+ * iyaaḷ/ayaaḷ read as the familiar i-/a- plus -aaḷ.
+ *
+ * The id still says l3u2l1: the lesson was authored in Level 3 and the
+ * native-speaker ruling moved it here. Lesson ids are learner-progress
+ * and audio-manifest keys, so it is kept stable (PLAN.md §11).
  */
 
 import type { Lesson } from '../../types'
 
 export const lesson1Distance: Lesson = {
   id: 'l3u2l1',
-  levelId: 'level3',
-  unitId: 'unit1',
+  levelId: 'level2',
+  unitId: 'unit5',
   title: 'Near and far: a vs i',
   reviewSlots: 2,
   sprite: { file: 'audio/l3u2l1.mp3' },
@@ -23,7 +28,7 @@ export const lesson1Distance: Lesson = {
       pos: 'adverb',
       notes: ['a- points away: avide, there.'],
       audio: { slow: 'avide.slow', medium: 'avide.medium', normal: 'avide.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
     {
       id: 'ivide',
@@ -34,7 +39,7 @@ export const lesson1Distance: Lesson = {
       pos: 'adverb',
       notes: ['i- points near: ivide, here.'],
       audio: { slow: 'ivide.slow', medium: 'ivide.medium', normal: 'ivide.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
     {
       id: 'ivan',
@@ -45,7 +50,7 @@ export const lesson1Distance: Lesson = {
       pos: 'pronoun',
       notes: ['avan is that guy (away); ivan is this guy (near).'],
       audio: { slow: 'ivan.slow', medium: 'ivan.medium', normal: 'ivan.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
     {
       id: 'ival',
@@ -57,7 +62,7 @@ export const lesson1Distance: Lesson = {
       acceptedInputs: ['ival'],
       notes: ['avaḷ is that girl (away); ivaḷ is this girl (near).'],
       audio: { slow: 'ival.slow', medium: 'ival.medium', normal: 'ival.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
     {
       id: 'angane',
@@ -68,7 +73,7 @@ export const lesson1Distance: Lesson = {
       pos: 'adverb',
       notes: ['a- points away: angane, like that.'],
       audio: { slow: 'angane.slow', medium: 'angane.medium', normal: 'angane.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
     {
       id: 'ingane',
@@ -79,7 +84,7 @@ export const lesson1Distance: Lesson = {
       pos: 'adverb',
       notes: ['i- points near: ingane, like this.'],
       audio: { slow: 'ingane.slow', medium: 'ingane.medium', normal: 'ingane.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
     {
       id: 'appo',
@@ -90,7 +95,7 @@ export const lesson1Distance: Lesson = {
       pos: 'adverb',
       notes: ['a- points away: appo, then. Also the casual "so": appo sheri, so okay.'],
       audio: { slow: 'appo.slow', medium: 'appo.medium', normal: 'appo.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
     {
       id: 'ippo',
@@ -101,7 +106,7 @@ export const lesson1Distance: Lesson = {
       pos: 'adverb',
       notes: ['i- points near: ippo, now.'],
       audio: { slow: 'ippo.slow', medium: 'ippo.medium', normal: 'ippo.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
     {
       id: 'njan-angott-varuva',
@@ -115,7 +120,7 @@ export const lesson1Distance: Lesson = {
         { token: 'varuva', gloss: 'coming' },
       ],
       audio: { slow: 'njan-angott-varuva.slow', medium: 'njan-angott-varuva.medium', normal: 'njan-angott-varuva.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
     {
       id: 'njangal',
@@ -125,9 +130,9 @@ export const lesson1Distance: Lesson = {
       kind: 'word',
       pos: 'pronoun',
       acceptedInputs: ['njangal'],
-      notes: ['njangaḷ is me and them, without you. nammaḷ includes you.'],
+      notes: ['njangaḷ is me and them, without the person you are talking to.'],
       audio: { slow: 'njangal.slow', medium: 'njangal.medium', normal: 'njangal.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
     {
       id: 'ente',
@@ -138,7 +143,7 @@ export const lesson1Distance: Lesson = {
       pos: 'pronoun',
       notes: ['It means my, and attaches to anything: ente chaaya, my tea.'],
       audio: { slow: 'ente.slow', medium: 'ente.medium', normal: 'ente.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
     {
       id: 'ninte',
@@ -149,7 +154,7 @@ export const lesson1Distance: Lesson = {
       pos: 'pronoun',
       notes: ['It means your (casual): ninte chaaya, your tea.'],
       audio: { slow: 'ninte.slow', medium: 'ninte.medium', normal: 'ninte.normal' },
-      tags: ['level:3'],
+      tags: ['level:2'],
     },
   ],
   pairs: [],

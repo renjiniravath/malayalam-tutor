@@ -10,6 +10,7 @@ import { L2UNIT3_LESSONS } from './unit3'
 import { L2UNIT4_LESSONS } from './unit4'
 import { L2UNIT5_LESSONS } from './unit5'
 import { L2UNIT6_LESSONS } from './unit6'
+import { L2UNIT7_LESSONS } from './unit7'
 
 export const LEVEL2: Level = {
   id: 'level2',
@@ -19,6 +20,7 @@ export const LEVEL2: Level = {
     'Ask and answer yes/no questions',
     'Use tag questions and the -o particle',
     'Choose the right level of politeness',
+    'Tell near from far: a- words vs i- words',
     'Address people by title: chettan, chechi',
   ],
   lessons: [
@@ -28,6 +30,7 @@ export const LEVEL2: Level = {
     ...L2UNIT4_LESSONS,
     ...L2UNIT5_LESSONS,
     ...L2UNIT6_LESSONS,
+    ...L2UNIT7_LESSONS,
   ],
   test: {
     itemCount: 20,

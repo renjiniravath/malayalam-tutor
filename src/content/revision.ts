@@ -51,5 +51,13 @@
  *       chaaya kudikkumello, alle added; kettiyo acceptedInput
  *       removed; checker gains banned-word traps and the bare
  *       second-person -uva ban; side notes completed
+ *  19 — native-speaker rulings 2026-10-07: near/far moved out of Level 3
+ *       into Level 2 Unit 5, before the third-person ladder (lesson id
+ *       l3u2l1 kept, units 5-6 renumbered to 6-7); nammaḷ removed from
+ *       the near/far notes (it lives in the pronoun lesson); "sandhi"
+ *       struck from learner copy; ni accepted for nee; athe answers
+ *       aano; ninakk chaaya veno is the offer form; iranguva/irangi
+ *       explained; eppo = eppozha with the e-/i-/a- pattern; hotel means
+ *       eatery; glosses say "off to work"
  */
-export const CONTENT_REVISION = 18
+export const CONTENT_REVISION = 19

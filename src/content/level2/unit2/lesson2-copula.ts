@@ -43,6 +43,7 @@ export const lesson2Copula: Lesson = {
       meaning: 'yes (answering a question)',
       kind: 'word',
       pos: 'particle',
+      notes: ['It answers a question that used aano — aano is the question form, aanu is the statement/answer form.'],
       audio: { slow: 'athe.slow', medium: 'athe.medium', normal: 'athe.normal' },
       tags: ['level:2'],
     },

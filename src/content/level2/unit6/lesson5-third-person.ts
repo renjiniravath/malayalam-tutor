@@ -1,7 +1,8 @@
 /**
- * Level 2 Unit 5 — The third-person ladder (PLAN.md §5): talking
+ * Level 2 Unit 6 — The third-person ladder (PLAN.md §5): talking
  * about a man you know, a man you respect, and a person you do not
  * know at all. The pronoun ladder from Level 1 extends to "he".
+ * Follows the near/far lesson, so iyaaḷ/ayaaḷ read as i-/a- plus -aaḷ.
  */
 
 import type { Lesson } from '../../types'
@@ -9,7 +10,7 @@ import type { Lesson } from '../../types'
 export const lesson5ThirdPerson: Lesson = {
   id: 'l2u1l5',
   levelId: 'level2',
-  unitId: 'unit5',
+  unitId: 'unit6',
   title: 'Talking about him',
   reviewSlots: 2,
   sprite: { file: 'audio/l2u1l5.mp3' },

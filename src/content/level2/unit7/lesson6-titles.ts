@@ -1,5 +1,5 @@
 /**
- * Level 2 Unit 6 — Title substitution (PLAN.md §5): addressing people
+ * Level 2 Unit 7 — Title substitution (PLAN.md §5): addressing people
  * by title the way Kerala does. The vocative drops the final -n
  * (chettan becomes chetta!) and always takes a comma; titles are
  * never the subject of a sentence.
@@ -10,7 +10,7 @@ import type { Lesson } from '../../types'
 export const lesson6Titles: Lesson = {
   id: 'l2u1l6',
   levelId: 'level2',
-  unitId: 'unit6',
+  unitId: 'unit7',
   title: 'Chettan and chechi',
   reviewSlots: 2,
   sprite: { file: 'audio/l2u1l6.mp3' },
