@@ -51,6 +51,13 @@ describe('gemination cross-check (§9 rule 2)', () => {
     assert.deepEqual(geminationProblems('ഈ ബക്കറ്റ് ഫുൾ ആയി', 'ee bucket full aayi'), []);
   });
 
+  it('pins the black and color loan scripts', () => {
+    assert.deepEqual(geminationProblems('ബ്ലാക്ക് കളർ', 'black color'), []);
+    const problems = geminationProblems('ബ്ലാക് കളർ', 'black color');
+    assert.equal(problems.length, 1);
+    assert.match(problems[0], /ബ്ലാക്ക്/);
+  });
+
   it('does not read an inherited object key as a loan (constructor)', () => {
     // A plain object answers for Object.prototype members, so an unguarded
     // lookup would return a function and crash the pass instead of reporting.

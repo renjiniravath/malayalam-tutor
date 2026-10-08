@@ -54,6 +54,8 @@ const LOAN_SCRIPTS: Record<string, string[]> = {
   bucket: ['ബക്കറ്റ്'],
   schoolil: ['സ്കൂളിൽ'],
   full: ['ഫുൾ'],
+  black: ['ബ്ലാക്ക്'],
+  color: ['കളർ'],
 };
 
 /**

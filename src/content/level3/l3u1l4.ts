@@ -3,8 +3,8 @@ import type { Lesson } from '../types';
 /**
  * Level 3 Unit 1 Lesson 4 — the -nte suffix (PLAN.md §5): of, belonging.
  * ente and ninte opened the door; here the ending spreads across the
- * third person (avante, avaḷude, avarude) and onto English words
- * (businte), plus the question word aarude.
+ * third person (avante, avaḷude, avarude), onto English words (businte)
+ * and onto a name (akhilinte), plus the question word aarude.
  */
 export const l3u1l4: Lesson = {
   id: 'l3u1l4',
@@ -187,27 +187,31 @@ export const l3u1l4: Lesson = {
       tags: [],
     },
     {
-      id: 'avarude-veedu-avide-und',
-      manglish: 'avarude veedu avide und',
-      script: 'അവരുടെ വീട് അവിടെ ഉണ്ട്',
-      meaning: 'their house is there',
+      id: 'akhilinte-car-black-color-aanu',
+      manglish: 'akhilinte car black color aanu',
+      script: 'അഖിലിന്റെ കാർ ബ്ലാക്ക് കളർ ആണ്',
+      meaning: "Akhil's car is black",
       kind: 'sentence',
       audio: {
-        slow: 'l3u1l4_avarude-veedu-avide-und_slow',
-        medium: 'l3u1l4_avarude-veedu-avide-und_medium',
-        normal: 'l3u1l4_avarude-veedu-avide-und_normal',
+        slow: 'l3u1l4_akhilinte-car-black-color-aanu_slow',
+        medium: 'l3u1l4_akhilinte-car-black-color-aanu_medium',
+        normal: 'l3u1l4_akhilinte-car-black-color-aanu_normal',
       },
       sentence: {
-        bank: ['avarude', 'veedu', 'avide', 'und', 'nammude'],
-        orders: ['avarude veedu avide und'],
+        bank: ['akhilinte', 'car', 'black', 'color', 'aanu', 'avante'],
+        orders: ['akhilinte car black color aanu'],
         parts: [
-          { word: 'avarude', meaning: 'their' },
-          { word: 'veedu', meaning: 'house' },
-          { word: 'avide', meaning: 'there' },
-          { word: 'und', meaning: 'there is; have' },
+          { word: 'akhilinte', meaning: "Akhil's (a name plus -nte)" },
+          { word: 'car', meaning: 'car' },
+          { word: 'black', meaning: 'black' },
+          { word: 'color', meaning: 'color' },
+          { word: 'aanu', meaning: 'is' },
         ],
       },
-      notes: ['Four words, one possessive: their house, there, is.'],
+      notes: [
+        "A name takes -nte like any other word: akhilinte, Akhil's.",
+        'Colour words stay English: black color aanu, is black.',
+      ],
       tags: [],
     },
     {
@@ -245,10 +249,10 @@ export const l3u1l4: Lesson = {
     { kind: 'multipleChoice', itemId: 'veedu', distractors: ["the bus's; of the bus", "the older brother's", 'my house'] },
     { kind: 'multipleChoice', itemId: 'chettante', distractors: ['his', 'her', 'whose'] },
     { kind: 'multipleChoice', itemId: 'businte', distractors: ['house', "the older brother's", 'their'] },
-    { kind: 'multipleChoice', itemId: 'ente-veedu', distractors: ['his job', 'their house is there', 'her'] },
+    { kind: 'multipleChoice', itemId: 'ente-veedu', distractors: ['his job', "Akhil's car is black", 'her'] },
     { kind: 'multipleChoice', itemId: 'avante-joli', distractors: ['my house', 'whose', 'their'] },
     { kind: 'sentenceBuilder', itemId: 'athu-aarude-aanu', mode: 'bank' },
-    { kind: 'sentenceBuilder', itemId: 'avarude-veedu-avide-und', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'akhilinte-car-black-color-aanu', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'avan-ente-friend-aanu', mode: 'bank' },
   ],
   reviewSlots: 0,

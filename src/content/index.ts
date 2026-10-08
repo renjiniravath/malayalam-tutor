@@ -33,7 +33,9 @@ export const contentRevision: ContentRevision = {
   // aayi; -il ninnu displays as the clipped ninn; the bare coming-from
   // statements gave way to the aarokke question and the cleft pair, and the
   // new lesson l3u2l1 teaches the ... aanu ...ath question.
-  revision: 22,
+  // 23: the pointless avarude veedu avide und retired for the model
+  // belonging sentence akhilinte car black color aanu (l3u1l4).
+  revision: 23,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -139,6 +141,10 @@ export const contentRevision: ContentRevision = {
     'avan-teacher-aayi',
     'njan-veettil-ninn-varunnund',
     'avan-officil-ninn-varunnund',
+    // Native-speaker ruling 2026-10-08: a belonging sentence must carry
+    // information — avarude veedu avide und was pointless and is replaced
+    // by the model akhilinte car black color aanu.
+    'avarude-veedu-avide-und',
   ],
 };
 

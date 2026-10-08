@@ -12,7 +12,7 @@ export const level3: Level = {
   name: 'Level 3 — Places and Cases',
   canDo: [
     'Put places on the map: -il for in and at, -kku for to and for, -ilekk for heading to.',
-    'Say who things belong to with -nte and -ude: ente, avante, avaḷude, nammude.',
+    'Say who things belong to with -nte and -ude: ente, avante, avaḷude, nammude, akhilinte (names take it too).',
     'Add -um for too and for and: njanum, chaayayum kaappiyum.',
     'Say how things turn out with -aayi (ee bucket full aayi) and where things come from with -il ninn (officil ninn).',
     'Attach Malayalam case suffixes to English words the way Kerala talks: officil, jolikku, busil, hotelilekk, businte, busil ninn — and the native kada.',
