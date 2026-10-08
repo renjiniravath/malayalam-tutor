@@ -118,7 +118,7 @@ export const l3u1l3: Lesson = {
           { word: 'pokuva', meaning: 'going' },
         ],
       },
-      notes: ['-ilekk and -kku both say to — -ilekk points the direction, -kku is the dative.'],
+      notes: ['-ilekk and -kku both say to — -ilekk points the direction, -kku goes on the person: enikk, avanu.'],
       tags: [],
     },
     {

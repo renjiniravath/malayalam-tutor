@@ -24,7 +24,7 @@ export const l2u1l3: Lesson = {
         normal: 'l2u1l3_venam_normal',
       },
       acceptedInputs: ['venam'],
-      notes: ['Wanting takes the dative: enikk chaaya venam, to me tea is wanted.'],
+      notes: ['Wanting puts the person in the to-me form: enikk chaaya venam, to me tea is wanted.'],
       tags: [],
     },
     {
@@ -134,7 +134,7 @@ export const l2u1l3: Lesson = {
         ],
       },
       notes: [
-        'The standard offer: the person asked takes the dative, so the full form is ninakk chaaya veno.',
+        'The standard offer: the person asked takes the to-you form, so the full form is ninakk chaaya veno.',
       ],
       tags: [],
     },

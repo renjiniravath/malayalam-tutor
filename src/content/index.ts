@@ -38,7 +38,10 @@ export const contentRevision: ContentRevision = {
   // 24: the -a on entha/etha/eppozha taught as the fused copula (notes in
   // l2u3l2 and l3u2l1, the eppozha same-word note corrected), and the model
   // sentence eth busa added to l2u3l2.
-  revision: 24,
+  // 25: no linguistic jargon in learner copy — dative, declarative, vocative
+  // and the phonetics labels rewritten in plain English (notes, one canDo,
+  // one articulation cue); no ids or keys moved.
+  revision: 25,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',

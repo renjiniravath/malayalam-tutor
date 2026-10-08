@@ -152,7 +152,7 @@ export const l2u1l4: Lesson = {
       acceptedInputs: ['nee varunnundo', 'ni varunnundo'],
       notes: [
         'The casual invite with nee.',
-        'A bare second-person -uva declarative reads like a command, so questions use varunnundo.',
+        'Saying nee varuva straight reads like a command, so questions use varunnundo.',
       ],
       tags: [],
     },
@@ -177,7 +177,7 @@ export const l2u1l4: Lesson = {
         ],
       },
       notes: [
-        'Wanting takes the dative: enikk, to me.',
+        'Wanting puts the person in the to-me form: enikk, to me.',
         'The negative counterpart: enikk chaaya venda — I do not want tea.',
       ],
       tags: [],

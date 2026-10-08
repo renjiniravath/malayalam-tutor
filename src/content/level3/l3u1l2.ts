@@ -62,7 +62,7 @@ export const l3u1l2: Lesson = {
       articulation: {
         cue: 'Hold the doubled kk.',
       },
-      notes: ['-kku on njan becomes enikk — the dative you met in enikk chaaya venam.'],
+      notes: ['-kku on njan becomes enikk — the to-me form you met in enikk chaaya venam.'],
       tags: ['sound:geminate'],
     },
     {
@@ -77,7 +77,7 @@ export const l3u1l2: Lesson = {
         normal: 'l3u1l2_avanu_normal',
       },
       acceptedInputs: ['avanu'],
-      notes: ['The casual to-him: avan plus the dative.'],
+      notes: ['The casual to-him: avan takes -kku — avanu.'],
       tags: [],
     },
     {
@@ -123,7 +123,7 @@ export const l3u1l2: Lesson = {
           { word: 'venam', meaning: 'want; need' },
         ],
       },
-      notes: ['The dative wants: to him, tea is wanted.'],
+      notes: ['Wanting puts him in the to-him form: to him, tea is wanted.'],
       tags: [],
     },
     {
@@ -145,7 +145,7 @@ export const l3u1l2: Lesson = {
           { word: 'venda', meaning: "don't want" },
         ],
       },
-      notes: ['The polite refusal, with the dative.'],
+      notes: ['The polite refusal, with the to-me form.'],
       tags: [],
     },
     {
@@ -164,7 +164,7 @@ export const l3u1l2: Lesson = {
       articulation: {
         cue: 'Hold the doubled ll in milla.',
       },
-      notes: ['Not-liking takes the dative too: to him, tea is not liked.'],
+      notes: ['Not-liking puts the person in the to-him form too: to him, tea is not liked.'],
       tags: ['sound:geminate'],
     },
     {
@@ -187,7 +187,7 @@ export const l3u1l2: Lesson = {
           { word: 'ishttamilla', meaning: "doesn't like" },
         ],
       },
-      notes: ['The dative experiencer: liking and wanting both happen to the person.'],
+      notes: ['Liking and wanting both happen to the person, so both take the to-him form.'],
       tags: [],
     },
     {

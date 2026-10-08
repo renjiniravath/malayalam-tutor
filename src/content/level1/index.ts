@@ -11,7 +11,7 @@ export const level1: Level = {
   id: 'l1',
   name: 'Level 1 — Sounds & Words',
   canDo: [
-    'Recognize and produce the four hard sound classes: zh, the coronal series, gemination, and vowel length.',
+    'Recognize and produce the four hard sound classes: zh, the three t-sounds, doubled consonants, and long vowels.',
     'Greet people and use everyday expressions.',
     'Use around 40 high-frequency nouns, 10 core verbs, and pronouns.',
   ],

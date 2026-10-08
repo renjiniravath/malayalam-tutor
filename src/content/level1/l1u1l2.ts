@@ -66,7 +66,7 @@ export const l1u1l2: Lesson = {
       acceptedInputs: ['kaarru', 'kaattu'],
       notes: [
         'The doubled ṟṟ is the റ്റ sound — people type it as rr, so kaaṟṟu shows up as kaarru.',
-        'Colloquially typed "kaattu" too — the ṟṟ marks the doubled alveolar tap.',
+        'Colloquially typed "kaattu" too — the ṟṟ marks the doubled tongue-tap.',
       ],
       tags: ['sound:coronal'],
     },
@@ -113,7 +113,7 @@ export const l1u1l2: Lesson = {
       meaning: 'will work; will be possible',
       kind: 'word',
       articulation: {
-        cue: 'Tap the tongue tip on the gum ridge behind the upper teeth for the doubled alveolar sound, quick, like the tt in "butter".',
+        cue: 'Tap the tongue tip on the gum ridge behind the upper teeth for the doubled sound, quick, like the tt in "butter".',
       },
       audio: {
         slow: 'l1u1l2_parrum_slow',
