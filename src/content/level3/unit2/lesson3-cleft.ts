@@ -22,7 +22,10 @@ export const lesson3Cleft: Lesson = {
       meaning: 'which (before a noun)',
       kind: 'word',
       pos: 'pronoun',
-      notes: ['eth goes before a noun: eth schoolil, which school. On its own, "which one?" is etha.'],
+      notes: [
+        'eth goes before a noun: eth schoolil, which school. On its own, "which one?" is etha.',
+        'The -a on etha is a squeezed-in "is": etha, which one is it? Before a noun there is nothing for the is to do, so it drops: eth schoolil.',
+      ],
       audio: { slow: 'eth.slow', medium: 'eth.medium', normal: 'eth.normal' },
       tags: ['level:3'],
     },
@@ -33,7 +36,10 @@ export const lesson3Cleft: Lesson = {
       meaning: 'what (before aanu)',
       kind: 'word',
       pos: 'pronoun',
-      notes: ['enth goes before aanu: enth aanu kazhichath, what is it that you ate. On its own, "what?" is entha.'],
+      notes: [
+        'enth goes before aanu: enth aanu kazhichath, what is it that you ate. On its own, "what?" is entha.',
+        'The -a on entha is really a squeezed-in "is": entha, what is it? When the is comes out as its own word — enth aanu kazhichath, what is it that you ate — the -a has nothing to do, so it goes.',
+      ],
       audio: { slow: 'enth.slow', medium: 'enth.medium', normal: 'enth.normal' },
       tags: ['level:3'],
     },

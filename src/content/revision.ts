@@ -84,8 +84,15 @@
  *       redundant beside the continuous); the retired ids are recorded
  *       in REMOVED_ITEM_IDS; the checker accepts the word-final ത്
  *       spelling (varunnath, kazhichath) the native speaker writes
+ *  24 — native-speaker ruling 2026-10-08: the -a on entha / etha /
+ *       eppozha is a squeezed-in "is" (the fused copula), taught in plain
+ *       English on enth and eth in the cleft lesson and on entha and etha
+ *       in the question-words lesson; the old eppozha/eppo "same word"
+ *       note is corrected to the with-is and bare forms; etha bus gives
+ *       way to eth busa (the -a rides on the predicate), retiring the
+ *       etha-bus id
  */
-export const CONTENT_REVISION = 23
+export const CONTENT_REVISION = 24
 
 /**
  * Item ids retired from content — the record of what was replaced by a
@@ -104,4 +111,7 @@ export const REMOVED_ITEM_IDS: readonly string[] = [
   'njan-veettil-ninn-varuva', // -> ninte veettil ninn aarokke varunnund
   'njan-ippo-veettil-ninn-pokuva', // -> njan veettil ninn iranguva
   'avan-oru-teacher-aayi', // -> ee bucket full aayi
+  // l3u2l2 — the native speaker ruled eth busa ("which bus is it?") the
+  // better form, with the -a riding on the predicate:
+  'etha-bus', // -> eth busa
 ]

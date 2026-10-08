@@ -1,6 +1,6 @@
 /**
- * Level 3 Unit 2 Lesson 2 — Question words (PLAN.md §5): the -aa
- * question endings and the e- words that open every conversation.
+ * Level 3 Unit 2 Lesson 2 — Question words (PLAN.md §5): the fused -a
+ * (a squeezed-in "is") and the e- words that open every conversation.
  */
 
 import type { Lesson } from '../../types'
@@ -20,7 +20,10 @@ export const lesson2Questions: Lesson = {
       meaning: 'what?',
       kind: 'word',
       pos: 'pronoun',
-      notes: ['It means what? The casual form is enna: enna und vishesham.'],
+      notes: [
+        'It means what? The casual form is enna: enna und vishesham.',
+        'The -a is a squeezed-in "is": entha is enth + is, what is it?',
+      ],
       audio: { slow: 'entha.slow', medium: 'entha.medium', normal: 'entha.normal' },
       tags: ['level:3'],
     },
@@ -31,7 +34,10 @@ export const lesson2Questions: Lesson = {
       meaning: 'which?',
       kind: 'word',
       pos: 'pronoun',
-      notes: ['It means which one? ithil etha ishttappette? — which among these did you like?'],
+      notes: [
+        'It means which one? ithil etha ishttappette? — which among these did you like?',
+        'The -a is the same squeezed-in "is": etha, which one is it? It rides on what you are asking about: eth busa, which bus is it?',
+      ],
       audio: { slow: 'etha.slow', medium: 'etha.medium', normal: 'etha.normal' },
       tags: ['level:3'],
     },
@@ -65,7 +71,7 @@ export const lesson2Questions: Lesson = {
       kind: 'word',
       pos: 'adverb',
       notes: [
-        'eppozha and eppo are the same word: when?',
+        'eppozha carries the -a: eppozha, when is it? eppo is the bare form, without the is.',
         'e- is the question marker, the way i- points near and a- points far.',
       ],
       audio: { slow: 'eppozha.slow', medium: 'eppozha.medium', normal: 'eppozha.normal' },
@@ -96,16 +102,19 @@ export const lesson2Questions: Lesson = {
       tags: ['level:3'],
     },
     {
-      id: 'etha-bus',
-      manglish: 'etha bus',
-      meaning: 'which bus?',
+      id: 'eth-busa',
+      manglish: 'eth busa',
+      meaning: 'which bus is it?',
       kind: 'sentence',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
-      segments: [
-        { token: 'etha', gloss: 'which?' },
-        { token: 'bus', gloss: 'bus' },
+      notes: [
+        'The -a rides on the bus: eth busa, which bus is it? The bare eth leans straight on the noun (eth bus), but in the question the is lands at the end.',
+        'No script here: the English word has no settled Malayalam spelling.',
       ],
-      audio: { slow: 'etha-bus.slow', medium: 'etha-bus.medium', normal: 'etha-bus.normal' },
+      segments: [
+        { token: 'eth', gloss: 'which (before a noun)' },
+        { token: 'busa', gloss: 'bus is it' },
+      ],
+      audio: { slow: 'eth-busa.slow', medium: 'eth-busa.medium', normal: 'eth-busa.normal' },
       tags: ['level:3'],
     },
     {
@@ -150,9 +159,9 @@ export const lesson2Questions: Lesson = {
     { kind: 'multipleChoice', itemId: 'enthina', distractors: ['entha', 'eppozha', 'engane'] },
     { kind: 'multipleChoice', itemId: 'eppozha', distractors: ['enthina', 'etha', 'evide'] },
     { kind: 'multipleChoice', itemId: 'evide', distractors: ['entha', 'engane', 'eppozha'] },
-    { kind: 'multipleChoice', itemId: 'evide-aa', distractors: ['etha-bus', 'entha', 'engane'] },
-    { kind: 'multipleChoice', itemId: 'etha-bus', distractors: ['evide-aa', 'etha', 'entha'] },
-    { kind: 'multipleChoice', itemId: 'nee-chaaya-kudikkumello-alle', distractors: ['evide-aa', 'etha-bus', 'entha'] },
+    { kind: 'multipleChoice', itemId: 'evide-aa', distractors: ['eth-busa', 'entha', 'engane'] },
+    { kind: 'multipleChoice', itemId: 'eth-busa', distractors: ['evide-aa', 'etha', 'entha'] },
+    { kind: 'multipleChoice', itemId: 'nee-chaaya-kudikkumello-alle', distractors: ['evide-aa', 'eth-busa', 'entha'] },
     {
       kind: 'sentenceBuilder',
       sentenceId: 'evide-aa',
@@ -161,9 +170,9 @@ export const lesson2Questions: Lesson = {
     },
     {
       kind: 'sentenceBuilder',
-      sentenceId: 'etha-bus',
-      bank: ['etha', 'bus'],
-      acceptedInputs: ['etha bus'],
+      sentenceId: 'eth-busa',
+      bank: ['eth', 'busa'],
+      acceptedInputs: ['eth busa'],
     },
     {
       kind: 'sentenceBuilder',

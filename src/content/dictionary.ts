@@ -222,7 +222,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'eppozha', script: 'എപ്പോഴാ', meaning: 'when?' },
   { manglish: 'evide', script: 'എവിടെ', meaning: 'where?' },
   { manglish: 'evide aa', script: 'എവിടെ ആ', meaning: 'where is it?' },
-  { manglish: 'etha bus', meaning: 'which bus?' },
+  { manglish: 'eth busa', meaning: 'which bus is it?' },
   { manglish: 'ithil etha ishttappette', script: 'ഇതിൽ ഏതാ ഇഷ്ടപ്പെട്ടേ', meaning: 'which among these did you like?' },
   { manglish: 'nee chaaya kudikkumello, alle', meaning: 'you drink tea, right?' },
   // Level 3 — the -nte case: of and whose
