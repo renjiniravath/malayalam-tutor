@@ -33,7 +33,7 @@ export const lesson1Pronouns: Lesson = {
       kind: 'word',
       pos: 'pronoun',
       acceptedInputs: ['ni'],
-      alsoIn: 'neeyyo ("you?") and neeyyum ("you too")',
+      alsoIn: 'neeyo ("you?") and neeyum ("you too")',
       notes: [
         'For friends and kids. With elders or strangers use ningaḷ or thaangkaḷ.',
         'Also written ni.',

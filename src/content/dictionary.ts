@@ -122,15 +122,15 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'ketto', script: 'കേട്ടോ', meaning: 'did you hear? (tag)' },
   // no script: the written form spells a long a that is short in speech
   { manglish: 'kettayirunno', meaning: 'did you hear? (about the past)' },
-  { manglish: 'neeyyo', script: 'നീയോ', meaning: 'you? (question particle)' },
-  { manglish: 'neeyyum', script: 'നീയും', meaning: 'you too?' },
+  { manglish: 'neeyo', script: 'നീയോ', meaning: 'you? (question particle)' },
+  { manglish: 'neeyum', script: 'നീയും', meaning: 'you too?' },
   { manglish: 'sheriyalle', script: 'ശെരിയല്ലേ', meaning: 'right? (isn’t it right)' },
   { manglish: 'chaaya alle', script: 'ചായ അല്ലേ', meaning: "it's tea, isn't it?" },
   { manglish: 'pokuva alle', script: 'പോകുവാ അല്ലേ', meaning: 'going, right?' },
   { manglish: 'athu alle', script: 'അത് അല്ലേ', meaning: 'that, right?' },
   { manglish: 'ippo alle', script: 'ഇപ്പോ അല്ലേ', meaning: 'now, right?' },
   { manglish: 'athu sheri alle', script: 'അത് ശെരി അല്ലേ', meaning: "that's correct, right?" },
-  { manglish: 'neeyyum varunnundo', script: 'നീയും വരുന്നുണ്ടോ', meaning: 'are you coming too?' },
+  { manglish: 'neeyum varunnundo', script: 'നീയും വരുന്നുണ്ടോ', meaning: 'are you coming too?' },
   // Level 2 Unit 4 — politeness in context (second-person items use the
   // -unnundo question form: a bare -uva declarative reads as a command)
   // no script: the written form spells a long a that is short in speech

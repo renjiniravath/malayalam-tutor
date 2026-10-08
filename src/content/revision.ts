@@ -62,5 +62,10 @@
  *  20 — ithil etha ishttappette? taught as an item in the question-words
  *       lesson (replacing the confusing athu etha phrasing); the
  *       jolikku pokuva glosses stay literal, so the two builds match
+ *  21 — spelling rulings: neeyo / neeyum take a plain y (display layer;
+ *       the doubled neeyyo/neeyyum and niyyo/niyyum stay as accepted
+ *       inputs); the nonsensical enikk chaaya veno counter-example is
+ *       struck in favour of the same-dative answer enikk chaaya venda;
+ *       ishttappette (double p) confirmed
  */
-export const CONTENT_REVISION = 20
+export const CONTENT_REVISION = 21

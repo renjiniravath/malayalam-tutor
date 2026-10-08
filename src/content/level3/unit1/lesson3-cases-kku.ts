@@ -94,7 +94,10 @@ export const lesson3CasesKku: Lesson = {
       script: 'നിനക്ക് ചായ വേണോ',
       meaning: 'do you want tea? (casual)',
       kind: 'sentence',
-      notes: ['An offer takes the dative of the person asked: ninakk chaaya veno. enikk chaaya veno would mean "do I want tea?".'],
+      notes: [
+        "An offer takes the dative of the person asked: ninakk chaaya veno — do you want tea?",
+        "The same dative carries the answer: enikk chaaya venda — I don't want tea (venda = don't want).",
+      ],
       segments: [
         { token: 'ninakk', gloss: 'to you (casual)' },
         { token: 'chaaya', gloss: 'tea' },
