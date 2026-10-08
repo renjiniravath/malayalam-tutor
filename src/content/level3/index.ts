@@ -16,6 +16,7 @@ export const LEVEL3: Level = {
     'Build three-word frames: who + place + verb',
     'Ask with the question words',
     'Say whose something is, and where someone is coming from',
+    'Ask which, what and where with aanu ... ath',
   ],
   lessons: [...L3UNIT1_LESSONS, ...L3UNIT2_LESSONS],
   test: {

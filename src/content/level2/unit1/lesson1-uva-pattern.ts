@@ -337,7 +337,7 @@ export const lesson1UvaPattern: Lesson = {
       bank: ['njan', 'veettil', 'ninn', 'irangi'],
       acceptedInputs: ['njan veettil ninn irangi'],
     },
-    { kind: 'typing', itemId: 'njan-varuva', acceptedInputs: ['njan varunund'] },
+    { kind: 'typing', itemId: 'njan-varuva', acceptedInputs: ['njan varunund', 'njan varuva'] },
     { kind: 'typing', itemId: 'avan-parayuva', acceptedInputs: ['avan parayuva'] },
   ],
 }

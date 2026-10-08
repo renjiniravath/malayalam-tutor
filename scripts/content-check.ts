@@ -22,7 +22,7 @@ import { LEVELS } from '../src/content/levels'
 import { DICTIONARY } from '../src/content/dictionary'
 import { IMAGE_LICENSES, LICENSE_ALLOWLIST } from '../src/content/imageLicenses'
 import { KNOWN_TAGS, SOUND_TAGS, SOUND_TAG_FEATURE, type SoundTag } from '../src/content/tags'
-import { CONTENT_REVISION } from '../src/content/revision'
+import { CONTENT_REVISION, REMOVED_ITEM_IDS } from '../src/content/revision'
 
 const ROOT = path.resolve(__dirname, '..')
 const CONTENT_DIR = path.join(ROOT, 'src', 'content')
@@ -327,7 +327,12 @@ function checkDictionaryEntry(manglish: string, script?: string): void {
   // A final virama on a bare consonant is pronounced with a final u
   // (kazhinju); on a consonant cluster like ണ്ട് it is not (und).
   const finalConjunct = /്[ഀ-ൿ]്$/.test(script)
-  if (script.endsWith('്') && !manglish.endsWith('u') && !finalConjunct)
+  // Word-final ത് is the other exception: ath (അത്), eth (ഏത്),
+  // enth (എന്ത്) and the -ath verb forms (വരുന്നത് varunnath,
+  // കഴിച്ചത് kazhichath) are written without the final u — native-speaker
+  // spelling, as in evide ninn aanu varunnath.
+  const finalTa = script.endsWith('ത്')
+  if (script.endsWith('്') && !manglish.endsWith('u') && !finalConjunct && !finalTa)
     fail(ctx, `word-final virama is spelled with a final u: ${manglish}`)
   if (manglish.endsWith('u') && !script.endsWith('്') && !/[ഉഊു]/.test(script))
     fail(ctx, `final u needs a final virama, ു, ഉ, or ഊ in the script: ${script}`)
@@ -577,6 +582,16 @@ function main(): void {
       fail(`images:${license.image}`, 'license record exists but the image file is missing')
     if (!items.some((i) => i.image === license.image))
       warn(`images:${license.image}`, 'license record not referenced by any item')
+  }
+
+  // ---- retired item ids ----------------------------------------------------
+  // A retired id is never reused: a replacement sentence is a new item.
+  const removedSeen = new Set<string>()
+  for (const id of REMOVED_ITEM_IDS) {
+    if (!/^[a-z0-9-]+$/.test(id)) fail(`removed:${id}`, 'retired item id must be an ASCII slug')
+    if (removedSeen.has(id)) fail(`removed:${id}`, 'duplicate retired item id')
+    removedSeen.add(id)
+    if (itemsById.has(id)) fail(`removed:${id}`, 'a retired item id is back in content — ids are never reused')
   }
 
   // ---- minimal pairs -------------------------------------------------------

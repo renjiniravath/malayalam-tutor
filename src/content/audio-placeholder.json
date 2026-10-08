@@ -271,15 +271,17 @@
         "officil-ninn.slow", "officil-ninn.medium", "officil-ninn.normal",
         "busil-ninn.slow", "busil-ninn.medium", "busil-ninn.normal",
         "kadayil-ninn.slow", "kadayil-ninn.medium", "kadayil-ninn.normal",
-        "njan-veettil-ninn-varuva.slow", "njan-veettil-ninn-varuva.medium", "njan-veettil-ninn-varuva.normal",
+        "ninte-veettil-ninn-aarokke-varunnund.slow", "ninte-veettil-ninn-aarokke-varunnund.medium", "ninte-veettil-ninn-aarokke-varunnund.normal",
         "avan-kadayil-ninn-varunnund.slow", "avan-kadayil-ninn-varunnund.medium", "avan-kadayil-ninn-varunnund.normal",
-        "njan-officil-ninn-varunnund.slow", "njan-officil-ninn-varunnund.medium", "njan-officil-ninn-varunnund.normal",
+        "nee-evide-ninn-aanu-varunnath.slow", "nee-evide-ninn-aanu-varunnath.medium", "nee-evide-ninn-aanu-varunnath.normal",
+        "njan-officil-ninn-aanu-varunnath.slow", "njan-officil-ninn-aanu-varunnath.medium", "njan-officil-ninn-aanu-varunnath.normal",
         "avan-busil-ninn-irangi.slow", "avan-busil-ninn-irangi.medium", "avan-busil-ninn-irangi.normal",
-        "avan-evide-ninn-varunnund.slow", "avan-evide-ninn-varunnund.medium", "avan-evide-ninn-varunnund.normal",
-        "njan-ippo-veettil-ninn-pokuva.slow", "njan-ippo-veettil-ninn-pokuva.medium", "njan-ippo-veettil-ninn-pokuva.normal",
+        "avan-evide-ninn-aanu-varunnath.slow", "avan-evide-ninn-aanu-varunnath.medium", "avan-evide-ninn-aanu-varunnath.normal",
+        "avan-officil-ninn-aanu-varunnath.slow", "avan-officil-ninn-aanu-varunnath.medium", "avan-officil-ninn-aanu-varunnath.normal",
+        "njan-veettil-ninn-iranguva.slow", "njan-veettil-ninn-iranguva.medium", "njan-veettil-ninn-iranguva.normal",
         "sheri-aayi.slow", "sheri-aayi.medium", "sheri-aayi.normal",
         "njan-ready-aayi.slow", "njan-ready-aayi.medium", "njan-ready-aayi.normal",
-        "avan-oru-teacher-aayi.slow", "avan-oru-teacher-aayi.medium", "avan-oru-teacher-aayi.normal"
+        "ee-bucket-full-aayi.slow", "ee-bucket-full-aayi.medium", "ee-bucket-full-aayi.normal"
       ]
     },
     "l3u2l1": {
@@ -312,6 +314,17 @@
         "etha-bus.slow", "etha-bus.medium", "etha-bus.normal",
         "ithil-etha-ishttappette.slow", "ithil-etha-ishttappette.medium", "ithil-etha-ishttappette.normal",
         "nee-chaaya-kudikkumello-alle.slow", "nee-chaaya-kudikkumello-alle.medium", "nee-chaaya-kudikkumello-alle.normal"
+      ]
+    },
+    "l3u2l3": {
+      "sprite": "audio/l3u2l3.mp3",
+      "clips": [
+        "eth.slow", "eth.medium", "eth.normal",
+        "enth.slow", "enth.medium", "enth.normal",
+        "raavile.slow", "raavile.medium", "raavile.normal",
+        "nee-eth-schoolil-aanu-padichath.slow", "nee-eth-schoolil-aanu-padichath.medium", "nee-eth-schoolil-aanu-padichath.normal",
+        "chechi-raavile-enth-aanu-kazhichath.slow", "chechi-raavile-enth-aanu-kazhichath.medium", "chechi-raavile-enth-aanu-kazhichath.normal",
+        "ee-tv-evide-ninn-aanu-medichath.slow", "ee-tv-evide-ninn-aanu-medichath.medium", "ee-tv-evide-ninn-aanu-medichath.normal"
       ]
     }
   }

@@ -5,5 +5,6 @@
 
 import type { Lesson } from '../../types'
 import { lesson2Questions } from './lesson2-questions'
+import { lesson3Cleft } from './lesson3-cleft'
 
-export const L3UNIT2_LESSONS: readonly Lesson[] = [lesson2Questions]
+export const L3UNIT2_LESSONS: readonly Lesson[] = [lesson2Questions, lesson3Cleft]
