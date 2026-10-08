@@ -12,7 +12,7 @@ export const LEVEL1: Level = {
   id: 'level1',
   name: 'Sounds & Words',
   canDo: [
-    'Recognize and produce the four hard sound classes: zh, coronals, gemination, vowel length',
+    'Recognize and produce the four hard sound classes: zh, the tongue-tip sounds (th, t, ṟ), held sounds, and long vowels',
     'Greet people in casual Malayalam',
     'Use high-frequency nouns, core verbs, and pronouns',
     'Use everyday conversational expressions',

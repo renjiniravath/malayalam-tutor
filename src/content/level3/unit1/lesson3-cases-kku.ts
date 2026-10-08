@@ -111,7 +111,7 @@ export const lesson3CasesKku: Lesson = {
       manglish: 'chetta, jolikku pokunnundo',
       meaning: 'chetta, are you going to work?',
       kind: 'sentence',
-      notes: ['The vocative takes a comma: chetta is addressed, never the subject.'],
+      notes: ['chetta takes a comma: you are addressing him, not talking about him.'],
       segments: [
         { token: 'chetta,', gloss: 'chetta (addressing him)' },
         { token: 'jolikku', gloss: 'to work' },

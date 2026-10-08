@@ -72,7 +72,7 @@ export const lesson2Questions: Lesson = {
       pos: 'adverb',
       notes: [
         'eppozha carries the -a: eppozha, when is it? eppo is the bare form, without the is.',
-        'e- is the question marker, the way i- points near and a- points far.',
+        'e- asks the question, the way i- points near and a- points far.',
       ],
       audio: { slow: 'eppozha.slow', medium: 'eppozha.medium', normal: 'eppozha.normal' },
       tags: ['level:3'],

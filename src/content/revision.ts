@@ -97,8 +97,17 @@
  *       (l2u2l2). "particle", "vocative", "coronals"/"gemination" and the
  *       "a (the article)" gloss are previously approved copy: flagged for
  *       a ruling, not rewritten
+ *  26 — native-speaker ruling 2026-10-08: the flagged jargon converts too.
+ *       "particle" becomes the -o tag and plain -um wording (level 2
+ *       can-do, niyyo, niyyum, kaappiyum, with the dictionary mirror);
+ *       "vocative" becomes the calling form (l2u4l4, l2u7l6, l3u1l2,
+ *       l3u1l3); "coronals"/"gemination" become the tongue-tip sounds and
+ *       held sounds in the level 1 can-do; "a (the article)" becomes
+ *       "a (one)"; "case suffix" becomes "an -il word"; "e- is the
+ *       question marker" becomes "e- asks the question". "present tense"
+ *       stays — ordinary school English
  */
-export const CONTENT_REVISION = 25
+export const CONTENT_REVISION = 26
 
 /**
  * Item ids retired from content — the record of what was replaced by a

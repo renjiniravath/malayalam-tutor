@@ -150,7 +150,7 @@ export const lesson2CasesIlekk: Lesson = {
       manglish: 'chetta, hotelilekk pokunnundo',
       meaning: 'chetta, are you going to the hotel?',
       kind: 'sentence',
-      notes: ['The vocative takes a comma: chetta is addressed, never the subject.'],
+      notes: ['chetta takes a comma: you are addressing him, not talking about him.'],
       segments: [
         { token: 'chetta,', gloss: 'chetta (addressing him)' },
         { token: 'hotelilekk', gloss: 'to the hotel' },

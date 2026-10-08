@@ -24,7 +24,7 @@ export const lesson6Titles: Lesson = {
       pos: 'noun',
       notes: [
         'To call him, the final -n drops: chettan becomes chetta!',
-        'The vocative chetta always takes a comma in a sentence.',
+        'Addressing him as chetta always takes a comma in a sentence.',
       ],
       audio: { slow: 'chettan.slow', medium: 'chettan.medium', normal: 'chettan.normal' },
       tags: ['level:2'],
@@ -38,7 +38,7 @@ export const lesson6Titles: Lesson = {
       pos: 'noun',
       notes: [
         'It is the everyday title for a woman a little older than you.',
-        'The vocative keeps its form: chechi! And it takes a comma in a sentence.',
+        'Calling her keeps the full word: chechi! And it takes a comma in a sentence.',
       ],
       audio: { slow: 'chechi.slow', medium: 'chechi.medium', normal: 'chechi.normal' },
       tags: ['level:2'],
@@ -48,7 +48,7 @@ export const lesson6Titles: Lesson = {
       manglish: 'chetta, ith kando',
       meaning: 'chetta, did you see this?',
       kind: 'sentence',
-      notes: ['The vocative takes a comma: chetta is addressed, never the subject.'],
+      notes: ['chetta takes a comma: you are addressing him, not talking about him.'],
       segments: [
         { token: 'chetta,', gloss: 'chetta (addressing him)' },
         { token: 'ith', gloss: 'this' },

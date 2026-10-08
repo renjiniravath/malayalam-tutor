@@ -122,7 +122,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'ketto', script: 'കേട്ടോ', meaning: 'did you hear? (tag)' },
   // no script: the written form spells a long a that is short in speech
   { manglish: 'kettayirunno', meaning: 'did you hear? (about the past)' },
-  { manglish: 'neeyo', script: 'നീയോ', meaning: 'you? (question particle)' },
+  { manglish: 'neeyo', script: 'നീയോ', meaning: 'you? (question tag)' },
   { manglish: 'neeyum', script: 'നീയും', meaning: 'you too?' },
   { manglish: 'sheriyalle', script: 'ശെരിയല്ലേ', meaning: 'right? (isn’t it right)' },
   { manglish: 'chaaya alle', script: 'ചായ അല്ലേ', meaning: "it's tea, isn't it?" },

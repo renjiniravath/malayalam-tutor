@@ -21,9 +21,9 @@ export const lesson4Politeness: Lesson = {
       kind: 'word',
       pos: 'noun',
       notes: [
-        'A vocative: you use it to call or address someone, never as the subject of a sentence.',
-        'In a sentence the vocative takes a comma: chetta, pokunnundo?',
-        'Asking the chettan himself, the vocative question is fine: chetta, varunnundo. The Chettan and chechi lesson covers exactly that.',
+        'A calling form: you use it to call or address someone, never to talk about them.',
+        'In a sentence the calling form takes a comma: chetta, pokunnundo?',
+        'Asking the chettan himself, the calling form is fine: chetta, varunnundo. The Chettan and chechi lesson covers exactly that.',
         'No script here: the written form spells a long a that is short in speech.',
       ],
       audio: { slow: 'chetta.slow', medium: 'chetta.medium', normal: 'chetta.normal' },
@@ -36,7 +36,7 @@ export const lesson4Politeness: Lesson = {
       kind: 'sentence',
       acceptedInputs: ['chetta pokunundo'],
       notes: [
-        'The vocative chetta gets a comma: you are addressing him, not naming him.',
+        'chetta gets a comma: you are addressing him, not naming him.',
         'No script here: the written form spells a long a that is short in speech.',
       ],
       segments: [

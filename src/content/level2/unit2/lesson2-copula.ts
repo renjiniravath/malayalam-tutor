@@ -127,7 +127,7 @@ export const lesson2Copula: Lesson = {
       ],
       segments: [
         { token: 'avan', gloss: 'he' },
-        { token: 'oru', gloss: 'a (the article)' },
+        { token: 'oru', gloss: 'a (one)' },
         { token: 'school', gloss: 'school' },
         { token: 'teacher', gloss: 'teacher' },
         { token: 'aanu', gloss: 'is' },

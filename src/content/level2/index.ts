@@ -18,7 +18,7 @@ export const LEVEL2: Level = {
   canDo: [
     'Say simple present-tense sentences from Level 1 words',
     'Ask and answer yes/no questions',
-    'Use tag questions and the -o particle',
+    'Use tag questions with -o',
     'Choose the right level of politeness',
     'Tell near from far: a- words vs i- words',
     'Address people by title: chettan, chechi',
