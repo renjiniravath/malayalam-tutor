@@ -106,6 +106,9 @@ export const lesson2Questions: Lesson = {
       manglish: 'eth busa',
       meaning: 'which bus is it?',
       kind: 'sentence',
+      // bus etha is the other natural order (the -a riding on etha); etha bus
+      // is a borderline anti-pattern and is deliberately not accepted.
+      acceptedInputs: ['bus etha'],
       notes: [
         'The -a rides on the bus: eth busa, which bus is it? The bare eth leans straight on the noun (eth bus), but in the question the is lands at the end.',
         'No script here: the English word has no settled Malayalam spelling.',
@@ -172,7 +175,7 @@ export const lesson2Questions: Lesson = {
       kind: 'sentenceBuilder',
       sentenceId: 'eth-busa',
       bank: ['eth', 'busa'],
-      acceptedInputs: ['eth busa'],
+      acceptedInputs: ['eth busa', 'bus etha'],
     },
     {
       kind: 'sentenceBuilder',
