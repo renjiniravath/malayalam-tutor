@@ -224,7 +224,7 @@ export const l2u1l4: Lesson = {
           { word: 'alla', meaning: 'not' },
         ],
       },
-      notes: ['The negative copula: alla replaces aa.'],
+      notes: ['The not-is word: alla replaces aa — njan ready aa, I am ready; njan ready alla, I am not.'],
       tags: [],
     },
   ],
