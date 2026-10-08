@@ -229,6 +229,59 @@
         "enikk-venam.slow", "enikk-venam.medium", "enikk-venam.normal"
       ]
     },
+    "l3u1l4": {
+      "sprite": "audio/l3u1l4.mp3",
+      "clips": [
+        "chettante.slow", "chettante.medium", "chettante.normal",
+        "avante.slow", "avante.medium", "avante.normal",
+        "njangalude.slow", "njangalude.medium", "njangalude.normal",
+        "kadayude.slow", "kadayude.medium", "kadayude.normal",
+        "officinte.slow", "officinte.medium", "officinte.normal",
+        "businte.slow", "businte.medium", "businte.normal",
+        "ithu-ente-veedu-aanu.slow", "ithu-ente-veedu-aanu.medium", "ithu-ente-veedu-aanu.normal",
+        "ithu-ente-chettante-veedu-aanu.slow", "ithu-ente-chettante-veedu-aanu.medium", "ithu-ente-chettante-veedu-aanu.normal",
+        "ithu-avante-veedu-aanu.slow", "ithu-avante-veedu-aanu.medium", "ithu-avante-veedu-aanu.normal",
+        "avan-ente-chettan-aanu.slow", "avan-ente-chettan-aanu.medium", "avan-ente-chettan-aanu.normal",
+        "avante-veedu-evide-aanu.slow", "avante-veedu-evide-aanu.medium", "avante-veedu-evide-aanu.normal",
+        "ithu-njangalude-kada-aanu.slow", "ithu-njangalude-kada-aanu.medium", "ithu-njangalude-kada-aanu.normal"
+      ]
+    },
+    "l3u1l5": {
+      "sprite": "audio/l3u1l5.mp3",
+      "clips": [
+        "chaayayum.slow", "chaayayum.medium", "chaayayum.normal",
+        "kaappiyum.slow", "kaappiyum.medium", "kaappiyum.normal",
+        "avanum.slow", "avanum.medium", "avanum.normal",
+        "enikkum.slow", "enikkum.medium", "enikkum.normal",
+        "njanum.slow", "njanum.medium", "njanum.normal",
+        "veettilum.slow", "veettilum.medium", "veettilum.normal",
+        "chaayayum-kaappiyum-und.slow", "chaayayum-kaappiyum-und.medium", "chaayayum-kaappiyum-und.normal",
+        "enikkum-venam.slow", "enikkum-venam.medium", "enikkum-venam.normal",
+        "avanum-varunnund.slow", "avanum-varunnund.medium", "avanum-varunnund.normal",
+        "njanum-varunnund.slow", "njanum-varunnund.medium", "njanum-varunnund.normal",
+        "njanum-avanum-officil-pokuva.slow", "njanum-avanum-officil-pokuva.medium", "njanum-avanum-officil-pokuva.normal",
+        "ente-veettilum-chaaya-und.slow", "ente-veettilum-chaaya-und.medium", "ente-veettilum-chaaya-und.normal"
+      ]
+    },
+    "l3u1l6": {
+      "sprite": "audio/l3u1l6.mp3",
+      "clips": [
+        "ninn.slow", "ninn.medium", "ninn.normal",
+        "veettil-ninn.slow", "veettil-ninn.medium", "veettil-ninn.normal",
+        "officil-ninn.slow", "officil-ninn.medium", "officil-ninn.normal",
+        "busil-ninn.slow", "busil-ninn.medium", "busil-ninn.normal",
+        "kadayil-ninn.slow", "kadayil-ninn.medium", "kadayil-ninn.normal",
+        "njan-veettil-ninn-varuva.slow", "njan-veettil-ninn-varuva.medium", "njan-veettil-ninn-varuva.normal",
+        "avan-kadayil-ninn-varunnund.slow", "avan-kadayil-ninn-varunnund.medium", "avan-kadayil-ninn-varunnund.normal",
+        "njan-officil-ninn-varunnund.slow", "njan-officil-ninn-varunnund.medium", "njan-officil-ninn-varunnund.normal",
+        "avan-busil-ninn-irangi.slow", "avan-busil-ninn-irangi.medium", "avan-busil-ninn-irangi.normal",
+        "avan-evide-ninn-varunnund.slow", "avan-evide-ninn-varunnund.medium", "avan-evide-ninn-varunnund.normal",
+        "njan-ippo-veettil-ninn-pokuva.slow", "njan-ippo-veettil-ninn-pokuva.medium", "njan-ippo-veettil-ninn-pokuva.normal",
+        "sheri-aayi.slow", "sheri-aayi.medium", "sheri-aayi.normal",
+        "njan-ready-aayi.slow", "njan-ready-aayi.medium", "njan-ready-aayi.normal",
+        "avan-oru-teacher-aayi.slow", "avan-oru-teacher-aayi.medium", "avan-oru-teacher-aayi.normal"
+      ]
+    },
     "l3u2l1": {
       "sprite": "audio/l3u2l1.mp3",
       "clips": [

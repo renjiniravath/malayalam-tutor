@@ -129,6 +129,8 @@ const IRREGULAR_WORDS: Record<string, string> = {
   etha: 'ഏതാ',
   enthina: 'എന്തിനാ',
   eppozha: 'എപ്പോഴാ',
+  // njan + um keeps the same short a as njan itself.
+  njanum: 'ഞാനും',
 }
 
 /**

@@ -15,6 +15,7 @@ export const LEVEL3: Level = {
     'Attach -il, -ilekk, and -kku to English words',
     'Build three-word frames: who + place + verb',
     'Ask with the question words',
+    'Say whose something is, and where someone is coming from',
   ],
   lessons: [...L3UNIT1_LESSONS, ...L3UNIT2_LESSONS],
   test: {

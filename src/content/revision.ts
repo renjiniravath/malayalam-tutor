@@ -67,5 +67,10 @@
  *       inputs); the nonsensical enikk chaaya veno counter-example is
  *       struck in favour of the same-dative answer enikk chaaya venda;
  *       ishttappette (double p) confirmed
+ *  22 — Level 3 lessons 4-6, the remaining cases: -nte (of), -um
+ *       (also/and), -il ninn (from, spelled like the ninn already
+ *       taught) and -aayi (became), with English-word assimilation and
+ *       frame drills; njanum joins the sanctioned short-a spellings;
+ *       the level gains a can-do for possession and origin
  */
-export const CONTENT_REVISION = 21
+export const CONTENT_REVISION = 22
