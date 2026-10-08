@@ -65,7 +65,8 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  event.respondWith(
-    fetch(request).catch(() => caches.match(request).then((hit) => hit || caches.match('/'))),
-  );
+  // Fall back to the cache only for the request itself: substituting the
+  // home document for a failed RSC fetch made a dead connection look like a
+  // successful navigation to '/'. A real failure must stay a failure.
+  event.respondWith(fetch(request).catch(() => caches.match(request)));
 });
