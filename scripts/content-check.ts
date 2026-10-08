@@ -40,7 +40,7 @@ import {
   hasBareThirdPersonUva,
   hasChettaSubject,
 } from '../src/lib/content/pragmatics';
-import { geminationFindings, sentenceSpellingFindings } from '../src/lib/content/romanization';
+import { geminationProblems, sentenceSpellingFindings } from '../src/lib/content/romanization';
 import type { Item, Lesson, MinimalPair, MinimalPairSegment } from '../src/content/types';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -169,9 +169,7 @@ function checkItem(lesson: Lesson, item: Item): void {
   if (item.script !== undefined) {
     checkScript(where, item.script);
     checkCoronals(where, item);
-    const findings = geminationFindings(item.script, item.manglish);
-    for (const problem of findings.problems) fail(where, problem);
-    for (const note of findings.review) warn(where, note);
+    for (const problem of geminationProblems(item.script, item.manglish)) fail(where, problem);
   }
 
   // The sentence drill renders the orders and the bank/parts tokens, so

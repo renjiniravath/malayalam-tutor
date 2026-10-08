@@ -24,7 +24,9 @@ export interface ContentRevision {
 }
 
 export const contentRevision: ContentRevision = {
-  revision: 19,
+  // 20: the -o and -um particles write a plain y (neeyo, neeyum) — display
+  // spellings changed under the unchanged ids, so nothing is re-keyed.
+  revision: 20,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',

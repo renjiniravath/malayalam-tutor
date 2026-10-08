@@ -46,20 +46,6 @@ const LOAN_SCRIPTS: Record<string, string[]> = {
   busilekk: ['ബസ്സിലേക്ക്'],
 };
 
-/**
- * neeyyo and neeyyum carry the native-speaker's doubled y (PLAN §5) while the
- * script spells a plain യ. The spelling is sanctioned, so a mismatch here is
- * a script question for native-speaker review, not a content error.
- */
-const SANCTIONED_SPELLINGS = new Set(['neeyyo', 'neeyyum']);
-
-export interface GeminationFindings {
-  /** §9 rule 2 violations — content:check errors. */
-  problems: string[];
-  /** Script questions for native-speaker review — content:check warnings. */
-  review: string[];
-}
-
 /** Script geminates of those classes, in order. */
 function scriptDoubles(script: string): string[] {
   const out: string[] = [];
@@ -100,16 +86,16 @@ function mismatch(scriptWord: string, romanWord: string): string | undefined {
 }
 
 /**
- * Gemination findings between an item's script and its romanization, word by
- * word: the two are transliterations of each other, and the English-loan
- * exemption applies to the loan word itself, not to the whole item.
+ * Gemination problems between an item's script and its romanization, one
+ * message per offending word. Word by word: the two are transliterations of
+ * each other, and the English-loan allowance applies to the loan word itself,
+ * not to the whole item.
  */
-export function geminationFindings(script: string, manglish: string): GeminationFindings {
+export function geminationProblems(script: string, manglish: string): string[] {
   const problems: string[] = [];
-  const review: string[] = [];
-  const collect = (scriptWord: string, romanWord: string, sanctioned: boolean): void => {
+  const collect = (scriptWord: string, romanWord: string): void => {
     const found = mismatch(scriptWord, romanWord);
-    if (found) (sanctioned ? review : problems).push(found);
+    if (found) problems.push(found);
   };
 
   const scriptWords = script.trim().split(/\s+/);
@@ -117,8 +103,8 @@ export function geminationFindings(script: string, manglish: string): Gemination
   if (scriptWords.length !== romanWords.length) {
     // The script and the manglish run word for word; if the split ever
     // drifts, compare the whole item rather than pairing the wrong words.
-    collect(script, manglish, false);
-    return { problems, review };
+    collect(script, manglish);
+    return problems;
   }
   scriptWords.forEach((scriptWord, i) => {
     const word = romanWords[i].replace(/[^a-z]/g, '');
@@ -131,9 +117,9 @@ export function geminationFindings(script: string, manglish: string): Gemination
       }
       return;
     }
-    collect(scriptWord, romanWords[i], SANCTIONED_SPELLINGS.has(word));
+    collect(scriptWord, romanWords[i]);
   });
-  return { problems, review };
+  return problems;
 }
 
 /** The spelling letters of a token, lowercased — punctuation is not part of the spelling. */

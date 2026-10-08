@@ -176,7 +176,10 @@ export const l2u1l4: Lesson = {
           { word: 'venam', meaning: 'want, need' },
         ],
       },
-      notes: ['Wanting takes the dative: enikk, to me.'],
+      notes: [
+        'Wanting takes the dative: enikk, to me.',
+        'The negative counterpart: enikk chaaya venda — I do not want tea.',
+      ],
       tags: [],
     },
     {
