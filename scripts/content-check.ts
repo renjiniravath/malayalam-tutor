@@ -40,7 +40,7 @@ import {
   hasBareThirdPersonUva,
   hasChettaSubject,
 } from '../src/lib/content/pragmatics';
-import { geminationFindings } from '../src/lib/content/romanization';
+import { geminationFindings, sentenceSpellingFindings } from '../src/lib/content/romanization';
 import type { Item, Lesson, MinimalPair, MinimalPairSegment } from '../src/content/types';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -172,6 +172,16 @@ function checkItem(lesson: Lesson, item: Item): void {
     const findings = geminationFindings(item.script, item.manglish);
     for (const problem of findings.problems) fail(where, problem);
     for (const note of findings.review) warn(where, note);
+  }
+
+  // The sentence drill renders the orders and the bank/parts tokens, so
+  // every learner-visible romanization of the item is checked, not just
+  // manglish. Orders and parts inherit the coronal check through this: their
+  // words must be spelled exactly like the words of the checked sentence.
+  if (item.sentence !== undefined) {
+    for (const problem of sentenceSpellingFindings(item.manglish, item.sentence)) {
+      fail(where, problem);
+    }
   }
 
   for (const tag of item.tags) {
