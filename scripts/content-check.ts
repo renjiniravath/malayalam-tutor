@@ -3,7 +3,8 @@
  *
  * Enforces the authoring rules from CLAUDE.md and PLAN.md:
  *  - romanization per §9 (lowercase only, no ii/uu, doubling rules,
- *    dental/retroflex/alveolar place cross-checked against the script field)
+ *    dental/retroflex/alveolar place and consonant gemination cross-checked
+ *    against the script field)
  *  - script sanity (NFC, Malayalam block only, ZWJ/ZWNJ placement)
  *  - audio manifest presence and clip-key integrity
  *  - image presence + license allowlist
@@ -39,6 +40,7 @@ import {
   hasBareThirdPersonUva,
   hasChettaSubject,
 } from '../src/lib/content/pragmatics';
+import { geminationFindings } from '../src/lib/content/romanization';
 import type { Item, Lesson, MinimalPair, MinimalPairSegment } from '../src/content/types';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -167,6 +169,9 @@ function checkItem(lesson: Lesson, item: Item): void {
   if (item.script !== undefined) {
     checkScript(where, item.script);
     checkCoronals(where, item);
+    const findings = geminationFindings(item.script, item.manglish);
+    for (const problem of findings.problems) fail(where, problem);
+    for (const note of findings.review) warn(where, note);
   }
 
   for (const tag of item.tags) {
