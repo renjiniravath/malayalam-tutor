@@ -40,7 +40,7 @@ import {
   hasBareThirdPersonUva,
   hasChettaSubject,
 } from '../src/lib/content/pragmatics';
-import { geminationProblems, sentenceSpellingFindings } from '../src/lib/content/romanization';
+import { LOAN_SCRIPTS, geminationProblems, sentenceSpellingFindings } from '../src/lib/content/romanization';
 import type { Item, Lesson, MinimalPair, MinimalPairSegment } from '../src/content/types';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -352,6 +352,9 @@ const SCRIPT_CORONALS = new Map<string, string>([
   ['ഞ', 'nj'], ['ങ', 'ng'],
   ['ള', 'ḷ'], ['ണ', 'ṇ'], ['ന', 'n'], ['ല', 'l'], ['ര', 'r'],
   ['ത', 'th'], ['ദ', 'dh'], ['ട', 't'], ['ഡ', 'd'], ['റ', 'ṟ'],
+  // The aspirated retroflex pair voices like its unaspirated partner: ഠ -> d
+  // colloquially (പഠിച്ചത് is written padichath, native-speaker spelling).
+  ['ഠ', 'd'], ['ഢ', 'dh'],
   ['ൻ', 'n'], ['ൽ', 'l'], ['ൾ', 'ḷ'], ['ൺ', 'ṇ'], ['ർ', 'r'],
 ]);
 
@@ -453,13 +456,13 @@ const CORONAL_ALLOWED: Record<string, string[]> = {
   'ṟ': ['ṟ', 'r', 't'], 'ṟṟ': ['ṟṟ', 'rr', 'tt'],
 };
 
-function checkCoronals(where: string, item: Item): void {
-  const scriptTokens = scriptCoronals(item.script!);
-  const romanTokens = romanCoronals(item.manglish);
+function compareCoronals(where: string, script: string, manglish: string, prefix = ''): void {
+  const scriptTokens = scriptCoronals(script);
+  const romanTokens = romanCoronals(manglish);
   if (scriptTokens.length !== romanTokens.length) {
     fail(
       where,
-      `coronal mismatch: script has ${scriptTokens.join('+') || 'none'} but romanization has ${romanTokens.join('+') || 'none'}`,
+      `${prefix}coronal mismatch: script has ${scriptTokens.join('+') || 'none'} but romanization has ${romanTokens.join('+') || 'none'}`,
     );
     return;
   }
@@ -467,9 +470,38 @@ function checkCoronals(where: string, item: Item): void {
     if (!CORONAL_ALLOWED[token].includes(romanTokens[i])) {
       fail(
         where,
-        `coronal ${i + 1}: script ${token} must be written ${CORONAL_ALLOWED[token].join(' or ')} (§9 rule 2), found '${romanTokens[i]}'`,
+        `${prefix}coronal ${i + 1}: script ${token} must be written ${CORONAL_ALLOWED[token].join(' or ')} (§9 rule 2), found '${romanTokens[i]}'`,
       );
     }
+  });
+}
+
+/**
+ * Word by word, like the gemination pass: an English loan keeps its English
+ * spelling, and its script letters need not match the English ones — the
+ * pinned script in LOAN_SCRIPTS is the authority for those words (സ്കൂളിൽ,
+ * ഫുൾ, ബക്കറ്റ്), and the pinning keeps a corrupted script from riding along.
+ */
+function checkCoronals(where: string, item: Item): void {
+  const scriptWords = item.script!.trim().split(/\s+/);
+  const romanWords = item.manglish.trim().split(/\s+/);
+  if (scriptWords.length !== romanWords.length) {
+    compareCoronals(where, item.script!, item.manglish);
+    return;
+  }
+  scriptWords.forEach((scriptWord, i) => {
+    const word = romanWords[i].replace(/[^a-z]/g, '');
+    const loanScripts = LOAN_SCRIPTS[word];
+    if (loanScripts) {
+      if (!loanScripts.includes(scriptWord)) {
+        fail(
+          where,
+          `English loan '${romanWords[i]}' is written for ${loanScripts.join(' or ')}, found '${scriptWord}' (§9)`,
+        );
+      }
+      return;
+    }
+    compareCoronals(where, scriptWord, romanWords[i], `${word}: `);
   });
 }
 

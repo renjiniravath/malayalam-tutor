@@ -177,7 +177,7 @@ export const l3u1l5: Lesson = {
           { word: 'varunnund', meaning: 'is coming' },
         ],
       },
-      notes: ['The statement verb varunnund, with -um on the person.'],
+      notes: ['The -um rides on the person, not the verb: avanum varunnund.'],
       tags: [],
     },
     {

@@ -46,6 +46,11 @@ describe('gemination cross-check (§9 rule 2)', () => {
     assert.match(problems[0], /ബസ്സിലേക്ക്/);
   });
 
+  it('pins the school, full and bucket loan scripts', () => {
+    assert.deepEqual(geminationProblems('സ്കൂളിൽ', 'schoolil'), []);
+    assert.deepEqual(geminationProblems('ഈ ബക്കറ്റ് ഫുൾ ആയി', 'ee bucket full aayi'), []);
+  });
+
   it('passes the -o and -um particles, plain y like the script', () => {
     assert.deepEqual(geminationProblems('നീയോ', 'neeyo'), []);
     assert.deepEqual(geminationProblems('നീയും', 'neeyum'), []);

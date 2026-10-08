@@ -279,7 +279,7 @@ export const l2u1l1: Lesson = {
           { word: 'varunnund', meaning: 'is coming' },
         ],
       },
-      notes: ['The natural statement form: varunnund, not varuva.'],
+      notes: ['Same meaning as varuva — varuva is the more casual of the two.'],
       tags: [],
     },
   ],

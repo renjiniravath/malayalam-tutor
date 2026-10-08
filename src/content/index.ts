@@ -28,7 +28,12 @@ export const contentRevision: ContentRevision = {
   // spellings changed under the unchanged ids, so nothing is re-keyed.
   // 21: Level 3 lessons 4-6 add the -nte, -um, -aayi and -il ninnu items —
   // 38 new ids, nothing existing moved.
-  revision: 21,
+  // 22: native-speaker rulings — varuva and varunnund are the same (varuva
+  // the casual one); the -aayi model became the just-happened ee bucket full
+  // aayi; -il ninnu displays as the clipped ninn; the bare coming-from
+  // statements gave way to the aarokke question and the cleft pair, and the
+  // new lesson l3u2l1 teaches the ... aanu ...ath question.
+  revision: 22,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -127,6 +132,13 @@ export const contentRevision: ContentRevision = {
     // near/far pair item is gone — nammal itself is taught with the
     // pronouns in L1U3L2 (id 'nammal').
     'nammal-pair',
+    // Native-speaker ruling 2026-10-07: -aayi is for something that just
+    // happened, so avan teacher aayi is out (ee bucket full aayi replaces
+    // it); the bare coming-from statements are replaced by the aarokke
+    // question and the cleft pair taught in l3u2l1.
+    'avan-teacher-aayi',
+    'njan-veettil-ninn-varunnund',
+    'avan-officil-ninn-varunnund',
   ],
 };
 

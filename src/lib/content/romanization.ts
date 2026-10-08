@@ -39,13 +39,21 @@ const CLASS_LETTERS = new Set(['k', 'g', 'j', 'p', 'b', 'm', 'y', 'v', 's']);
  * allowance is token level, in the style of CORONAL_ALLOWED in
  * scripts/content-check.ts: the loan spelling is accepted only beside the
  * script it is written for, so a corrupted script cannot ride along on it.
+ *
+ * One map for both passes — the coronal pass in scripts/content-check.ts
+ * reads it too, because a loan's script letters do not match its English
+ * spelling either (സ്കൂളിൽ has a retroflex ḷ for the English l, ബക്കറ്റ് a
+ * ക്ക for the single ck).
  */
-const LOAN_SCRIPTS: Record<string, string[]> = {
+export const LOAN_SCRIPTS: Record<string, string[]> = {
   okay: ['ഓക്കേ'],
   busil: ['ബസ്സിൽ'],
   busilekk: ['ബസ്സിലേക്ക്'],
   businte: ['ബസ്സിന്റെ'],
   busum: ['ബസ്സും'],
+  bucket: ['ബക്കറ്റ്'],
+  schoolil: ['സ്കൂളിൽ'],
+  full: ['ഫുൾ'],
 };
 
 /** Script geminates of those classes, in order. */
