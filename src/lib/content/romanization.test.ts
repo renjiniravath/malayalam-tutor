@@ -51,6 +51,13 @@ describe('gemination cross-check (§9 rule 2)', () => {
     assert.deepEqual(geminationProblems('ഈ ബക്കറ്റ് ഫുൾ ആയി', 'ee bucket full aayi'), []);
   });
 
+  it('pins the bus loan carrying the fused -a', () => {
+    assert.deepEqual(geminationProblems('ഏത് ബസ്സാ', 'eth busa'), []);
+    const problems = geminationProblems('ഏത് ബസാ', 'eth busa');
+    assert.equal(problems.length, 1);
+    assert.match(problems[0], /ബസ്സാ/);
+  });
+
   it('pins the black and color loan scripts', () => {
     assert.deepEqual(geminationProblems('ബ്ലാക്ക് കളർ', 'black color'), []);
     const problems = geminationProblems('ബ്ലാക് കളർ', 'black color');

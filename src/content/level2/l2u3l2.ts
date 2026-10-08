@@ -2,8 +2,10 @@ import type { Lesson } from '../types';
 
 /**
  * Level 2 Unit 3 Lesson 2 — the question words (PLAN.md §5): entha,
- * etha, engane, enthina, eppozha, evide. With engane und and evide
- * covered, these complete the everyday question set.
+ * etha, engane, enthina, eppozha, evide, plus the model sentence
+ * eth busa. With engane und and evide covered, these complete the
+ * everyday question set. The -a on entha, etha and eppozha is the
+ * fused copula (native-speaker ruling 2026-10-08): a squeezed-in is.
  */
 export const l2u3l2: Lesson = {
   id: 'l2u3l2',
@@ -24,7 +26,10 @@ export const l2u3l2: Lesson = {
         normal: 'l2u3l2_entha_normal',
       },
       acceptedInputs: ['entha'],
-      notes: ['The everyday what.'],
+      notes: [
+        'The everyday what: entha is enth plus a squeezed-in is — what is it?',
+        'Spell the is out as its own word — enth aanu kazhichath, what is it that you ate — and the -a has nothing to do, so it goes.',
+      ],
       tags: [],
     },
     {
@@ -39,7 +44,10 @@ export const l2u3l2: Lesson = {
         normal: 'l2u3l2_etha_normal',
       },
       acceptedInputs: ['etha'],
-      notes: ['Which one.'],
+      notes: [
+        'Which one: etha is eth plus the same squeezed-in is — which one is it?',
+        'Leaning straight on a noun the -a goes: eth schoolil, which school.',
+      ],
       tags: [],
     },
     {
@@ -69,7 +77,7 @@ export const l2u3l2: Lesson = {
         normal: 'l2u3l2_enthina_normal',
       },
       acceptedInputs: ['enthina'],
-      notes: ['Why — entha plus -ina, what-for.'],
+      notes: ['Why — enthin plus the same squeezed-in -a: enthina, what is it for.'],
       tags: [],
     },
     {
@@ -85,7 +93,7 @@ export const l2u3l2: Lesson = {
       },
       acceptedInputs: ['eppozha'],
       notes: [
-        'When — eppozha and eppo are the same word; eppo is the shorter everyday form.',
+        'When — eppozha carries the same squeezed-in -a: when is it? eppo is the bare form, for when the is stands as its own word.',
         'The pattern: e- asks (eppozha, evide, etha), i- points near (ippo, ivide), a- points far (appo, avide).',
       ],
       tags: [],
@@ -151,6 +159,32 @@ export const l2u3l2: Lesson = {
       tags: [],
     },
     {
+      id: 'eth-busa',
+      manglish: 'eth busa',
+      script: 'ഏത് ബസ്സാ',
+      meaning: 'which bus is it?',
+      kind: 'sentence',
+      audio: {
+        slow: 'l2u3l2_eth-busa_slow',
+        medium: 'l2u3l2_eth-busa_medium',
+        normal: 'l2u3l2_eth-busa_normal',
+      },
+      acceptedInputs: ['eth busa', 'bus etha'],
+      sentence: {
+        bank: ['eth', 'busa', 'entha', 'evide'],
+        orders: ['eth busa'],
+        parts: [
+          { word: 'eth', meaning: 'which' },
+          { word: 'busa', meaning: 'bus (bus plus the squeezed-in is)' },
+        ],
+      },
+      notes: [
+        'The -a rides straight on the noun here: busa, bus is it.',
+        'bus etha is fine too, but etha bus is not said — the -a never stands as its own word.',
+      ],
+      tags: [],
+    },
+    {
       id: 'ningal-evide',
       manglish: 'ningaḷ evide',
       script: 'നിങ്ങൾ എവിടെ',
@@ -183,6 +217,7 @@ export const l2u3l2: Lesson = {
     { kind: 'multipleChoice', itemId: 'evide', distractors: ['what', 'which', 'why'] },
     { kind: 'sentenceBuilder', itemId: 'athu-entha', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'athu-etha', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'eth-busa', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ningal-evide', mode: 'bank' },
   ],
   reviewSlots: 0,

@@ -28,7 +28,9 @@ export const l3u2l1: Lesson = {
         normal: 'l3u2l1_eth_normal',
       },
       acceptedInputs: ['eth'],
-      notes: ['eth leans on a noun: eth schoolil, which school. Alone it is etha, which one.'],
+      notes: [
+        'eth leans on a noun: eth schoolil, which school. Alone it is etha — eth plus a squeezed-in is, which one is it?',
+      ],
       tags: [],
     },
     {
@@ -169,7 +171,7 @@ export const l3u2l1: Lesson = {
         ],
       },
       notes: [
-        'enth is the entha you know, standing right before aanu.',
+        'enth is the entha you know with the -a dropped: the is is spelled out here as its own word, so the -a has nothing to do and goes.',
         'Addressed to chechi: the name opens the question.',
       ],
       tags: [],

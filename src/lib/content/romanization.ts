@@ -51,6 +51,7 @@ const LOAN_SCRIPTS: Record<string, string[]> = {
   busilekk: ['ബസ്സിലേക്ക്'],
   businte: ['ബസ്സിന്റെ'],
   busum: ['ബസ്സും'],
+  busa: ['ബസ്സാ'],
   bucket: ['ബക്കറ്റ്'],
   schoolil: ['സ്കൂളിൽ'],
   full: ['ഫുൾ'],

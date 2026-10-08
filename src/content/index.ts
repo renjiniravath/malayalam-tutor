@@ -35,7 +35,10 @@ export const contentRevision: ContentRevision = {
   // new lesson l3u2l1 teaches the ... aanu ...ath question.
   // 23: the pointless avarude veedu avide und retired for the model
   // belonging sentence akhilinte car black color aanu (l3u1l4).
-  revision: 23,
+  // 24: the -a on entha/etha/eppozha taught as the fused copula (notes in
+  // l2u3l2 and l3u2l1, the eppozha same-word note corrected), and the model
+  // sentence eth busa added to l2u3l2.
+  revision: 24,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
