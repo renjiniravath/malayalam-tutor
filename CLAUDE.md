@@ -9,7 +9,7 @@ Full plan: `planning/PLAN.md`. Research: `planning/research-language-learning.md
 ## Content rules (mandatory)
 
 - **Casual register is primary.** Always use daily conversational Manglish: `pokuva` not `pokunnu`, `ippo` not `ippol`, `vaa` not `varoo`. Formal/written forms appear only as a secondary note.
-- **No linguistic jargon in learner copy** — explain in plain English (`veedu + -il` → `veettil`, "the d doubles"); never write `sandhi` (`chandi` means butt). Glosses are natural English ("we're off to work", never "we are going to work"). Coffee is always `kaappi`.
+- **No linguistic jargon in learner copy** — explain in plain English (`veedu + -il` → `veettil`, "the d doubles"). Banned in learner copy: `sandhi` (it sounds like `chandi`, butt), `dative`, `declarative`, `copula`, and grammar vocabulary of that kind — say the thing, not its label (e.g. "the to-me form", "a plain statement"). Glosses are natural English ("we're off to work", never "we are going to work"). Coffee is always `kaappi`.
 - **Romanization** (audio is the source of truth; full spec in PLAN.md §9):
   - Long **a/i/u** are always doubled: `aa`, `ee`, `oo` (`chaaya`, `veedu`, `koodi`) — long i is written `ee` and long u is written `oo`, the way Malayalees type (`nee`, `veedu`, `koodi`), never `ii`/`uu`
   - Long **e/o** are never doubled: `e`, `o` (`pokuva`, `ippo`, `chechi`) — matches how Malayalees type

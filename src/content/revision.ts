@@ -91,8 +91,14 @@
  *       note is corrected to the with-is and bare forms; etha bus gives
  *       way to eth busa (the -a rides on the predicate), retiring the
  *       etha-bus id
+ *  25 — house rule 2026-10-08: no linguistic jargon in learner copy. The
+ *       "dative" notes become the to-me / to-you / to-him form (l2u2l2,
+ *       l3u1l3, l3u1l5) and the "copula" note becomes plain English
+ *       (l2u2l2). "particle", "vocative", "coronals"/"gemination" and the
+ *       "a (the article)" gloss are previously approved copy: flagged for
+ *       a ruling, not rewritten
  */
-export const CONTENT_REVISION = 24
+export const CONTENT_REVISION = 25
 
 /**
  * Item ids retired from content — the record of what was replaced by a

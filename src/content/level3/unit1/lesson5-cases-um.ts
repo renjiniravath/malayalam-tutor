@@ -54,7 +54,7 @@ export const lesson5CasesUm: Lesson = {
       meaning: 'me too (enikk + um)',
       kind: 'word',
       pos: 'pronoun',
-      notes: ['It attaches to the dative as well: enikk (to me) + um = enikkum, to me too.'],
+      notes: ['It attaches to the to-me form as well: enikk (to me) + um = enikkum, to me too.'],
       audio: { slow: 'enikkum.slow', medium: 'enikkum.medium', normal: 'enikkum.normal' },
       tags: ['level:3'],
     },

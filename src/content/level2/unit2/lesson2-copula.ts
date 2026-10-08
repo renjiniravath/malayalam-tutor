@@ -122,7 +122,7 @@ export const lesson2Copula: Lesson = {
       meaning: 'He is a school teacher.',
       kind: 'sentence',
       notes: [
-        'Copula statements about people take the article oru (a): avan oru teacher aanu.',
+        'Saying what someone is takes oru (a): avan oru teacher aanu.',
         'No script here: the English words have no settled Malayalam spelling.',
       ],
       segments: [
@@ -178,7 +178,7 @@ export const lesson2Copula: Lesson = {
       script: 'എനിക്ക് ചായ വേണം',
       meaning: 'I want tea',
       kind: 'sentence',
-      notes: ['The dative: enikk (to me) chaaya venam (tea is wanted).'],
+      notes: ['The to-me form: enikk (to me) chaaya venam (tea is wanted).'],
       segments: [
         { token: 'enikk', gloss: 'to me' },
         { token: 'chaaya', gloss: 'tea' },
