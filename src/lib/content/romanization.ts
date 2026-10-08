@@ -44,6 +44,8 @@ const LOAN_SCRIPTS: Record<string, string[]> = {
   okay: ['ഓക്കേ'],
   busil: ['ബസ്സിൽ'],
   busilekk: ['ബസ്സിലേക്ക്'],
+  businte: ['ബസ്സിന്റെ'],
+  busum: ['ബസ്സും'],
 };
 
 /** Script geminates of those classes, in order. */

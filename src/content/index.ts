@@ -26,7 +26,9 @@ export interface ContentRevision {
 export const contentRevision: ContentRevision = {
   // 20: the -o and -um particles write a plain y (neeyo, neeyum) — display
   // spellings changed under the unchanged ids, so nothing is re-keyed.
-  revision: 20,
+  // 21: Level 3 lessons 4-6 add the -nte, -um, -aayi and -il ninnu items —
+  // 38 new ids, nothing existing moved.
+  revision: 21,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
