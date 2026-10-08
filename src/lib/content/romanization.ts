@@ -41,11 +41,11 @@ const CLASS_LETTERS = new Set(['k', 'g', 'j', 'p', 'b', 'm', 'y', 'v', 's']);
  * script it is written for, so a corrupted script cannot ride along on it.
  *
  * One map for both passes — the coronal pass in scripts/content-check.ts
- * reads it too, because a loan's script letters do not match its English
- * spelling either (സ്കൂളിൽ has a retroflex ḷ for the English l, ബക്കറ്റ് a
- * ക്ക for the single ck).
+ * reads it through loanScriptsFor too, because a loan's script letters do not
+ * match its English spelling either (സ്കൂളിൽ has a retroflex ḷ for the
+ * English l, ബക്കറ്റ് a ക്ക for the single ck).
  */
-export const LOAN_SCRIPTS: Record<string, string[]> = {
+const LOAN_SCRIPTS: Record<string, string[]> = {
   okay: ['ഓക്കേ'],
   busil: ['ബസ്സിൽ'],
   busilekk: ['ബസ്സിലേക്ക്'],
@@ -55,6 +55,16 @@ export const LOAN_SCRIPTS: Record<string, string[]> = {
   schoolil: ['സ്കൂളിൽ'],
   full: ['ഫുൾ'],
 };
+
+/**
+ * The sanctioned script for a romanized English loan, or undefined. Own-key
+ * lookup: a plain object answers for its inherited members too, so a content
+ * word like 'constructor' would otherwise come back as a function instead of
+ * no loan at all.
+ */
+export function loanScriptsFor(word: string): string[] | undefined {
+  return Object.hasOwn(LOAN_SCRIPTS, word) ? LOAN_SCRIPTS[word] : undefined;
+}
 
 /** Script geminates of those classes, in order. */
 function scriptDoubles(script: string): string[] {
@@ -118,7 +128,7 @@ export function geminationProblems(script: string, manglish: string): string[] {
   }
   scriptWords.forEach((scriptWord, i) => {
     const word = romanWords[i].replace(/[^a-z]/g, '');
-    const loanScripts = LOAN_SCRIPTS[word];
+    const loanScripts = loanScriptsFor(word);
     if (loanScripts) {
       if (!loanScripts.includes(scriptWord)) {
         problems.push(

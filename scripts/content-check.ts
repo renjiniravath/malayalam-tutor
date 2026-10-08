@@ -40,7 +40,7 @@ import {
   hasBareThirdPersonUva,
   hasChettaSubject,
 } from '../src/lib/content/pragmatics';
-import { LOAN_SCRIPTS, geminationProblems, sentenceSpellingFindings } from '../src/lib/content/romanization';
+import { geminationProblems, loanScriptsFor, sentenceSpellingFindings } from '../src/lib/content/romanization';
 import type { Item, Lesson, MinimalPair, MinimalPairSegment } from '../src/content/types';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -352,9 +352,6 @@ const SCRIPT_CORONALS = new Map<string, string>([
   ['ഞ', 'nj'], ['ങ', 'ng'],
   ['ള', 'ḷ'], ['ണ', 'ṇ'], ['ന', 'n'], ['ല', 'l'], ['ര', 'r'],
   ['ത', 'th'], ['ദ', 'dh'], ['ട', 't'], ['ഡ', 'd'], ['റ', 'ṟ'],
-  // The aspirated retroflex pair voices like its unaspirated partner: ഠ -> d
-  // colloquially (പഠിച്ചത് is written padichath, native-speaker spelling).
-  ['ഠ', 'd'], ['ഢ', 'dh'],
   ['ൻ', 'n'], ['ൽ', 'l'], ['ൾ', 'ḷ'], ['ൺ', 'ṇ'], ['ർ', 'r'],
 ]);
 
@@ -477,10 +474,23 @@ function compareCoronals(where: string, script: string, manglish: string, prefix
 }
 
 /**
+ * ഠ and ഢ voice colloquially to d and dh, but only in the words actually
+ * written that way. A global ഠ -> d letter substitution would make ഠ
+ * token-identical to ട and ഡ and let a wrong retroflex hide as its aspirate
+ * (വീഠ് for വീട്), so the allowance is word level like the loans: the
+ * romanized word names the script it is written for. പഠിച്ചത് is the shipped
+ * aspirate word, as a word and inside the sentence that carries it.
+ */
+const ASPIRATE_SCRIPTS: Record<string, string[]> = {
+  padichath: ['പഠിച്ചത്'],
+};
+
+/**
  * Word by word, like the gemination pass: an English loan keeps its English
  * spelling, and its script letters need not match the English ones — the
- * pinned script in LOAN_SCRIPTS is the authority for those words (സ്കൂളിൽ,
- * ഫുൾ, ബക്കറ്റ്), and the pinning keeps a corrupted script from riding along.
+ * pinned script for that word (സ്കൂളിൽ, ഫുൾ, ബക്കറ്റ്) is the authority, and
+ * the aspirate words are pinned the same way; the pinning keeps a corrupted
+ * script from riding along.
  */
 function checkCoronals(where: string, item: Item): void {
   const scriptWords = item.script!.trim().split(/\s+/);
@@ -491,7 +501,17 @@ function checkCoronals(where: string, item: Item): void {
   }
   scriptWords.forEach((scriptWord, i) => {
     const word = romanWords[i].replace(/[^a-z]/g, '');
-    const loanScripts = LOAN_SCRIPTS[word];
+    const aspirateScripts = Object.hasOwn(ASPIRATE_SCRIPTS, word) ? ASPIRATE_SCRIPTS[word] : undefined;
+    if (aspirateScripts) {
+      if (!aspirateScripts.includes(scriptWord)) {
+        fail(
+          where,
+          `'${romanWords[i]}' with ഠ/ഢ is written ${aspirateScripts.join(' or ')}, found '${scriptWord}' (§9)`,
+        );
+      }
+      return;
+    }
+    const loanScripts = loanScriptsFor(word);
     if (loanScripts) {
       if (!loanScripts.includes(scriptWord)) {
         fail(
