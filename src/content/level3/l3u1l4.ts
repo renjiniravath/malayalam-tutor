@@ -85,7 +85,7 @@ export const l3u1l4: Lesson = {
         normal: 'l3u1l4_aarude_normal',
       },
       acceptedInputs: ['aarude', 'arude'],
-      notes: ['aaru, who, plus -nte: whose. athu aarude, whose is that?'],
+      notes: ['aaru, who, plus -ude: whose. athu aarude, whose is that?'],
       tags: [],
     },
     {
