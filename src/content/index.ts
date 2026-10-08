@@ -41,7 +41,10 @@ export const contentRevision: ContentRevision = {
   // 25: no linguistic jargon in learner copy — dative, declarative, vocative
   // and the phonetics labels rewritten in plain English (notes, one canDo,
   // one articulation cue); no ids or keys moved.
-  revision: 25,
+  // 26: the last jargon stragglers in learner copy — particle, case suffix and
+  // the calling-word note's "stands as the subject" — rewritten in plain
+  // English (two notes, one canDo); no ids moved.
+  revision: 26,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',

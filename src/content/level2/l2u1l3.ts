@@ -39,7 +39,7 @@ export const l2u1l3: Lesson = {
         normal: 'l2u1l3_neeyyo_normal',
       },
       acceptedInputs: ['neeyo', 'neeyyo', 'niyyo'],
-      notes: ['The -o particle on nee: "you?" For "you too?" the word is neeyum.'],
+      notes: ['The -o on nee: "you?" For "you too?" the word is neeyum.'],
       tags: [],
     },
     {

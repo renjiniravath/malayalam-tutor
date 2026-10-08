@@ -15,7 +15,7 @@ export const level3: Level = {
     'Say who things belong to with -nte and -ude: ente, avante, avaḷude, nammude, akhilinte (names take it too).',
     'Add -um for too and for and: njanum, chaayayum kaappiyum.',
     'Say how things turn out with -aayi (ee bucket full aayi) and where things come from with -il ninn (officil ninn).',
-    'Attach Malayalam case suffixes to English words the way Kerala talks: officil, jolikku, busil, hotelilekk, businte, busil ninn — and the native kada.',
+    'Attach Malayalam endings to English words the way Kerala talks: officil, jolikku, busil, hotelilekk, businte, busil ninn — and the native kada.',
     'Build the everyday frame: person + place + verb.',
     'Ask which, what and where with the ... aanu ...ath question: nee eth schoolil aanu padichath.',
   ],
