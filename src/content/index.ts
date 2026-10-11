@@ -2,8 +2,9 @@ import type { Level } from './types';
 import { level1 } from './level1';
 import { level2 } from './level2';
 import { level3 } from './level3';
+import { level4 } from './level4';
 
-export { level1, level2, level3 };
+export { level1, level2, level3, level4 };
 export { audioManifest } from './audio/manifest';
 export { imageManifest } from './images/manifest';
 export * from './types';
@@ -44,7 +45,10 @@ export const contentRevision: ContentRevision = {
   // 26: the last jargon stragglers in learner copy — particle, case suffix and
   // the calling-word note's "stands as the subject" — rewritten in plain
   // English (two notes, one canDo); no ids moved.
-  revision: 26,
+  // 27: Level 4 (Making Sentences) opens with its first four lessons — the
+  // casual past, the -um future and -aam plans, the person + time + verb
+  // frames, and the day words. 40 new ids; nothing existing moved.
+  revision: 27,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -164,4 +168,4 @@ export function currentItemIds(): string[] {
   );
 }
 
-export const levels: Level[] = [level1, level2, level3];
+export const levels: Level[] = [level1, level2, level3, level4];

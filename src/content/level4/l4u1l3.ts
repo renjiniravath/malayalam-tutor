@@ -1,0 +1,261 @@
+import type { Lesson } from '../types';
+
+/**
+ * Level 4 Unit 1 Lesson 3 — the frames (PLAN.md §5 Level 4): person +
+ * place + verb in the past and the future, built from the Level 3 places
+ * and the past and future chunks of the first two lessons.
+ */
+export const l4u1l3: Lesson = {
+  id: 'l4u1l3',
+  levelId: 'l4',
+  unitId: 'l4u1',
+  title: 'Person, place, verb',
+  comprehensionOnly: false,
+  items: [
+    {
+      id: 'njan-officil-poi',
+      manglish: 'njan officil poi',
+      script: 'ഞാൻ ഓഫീസിൽ പോയി',
+      meaning: 'I went to the office',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u1l3_njan-officil-poi_slow',
+        medium: 'l4u1l3_njan-officil-poi_medium',
+        normal: 'l4u1l3_njan-officil-poi_normal',
+      },
+      sentence: {
+        bank: ['njan', 'officil', 'poi', 'pokum'],
+        orders: ['njan officil poi'],
+        parts: [
+          { word: 'njan', meaning: 'I' },
+          { word: 'officil', meaning: 'to the office' },
+          { word: 'poi', meaning: 'went' },
+        ],
+      },
+      notes: ['The Level 3 frame moved to the past: person + place + poi.'],
+      tags: [],
+    },
+    {
+      id: 'njan-jolikku-pokum',
+      manglish: 'njan jolikku pokum',
+      script: 'ഞാൻ ജോലിക്ക് പോകും',
+      meaning: 'I will go to work',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u1l3_njan-jolikku-pokum_slow',
+        medium: 'l4u1l3_njan-jolikku-pokum_medium',
+        normal: 'l4u1l3_njan-jolikku-pokum_normal',
+      },
+      sentence: {
+        bank: ['njan', 'jolikku', 'pokum', 'poi'],
+        orders: ['njan jolikku pokum'],
+        parts: [
+          { word: 'njan', meaning: 'I' },
+          { word: 'jolikku', meaning: 'to work' },
+          { word: 'pokum', meaning: 'will go' },
+        ],
+      },
+      notes: ['The same frame in the future.'],
+      tags: [],
+    },
+    {
+      id: 'avan-veettil-poi',
+      manglish: 'avan veettil poi',
+      script: 'അവൻ വീട്ടിൽ പോയി',
+      meaning: 'he went home',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u1l3_avan-veettil-poi_slow',
+        medium: 'l4u1l3_avan-veettil-poi_medium',
+        normal: 'l4u1l3_avan-veettil-poi_normal',
+      },
+      sentence: {
+        bank: ['avan', 'veettil', 'poi', 'pokum'],
+        orders: ['avan veettil poi'],
+        parts: [
+          { word: 'avan', meaning: 'he' },
+          { word: 'veettil', meaning: 'home' },
+          { word: 'poi', meaning: 'went' },
+        ],
+      },
+      notes: ['A third person takes the same past chunk.'],
+      tags: [],
+    },
+    {
+      id: 'avan-jolikku-pokum',
+      manglish: 'avan jolikku pokum',
+      script: 'അവൻ ജോലിക്ക് പോകും',
+      meaning: 'he will go to work',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u1l3_avan-jolikku-pokum_slow',
+        medium: 'l4u1l3_avan-jolikku-pokum_medium',
+        normal: 'l4u1l3_avan-jolikku-pokum_normal',
+      },
+      sentence: {
+        bank: ['avan', 'jolikku', 'pokum', 'poi'],
+        orders: ['avan jolikku pokum'],
+        parts: [
+          { word: 'avan', meaning: 'he' },
+          { word: 'jolikku', meaning: 'to work' },
+          { word: 'pokum', meaning: 'will go' },
+        ],
+      },
+      notes: ['One more future frame.'],
+      tags: [],
+    },
+    {
+      id: 'nammal-kadayil-poi',
+      manglish: 'nammaḷ kadayil poi',
+      script: 'നമ്മൾ കടയിൽ പോയി',
+      meaning: 'we went to the shop',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u1l3_nammal-kadayil-poi_slow',
+        medium: 'l4u1l3_nammal-kadayil-poi_medium',
+        normal: 'l4u1l3_nammal-kadayil-poi_normal',
+      },
+      sentence: {
+        bank: ['nammaḷ', 'kadayil', 'poi', 'pokum'],
+        orders: ['nammaḷ kadayil poi'],
+        parts: [
+          { word: 'nammaḷ', meaning: 'we (you and me)' },
+          { word: 'kadayil', meaning: 'to the shop' },
+          { word: 'poi', meaning: 'went' },
+        ],
+      },
+      notes: ['The inclusive we, in the past.'],
+      tags: [],
+    },
+    {
+      id: 'njan-hotelil-kazhichu',
+      manglish: 'njan hotelil kazhichu',
+      script: 'ഞാൻ ഹോട്ടലിൽ കഴിച്ചു',
+      meaning: 'I ate at the hotel',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u1l3_njan-hotelil-kazhichu_slow',
+        medium: 'l4u1l3_njan-hotelil-kazhichu_medium',
+        normal: 'l4u1l3_njan-hotelil-kazhichu_normal',
+      },
+      sentence: {
+        bank: ['njan', 'hotelil', 'kazhichu', 'kudichu'],
+        orders: ['njan hotelil kazhichu'],
+        parts: [
+          { word: 'njan', meaning: 'I' },
+          { word: 'hotelil', meaning: 'at the hotel' },
+          { word: 'kazhichu', meaning: 'ate' },
+        ],
+      },
+      notes: ['In Kerala a hotel means the eatery: hotelil kazhichu, ate at the hotel.'],
+      tags: [],
+    },
+    {
+      id: 'njan-busil-keri',
+      manglish: 'njan busil keri',
+      script: 'ഞാൻ ബസ്സിൽ കേറി',
+      meaning: 'I got on the bus',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u1l3_njan-busil-keri_slow',
+        medium: 'l4u1l3_njan-busil-keri_medium',
+        normal: 'l4u1l3_njan-busil-keri_normal',
+      },
+      sentence: {
+        bank: ['njan', 'busil', 'keri', 'irangi'],
+        orders: ['njan busil keri'],
+        parts: [
+          { word: 'njan', meaning: 'I' },
+          { word: 'busil', meaning: 'on the bus' },
+          { word: 'keri', meaning: 'got on' },
+        ],
+      },
+      notes: ['Keruka is climbing on; keri is got on. The way off is irangi.'],
+      tags: [],
+    },
+    {
+      id: 'avan-athu-cheythu',
+      manglish: 'avan athu cheythu',
+      script: 'അവൻ അത് ചെയ്തു',
+      meaning: 'he did that',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u1l3_avan-athu-cheythu_slow',
+        medium: 'l4u1l3_avan-athu-cheythu_medium',
+        normal: 'l4u1l3_avan-athu-cheythu_normal',
+      },
+      sentence: {
+        bank: ['avan', 'athu', 'cheythu', 'cheyyum'],
+        orders: ['avan athu cheythu'],
+        parts: [
+          { word: 'avan', meaning: 'he' },
+          { word: 'athu', meaning: 'that' },
+          { word: 'cheythu', meaning: 'did' },
+        ],
+      },
+      notes: ['Cheythu, the past of cheyyuva.'],
+      tags: [],
+    },
+    {
+      id: 'njan-athu-paranju',
+      manglish: 'njan athu paranju',
+      script: 'ഞാൻ അത് പറഞ്ഞു',
+      meaning: 'I said that',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u1l3_njan-athu-paranju_slow',
+        medium: 'l4u1l3_njan-athu-paranju_medium',
+        normal: 'l4u1l3_njan-athu-paranju_normal',
+      },
+      sentence: {
+        bank: ['njan', 'athu', 'paranju', 'parayuva'],
+        orders: ['njan athu paranju'],
+        parts: [
+          { word: 'njan', meaning: 'I' },
+          { word: 'athu', meaning: 'that' },
+          { word: 'paranju', meaning: 'said' },
+        ],
+      },
+      notes: ['Paranju, the past of parayuva, with the thing said.'],
+      tags: [],
+    },
+    {
+      id: 'nammal-veettil-pokum',
+      manglish: 'nammaḷ veettil pokum',
+      script: 'നമ്മൾ വീട്ടിൽ പോകും',
+      meaning: 'we will go home',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u1l3_nammal-veettil-pokum_slow',
+        medium: 'l4u1l3_nammal-veettil-pokum_medium',
+        normal: 'l4u1l3_nammal-veettil-pokum_normal',
+      },
+      sentence: {
+        bank: ['nammaḷ', 'veettil', 'pokum', 'poi'],
+        orders: ['nammaḷ veettil pokum'],
+        parts: [
+          { word: 'nammaḷ', meaning: 'we (you and me)' },
+          { word: 'veettil', meaning: 'home' },
+          { word: 'pokum', meaning: 'will go' },
+        ],
+      },
+      notes: ['Nammaḷ veettil pokuva is now; pokum is later.'],
+      tags: [],
+    },
+  ],
+  minimalPairs: [],
+  drills: [
+    { kind: 'sentenceBuilder', itemId: 'njan-officil-poi', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'njan-jolikku-pokum', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'avan-veettil-poi', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'avan-jolikku-pokum', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'nammal-kadayil-poi', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'njan-hotelil-kazhichu', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'njan-busil-keri', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'avan-athu-cheythu', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'njan-athu-paranju', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'nammal-veettil-pokum', mode: 'bank' },
+  ],
+  reviewSlots: 0,
+  spriteId: 'l4u1l3',
+};
