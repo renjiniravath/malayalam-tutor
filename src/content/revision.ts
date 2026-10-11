@@ -106,8 +106,14 @@
  *       "a (one)"; "case suffix" becomes "an -il word"; "e- is the
  *       question marker" becomes "e- asks the question". "present tense"
  *       stays — ordinary school English
+ *  27 — Level 4 (Making Sentences) opens with four lessons: the everyday
+ *       past (poyi, vannu, kandu ... as whole chunks), the future and the
+ *       "let's" form (pokum, varum, pokaam ... with the comes-as-a-rule
+ *       sense of -um), the who-when-what frame (with English filling an
+ *       untaught slot, as in Level 2), and the time words inn / naaḷe /
+ *       innale; the level ships four units, one lesson each
  */
-export const CONTENT_REVISION = 26
+export const CONTENT_REVISION = 27
 
 /**
  * Item ids retired from content — the record of what was replaced by a

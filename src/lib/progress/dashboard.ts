@@ -17,6 +17,7 @@ export const CAN_DO_UNITS: Record<string, string[][]> = {
   level1: [['unit1'], ['unit2'], ['unit2', 'unit3', 'unit4', 'unit5'], ['unit2']],
   level2: [['unit1'], ['unit2'], ['unit3'], ['unit4'], ['unit5'], ['unit7']],
   level3: [[], [], [], [], ['unit4', 'unit5', 'unit6'], ['unit2']],
+  level4: [['unit1'], ['unit2'], ['unit3'], ['unit4']],
 }
 
 export interface CanDoRow {

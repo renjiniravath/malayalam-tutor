@@ -326,6 +326,42 @@
         "chechi-raavile-enth-aanu-kazhichath.slow", "chechi-raavile-enth-aanu-kazhichath.medium", "chechi-raavile-enth-aanu-kazhichath.normal",
         "ee-tv-evide-ninn-aanu-medichath.slow", "ee-tv-evide-ninn-aanu-medichath.medium", "ee-tv-evide-ninn-aanu-medichath.normal"
       ]
+    },
+    "l4u1l1": {
+      "sprite": "audio/l4u1l1.mp3",
+      "clips": [
+        "poyi.slow", "poyi.medium", "poyi.normal", "vannu.slow", "vannu.medium", "vannu.normal", "kandu.slow", "kandu.medium", "kandu.normal",
+        "kazhichu.slow", "kazhichu.medium", "kazhichu.normal", "kudichu.slow", "kudichu.medium", "kudichu.normal", "nokki.slow", "nokki.medium", "nokki.normal",
+        "paranju.slow", "paranju.medium", "paranju.normal", "cheythu.slow", "cheythu.medium", "cheythu.normal", "njan-veettil-poyi.slow", "njan-veettil-poyi.medium", "njan-veettil-poyi.normal",
+        "avan-ippo-vannu.slow", "avan-ippo-vannu.medium", "avan-ippo-vannu.normal"
+      ]
+    },
+    "l4u2l1": {
+      "sprite": "audio/l4u2l1.mp3",
+      "clips": [
+        "pokum.slow", "pokum.medium", "pokum.normal", "varum.slow", "varum.medium", "varum.normal", "kazhikkum.slow", "kazhikkum.medium", "kazhikkum.normal",
+        "pokaam.slow", "pokaam.medium", "pokaam.normal", "kazhikkaam.slow", "kazhikkaam.medium", "kazhikkaam.normal", "cheyyaam.slow", "cheyyaam.medium", "cheyyaam.normal",
+        "njan-veettil-pokum.slow", "njan-veettil-pokum.medium", "njan-veettil-pokum.normal", "avan-varum.slow", "avan-varum.medium", "avan-varum.normal", "nammal-veettil-pokaam.slow", "nammal-veettil-pokaam.medium", "nammal-veettil-pokaam.normal",
+        "avan-every-day-veettil-varum.slow", "avan-every-day-veettil-varum.medium", "avan-every-day-veettil-varum.normal", "njan-cheyyaam.slow", "njan-cheyyaam.medium", "njan-cheyyaam.normal"
+      ]
+    },
+    "l4u3l1": {
+      "sprite": "audio/l4u3l1.mp3",
+      "clips": [
+        "njan-ippo-kazhichu.slow", "njan-ippo-kazhichu.medium", "njan-ippo-kazhichu.normal", "avan-ippo-poyi.slow", "avan-ippo-poyi.medium", "avan-ippo-poyi.normal", "njan-appo-paranju.slow", "njan-appo-paranju.medium", "njan-appo-paranju.normal",
+        "avan-chaaya-kudichu.slow", "avan-chaaya-kudichu.medium", "avan-chaaya-kudichu.normal", "njan-yesterday-veettil-poyi.slow", "njan-yesterday-veettil-poyi.medium", "njan-yesterday-veettil-poyi.normal", "avan-tomorrow-varum.slow", "avan-tomorrow-varum.medium", "avan-tomorrow-varum.normal",
+        "nammal-appo-pokaam.slow", "nammal-appo-pokaam.medium", "nammal-appo-pokaam.normal", "njan-ath-cheythu.slow", "njan-ath-cheythu.medium", "njan-ath-cheythu.normal", "avan-veettil-poyi.slow", "avan-veettil-poyi.medium", "avan-veettil-poyi.normal",
+        "avan-veettil-pokum.slow", "avan-veettil-pokum.medium", "avan-veettil-pokum.normal"
+      ]
+    },
+    "l4u4l1": {
+      "sprite": "audio/l4u4l1.mp3",
+      "clips": [
+        "inn.slow", "inn.medium", "inn.normal", "naale.slow", "naale.medium", "naale.normal", "innale.slow", "innale.medium", "innale.normal",
+        "njan-innale-veettil-poyi.slow", "njan-innale-veettil-poyi.medium", "njan-innale-veettil-poyi.normal", "avan-innale-vannu.slow", "avan-innale-vannu.medium", "avan-innale-vannu.normal", "njan-naale-veettil-pokum.slow", "njan-naale-veettil-pokum.medium", "njan-naale-veettil-pokum.normal",
+        "avan-naale-varum.slow", "avan-naale-varum.medium", "avan-naale-varum.normal", "nammal-inn-veettil-pokaam.slow", "nammal-inn-veettil-pokaam.medium", "nammal-inn-veettil-pokaam.normal", "njan-innale-chaaya-kudichu.slow", "njan-innale-chaaya-kudichu.medium", "njan-innale-chaaya-kudichu.normal",
+        "avan-inn-varum.slow", "avan-inn-varum.medium", "avan-inn-varum.normal"
+      ]
     }
   }
 }
