@@ -22,6 +22,7 @@ import { MinimalPairDrill } from "./MinimalPairDrill";
 import { MultipleChoiceDrill } from "./MultipleChoiceDrill";
 import { PreferencesSheet } from "./PreferencesSheet";
 import { RevealCard } from "./RevealCard";
+import { RolePlayDrill } from "./RolePlayDrill";
 import { SentenceBuilderDrill } from "./SentenceBuilderDrill";
 import { TypingDrill } from "./TypingDrill";
 
@@ -247,6 +248,16 @@ export function LessonPlayer({ lesson }: LessonPlayerProps) {
             {step && step.kind === "sentenceBuilder" && (
               <SentenceBuilderDrill
                 item={itemsById.get(step.drill.itemId)!}
+                spriteId={lesson.spriteId}
+                mode={step.drill.mode}
+                revealImmediately={prefs.revealImmediately}
+                onComplete={(correct) => advance(correct)}
+              />
+            )}
+            {step && step.kind === "rolePlay" && (
+              <RolePlayDrill
+                item={itemsById.get(step.drill.itemId)!}
+                prompt={itemsById.get(step.drill.promptItemId)!}
                 spriteId={lesson.spriteId}
                 mode={step.drill.mode}
                 revealImmediately={prefs.revealImmediately}

@@ -92,7 +92,22 @@ export interface MinimalPair {
 export type DrillSpec =
   | { kind: 'multipleChoice'; itemId: string; distractors: string[] }
   | { kind: 'minimalPair'; pairId: string }
-  | { kind: 'sentenceBuilder'; itemId: string; mode: 'bank' | 'typing' };
+  | { kind: 'sentenceBuilder'; itemId: string; mode: 'bank' | 'typing' }
+  | {
+      /**
+       * Dialogue role-play (PLAN.md §5 Level 5): the other speaker's line
+       * is the cue, the learner produces their own line, then the model
+       * line plays back for comparison. Both items are turns of the same
+       * scene and live in the same lesson.
+       */
+      kind: 'rolePlay';
+      /** The learner's line — an item in this lesson */
+      itemId: string;
+      /** The other speaker's line, played as the cue — an item in this lesson */
+      promptItemId: string;
+      /** bank: assemble the line from its word bank; typing: write it free-form */
+      mode: 'bank' | 'typing';
+    };
 
 export interface Lesson {
   /** e.g. 'l1u1l1' */

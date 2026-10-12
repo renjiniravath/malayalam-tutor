@@ -603,6 +603,7 @@ function checkPair(lesson: Lesson, pair: MinimalPair): void {
 
 function checkDrills(lesson: Lesson): void {
   const meanings = lesson.items.map((i) => i.meaning);
+  const rolePlayTargets = new Set<string>();
   for (const drill of lesson.drills) {
     if (drill.kind === 'multipleChoice') {
       const target = lesson.items.find((i) => i.id === drill.itemId);
@@ -632,6 +633,35 @@ function checkDrills(lesson: Lesson): void {
         fail(lesson.id, `drill references missing item '${drill.itemId}'`);
       } else if (target.kind !== 'sentence' || !target.sentence) {
         fail(lesson.id, `sentenceBuilder drill '${drill.itemId}' needs a sentence item with a sentence spec`);
+      }
+    } else if (drill.kind === 'rolePlay') {
+      const target = lesson.items.find((i) => i.id === drill.itemId);
+      const prompt = lesson.items.find((i) => i.id === drill.promptItemId);
+      if (!target) {
+        fail(lesson.id, `rolePlay drill references missing item '${drill.itemId}'`);
+        continue;
+      }
+      if (!prompt) {
+        fail(lesson.id, `rolePlay drill references missing cue item '${drill.promptItemId}'`);
+      } else if (drill.promptItemId === drill.itemId) {
+        fail(lesson.id, `rolePlay drill '${drill.itemId}' uses the same item as its cue — the cue is the other speaker's line`);
+      }
+      if (target.kind !== 'sentence' || !target.sentence) {
+        fail(lesson.id, `rolePlay drill '${drill.itemId}' needs a sentence item with a sentence spec`);
+      }
+      if (rolePlayTargets.has(drill.itemId)) {
+        fail(lesson.id, `item '${drill.itemId}' has more than one rolePlay drill — only one is played`);
+      }
+      rolePlayTargets.add(drill.itemId);
+      // A scene plays in the order it is authored: the cue is the line
+      // before the answer, so its item must come first in the lesson.
+      const cueIndex = lesson.items.findIndex((i) => i.id === drill.promptItemId);
+      const lineIndex = lesson.items.findIndex((i) => i.id === drill.itemId);
+      if (cueIndex > lineIndex) {
+        fail(
+          lesson.id,
+          `rolePlay drill '${drill.itemId}': the cue '${drill.promptItemId}' comes after the line it cues — the scene must introduce the cue first`,
+        );
       }
     }
   }
