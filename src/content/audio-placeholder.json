@@ -385,7 +385,7 @@
         "enikk-ippo-venda.slow", "enikk-ippo-venda.medium", "enikk-ippo-venda.normal", "enikk-samayam-illa.slow", "enikk-samayam-illa.medium",
         "enikk-samayam-illa.normal", "veettil-chaaya-illa.slow", "veettil-chaaya-illa.medium", "veettil-chaaya-illa.normal", "ithu-ente-bag-alla.slow",
         "ithu-ente-bag-alla.medium", "ithu-ente-bag-alla.normal", "athu-ente-laptop-alla.slow", "athu-ente-laptop-alla.medium", "athu-ente-laptop-alla.normal",
-        "avan-ente-chettan-alla.slow", "avan-ente-chettan-alla.medium", "avan-ente-chettan-alla.normal", "vannilla.slow", "vannilla.medium",
+        "ithu-ente-phone-alla.slow", "ithu-ente-phone-alla.medium", "ithu-ente-phone-alla.normal", "vannilla.slow", "vannilla.medium",
         "vannilla.normal", "kandilla.slow", "kandilla.medium", "kandilla.normal", "etthiyilla.slow", "etthiyilla.medium", "etthiyilla.normal",
         "avan-innale-officil-vannilla.slow", "avan-innale-officil-vannilla.medium", "avan-innale-officil-vannilla.normal"
 
@@ -398,8 +398,8 @@
         "ithu-ethra-aanu.slow", "ithu-ethra-aanu.medium", "ithu-ethra-aanu.normal", "athu-aara.slow", "athu-aara.medium", "athu-aara.normal",
         "ithu-entha.slow", "ithu-entha.medium", "ithu-entha.normal", "avan-eppo-varum.slow", "avan-eppo-varum.medium", "avan-eppo-varum.normal",
         "nee-evide-aanu-pokunnath.slow", "nee-evide-aanu-pokunnath.medium", "nee-evide-aanu-pokunnath.normal", "avan-evide-aanu-pokunnath.slow",
-        "avan-evide-aanu-pokunnath.medium", "avan-evide-aanu-pokunnath.normal", "ithu-engane-cheyyuva.slow", "ithu-engane-cheyyuva.medium",
-        "ithu-engane-cheyyuva.normal"
+        "avan-evide-aanu-pokunnath.medium", "avan-evide-aanu-pokunnath.normal", "ithu-engane-aanu-cheyyunnath.slow", "ithu-engane-aanu-cheyyunnath.medium",
+        "ithu-engane-aanu-cheyyunnath.normal"
 
       ]
     },

@@ -158,8 +158,16 @@
  *       takes the ending (ithinu ethra aanu — display-only, id unchanged);
  *       past negation is the -illa family (vannilla, kandilla, etthiyilla,
  *       and avan innale officil vannilla) taught in the saying-no lesson
+ *  35 — native-speaker corrections 2026-10-12, the last of the round:
+ *       avan ente chettan alla is struck — a listener hears someone
+ *       disowning his brother, so it fails the probable-sentence test —
+ *       and gives way to ithu ente phone alla, the sibling of the bag and
+ *       laptop sentences. The how question takes the same aanu ... unnath
+ *       shape as evide, so ithu engane cheyyuva becomes ithu engane aanu
+ *       cheyyunnath, with the clipped ith accepted per the display/input
+ *       split. Both replaced ids retired
  */
-export const CONTENT_REVISION = 34
+export const CONTENT_REVISION = 35
 
 /**
  * Item ids retired from content — the record of what was replaced by a
@@ -201,4 +209,7 @@ export const REMOVED_ITEM_IDS: readonly string[] = [
   'ithu-chaaya-alla', // -> ithu ente bag alla
   'ithu-ente-veedu-alla', // -> athu ente laptop alla
   'kada-evide-aanu', // -> ninte veedu evide aanu
+  // l4u5l1, l4u6l1 — the same round's corrections (2026-10-12):
+  'avan-ente-chettan-alla', // -> ithu ente phone alla
+  'ithu-engane-cheyyuva', // -> ithu engane aanu cheyyunnath
 ]

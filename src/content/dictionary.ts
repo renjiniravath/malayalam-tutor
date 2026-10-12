@@ -331,7 +331,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'veettil chaaya illa', script: 'വീട്ടിൽ ചായ ഇല്ല', meaning: "there's no tea at home." },
   { manglish: 'ithu ente bag alla', meaning: 'this is not my bag.' },
   { manglish: 'athu ente laptop alla', meaning: 'that is not my laptop.' },
-  { manglish: 'avan ente chettan alla', script: 'അവൻ എന്റെ ചേട്ടൻ അല്ല', meaning: 'he is not my elder brother.' },
+  { manglish: 'ithu ente phone alla', meaning: 'this is not my phone.' },
   { manglish: 'vannilla', script: 'വന്നില്ല', meaning: "didn't come" },
   { manglish: 'kandilla', script: 'കണ്ടില്ല', meaning: "didn't see" },
   { manglish: 'etthiyilla', script: 'എത്തിയില്ല', meaning: "didn't arrive" },
@@ -347,7 +347,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'avan eppo varum', script: 'അവൻ എപ്പോ വരും', meaning: 'When will he come?' },
   { manglish: 'nee evide aanu pokunnath', script: 'നീ എവിടെ ആണ് പോകുന്നത്', meaning: 'Where are you going?' },
   { manglish: 'avan evide aanu pokunnath', script: 'അവൻ എവിടെ ആണ് പോകുന്നത്', meaning: 'Where is he going?' },
-  { manglish: 'ithu engane cheyyuva', script: 'ഇത് എങ്ങനെ ചെയ്യുവാ', meaning: 'How do you do this?' },
+  { manglish: 'ithu engane aanu cheyyunnath', script: 'ഇത് എങ്ങനെ ആണ് ചെയ്യുന്നത്', meaning: 'How do you do this?' },
 
   // Level 4 Unit 7 — assembling I (statements)
   { manglish: 'njan innale kadayil poyi', script: 'ഞാൻ ഇന്നലെ കടയിൽ പോയി', meaning: 'I went to the shop yesterday.' },
