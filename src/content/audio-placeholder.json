@@ -425,7 +425,10 @@
         "avan-eppo-aanu-varunnath.normal", "njan-evide-aanu-irangunnath.slow", "njan-evide-aanu-irangunnath.medium", "njan-evide-aanu-irangunnath.normal",
         "ee-bus-engott-aanu-pokunnath.slow", "ee-bus-engott-aanu-pokunnath.medium", "ee-bus-engott-aanu-pokunnath.normal", "avan-aara.slow", "avan-aara.medium",
         "avan-aara.normal", "athu-entha.slow", "athu-entha.medium", "athu-entha.normal", "ninte-veedu-evide-aanu.slow", "ninte-veedu-evide-aanu.medium",
-        "ninte-veedu-evide-aanu.normal"
+        "ninte-veedu-evide-aanu.normal",
+        "nee-evide-ninn-aanu-lunch-kazhikkunnath.slow", "nee-evide-ninn-aanu-lunch-kazhikkunnath.medium",
+        "nee-evide-ninn-aanu-lunch-kazhikkunnath.normal", "nee-eth-game-aanu-kalikkunnath.slow", "nee-eth-game-aanu-kalikkunnath.medium",
+        "nee-eth-game-aanu-kalikkunnath.normal"
 
       ]
     }

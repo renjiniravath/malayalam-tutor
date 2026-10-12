@@ -173,8 +173,16 @@
  *       ee bus engotta is not it). Replaced id retired. The ruling also
  *       settles the earlier flag: past negation displays etthiyilla per
  *       §9's tth = ത്ത, with ethiyilla accepted as the typing variant
+ *  37 — two more cleft questions from the native speaker join l4u8l1:
+ *       nee evide ninn aanu lunch kazhikkunnath (the from-here question,
+ *       built on the Level 3 nee evide ninn aanu varunnath) and nee eth
+ *       game aanu kalikkunnath (eth, the which already taught by eth busa).
+ *       Both part English, both with the no-script note; ni accepted as
+ *       typed input for nee, per the standing alternate spelling.
+ *       kalikkunnath (playing) is glossed only — proposed as a word item
+ *       for the native speaker's ruling rather than added silently
  */
-export const CONTENT_REVISION = 36
+export const CONTENT_REVISION = 37
 
 /**
  * Item ids retired from content — the record of what was replaced by a
