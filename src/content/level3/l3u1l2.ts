@@ -91,6 +91,7 @@ export const l3u1l2: Lesson = {
         medium: 'l3u1l2_njan-jolikku-pokuva_medium',
         normal: 'l3u1l2_njan-jolikku-pokuva_normal',
       },
+      acceptedInputs: ['njan jolikku pokuva', 'njan jolikk pokuva'],
       sentence: {
         bank: ['njan', 'jolikku', 'pokuva', 'joli'],
         orders: ['njan jolikku pokuva'],
@@ -100,7 +101,10 @@ export const l3u1l2: Lesson = {
           { word: 'pokuva', meaning: 'going' },
         ],
       },
-      notes: ['The everyday goodbye in the morning: njan jolikku pokuva.'],
+      notes: [
+        'The everyday goodbye in the morning: njan jolikku pokuva.',
+        'Fast speech clips it to jolikk, and typing that is accepted; the display keeps the full -kku.',
+      ],
       tags: [],
     },
     {
@@ -201,6 +205,7 @@ export const l3u1l2: Lesson = {
         medium: 'l3u1l2_nammal-jolikku-pokuva_medium',
         normal: 'l3u1l2_nammal-jolikku-pokuva_normal',
       },
+      acceptedInputs: ['nammal jolikku pokuva', 'nammal jolikk pokuva'],
       sentence: {
         bank: ['nammaḷ', 'jolikku', 'pokuva', 'joli'],
         orders: ['nammaḷ jolikku pokuva'],
@@ -210,7 +215,10 @@ export const l3u1l2: Lesson = {
           { word: 'pokuva', meaning: 'going' },
         ],
       },
-      notes: ['The inclusive we — you and me, heading to work.'],
+      notes: [
+        'The inclusive we — you and me, heading to work.',
+        'Fast speech clips it to jolikk, and typing that is accepted; the display keeps the full -kku.',
+      ],
       tags: [],
     },
   ],

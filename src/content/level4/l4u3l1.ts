@@ -48,6 +48,7 @@ export const l4u3l1: Lesson = {
         medium: 'l4u3l1_njan-jolikku-pokum_medium',
         normal: 'l4u3l1_njan-jolikku-pokum_normal',
       },
+      acceptedInputs: ['njan jolikku pokum', 'njan jolikk pokum'],
       sentence: {
         bank: ['njan', 'jolikku', 'pokum', 'poyi'],
         orders: ['njan jolikku pokum'],
@@ -57,7 +58,10 @@ export const l4u3l1: Lesson = {
           { word: 'pokum', meaning: 'will go' },
         ],
       },
-      notes: ['The same frame in the future.'],
+      notes: [
+        'The same frame in the future.',
+        'Fast speech clips it to jolikk, and typing that is accepted; the display keeps the full -kku.',
+      ],
       tags: [],
     },
     {
@@ -94,6 +98,7 @@ export const l4u3l1: Lesson = {
         medium: 'l4u3l1_avan-jolikku-pokum_medium',
         normal: 'l4u3l1_avan-jolikku-pokum_normal',
       },
+      acceptedInputs: ['avan naale jolikku pokum', 'avan naale jolikk pokum'],
       sentence: {
         bank: ['avan', 'naaḷe', 'jolikku', 'pokum', 'poyi'],
         orders: ['avan naaḷe jolikku pokum'],
@@ -104,7 +109,10 @@ export const l4u3l1: Lesson = {
           { word: 'pokum', meaning: 'will go' },
         ],
       },
-      notes: ['A future sentence needs its time: naaḷe, tomorrow, says when.'],
+      notes: [
+        'A future sentence needs its time: naaḷe, tomorrow, says when.',
+        'Fast speech clips it to jolikk, and typing that is accepted; the display keeps the full -kku.',
+      ],
       tags: [],
     },
     {

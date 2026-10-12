@@ -62,7 +62,12 @@ export const contentRevision: ContentRevision = {
   // — the movie sentence (id nammal-innu-kadayil-pokaam) displays cinemakku
   // and now accepts the fast-speech cinemakk as an explicit input, the same
   // split the jolikku item already carries; no ids or keys moved.
-  revision: 30,
+  // 31: the same split reaches the four jolikku sentences (ids
+  // njan-jolikku-pokuva, nammal-jolikku-pokuva, njan-jolikku-pokum and
+  // avan-jolikku-pokum) — each accepts the clipped jolikk explicitly
+  // instead of resting on the one-typo rule, with the fast-speech note;
+  // no ids or keys moved.
+  revision: 31,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
