@@ -100,7 +100,10 @@ export const lesson1Greetings: Lesson = {
       meaning: "let's see",
       kind: 'expression',
       acceptedInputs: ['nokkam', 'nokam'],
-      notes: ['Said when you are not sure yet. The everyday present form is nokkuva.'],
+      notes: [
+        'Said when you are not sure yet. The everyday present form is nokkuva.',
+        'The -aam ending also commits: asked will you look?, nokkaam answers, I will.',
+      ],
       audio: { slow: 'nokkam.slow', medium: 'nokkam.medium', normal: 'nokkam.normal' },
       tags: ['level:1'],
     },

@@ -111,6 +111,15 @@ Units:
 - Question words: `evide`, `eppo`, `enthaa`, `ethra`, `engane`, `aaru`
 - Sentence-builder exercises (word bank → assemble; type free-form answers)
 
+Rulings from the first Level 4 sign-off round (native-speaker, 2026-10-11):
+
+- **Spellings**: `poyi` is the display (`poi` accepted); the `-aam` ending is doubled — `nokkaam`, `pokaam` (`nokkam`/`pokam` accepted inputs); "today" is `innu` (`inn` is a real English word, accept it but don't display it)
+- **`-aam` has two jobs**: `pokaam`/`kudikkaam` propose ("let's"), and `cheyyaam`/`nokkaam` also answer a question as a committed yes ("will you do this?" — "cheyyaam, I will")
+- **"Let's" takes the dative**: `nammalkku veettil pokaam` — never `nammaḷ veettil pokaam` (the nominative can't carry the suggestion)
+- **A past or future sentence carries a clear time or destination** when the listener would otherwise wonder: `njan naale raavile veettil pokum` (not a bare `njan veettil pokum`), `avan friday raatri varum`, `avan naale veettil pokum`, `njan innale veettil ethi` ("I reached home yesterday" — `ethi` says where the speaker is now, unlike `poyi`)
+- **Sentences must carry information** — "njan innale chaaya kudichu" ("I drank tea yesterday") was struck as pointless; "he comes home every day" was replaced with `avan ella weekendsum veettil pokum`-style (say something worth knowing)
+- Frames landed as `njan innale oru cinemakk poyi` (I went to a movie yesterday), `njan lunch kazhichu` (I ate lunch), `njan innale oru cinema kandu`, `enna nammalkku pokaam` (then let's go), `nammalkku innu oru cinemakk pokaam`
+
 ### Level 5 — Real Conversations (Pre-advanced, still romanized) · ~100 phrases/dialogues, 8 lessons
 **Can do:** follow and take part in short natural conversations in the target register.
 

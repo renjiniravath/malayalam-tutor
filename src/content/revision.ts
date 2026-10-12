@@ -112,8 +112,14 @@
  *       sense of -um), the who-when-what frame (with English filling an
  *       untaught slot, as in Level 2), and the time words inn / naaḷe /
  *       innale; the level ships four units, one lesson each
+ *  28 — native-speaker rulings 2026-10-11 on Level 4: today is innu (inn
+ *       accepted, never displayed); the -aam ending has two jobs (pokaam
+ *       proposes, cheyyaam and nokkaam also answer as a committed yes);
+ *       a suggestion takes the to-us form (nammaḷkku veettil pokaam); a
+ *       past or future sentence carries its time or destination, and the
+ *       replaced sentences are new items (retired ids in REMOVED_ITEM_IDS)
  */
-export const CONTENT_REVISION = 27
+export const CONTENT_REVISION = 28
 
 /**
  * Item ids retired from content — the record of what was replaced by a
@@ -135,4 +141,19 @@ export const REMOVED_ITEM_IDS: readonly string[] = [
   // l3u2l2 — the native speaker ruled eth busa ("which bus is it?") the
   // better form, with the -a riding on the predicate:
   'etha-bus', // -> eth busa
+  // l4u1l1-l4u4l1 — the Level 4 sign-off round (2026-10-11) replaced these
+  // with the native speaker's own sentences: each past or future sentence
+  // carries its time or destination, and a suggestion takes the to-us form.
+  'njan-veettil-poyi', // -> njan innale oru cinemakk poyi
+  'avan-ippo-vannu', // -> njan lunch kazhichu
+  'njan-veettil-pokum', // -> njan naaḷe raavile veettil pokum
+  'avan-varum', // -> avan friday raathri varum
+  'nammal-veettil-pokaam', // -> nammaḷkku veettil pokaam
+  'avan-every-day-veettil-varum', // -> avan ella weekendsum veettil varum
+  'njan-yesterday-veettil-poyi', // -> njan yesterday avane kandu
+  'nammal-appo-pokaam', // -> enna nammaḷkku pokaam
+  'avan-veettil-pokum', // -> avan naaḷe veettil pokum
+  'njan-innale-veettil-poyi', // -> njan innale veettil etthi
+  'nammal-inn-veettil-pokaam', // -> nammaḷkku innu oru cinemakk pokaam
+  'njan-innale-chaaya-kudichu', // -> njan innale oru cinema kandu
 ]
