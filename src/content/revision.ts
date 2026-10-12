@@ -166,8 +166,15 @@
  *       shape as evide, so ithu engane cheyyuva becomes ithu engane aanu
  *       cheyyunnath, with the clipped ith accepted per the display/input
  *       split. Both replaced ids retired
+ *  36 — native-speaker correction 2026-10-12: the bus question asks the
+ *       direction, not the place, so it becomes ee bus engott aanu
+ *       pokunnath — engott where evide asks the place, in the same
+ *       aanu ... unnath shape as the other long questions (the fused
+ *       ee bus engotta is not it). Replaced id retired. The ruling also
+ *       settles the earlier flag: past negation displays etthiyilla per
+ *       §9's tth = ത്ത, with ethiyilla accepted as the typing variant
  */
-export const CONTENT_REVISION = 35
+export const CONTENT_REVISION = 36
 
 /**
  * Item ids retired from content — the record of what was replaced by a
@@ -212,4 +219,5 @@ export const REMOVED_ITEM_IDS: readonly string[] = [
   // l4u5l1, l4u6l1 — the same round's corrections (2026-10-12):
   'avan-ente-chettan-alla', // -> ithu ente phone alla
   'ithu-engane-cheyyuva', // -> ithu engane aanu cheyyunnath
+  'ee-bus-evide-aanu-pokunnath', // -> ee bus engott aanu pokunnath
 ]

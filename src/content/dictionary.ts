@@ -365,7 +365,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'nee enth aanu cheyyunnath', script: 'നീ എന്ത് ആണ് ചെയ്യുന്നത്', meaning: 'What are you doing?' },
   { manglish: 'avan eppo aanu varunnath', script: 'അവൻ എപ്പോ ആണ് വരുന്നത്', meaning: 'When is he coming?' },
   { manglish: 'njan evide aanu irangunnath', script: 'ഞാൻ എവിടെ ആണ് ഇറങ്ങുന്നത്', meaning: 'Where do I get off?' },
-  { manglish: 'ee bus evide aanu pokunnath', meaning: 'Where does this bus go?' },
+  { manglish: 'ee bus engott aanu pokunnath', meaning: 'Where does this bus go?' },
   { manglish: 'avan aara', script: 'അവൻ ആരാ', meaning: 'Who is he?' },
   { manglish: 'athu entha', script: 'അത് എന്താ', meaning: 'What is that?' },
   { manglish: 'ninte veedu evide aanu', script: 'നിന്റെ വീട് എവിടെ ആണ്', meaning: 'Where is your house?' },
