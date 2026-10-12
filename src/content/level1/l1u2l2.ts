@@ -28,7 +28,7 @@ export const l1u2l2: Lesson = {
     },
     {
       id: 'nokkam',
-      manglish: 'nokkam',
+      manglish: 'nokkaam',
       script: 'നോക്കാം',
       meaning: "we'll see",
       kind: 'expression',
@@ -38,11 +38,15 @@ export const l1u2l2: Lesson = {
         normal: 'l1u2l2_nokkam_normal',
         focus: ['l1u2l2_nokkam_focus'],
       },
-      acceptedInputs: ['nokkam'],
+      acceptedInputs: ['nokkaam', 'nokkam', 'nokam'],
       articulation: {
         cue: 'Hold the doubled kk for a full beat.',
       },
-      notes: ["The classic non-committal answer — let's see.", 'From nokkuka, to look. Hold the doubled kk.'],
+      notes: [
+        "The classic answer to a plan: let's see.",
+        'From nokkuka, to look. Hold the doubled kk, and the doubled aa: nokkaam.',
+        'The same -aam answers a question as a firm yes: will you do it? — nokkaam, I will, I will see to it.',
+      ],
       tags: ['sound:geminate'],
     },
     {

@@ -3,7 +3,7 @@ import type { Lesson } from '../types';
 /**
  * Level 4 Unit 1 Lesson 1 — the casual past (PLAN.md §5 Level 4).
  * The past of verbs the learner already has as present chunks, taught as
- * whole usable chunks the way Level 1 taught the present: pokuva -> poi,
+ * whole usable chunks the way Level 1 taught the present: pokuva -> poyi,
  * varuva -> vannu, kazhikkuva -> kazhichu, and the rest.
  */
 export const l4u1l1: Lesson = {
@@ -15,7 +15,7 @@ export const l4u1l1: Lesson = {
   items: [
     {
       id: 'poi',
-      manglish: 'poi',
+      manglish: 'poyi',
       script: 'പോയി',
       meaning: 'went',
       kind: 'word',
@@ -24,8 +24,11 @@ export const l4u1l1: Lesson = {
         medium: 'l4u1l1_poi_medium',
         normal: 'l4u1l1_poi_normal',
       },
-      acceptedInputs: ['poi'],
-      notes: ['Pokuva is going; poi is went. The shortest past in the language.'],
+      acceptedInputs: ['poyi', 'poi'],
+      notes: [
+        'Pokuva is going; poyi is went. The shortest past in the language.',
+        'Spelled poyi, with the y the script spells: യ. Fast typing often writes poi.',
+      ],
       tags: [],
     },
     {

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { level1 } from '@/content';
+import { level1, level4 } from '@/content';
 import { XP_REWARDS } from './xp';
 import { levelCanDo, soundMastery } from './mastery';
 import { recordLessonComplete, recordReviewComplete, type XpState } from './progress';
@@ -55,6 +55,29 @@ describe('sound mastery and can-do (real logs only)', () => {
     const allItems = level1.lessons.flatMap((lesson) => lesson.items);
     const everyItemLogged = levelCanDo(level1, allItems.map((item) => log(item.id)));
     assert.ok(everyItemLogged.every((entry) => entry.done), 'reviewing the whole level completes the checklist');
+  });
+
+  it('Level 4 lights one can-do line per unit as its lessons are reviewed', () => {
+    const itemsOf = (unitId: string) =>
+      level4.lessons.filter((lesson) => lesson.unitId === unitId).flatMap((lesson) => lesson.items);
+    const lights = (unitIds: string[]) =>
+      levelCanDo(
+        level4,
+        unitIds.flatMap((unitId) => itemsOf(unitId)).map((item) => log(item.id)),
+      ).map((entry) => entry.done);
+
+    assert.equal(level4.canDo.length, 4, 'one statement per unit');
+    assert.deepEqual(
+      level4.lessons.map((lesson) => lesson.unitId),
+      ['l4u1', 'l4u2', 'l4u3', 'l4u4'],
+      'four units, one lesson each',
+    );
+
+    assert.deepEqual(lights([]), [false, false, false, false]);
+    assert.deepEqual(lights(['l4u1']), [true, false, false, false]);
+    assert.deepEqual(lights(['l4u1', 'l4u2']), [true, true, false, false]);
+    assert.deepEqual(lights(['l4u1', 'l4u2', 'l4u3']), [true, true, true, false]);
+    assert.deepEqual(lights(['l4u1', 'l4u2', 'l4u3', 'l4u4']), [true, true, true, true]);
   });
 });
 

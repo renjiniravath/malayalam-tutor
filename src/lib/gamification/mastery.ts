@@ -52,14 +52,28 @@ export function soundMastery(level: Level, logs: ReviewLogRecord[]): SoundMaster
 
 /**
  * The level's can-do checklist with real evidence:
- *  - the sound-classes statement is done when all four sound tags are
- *    mastered
- *  - the greetings statement is done when every unit-2 item has been
- *    reviewed at least once
- *  - the nouns/verbs/pronouns statement is done when every unit-3
- *    (pronouns) item has been reviewed; the noun and verb units are
- *    not authored yet, so this reflects what the course teaches today
+ *  - a statement is done when every item of the unit that teaches it has
+ *    been reviewed at least once
+ *  - Level 1's first line is the sound classes instead: done when all four
+ *    sound tags are mastered. Its greetings line rides on unit 2 and the
+ *    nouns/verbs/pronouns line on unit 3 (pronouns); the noun and verb
+ *    units are not authored yet, so this reflects what the course teaches
+ *    today
+ *  - Level 4 has four units of one lesson each, one line per unit, so
+ *    finishing a lesson lights exactly one statement; a level with no
+ *    mapping yet reports every line open
  */
+
+/**
+ * The unit carrying each can-do statement, by level id. 'sound' marks
+ * Level 1's sound-classes line, which the sound tags evidence rather than a
+ * unit.
+ */
+const CAN_DO_UNITS: Record<string, string[]> = {
+  l1: ['sound', 'l1u2', 'l1u3'],
+  l4: ['l4u1', 'l4u2', 'l4u3', 'l4u4'],
+};
+
 export function levelCanDo(level: Level, logs: ReviewLogRecord[]): CanDoState[] {
   const reviewedOnce = new Set(logs.map((log) => log.itemId));
   const unitReviewed = (unitId: string): boolean => {
@@ -67,13 +81,15 @@ export function levelCanDo(level: Level, logs: ReviewLogRecord[]): CanDoState[] 
     return items.length > 0 && items.every((item) => reviewedOnce.has(item.id));
   };
   const sounds = soundMastery(level, logs);
-  return level.canDo.map((statement, index) => ({
-    statement,
-    done:
-      index === 0
-        ? sounds.length > 0 && sounds.every((sound) => sound.mastered)
-        : index === 1
-          ? unitReviewed('l1u2')
-          : unitReviewed('l1u3'),
-  }));
+  const units = CAN_DO_UNITS[level.id] ?? [];
+  return level.canDo.map((statement, index) => {
+    const target = units[index];
+    return {
+      statement,
+      done:
+        target === 'sound'
+          ? sounds.length > 0 && sounds.every((sound) => sound.mastered)
+          : target !== undefined && unitReviewed(target),
+    };
+  });
 }

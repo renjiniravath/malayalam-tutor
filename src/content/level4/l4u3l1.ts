@@ -1,38 +1,40 @@
 import type { Lesson } from '../types';
 
 /**
- * Level 4 Unit 1 Lesson 3 — the frames (PLAN.md §5 Level 4): person +
+ * Level 4 Unit 3 Lesson 1 — the frames (PLAN.md §5 Level 4): person +
  * place + verb in the past and the future, built from the Level 3 places
- * and the past and future chunks of the first two lessons.
+ * and the past and future chunks of the first two lessons. Per the
+ * sign-off rulings each sentence carries its time, its place or its
+ * person, so the frame says something rather than standing bare.
  */
-export const l4u1l3: Lesson = {
-  id: 'l4u1l3',
+export const l4u3l1: Lesson = {
+  id: 'l4u3l1',
   levelId: 'l4',
-  unitId: 'l4u1',
+  unitId: 'l4u3',
   title: 'Person, place, verb',
   comprehensionOnly: false,
   items: [
     {
       id: 'njan-officil-poi',
-      manglish: 'njan officil poi',
+      manglish: 'njan officil poyi',
       script: 'ഞാൻ ഓഫീസിൽ പോയി',
       meaning: 'I went to the office',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l3_njan-officil-poi_slow',
-        medium: 'l4u1l3_njan-officil-poi_medium',
-        normal: 'l4u1l3_njan-officil-poi_normal',
+        slow: 'l4u3l1_njan-officil-poi_slow',
+        medium: 'l4u3l1_njan-officil-poi_medium',
+        normal: 'l4u3l1_njan-officil-poi_normal',
       },
       sentence: {
-        bank: ['njan', 'officil', 'poi', 'pokum'],
-        orders: ['njan officil poi'],
+        bank: ['njan', 'officil', 'poyi', 'pokum'],
+        orders: ['njan officil poyi'],
         parts: [
           { word: 'njan', meaning: 'I' },
           { word: 'officil', meaning: 'to the office' },
-          { word: 'poi', meaning: 'went' },
+          { word: 'poyi', meaning: 'went' },
         ],
       },
-      notes: ['The Level 3 frame moved to the past: person + place + poi.'],
+      notes: ['The Level 3 frame moved to the past: person + place + poyi.'],
       tags: [],
     },
     {
@@ -42,12 +44,12 @@ export const l4u1l3: Lesson = {
       meaning: 'I will go to work',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l3_njan-jolikku-pokum_slow',
-        medium: 'l4u1l3_njan-jolikku-pokum_medium',
-        normal: 'l4u1l3_njan-jolikku-pokum_normal',
+        slow: 'l4u3l1_njan-jolikku-pokum_slow',
+        medium: 'l4u3l1_njan-jolikku-pokum_medium',
+        normal: 'l4u3l1_njan-jolikku-pokum_normal',
       },
       sentence: {
-        bank: ['njan', 'jolikku', 'pokum', 'poi'],
+        bank: ['njan', 'jolikku', 'pokum', 'poyi'],
         orders: ['njan jolikku pokum'],
         parts: [
           { word: 'njan', meaning: 'I' },
@@ -60,22 +62,22 @@ export const l4u1l3: Lesson = {
     },
     {
       id: 'avan-veettil-poi',
-      manglish: 'avan veettil poi',
+      manglish: 'avan veettil poyi',
       script: 'അവൻ വീട്ടിൽ പോയി',
       meaning: 'he went home',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l3_avan-veettil-poi_slow',
-        medium: 'l4u1l3_avan-veettil-poi_medium',
-        normal: 'l4u1l3_avan-veettil-poi_normal',
+        slow: 'l4u3l1_avan-veettil-poi_slow',
+        medium: 'l4u3l1_avan-veettil-poi_medium',
+        normal: 'l4u3l1_avan-veettil-poi_normal',
       },
       sentence: {
-        bank: ['avan', 'veettil', 'poi', 'pokum'],
-        orders: ['avan veettil poi'],
+        bank: ['avan', 'veettil', 'poyi', 'pokum'],
+        orders: ['avan veettil poyi'],
         parts: [
           { word: 'avan', meaning: 'he' },
           { word: 'veettil', meaning: 'home' },
-          { word: 'poi', meaning: 'went' },
+          { word: 'poyi', meaning: 'went' },
         ],
       },
       notes: ['A third person takes the same past chunk.'],
@@ -83,71 +85,76 @@ export const l4u1l3: Lesson = {
     },
     {
       id: 'avan-jolikku-pokum',
-      manglish: 'avan jolikku pokum',
-      script: 'അവൻ ജോലിക്ക് പോകും',
-      meaning: 'he will go to work',
+      manglish: 'avan naaḷe jolikku pokum',
+      script: 'അവൻ നാളെ ജോലിക്ക് പോകും',
+      meaning: 'he will go to work tomorrow',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l3_avan-jolikku-pokum_slow',
-        medium: 'l4u1l3_avan-jolikku-pokum_medium',
-        normal: 'l4u1l3_avan-jolikku-pokum_normal',
+        slow: 'l4u3l1_avan-jolikku-pokum_slow',
+        medium: 'l4u3l1_avan-jolikku-pokum_medium',
+        normal: 'l4u3l1_avan-jolikku-pokum_normal',
       },
       sentence: {
-        bank: ['avan', 'jolikku', 'pokum', 'poi'],
-        orders: ['avan jolikku pokum'],
+        bank: ['avan', 'naaḷe', 'jolikku', 'pokum', 'poyi'],
+        orders: ['avan naaḷe jolikku pokum'],
         parts: [
           { word: 'avan', meaning: 'he' },
+          { word: 'naaḷe', meaning: 'tomorrow' },
           { word: 'jolikku', meaning: 'to work' },
           { word: 'pokum', meaning: 'will go' },
         ],
       },
-      notes: ['One more future frame.'],
+      notes: ['A future sentence needs its time: naaḷe, tomorrow, says when.'],
       tags: [],
     },
     {
       id: 'nammal-kadayil-poi',
-      manglish: 'nammaḷ kadayil poi',
-      script: 'നമ്മൾ കടയിൽ പോയി',
-      meaning: 'we went to the shop',
+      manglish: 'avaḷ kadayilekku poyi',
+      script: 'അവൾ കടയിലേക്ക് പോയി',
+      meaning: 'she went to the shop',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l3_nammal-kadayil-poi_slow',
-        medium: 'l4u1l3_nammal-kadayil-poi_medium',
-        normal: 'l4u1l3_nammal-kadayil-poi_normal',
+        slow: 'l4u3l1_nammal-kadayil-poi_slow',
+        medium: 'l4u3l1_nammal-kadayil-poi_medium',
+        normal: 'l4u3l1_nammal-kadayil-poi_normal',
       },
       sentence: {
-        bank: ['nammaḷ', 'kadayil', 'poi', 'pokum'],
-        orders: ['nammaḷ kadayil poi'],
+        bank: ['avaḷ', 'kadayilekku', 'poyi', 'pokum'],
+        orders: ['avaḷ kadayilekku poyi'],
         parts: [
-          { word: 'nammaḷ', meaning: 'we (you and me)' },
-          { word: 'kadayil', meaning: 'to the shop' },
-          { word: 'poi', meaning: 'went' },
+          { word: 'avaḷ', meaning: 'she' },
+          { word: 'kadayilekku', meaning: 'to the shop' },
+          { word: 'poyi', meaning: 'went' },
         ],
       },
-      notes: ['The inclusive we, in the past.'],
+      notes: ['A different person in the same frame, with the heading-to form kadayilekku.'],
       tags: [],
     },
     {
       id: 'njan-hotelil-kazhichu',
-      manglish: 'njan hotelil kazhichu',
-      script: 'ഞാൻ ഹോട്ടലിൽ കഴിച്ചു',
-      meaning: 'I ate at the hotel',
+      manglish: 'njan hotelil ninn kazhichu',
+      script: 'ഞാൻ ഹോട്ടലിൽ നിന്ന് കഴിച്ചു',
+      meaning: 'I ate from the hotel',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l3_njan-hotelil-kazhichu_slow',
-        medium: 'l4u1l3_njan-hotelil-kazhichu_medium',
-        normal: 'l4u1l3_njan-hotelil-kazhichu_normal',
+        slow: 'l4u3l1_njan-hotelil-kazhichu_slow',
+        medium: 'l4u3l1_njan-hotelil-kazhichu_medium',
+        normal: 'l4u3l1_njan-hotelil-kazhichu_normal',
       },
       sentence: {
-        bank: ['njan', 'hotelil', 'kazhichu', 'kudichu'],
-        orders: ['njan hotelil kazhichu'],
+        bank: ['njan', 'hotelil', 'ninn', 'kazhichu'],
+        orders: ['njan hotelil ninn kazhichu'],
         parts: [
           { word: 'njan', meaning: 'I' },
           { word: 'hotelil', meaning: 'at the hotel' },
+          { word: 'ninn', meaning: 'from' },
           { word: 'kazhichu', meaning: 'ate' },
         ],
       },
-      notes: ['In Kerala a hotel means the eatery: hotelil kazhichu, ate at the hotel.'],
+      notes: [
+        'In Kerala a hotel means the eatery, and ninn says the food came from there: hotelil ninn kazhichu, ate from the hotel.',
+        'The same ninn as officil ninn, from the office.',
+      ],
       tags: [],
     },
     {
@@ -157,9 +164,9 @@ export const l4u1l3: Lesson = {
       meaning: 'I got on the bus',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l3_njan-busil-keri_slow',
-        medium: 'l4u1l3_njan-busil-keri_medium',
-        normal: 'l4u1l3_njan-busil-keri_normal',
+        slow: 'l4u3l1_njan-busil-keri_slow',
+        medium: 'l4u3l1_njan-busil-keri_medium',
+        normal: 'l4u3l1_njan-busil-keri_normal',
       },
       sentence: {
         bank: ['njan', 'busil', 'keri', 'irangi'],
@@ -180,9 +187,9 @@ export const l4u1l3: Lesson = {
       meaning: 'he did that',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l3_avan-athu-cheythu_slow',
-        medium: 'l4u1l3_avan-athu-cheythu_medium',
-        normal: 'l4u1l3_avan-athu-cheythu_normal',
+        slow: 'l4u3l1_avan-athu-cheythu_slow',
+        medium: 'l4u3l1_avan-athu-cheythu_medium',
+        normal: 'l4u3l1_avan-athu-cheythu_normal',
       },
       sentence: {
         bank: ['avan', 'athu', 'cheythu', 'cheyyum'],
@@ -203,9 +210,9 @@ export const l4u1l3: Lesson = {
       meaning: 'I said that',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l3_njan-athu-paranju_slow',
-        medium: 'l4u1l3_njan-athu-paranju_medium',
-        normal: 'l4u1l3_njan-athu-paranju_normal',
+        slow: 'l4u3l1_njan-athu-paranju_slow',
+        medium: 'l4u3l1_njan-athu-paranju_medium',
+        normal: 'l4u3l1_njan-athu-paranju_normal',
       },
       sentence: {
         bank: ['njan', 'athu', 'paranju', 'parayuva'],
@@ -221,25 +228,30 @@ export const l4u1l3: Lesson = {
     },
     {
       id: 'nammal-veettil-pokum',
-      manglish: 'nammaḷ veettil pokum',
-      script: 'നമ്മൾ വീട്ടിൽ പോകും',
-      meaning: 'we will go home',
+      manglish: 'nammaḷ innu raathri veettil pokum',
+      script: 'നമ്മൾ ഇന്ന് രാത്രി വീട്ടിൽ പോകും',
+      meaning: 'we will go home tonight',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l3_nammal-veettil-pokum_slow',
-        medium: 'l4u1l3_nammal-veettil-pokum_medium',
-        normal: 'l4u1l3_nammal-veettil-pokum_normal',
+        slow: 'l4u3l1_nammal-veettil-pokum_slow',
+        medium: 'l4u3l1_nammal-veettil-pokum_medium',
+        normal: 'l4u3l1_nammal-veettil-pokum_normal',
       },
       sentence: {
-        bank: ['nammaḷ', 'veettil', 'pokum', 'poi'],
-        orders: ['nammaḷ veettil pokum'],
+        bank: ['nammaḷ', 'innu', 'raathri', 'veettil', 'pokum', 'poyi'],
+        orders: ['nammaḷ innu raathri veettil pokum'],
         parts: [
           { word: 'nammaḷ', meaning: 'we (you and me)' },
+          { word: 'innu', meaning: 'today' },
+          { word: 'raathri', meaning: 'night' },
           { word: 'veettil', meaning: 'home' },
           { word: 'pokum', meaning: 'will go' },
         ],
       },
-      notes: ['Nammaḷ veettil pokuva is now; pokum is later.'],
+      notes: [
+        'A future with its time: innu raathri, tonight, is when the going happens.',
+        'Nammaḷ veettil pokuva is now; pokum is later.',
+      ],
       tags: [],
     },
   ],
@@ -257,5 +269,5 @@ export const l4u1l3: Lesson = {
     { kind: 'sentenceBuilder', itemId: 'nammal-veettil-pokum', mode: 'bank' },
   ],
   reviewSlots: 0,
-  spriteId: 'l4u1l3',
+  spriteId: 'l4u3l1',
 };

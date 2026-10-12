@@ -48,7 +48,13 @@ export const contentRevision: ContentRevision = {
   // 27: Level 4 (Making Sentences) opens with its first four lessons — the
   // casual past, the -um future and -aam plans, the person + time + verb
   // frames, and the day words. 40 new ids; nothing existing moved.
-  revision: 27,
+  // 28: the Level 4 sign-off rulings — the level becomes four units of one
+  // lesson (ids l4u1l1, l4u2l1, l4u3l1, l4u4l1, one can-do line each, so
+  // three lesson ids and three sprite ids move; item ids stay), poyi and the
+  // doubled -aam are the displays (poi/nokkam/pokam stay accepted), the
+  // sentences take their time, place and to-us forms, and the -aam notes
+  // gain its second job.
+  revision: 28,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',

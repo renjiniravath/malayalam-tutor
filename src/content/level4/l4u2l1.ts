@@ -1,14 +1,14 @@
 import type { Lesson } from '../types';
 
 /**
- * Level 4 Unit 1 Lesson 2 — future and intent (PLAN.md §5 Level 4):
+ * Level 4 Unit 2 Lesson 1 — future and intent (PLAN.md §5 Level 4):
  * the -um future (pokum, varum) and the -aam plan forms (pokaam,
  * kazhikkaam), including the habitual sense the -um future also carries.
  */
-export const l4u1l2: Lesson = {
-  id: 'l4u1l2',
+export const l4u2l1: Lesson = {
+  id: 'l4u2l1',
   levelId: 'l4',
-  unitId: 'l4u1',
+  unitId: 'l4u2',
   title: 'Will and let us',
   comprehensionOnly: false,
   items: [
@@ -19,9 +19,9 @@ export const l4u1l2: Lesson = {
       meaning: 'will go',
       kind: 'word',
       audio: {
-        slow: 'l4u1l2_pokum_slow',
-        medium: 'l4u1l2_pokum_medium',
-        normal: 'l4u1l2_pokum_normal',
+        slow: 'l4u2l1_pokum_slow',
+        medium: 'l4u2l1_pokum_medium',
+        normal: 'l4u2l1_pokum_normal',
       },
       acceptedInputs: ['pokum'],
       notes: [
@@ -37,9 +37,9 @@ export const l4u1l2: Lesson = {
       meaning: 'will come',
       kind: 'word',
       audio: {
-        slow: 'l4u1l2_varum_slow',
-        medium: 'l4u1l2_varum_medium',
-        normal: 'l4u1l2_varum_normal',
+        slow: 'l4u2l1_varum_slow',
+        medium: 'l4u2l1_varum_medium',
+        normal: 'l4u2l1_varum_normal',
       },
       acceptedInputs: ['varum'],
       notes: ['Varuva is coming; varum is will come.'],
@@ -52,9 +52,9 @@ export const l4u1l2: Lesson = {
       meaning: 'will eat',
       kind: 'word',
       audio: {
-        slow: 'l4u1l2_kazhikkum_slow',
-        medium: 'l4u1l2_kazhikkum_medium',
-        normal: 'l4u1l2_kazhikkum_normal',
+        slow: 'l4u2l1_kazhikkum_slow',
+        medium: 'l4u2l1_kazhikkum_medium',
+        normal: 'l4u2l1_kazhikkum_normal',
       },
       acceptedInputs: ['kazhikkum'],
       notes: ['Kazhikkuva is eating; kazhikkum is will eat.'],
@@ -67,9 +67,9 @@ export const l4u1l2: Lesson = {
       meaning: 'will do',
       kind: 'word',
       audio: {
-        slow: 'l4u1l2_cheyyum_slow',
-        medium: 'l4u1l2_cheyyum_medium',
-        normal: 'l4u1l2_cheyyum_normal',
+        slow: 'l4u2l1_cheyyum_slow',
+        medium: 'l4u2l1_cheyyum_medium',
+        normal: 'l4u2l1_cheyyum_normal',
       },
       acceptedInputs: ['cheyyum'],
       notes: ['Cheyyuva is doing; cheyyum is will do.'],
@@ -82,12 +82,15 @@ export const l4u1l2: Lesson = {
       meaning: "let's go",
       kind: 'word',
       audio: {
-        slow: 'l4u1l2_pokaam_slow',
-        medium: 'l4u1l2_pokaam_medium',
-        normal: 'l4u1l2_pokaam_normal',
+        slow: 'l4u2l1_pokaam_slow',
+        medium: 'l4u2l1_pokaam_medium',
+        normal: 'l4u2l1_pokaam_normal',
       },
-      acceptedInputs: ['pokaam'],
-      notes: ['The plan word: -aam turns the verb into let us — namukku pokaam, let us go.'],
+      acceptedInputs: ['pokaam', 'pokam'],
+      notes: [
+        'The plan word: -aam turns the verb into let us — namukku pokaam, let us go.',
+        'The same -aam has a second job: answering a question as a firm yes. Will you do it? — cheyyaam, I will. Pokaam itself is the suggestion, not the promise.',
+      ],
       tags: [],
     },
     {
@@ -97,35 +100,41 @@ export const l4u1l2: Lesson = {
       meaning: "let's eat",
       kind: 'word',
       audio: {
-        slow: 'l4u1l2_kazhikkaam_slow',
-        medium: 'l4u1l2_kazhikkaam_medium',
-        normal: 'l4u1l2_kazhikkaam_normal',
+        slow: 'l4u2l1_kazhikkaam_slow',
+        medium: 'l4u2l1_kazhikkaam_medium',
+        normal: 'l4u2l1_kazhikkaam_normal',
       },
-      acceptedInputs: ['kazhikkaam'],
-      notes: ['The same -aam on eating: kazhikkaam, let us eat.'],
+      acceptedInputs: ['kazhikkaam', 'kazhikkam'],
+      notes: [
+        'The same -aam on eating: kazhikkaam, let us eat.',
+        'It answers a question too: will you eat? — kazhikkaam, I will.',
+      ],
       tags: [],
     },
     {
       id: 'nammal-veettil-pokaam',
-      manglish: 'nammaḷ veettil pokaam',
-      script: 'നമ്മൾ വീട്ടിൽ പോകാം',
+      manglish: 'nammaḷkku veettil pokaam',
+      script: 'നമ്മൾക്ക് വീട്ടിൽ പോകാം',
       meaning: "let's go home",
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l2_nammal-veettil-pokaam_slow',
-        medium: 'l4u1l2_nammal-veettil-pokaam_medium',
-        normal: 'l4u1l2_nammal-veettil-pokaam_normal',
+        slow: 'l4u2l1_nammal-veettil-pokaam_slow',
+        medium: 'l4u2l1_nammal-veettil-pokaam_medium',
+        normal: 'l4u2l1_nammal-veettil-pokaam_normal',
       },
       sentence: {
-        bank: ['nammaḷ', 'veettil', 'pokaam', 'pokum'],
-        orders: ['nammaḷ veettil pokaam'],
+        bank: ['nammaḷkku', 'veettil', 'pokaam', 'pokum'],
+        orders: ['nammaḷkku veettil pokaam'],
         parts: [
-          { word: 'nammaḷ', meaning: 'we (you and me)' },
+          { word: 'nammaḷkku', meaning: 'to us' },
           { word: 'veettil', meaning: 'home' },
           { word: 'pokaam', meaning: "let's go" },
         ],
       },
-      notes: ['The plan frame: who + where + -aam.'],
+      notes: [
+        'The suggestion takes the to-us form: nammaḷkku veettil pokaam, never nammaḷ veettil pokaam.',
+        'The plan frame: to us + where + -aam.',
+      ],
       tags: [],
     },
     {
@@ -135,9 +144,9 @@ export const l4u1l2: Lesson = {
       meaning: 'I will come',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l2_njan-varaam_slow',
-        medium: 'l4u1l2_njan-varaam_medium',
-        normal: 'l4u1l2_njan-varaam_normal',
+        slow: 'l4u2l1_njan-varaam_slow',
+        medium: 'l4u2l1_njan-varaam_medium',
+        normal: 'l4u2l1_njan-varaam_normal',
       },
       sentence: {
         bank: ['njan', 'varaam', 'varum', 'varuva'],
@@ -157,9 +166,9 @@ export const l4u1l2: Lesson = {
       meaning: 'he will come',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l2_avan-varum_slow',
-        medium: 'l4u1l2_avan-varum_medium',
-        normal: 'l4u1l2_avan-varum_normal',
+        slow: 'l4u2l1_avan-varum_slow',
+        medium: 'l4u2l1_avan-varum_medium',
+        normal: 'l4u2l1_avan-varum_normal',
       },
       sentence: {
         bank: ['avan', 'varum', 'varaam', 'vannu'],
@@ -179,9 +188,9 @@ export const l4u1l2: Lesson = {
       meaning: 'I will do that',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l2_njan-athu-cheyyum_slow',
-        medium: 'l4u1l2_njan-athu-cheyyum_medium',
-        normal: 'l4u1l2_njan-athu-cheyyum_normal',
+        slow: 'l4u2l1_njan-athu-cheyyum_slow',
+        medium: 'l4u2l1_njan-athu-cheyyum_medium',
+        normal: 'l4u2l1_njan-athu-cheyyum_normal',
       },
       sentence: {
         bank: ['njan', 'athu', 'cheyyum', 'cheythu'],
@@ -210,5 +219,5 @@ export const l4u1l2: Lesson = {
     { kind: 'sentenceBuilder', itemId: 'njan-athu-cheyyum', mode: 'bank' },
   ],
   reviewSlots: 0,
-  spriteId: 'l4u1l2',
+  spriteId: 'l4u2l1',
 };

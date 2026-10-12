@@ -1,15 +1,15 @@
 import type { Lesson } from '../types';
 
 /**
- * Level 4 Unit 1 Lesson 4 — the day words (PLAN.md §5 Level 4): today,
+ * Level 4 Unit 4 Lesson 1 — the day words (PLAN.md §5 Level 4): today,
  * tomorrow, yesterday and now, placed inside the past and future frames
  * of the previous lesson. Ippo is already taught in Level 1, so it is
  * used here inside sentences rather than re-introduced as an item.
  */
-export const l4u1l4: Lesson = {
-  id: 'l4u1l4',
+export const l4u4l1: Lesson = {
+  id: 'l4u4l1',
   levelId: 'l4',
-  unitId: 'l4u1',
+  unitId: 'l4u4',
   title: 'Today, tomorrow, yesterday',
   comprehensionOnly: false,
   items: [
@@ -20,12 +20,12 @@ export const l4u1l4: Lesson = {
       meaning: 'today',
       kind: 'word',
       audio: {
-        slow: 'l4u1l4_innu_slow',
-        medium: 'l4u1l4_innu_medium',
-        normal: 'l4u1l4_innu_normal',
+        slow: 'l4u4l1_innu_slow',
+        medium: 'l4u4l1_innu_medium',
+        normal: 'l4u4l1_innu_normal',
       },
-      acceptedInputs: ['innu'],
-      notes: ['Today — the day you are in.'],
+      acceptedInputs: ['innu', 'inn'],
+      notes: ['Today — the day you are in. Inn is accepted in typing, but innu is the word.'],
       tags: [],
     },
     {
@@ -35,9 +35,9 @@ export const l4u1l4: Lesson = {
       meaning: 'tomorrow',
       kind: 'word',
       audio: {
-        slow: 'l4u1l4_naale_slow',
-        medium: 'l4u1l4_naale_medium',
-        normal: 'l4u1l4_naale_normal',
+        slow: 'l4u4l1_naale_slow',
+        medium: 'l4u4l1_naale_medium',
+        normal: 'l4u4l1_naale_normal',
       },
       acceptedInputs: ['naale'],
       notes: ['Tomorrow. The ḷ is the curled-back l from avaḷ.'],
@@ -50,9 +50,9 @@ export const l4u1l4: Lesson = {
       meaning: 'yesterday',
       kind: 'word',
       audio: {
-        slow: 'l4u1l4_innale_slow',
-        medium: 'l4u1l4_innale_medium',
-        normal: 'l4u1l4_innale_normal',
+        slow: 'l4u4l1_innale_slow',
+        medium: 'l4u4l1_innale_medium',
+        normal: 'l4u4l1_innale_normal',
       },
       acceptedInputs: ['innale'],
       notes: ['Yesterday — the day behind you.'],
@@ -60,47 +60,50 @@ export const l4u1l4: Lesson = {
     },
     {
       id: 'njan-innu-officil-pokum',
-      manglish: 'njan innu officil pokum',
-      script: 'ഞാൻ ഇന്ന് ഓഫീസിൽ പോകും',
-      meaning: 'I will go to the office today',
+      manglish: 'njan naaḷe officil pokum',
+      script: 'ഞാൻ നാളെ ഓഫീസിൽ പോകും',
+      meaning: 'I will go to the office tomorrow',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l4_njan-innu-officil-pokum_slow',
-        medium: 'l4u1l4_njan-innu-officil-pokum_medium',
-        normal: 'l4u1l4_njan-innu-officil-pokum_normal',
+        slow: 'l4u4l1_njan-innu-officil-pokum_slow',
+        medium: 'l4u4l1_njan-innu-officil-pokum_medium',
+        normal: 'l4u4l1_njan-innu-officil-pokum_normal',
       },
       sentence: {
-        bank: ['njan', 'innu', 'officil', 'pokum', 'poi'],
-        orders: ['njan innu officil pokum'],
+        bank: ['njan', 'naaḷe', 'officil', 'pokum', 'innu'],
+        orders: ['njan naaḷe officil pokum'],
         parts: [
           { word: 'njan', meaning: 'I' },
-          { word: 'innu', meaning: 'today' },
+          { word: 'naaḷe', meaning: 'tomorrow' },
           { word: 'officil', meaning: 'to the office' },
           { word: 'pokum', meaning: 'will go' },
         ],
       },
-      notes: ['Time sits between the person and the place: njan innu officil pokum.'],
+      notes: [
+        'Time sits between the person and the place: njan naaḷe officil pokum.',
+        'A future sentence says when: naaḷe, tomorrow, is the day it happens.',
+      ],
       tags: [],
     },
     {
       id: 'njan-innale-officil-poi',
-      manglish: 'njan innale officil poi',
+      manglish: 'njan innale officil poyi',
       script: 'ഞാൻ ഇന്നലെ ഓഫീസിൽ പോയി',
       meaning: 'I went to the office yesterday',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l4_njan-innale-officil-poi_slow',
-        medium: 'l4u1l4_njan-innale-officil-poi_medium',
-        normal: 'l4u1l4_njan-innale-officil-poi_normal',
+        slow: 'l4u4l1_njan-innale-officil-poi_slow',
+        medium: 'l4u4l1_njan-innale-officil-poi_medium',
+        normal: 'l4u4l1_njan-innale-officil-poi_normal',
       },
       sentence: {
-        bank: ['njan', 'innale', 'officil', 'poi', 'pokum'],
-        orders: ['njan innale officil poi'],
+        bank: ['njan', 'innale', 'officil', 'poyi', 'pokum'],
+        orders: ['njan innale officil poyi'],
         parts: [
           { word: 'njan', meaning: 'I' },
           { word: 'innale', meaning: 'yesterday' },
           { word: 'officil', meaning: 'to the office' },
-          { word: 'poi', meaning: 'went' },
+          { word: 'poyi', meaning: 'went' },
         ],
       },
       notes: ['The same frame, one day back.'],
@@ -113,9 +116,9 @@ export const l4u1l4: Lesson = {
       meaning: 'he will come tomorrow',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l4_avan-naale-varum_slow',
-        medium: 'l4u1l4_avan-naale-varum_medium',
-        normal: 'l4u1l4_avan-naale-varum_normal',
+        slow: 'l4u4l1_avan-naale-varum_slow',
+        medium: 'l4u4l1_avan-naale-varum_medium',
+        normal: 'l4u4l1_avan-naale-varum_normal',
       },
       sentence: {
         bank: ['avan', 'naaḷe', 'varum', 'vannu'],
@@ -136,9 +139,9 @@ export const l4u1l4: Lesson = {
       meaning: 'he came yesterday',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l4_avan-innale-vannu_slow',
-        medium: 'l4u1l4_avan-innale-vannu_medium',
-        normal: 'l4u1l4_avan-innale-vannu_normal',
+        slow: 'l4u4l1_avan-innale-vannu_slow',
+        medium: 'l4u4l1_avan-innale-vannu_medium',
+        normal: 'l4u4l1_avan-innale-vannu_normal',
       },
       sentence: {
         bank: ['avan', 'innale', 'vannu', 'varum'],
@@ -154,50 +157,57 @@ export const l4u1l4: Lesson = {
     },
     {
       id: 'njan-ippo-athu-cheyyum',
-      manglish: 'njan ippo athu cheyyum',
-      script: 'ഞാൻ ഇപ്പോ അത് ചെയ്യും',
-      meaning: 'I will do that now',
+      manglish: 'njan ippo angott pokum',
+      script: 'ഞാൻ ഇപ്പോ അങ്ങോട്ട് പോകും',
+      meaning: 'I will head over there now',
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l4_njan-ippo-athu-cheyyum_slow',
-        medium: 'l4u1l4_njan-ippo-athu-cheyyum_medium',
-        normal: 'l4u1l4_njan-ippo-athu-cheyyum_normal',
+        slow: 'l4u4l1_njan-ippo-athu-cheyyum_slow',
+        medium: 'l4u4l1_njan-ippo-athu-cheyyum_medium',
+        normal: 'l4u4l1_njan-ippo-athu-cheyyum_normal',
       },
       sentence: {
-        bank: ['njan', 'ippo', 'athu', 'cheyyum', 'cheythu'],
-        orders: ['njan ippo athu cheyyum'],
+        bank: ['njan', 'ippo', 'angott', 'pokum', 'cheyyum'],
+        orders: ['njan ippo angott pokum'],
         parts: [
           { word: 'njan', meaning: 'I' },
           { word: 'ippo', meaning: 'now' },
-          { word: 'athu', meaning: 'that' },
-          { word: 'cheyyum', meaning: 'will do' },
+          { word: 'angott', meaning: 'that way, over there' },
+          { word: 'pokum', meaning: 'will go' },
         ],
       },
-      notes: ['Ippo, now, with a future verb: a promise about this moment.'],
+      notes: [
+        'angott points away from the speaker: that way, over there.',
+        'Ippo, now, with a future verb: this moment is when it happens.',
+      ],
       tags: [],
     },
     {
       id: 'nammal-innu-kadayil-pokaam',
-      manglish: 'nammaḷ innu kadayil pokaam',
-      script: 'നമ്മൾ ഇന്ന് കടയിൽ പോകാം',
-      meaning: "let's go to the shop today",
+      manglish: 'nammaḷkku innu oru cinemakku pokaam',
+      script: 'നമ്മൾക്ക് ഇന്ന് ഒരു സിനിമക്ക് പോകാം',
+      meaning: "let's go to a movie today",
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l4_nammal-innu-kadayil-pokaam_slow',
-        medium: 'l4u1l4_nammal-innu-kadayil-pokaam_medium',
-        normal: 'l4u1l4_nammal-innu-kadayil-pokaam_normal',
+        slow: 'l4u4l1_nammal-innu-kadayil-pokaam_slow',
+        medium: 'l4u4l1_nammal-innu-kadayil-pokaam_medium',
+        normal: 'l4u4l1_nammal-innu-kadayil-pokaam_normal',
       },
       sentence: {
-        bank: ['nammaḷ', 'innu', 'kadayil', 'pokaam', 'pokum'],
-        orders: ['nammaḷ innu kadayil pokaam'],
+        bank: ['nammaḷkku', 'innu', 'oru', 'cinemakku', 'pokaam', 'kadayil'],
+        orders: ['nammaḷkku innu oru cinemakku pokaam'],
         parts: [
-          { word: 'nammaḷ', meaning: 'we (you and me)' },
+          { word: 'nammaḷkku', meaning: 'to us' },
           { word: 'innu', meaning: 'today' },
-          { word: 'kadayil', meaning: 'to the shop' },
+          { word: 'oru', meaning: 'a' },
+          { word: 'cinemakku', meaning: 'to the movies' },
           { word: 'pokaam', meaning: "let's go" },
         ],
       },
-      notes: ['Making the plan for today.'],
+      notes: [
+        'The suggestion takes the to-us form: nammaḷkku innu oru cinemakku pokaam.',
+        'Cinema is the movies; cinemakku is the heading-to form. Swap it for any other place.',
+      ],
       tags: [],
     },
     {
@@ -207,9 +217,9 @@ export const l4u1l4: Lesson = {
       meaning: "let's go now",
       kind: 'sentence',
       audio: {
-        slow: 'l4u1l4_namukku-ippo-pokaam_slow',
-        medium: 'l4u1l4_namukku-ippo-pokaam_medium',
-        normal: 'l4u1l4_namukku-ippo-pokaam_normal',
+        slow: 'l4u4l1_namukku-ippo-pokaam_slow',
+        medium: 'l4u4l1_namukku-ippo-pokaam_medium',
+        normal: 'l4u4l1_namukku-ippo-pokaam_normal',
       },
       sentence: {
         bank: ['namukku', 'ippo', 'pokaam', 'pokum'],
@@ -238,5 +248,5 @@ export const l4u1l4: Lesson = {
     { kind: 'sentenceBuilder', itemId: 'namukku-ippo-pokaam', mode: 'bank' },
   ],
   reviewSlots: 0,
-  spriteId: 'l4u1l4',
+  spriteId: 'l4u4l1',
 };
