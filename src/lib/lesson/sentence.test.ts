@@ -42,6 +42,25 @@ describe('sentence checking', () => {
     assert.equal(checkTypedSentence('njan ready aano?', question), false);
   });
 
+  it("accepts an item's authored variants alongside the orders", () => {
+    const plan: SentenceSpec = {
+      bank: ['nammaḷkku', 'ippo', 'pokaam', 'pokum'],
+      orders: ['nammaḷkku ippo pokaam'],
+      parts: [
+        { word: 'nammaḷkku', meaning: 'to us' },
+        { word: 'ippo', meaning: 'now' },
+        { word: 'pokaam', meaning: "let's go" },
+      ],
+    };
+    const variants = ['nammalkku ippo pokaam', 'namukku ippo pokaam'];
+    assert.equal(checkTypedSentence('nammaḷkku ippo pokaam', plan), true, 'canonical order');
+    assert.equal(checkTypedSentence('namukku ippo pokaam', plan, variants), true, 'sanctioned variant');
+    assert.equal(checkTypedSentence('nammalkku ippo pokaam', plan, variants), true, 'folded display');
+    assert.equal(checkTypedSentence('ippo nammaḷkku pokaam', plan, variants), false, 'scrambled');
+    assert.equal(checkTypedSentence('njan ippo pokaam', plan, variants), false, 'wrong word');
+    assert.equal(checkTypedSentence('nammaḷkku ippo pokaam', plan, []), true, 'no variants, order still passes');
+  });
+
   it('sentenceWords returns the first accepted order as tokens', () => {
     assert.deepEqual(sentenceWords(spec), ['njan', 'chaaya', 'kudikkuva']);
   });

@@ -59,7 +59,11 @@ export function SentenceBuilderDrill({ item, spriteId, mode, revealImmediately, 
 
   const submit = () => {
     if (checked !== null) return;
-    setChecked(mode === 'bank' ? checkAssembly(assembly, spec) : checkTypedSentence(typed, spec));
+    setChecked(
+      mode === 'bank'
+        ? checkAssembly(assembly, spec)
+        : checkTypedSentence(typed, spec, item.acceptedInputs ?? []),
+    );
   };
 
   const words = checked ? spec.orders[0].split(' ') : assembly;
