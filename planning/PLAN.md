@@ -191,6 +191,7 @@ Accessibility (WCAG 2.2 AA target): everything keyboard-navigable; the anticipat
 Rules:
 1. Long a/i/u always doubled; long e/o never doubled (deliberate — matches how Malayalees actually type; `content:check` enforces it). Long i is written `ee` (`nee`, `veedu`), long u is written `oo` (`koodi`) — never `ii`/`uu`. `njaan` is written `njan` (native-speaker rulings 2026-10-06).
    - `ni` is an accepted alternate spelling of `nee` — more common than `nee` in casual typing (native-speaker ruling 2026-10-07). Accept it in the input layer and mention it on the item; the display layer keeps `nee`.
+   - Fused-copula question words keep a **single final `a`** even though it descends from ആണ്: `entha`, `etha`, `aara` (ആരാ, "who is it?"), `eppozha` — they are sanctioned irregulars in `content:check`'s word list, not long vowels to double (native-speaker rulings 2026-10-06/12).
 2. Dental vs retroflex always distinguished (`th` vs `t`).
 3. ള and ണ are common sounds (`veḷḷam`, `veṇṇa`), not rare — dedicated symbols in the **display layer**.
 4. Never use capitalization as a phonemic signal (mobile auto-capitalize).
