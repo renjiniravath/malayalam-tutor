@@ -75,7 +75,7 @@ export const lesson2Copula: Lesson = {
       manglish: 'njan ready aa',
       meaning: 'I am ready.',
       kind: 'sentence',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
+      notes: ['No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'njan', gloss: 'I' },
         { token: 'ready', gloss: 'ready' },
@@ -92,7 +92,7 @@ export const lesson2Copula: Lesson = {
       notes: [
         'The everyday answer to engane und?. Not njan sheri: that means "I correct".',
         'English words are normal in casual sentences: okay, ready, teacher.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'njan', gloss: 'I' },
@@ -123,7 +123,7 @@ export const lesson2Copula: Lesson = {
       kind: 'sentence',
       notes: [
         'Saying what someone is takes oru (a): avan oru teacher aanu.',
-        'No script here: the English words have no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell those words the way they sound.',
       ],
       segments: [
         { token: 'avan', gloss: 'he' },
@@ -140,7 +140,7 @@ export const lesson2Copula: Lesson = {
       manglish: 'ready aano',
       meaning: 'ready? (question form)',
       kind: 'sentence',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
+      notes: ['No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'ready', gloss: 'ready' },
         { token: 'aano', gloss: 'is it?' },

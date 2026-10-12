@@ -126,8 +126,14 @@
  *       sentence is part English, and the script rules cannot spell those
  *       words the way they sound (the English words themselves do have
  *       settled spellings)
+ *  30 — the same no-script reason sweeps Levels 1-3: the 31 notes that
+ *       said an English word "has no settled Malayalam spelling" now say
+ *       the item is part English and the script rules cannot spell that
+ *       part the way it sounds (word items say "the word", the rest "the
+ *       sentence"); every one of those loans does have a settled spelling,
+ *       so none kept the old phrasing
  */
-export const CONTENT_REVISION = 29
+export const CONTENT_REVISION = 30
 
 /**
  * Item ids retired from content — the record of what was replaced by a

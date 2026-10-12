@@ -32,7 +32,7 @@ export const lesson2CasesIlekk: Lesson = {
       pos: 'noun',
       notes: [
         'In Kerala, hotel colloquially means a restaurant or eatery, not a place to sleep.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the word is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       audio: { slow: 'hotelilekk.slow', medium: 'hotelilekk.medium', normal: 'hotelilekk.normal' },
       tags: ['level:3'],
@@ -43,7 +43,7 @@ export const lesson2CasesIlekk: Lesson = {
       meaning: 'to the office (office + ilekk)',
       kind: 'word',
       pos: 'noun',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
+      notes: ['No script here: the word is part English, and the script rules cannot spell that word the way it sounds.'],
       audio: { slow: 'officilekk.slow', medium: 'officilekk.medium', normal: 'officilekk.normal' },
       tags: ['level:3'],
     },
@@ -65,7 +65,7 @@ export const lesson2CasesIlekk: Lesson = {
       kind: 'sentence',
       notes: [
         '-ilekk is the pointed "to": hotelilekk, to the hotel.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'njan', gloss: 'I' },
@@ -80,7 +80,7 @@ export const lesson2CasesIlekk: Lesson = {
       manglish: 'njan officilekk pokuva',
       meaning: 'I am going to the office.',
       kind: 'sentence',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
+      notes: ['No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'njan', gloss: 'I' },
         { token: 'officilekk', gloss: 'to the office' },
@@ -108,7 +108,7 @@ export const lesson2CasesIlekk: Lesson = {
       manglish: 'avan hotelilekk varunnundo',
       meaning: 'is he coming to the hotel?',
       kind: 'sentence',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
+      notes: ['No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'avan', gloss: 'he' },
         { token: 'hotelilekk', gloss: 'to the hotel' },
@@ -136,7 +136,7 @@ export const lesson2CasesIlekk: Lesson = {
       manglish: 'avan hotelilekk pokuva',
       meaning: 'he is going to the hotel.',
       kind: 'sentence',
-      notes: ['No script here: the English words have no settled Malayalam spelling.'],
+      notes: ['No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'avan', gloss: 'he' },
         { token: 'hotelilekk', gloss: 'to the hotel' },

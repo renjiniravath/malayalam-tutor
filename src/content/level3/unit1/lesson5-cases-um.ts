@@ -141,7 +141,7 @@ export const lesson5CasesUm: Lesson = {
       kind: 'sentence',
       notes: [
         '-um on two people means and: njanum avanum, I and he.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'njanum', gloss: 'I too' },

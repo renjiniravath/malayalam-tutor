@@ -52,7 +52,7 @@ export const lesson6CasesFrom: Lesson = {
       pos: 'noun',
       notes: [
         'English words take the pair just as they take -il: officil ninn, from the office.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the word is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       audio: { slow: 'officil-ninn.slow', medium: 'officil-ninn.medium', normal: 'officil-ninn.normal' },
       tags: ['level:3'],
@@ -64,7 +64,7 @@ export const lesson6CasesFrom: Lesson = {
       acceptedInputs: ['busil ninnu'],
       kind: 'word',
       pos: 'noun',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
+      notes: ['No script here: the word is part English, and the script rules cannot spell that word the way it sounds.'],
       audio: { slow: 'busil-ninn.slow', medium: 'busil-ninn.medium', normal: 'busil-ninn.normal' },
       tags: ['level:3'],
     },
@@ -139,7 +139,7 @@ export const lesson6CasesFrom: Lesson = {
       kind: 'sentence',
       notes: [
         'The answer repeats the question and fills in the place: the emphasis lands on the office.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'njan', gloss: 'I' },
@@ -158,7 +158,7 @@ export const lesson6CasesFrom: Lesson = {
       kind: 'sentence',
       notes: [
         'irangi is the past of iranguva (to get down): busil ninn irangi, got down from the bus.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'avan', gloss: 'he' },
@@ -194,7 +194,7 @@ export const lesson6CasesFrom: Lesson = {
       manglish: 'avan officil ninn aanu varunnath',
       meaning: 'he is coming from the office.',
       kind: 'sentence',
-      notes: ['The answer to avan evide ninn aanu varunnath? — the emphasis lands on the office.', 'No script here: the English word has no settled Malayalam spelling.'],
+      notes: ['The answer to avan evide ninn aanu varunnath? — the emphasis lands on the office.', 'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'avan', gloss: 'he' },
         { token: 'officil', gloss: 'at the office' },
@@ -244,7 +244,7 @@ export const lesson6CasesFrom: Lesson = {
       kind: 'sentence',
       notes: [
         '-aayi attaches to English words: ready + aayi = became ready, got ready.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'njan', gloss: 'I' },
@@ -262,7 +262,7 @@ export const lesson6CasesFrom: Lesson = {
       notes: [
         '-aayi is for something that just happened: the bucket was empty, and now it is full.',
         'It is not for slow changes: becoming a teacher takes years, so aayi would not fit there.',
-        'No script here: the English words have no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell those words the way they sound.',
       ],
       segments: [
         { token: 'ee', gloss: 'this' },

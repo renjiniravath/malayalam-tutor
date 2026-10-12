@@ -111,7 +111,7 @@ export const lesson2Questions: Lesson = {
       acceptedInputs: ['bus etha'],
       notes: [
         'The -a rides on the bus: eth busa, which bus is it? The bare eth leans straight on the noun (eth bus), but in the question the is lands at the end.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'eth', gloss: 'which (before a noun)' },

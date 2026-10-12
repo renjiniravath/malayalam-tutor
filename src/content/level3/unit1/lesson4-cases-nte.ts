@@ -67,7 +67,7 @@ export const lesson4CasesNte: Lesson = {
       pos: 'noun',
       notes: [
         '-nte attaches to English words too: office + nte = officinte.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the word is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       audio: { slow: 'officinte.slow', medium: 'officinte.medium', normal: 'officinte.normal' },
       tags: ['level:3'],
@@ -78,7 +78,7 @@ export const lesson4CasesNte: Lesson = {
       meaning: 'of the bus (bus + nte)',
       kind: 'word',
       pos: 'noun',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
+      notes: ['No script here: the word is part English, and the script rules cannot spell that word the way it sounds.'],
       audio: { slow: 'businte.slow', medium: 'businte.medium', normal: 'businte.normal' },
       tags: ['level:3'],
     },

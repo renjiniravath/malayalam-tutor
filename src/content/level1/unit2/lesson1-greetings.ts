@@ -146,7 +146,7 @@ export const lesson1Greetings: Lesson = {
       kind: 'expression',
       notes: [
         'It is the colloquial goodbye: appo sheri (okay then), bye.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       audio: { slow: 'poyi-varatte.slow', medium: 'poyi-varatte.medium', normal: 'poyi-varatte.normal' },
       tags: ['level:1'],

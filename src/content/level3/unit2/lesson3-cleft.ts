@@ -62,7 +62,7 @@ export const lesson3Cleft: Lesson = {
       notes: [
         'The question word takes the emphasis and aanu follows it; the verb closes the question in its -ath form.',
         'padichath is the -ath form of padikkuva (to study): the studying.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'nee', gloss: 'you (casual)' },
@@ -103,7 +103,7 @@ export const lesson3Cleft: Lesson = {
         'ee means this, and it goes before the noun: ee tv, this tv.',
         'medichath is the -ath form of medikkuva (to buy): the buying.',
         'You already met this shape in the ninn lesson: avan evide ninn aanu varunnath?',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'ee', gloss: 'this' },

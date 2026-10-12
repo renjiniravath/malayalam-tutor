@@ -33,7 +33,7 @@ export const lesson1CasesIl: Lesson = {
       pos: 'noun',
       notes: [
         '-il attaches to English words too: office + il = officil.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the word is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       audio: { slow: 'officil.slow', medium: 'officil.medium', normal: 'officil.normal' },
       tags: ['level:3'],
@@ -66,7 +66,7 @@ export const lesson1CasesIl: Lesson = {
       meaning: 'on the bus (bus + il)',
       kind: 'word',
       pos: 'noun',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
+      notes: ['No script here: the word is part English, and the script rules cannot spell that word the way it sounds.'],
       audio: { slow: 'busil.slow', medium: 'busil.medium', normal: 'busil.normal' },
       tags: ['level:3'],
     },
@@ -77,7 +77,7 @@ export const lesson1CasesIl: Lesson = {
       kind: 'sentence',
       notes: [
         '-il covers "to" with going verbs: officil pokuva, going to the office.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'njan', gloss: 'I' },
@@ -120,7 +120,7 @@ export const lesson1CasesIl: Lesson = {
       manglish: 'njan busil und',
       meaning: 'I am on the bus.',
       kind: 'sentence',
-      notes: ['No script here: the English word has no settled Malayalam spelling.'],
+      notes: ['No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'njan', gloss: 'I' },
         { token: 'busil', gloss: 'on the bus' },
@@ -136,7 +136,7 @@ export const lesson1CasesIl: Lesson = {
       kind: 'sentence',
       notes: [
         'keran is the "to" form of keruka, to climb on.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'njan', gloss: 'I' },
@@ -166,7 +166,7 @@ export const lesson1CasesIl: Lesson = {
       manglish: 'avan officil und',
       meaning: 'he is at the office.',
       kind: 'sentence',
-      notes: ['No script here: the English words have no settled Malayalam spelling.'],
+      notes: ['No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'avan', gloss: 'he' },
         { token: 'officil', gloss: 'at the office' },

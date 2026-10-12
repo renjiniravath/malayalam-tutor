@@ -230,7 +230,7 @@ export const lesson1UvaPattern: Lesson = {
       kind: 'sentence',
       notes: [
         'English words fill slots you have not learned yet — that is exactly how Manglish works.',
-        'No script here: the English words have no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell those words the way they sound.',
       ],
       segments: [
         { token: 'njan', gloss: 'I' },
