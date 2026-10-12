@@ -374,7 +374,57 @@
         "nammalkku-innu-oru-cinemakk-pokaam.slow", "nammalkku-innu-oru-cinemakk-pokaam.medium", "nammalkku-innu-oru-cinemakk-pokaam.normal",
         "njan-innale-oru-cinema-kandu.slow", "njan-innale-oru-cinema-kandu.medium", "njan-innale-oru-cinema-kandu.normal", "avan-inn-varum.slow",
         "avan-inn-varum.medium", "avan-inn-varum.normal"
-      
+
+      ]
+    },
+    "l4u5l1": {
+      "sprite": "audio/l4u5l1.mp3",
+      "clips": [
+        "venda.slow", "venda.medium", "venda.normal", "samayam.slow", "samayam.medium", "samayam.normal", "enikk-chaaya-venda.slow",
+        "enikk-chaaya-venda.medium", "enikk-chaaya-venda.normal", "enikk-venda.slow", "enikk-venda.medium", "enikk-venda.normal",
+        "enikk-ippo-venda.slow", "enikk-ippo-venda.medium", "enikk-ippo-venda.normal", "enikk-samayam-illa.slow", "enikk-samayam-illa.medium",
+        "enikk-samayam-illa.normal", "veettil-chaaya-illa.slow", "veettil-chaaya-illa.medium", "veettil-chaaya-illa.normal", "ithu-chaaya-alla.slow",
+        "ithu-chaaya-alla.medium", "ithu-chaaya-alla.normal", "ithu-ente-veedu-alla.slow", "ithu-ente-veedu-alla.medium", "ithu-ente-veedu-alla.normal",
+        "avan-ente-chettan-alla.slow", "avan-ente-chettan-alla.medium", "avan-ente-chettan-alla.normal"
+
+      ]
+    },
+    "l4u6l1": {
+      "sprite": "audio/l4u6l1.mp3",
+      "clips": [
+        "ethra.slow", "ethra.medium", "ethra.normal", "aaru.slow", "aaru.medium", "aaru.normal", "eppo.slow", "eppo.medium", "eppo.normal",
+        "ithu-ethra-aanu.slow", "ithu-ethra-aanu.medium", "ithu-ethra-aanu.normal", "athu-aara.slow", "athu-aara.medium", "athu-aara.normal",
+        "ithu-entha.slow", "ithu-entha.medium", "ithu-entha.normal", "avan-eppo-varum.slow", "avan-eppo-varum.medium", "avan-eppo-varum.normal",
+        "nee-evide-aanu-pokunnath.slow", "nee-evide-aanu-pokunnath.medium", "nee-evide-aanu-pokunnath.normal", "avan-evide-aanu-pokunnath.slow",
+        "avan-evide-aanu-pokunnath.medium", "avan-evide-aanu-pokunnath.normal", "ithu-engane-cheyyuva.slow", "ithu-engane-cheyyuva.medium",
+        "ithu-engane-cheyyuva.normal"
+
+      ]
+    },
+    "l4u7l1": {
+      "sprite": "audio/l4u7l1.mp3",
+      "clips": [
+        "njan-innale-kadayil-poyi.slow", "njan-innale-kadayil-poyi.medium", "njan-innale-kadayil-poyi.normal", "avan-innale-chaaya-kudichu.slow",
+        "avan-innale-chaaya-kudichu.medium", "avan-innale-chaaya-kudichu.normal", "avan-innale-raavile-officil-poyi.slow",
+        "avan-innale-raavile-officil-poyi.medium", "avan-innale-raavile-officil-poyi.normal", "njan-ippo-veettil-pokuva.slow",
+        "njan-ippo-veettil-pokuva.medium", "njan-ippo-veettil-pokuva.normal", "njan-naale-kadayilekk-pokum.slow", "njan-naale-kadayilekk-pokum.medium",
+        "njan-naale-kadayilekk-pokum.normal", "enikk-innu-samayam-illa.slow", "enikk-innu-samayam-illa.medium", "enikk-innu-samayam-illa.normal",
+        "avanu-ippo-samayam-illa.slow", "avanu-ippo-samayam-illa.medium", "avanu-ippo-samayam-illa.normal", "nammalkku-naale-raavile-pokaam.slow",
+        "nammalkku-naale-raavile-pokaam.medium", "nammalkku-naale-raavile-pokaam.normal", "avan-innale-raavile-vannu.slow",
+        "avan-innale-raavile-vannu.medium", "avan-innale-raavile-vannu.normal"
+
+      ]
+    },
+    "l4u8l1": {
+      "sprite": "audio/l4u8l1.mp3",
+      "clips": [
+        "avan-enth-aanu-cheyyunnath.slow", "avan-enth-aanu-cheyyunnath.medium", "avan-enth-aanu-cheyyunnath.normal", "nee-enth-aanu-cheyyunnath.slow",
+        "nee-enth-aanu-cheyyunnath.medium", "nee-enth-aanu-cheyyunnath.normal", "avan-eppo-aanu-varunnath.slow", "avan-eppo-aanu-varunnath.medium",
+        "avan-eppo-aanu-varunnath.normal", "njan-evide-aanu-irangunnath.slow", "njan-evide-aanu-irangunnath.medium", "njan-evide-aanu-irangunnath.normal",
+        "ee-bus-evide-aanu-pokunnath.slow", "ee-bus-evide-aanu-pokunnath.medium", "ee-bus-evide-aanu-pokunnath.normal", "avan-aara.slow", "avan-aara.medium",
+        "avan-aara.normal", "athu-entha.slow", "athu-entha.medium", "athu-entha.normal", "kada-evide-aanu.slow", "kada-evide-aanu.medium",
+        "kada-evide-aanu.normal"
+
       ]
     }
   }

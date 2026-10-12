@@ -140,8 +140,18 @@
  *       cinemakku poyi, nammaḷkku innu oru cinemakku pokaam) with the
  *       fast-speech cinemakk accepted at item and builder level — the same
  *       split as jolikku / jolikk. Ids unchanged (display-only)
+ *  33 — Level 4 completed with four more lessons (one unit each): saying no
+ *       (illa, alla, venda in whole sentences, built on the copula lesson),
+ *       asking in sentences (ethra, aaru and eppo join the Level 3 question
+ *       words, in questions the learner would actually ask, with the
+ *       aanu ... ath frame reused where it is the everyday form), and the
+ *       two assembling lessons — statements, then questions, every item with
+ *       a second natural order — where the learner builds from a word bank
+ *       and types. The checker sanctions aara (ആരാ): the same short final a
+ *       as entha and etha, so it is exempt from the long-ാ count. No item
+ *       was retired this round
  */
-export const CONTENT_REVISION = 32
+export const CONTENT_REVISION = 33
 
 /**
  * Item ids retired from content — the record of what was replaced by a

@@ -321,4 +321,48 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'nammaḷkku innu oru cinemakku pokaam', meaning: "let's go to a movie today." },
   { manglish: 'njan innale oru cinema kandu', meaning: 'I saw a movie yesterday.' },
   { manglish: 'avan innu varum', script: 'അവൻ ഇന്നു വരും', meaning: 'he will come today.' },
+  // Level 4 Unit 5 — saying no
+  { manglish: 'venda', script: 'വേണ്ട', meaning: "don't want, no thanks" },
+  { manglish: 'samayam', script: 'സമയം', meaning: 'time' },
+  { manglish: 'enikk chaaya venda', script: 'എനിക്ക് ചായ വേണ്ട', meaning: "I don't want tea." },
+  { manglish: 'enikk venda', script: 'എനിക്ക് വേണ്ട', meaning: "I don't want it." },
+  { manglish: 'enikk ippo venda', script: 'എനിക്ക് ഇപ്പോ വേണ്ട', meaning: "I don't want it right now." },
+  { manglish: 'enikk samayam illa', script: 'എനിക്ക് സമയം ഇല്ല', meaning: "I don't have time." },
+  { manglish: 'veettil chaaya illa', script: 'വീട്ടിൽ ചായ ഇല്ല', meaning: "there's no tea at home." },
+  { manglish: 'ithu chaaya alla', script: 'ഇത് ചായ അല്ല', meaning: 'this is not tea.' },
+  { manglish: 'ithu ente veedu alla', script: 'ഇത് എന്റെ വീട് അല്ല', meaning: 'this is not my house.' },
+  { manglish: 'avan ente chettan alla', script: 'അവൻ എന്റെ ചേട്ടൻ അല്ല', meaning: 'he is not my elder brother.' },
+
+  // Level 4 Unit 6 — asking in sentences
+  { manglish: 'ethra', script: 'എത്ര', meaning: 'how many? how much?' },
+  { manglish: 'aaru', script: 'ആരു', meaning: 'who?' },
+  { manglish: 'eppo', script: 'എപ്പോ', meaning: 'when?' },
+  { manglish: 'ithu ethra aanu', script: 'ഇത് എത്ര ആണ്', meaning: 'How much is this?' },
+  { manglish: 'athu aara', script: 'അത് ആരാ', meaning: 'Who is that?' },
+  { manglish: 'ithu entha', script: 'ഇത് എന്താ', meaning: 'What is this?' },
+  { manglish: 'avan eppo varum', script: 'അവൻ എപ്പോ വരും', meaning: 'When will he come?' },
+  { manglish: 'nee evide aanu pokunnath', script: 'നീ എവിടെ ആണ് പോകുന്നത്', meaning: 'Where are you going?' },
+  { manglish: 'avan evide aanu pokunnath', script: 'അവൻ എവിടെ ആണ് പോകുന്നത്', meaning: 'Where is he going?' },
+  { manglish: 'ithu engane cheyyuva', script: 'ഇത് എങ്ങനെ ചെയ്യുവാ', meaning: 'How do you do this?' },
+
+  // Level 4 Unit 7 — assembling I (statements)
+  { manglish: 'njan innale kadayil poyi', script: 'ഞാൻ ഇന്നലെ കടയിൽ പോയി', meaning: 'I went to the shop yesterday.' },
+  { manglish: 'avan innale chaaya kudichu', script: 'അവൻ ഇന്നലെ ചായ കുടിച്ചു', meaning: 'he drank tea yesterday.' },
+  { manglish: 'avan innale raavile officil poyi', meaning: 'he went to the office yesterday morning.' },
+  { manglish: 'njan ippo veettil pokuva', script: 'ഞാൻ ഇപ്പോ വീട്ടിൽ പോകുവാ', meaning: 'I am going home now.' },
+  { manglish: 'njan naaḷe kadayilekk pokum', script: 'ഞാൻ നാളെ കടയിലേക്ക് പോകും', meaning: 'I will go to the shop tomorrow.' },
+  { manglish: 'enikk innu samayam illa', script: 'എനിക്ക് ഇന്നു സമയം ഇല്ല', meaning: "I don't have time today." },
+  { manglish: 'avanu ippo samayam illa', script: 'അവന് ഇപ്പോ സമയം ഇല്ല', meaning: "he doesn't have time now." },
+  { manglish: 'nammaḷkku naaḷe raavile pokaam', script: 'നമ്മൾക്ക് നാളെ രാവിലെ പോകാം', meaning: "let's go tomorrow morning." },
+  { manglish: 'avan innale raavile vannu', script: 'അവൻ ഇന്നലെ രാവിലെ വന്നു', meaning: 'he came yesterday morning.' },
+
+  // Level 4 Unit 8 — assembling II (questions)
+  { manglish: 'avan enth aanu cheyyunnath', script: 'അവൻ എന്ത് ആണ് ചെയ്യുന്നത്', meaning: 'What is he doing?' },
+  { manglish: 'nee enth aanu cheyyunnath', script: 'നീ എന്ത് ആണ് ചെയ്യുന്നത്', meaning: 'What are you doing?' },
+  { manglish: 'avan eppo aanu varunnath', script: 'അവൻ എപ്പോ ആണ് വരുന്നത്', meaning: 'When is he coming?' },
+  { manglish: 'njan evide aanu irangunnath', script: 'ഞാൻ എവിടെ ആണ് ഇറങ്ങുന്നത്', meaning: 'Where do I get off?' },
+  { manglish: 'ee bus evide aanu pokunnath', meaning: 'Where does this bus go?' },
+  { manglish: 'avan aara', script: 'അവൻ ആരാ', meaning: 'Who is he?' },
+  { manglish: 'athu entha', script: 'അത് എന്താ', meaning: 'What is that?' },
+  { manglish: 'kada evide aanu', script: 'കട എവിടെ ആണ്', meaning: 'Where is the shop?' },
 ]
