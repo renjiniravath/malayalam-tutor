@@ -4,13 +4,13 @@ import type { Lesson } from '../types';
  * Level 4 Unit 6 Lesson 1 — asking in sentences (PLAN.md §5 Level 4):
  * the question words the learner met in isolation now carry whole
  * questions they would actually ask — evide, eppo, entha, ethra, engane,
- * aara — with one long question in the Level 3 ... aanu ...ath form.
+ * aara — and the long questions in the Level 3 ... aanu ...ath form.
  * Every question here is one a listener could answer from the sentence
  * alone (native-speaker ruling 2026-10-12): a house question names its
  * owner, and the what-would-you-like question takes -aanu and vendath.
  * The second sign-off round (native-speaker, 2026-10-12) brought the bus
- * question to engotta, the how-do-I question to ... aanu cheyyunnath, and
- * the who question to aara paranje.
+ * question to engott ... aanu pokunnath, the how-do-I question to
+ * ... aanu cheyyunnath, and the who question to aara paranjath.
  */
 export const l4u6l1: Lesson = {
   id: 'l4u6l1',
@@ -20,28 +20,30 @@ export const l4u6l1: Lesson = {
   comprehensionOnly: false,
   items: [
     {
-      id: 'ee-bus-engotta',
-      manglish: 'ee bus engotta',
-      script: 'ഈ ബസ്സ് എങ്ങോട്ടാ',
+      id: 'ee-bus-engott-aanu-pokunnath',
+      manglish: 'ee bus engott aanu pokunnath',
+      script: 'ഈ ബസ്സ് എങ്ങോട്ട് ആണ് പോകുന്നത്',
       meaning: 'where does this bus go?',
       kind: 'sentence',
       audio: {
-        slow: 'l4u6l1_ee-bus-engotta_slow',
-        medium: 'l4u6l1_ee-bus-engotta_medium',
-        normal: 'l4u6l1_ee-bus-engotta_normal',
+        slow: 'l4u6l1_ee-bus-engott-aanu-pokunnath_slow',
+        medium: 'l4u6l1_ee-bus-engott-aanu-pokunnath_medium',
+        normal: 'l4u6l1_ee-bus-engott-aanu-pokunnath_normal',
       },
       sentence: {
-        bank: ['ee', 'bus', 'engotta', 'engottu'],
-        orders: ['ee bus engotta'],
+        bank: ['ee', 'bus', 'engott', 'aanu', 'pokunnath', 'pokum'],
+        orders: ['ee bus engott aanu pokunnath'],
         parts: [
           { word: 'ee', meaning: 'this' },
           { word: 'bus', meaning: 'bus' },
-          { word: 'engotta', meaning: 'where to' },
+          { word: 'engott', meaning: 'where to' },
+          { word: 'aanu', meaning: 'is' },
+          { word: 'pokunnath', meaning: 'the going' },
         ],
       },
       notes: [
-        'Engotta asks where to: ee bus engotta, where does this bus go.',
-        'The direction word is angott, over there; engotta carries the asking a, the same final a as entha and eppozha.',
+        'Engott asks where to, and the verb waits at the end: ee bus engott aanu pokunnath, where does this bus go.',
+        'The same aanu ...unnath shape as the long questions from Level 3.',
         'The bus question you will ask most in Kerala.',
       ],
       tags: [],
@@ -184,29 +186,29 @@ export const l4u6l1: Lesson = {
       tags: [],
     },
     {
-      id: 'athu-aara-paranje',
-      manglish: 'athu aara paranje',
-      script: 'അത് ആരാ പറഞ്ഞേ',
+      id: 'athu-aara-paranjath',
+      manglish: 'athu aara paranjath',
+      script: 'അത് ആരാ പറഞ്ഞത്',
       meaning: 'who said that?',
       kind: 'sentence',
       audio: {
-        slow: 'l4u6l1_athu-aara-paranje_slow',
-        medium: 'l4u6l1_athu-aara-paranje_medium',
-        normal: 'l4u6l1_athu-aara-paranje_normal',
+        slow: 'l4u6l1_athu-aara-paranjath_slow',
+        medium: 'l4u6l1_athu-aara-paranjath_medium',
+        normal: 'l4u6l1_athu-aara-paranjath_normal',
       },
-      acceptedInputs: ['athu aara paranje', 'ath aara paranje', 'athu aaru paranju'],
+      acceptedInputs: ['athu aara paranjath', 'ath aara paranjath', 'athu aaru paranju'],
       sentence: {
-        bank: ['athu', 'aara', 'paranje', 'paranju'],
-        orders: ['athu aara paranje'],
+        bank: ['athu', 'aara', 'paranjath', 'paranju'],
+        orders: ['athu aara paranjath'],
         parts: [
           { word: 'athu', meaning: 'that' },
           { word: 'aara', meaning: 'who' },
-          { word: 'paranje', meaning: 'said' },
+          { word: 'paranjath', meaning: 'the saying' },
         ],
       },
       notes: [
         'Aara is the who question with the asking a fused on, the same final a as entha and eppozha.',
-        'Paranje ends with the spoken e; the plain past is paranju, and typing it that way is accepted.',
+        'Paranjath ends in -ath, the same ending as pokunnath and medichath; the clipped ath is accepted, and so is the older athu aaru paranju.',
         'Aarum with illa answers nobody, as in veettil aarum illa.',
       ],
       tags: [],
@@ -242,17 +244,17 @@ export const l4u6l1: Lesson = {
   ],
   minimalPairs: [],
   drills: [
-    { kind: 'multipleChoice', itemId: 'ee-bus-engotta', distractors: ['where is your house?', 'when will he come?'] },
+    { kind: 'multipleChoice', itemId: 'ee-bus-engott-aanu-pokunnath', distractors: ['where is your house?', 'when will he come?'] },
     { kind: 'multipleChoice', itemId: 'ithu-ethra-aanu', distractors: ['where does this bus go?', 'what would you like?'] },
     { kind: 'multipleChoice', itemId: 'ningalkku-enthaanu-vendath', distractors: ['where did you buy this?', 'how do I do this?'] },
-    { kind: 'multipleChoice', itemId: 'athu-aara-paranje', distractors: ['how much is this?', 'where is your house?'] },
-    { kind: 'sentenceBuilder', itemId: 'ee-bus-engotta', mode: 'bank' },
+    { kind: 'multipleChoice', itemId: 'athu-aara-paranjath', distractors: ['how much is this?', 'where is your house?'] },
+    { kind: 'sentenceBuilder', itemId: 'ee-bus-engott-aanu-pokunnath', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ninte-veedu-evide-aanu', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'avan-eppo-varum', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ithu-ethra-aanu', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ningalkku-enthaanu-vendath', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ithu-engane-aanu-cheyyunnath', mode: 'bank' },
-    { kind: 'sentenceBuilder', itemId: 'athu-aara-paranje', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'athu-aara-paranjath', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ithu-evide-ninn-aanu-medichath', mode: 'bank' },
   ],
   reviewSlots: 0,

@@ -86,7 +86,12 @@ export const contentRevision: ContentRevision = {
   // engotta (the fused asking a, as in aara and eppozha), the how-do-I
   // question becomes ithu engane aanu cheyyunnath, and the who question
   // becomes athu aara paranje; nothing else moved.
-  revision: 34,
+  // 35: the same round's refinement, superseding two of those three —
+  // the bus question takes the long aanu ...unnath shape (ee bus engott
+  // aanu pokunnath, no fused a) and the who question takes the ...ath
+  // ending (athu aara paranjath, lining up with pokunnath and medichath);
+  // the how-do-I question stands as ruled.
+  revision: 35,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -221,6 +226,10 @@ export const contentRevision: ContentRevision = {
     'ee-bus-evide-pokum',
     'ithu-engane-cheyyum',
     'athu-aaru-paranju',
+    // The round's refinement superseded two of those three (see
+    // revision 35): the bus question and the who question re-keyed again.
+    'ee-bus-engotta',
+    'athu-aara-paranje',
   ],
 };
 
