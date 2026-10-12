@@ -60,6 +60,8 @@ const LOAN_SCRIPTS: Record<string, string[]> = {
   full: ['ഫുൾ'],
   black: ['ബ്ലാക്ക്'],
   color: ['കളർ'],
+  sugar: ['ഷുഗർ'],
+  kilo: ['കിലോ'],
 };
 
 /**

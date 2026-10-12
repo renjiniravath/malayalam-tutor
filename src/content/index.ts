@@ -3,8 +3,9 @@ import { level1 } from './level1';
 import { level2 } from './level2';
 import { level3 } from './level3';
 import { level4 } from './level4';
+import { level5 } from './level5';
 
-export { level1, level2, level3, level4 };
+export { level1, level2, level3, level4, level5 };
 export { audioManifest } from './audio/manifest';
 export { imageManifest } from './images/manifest';
 export * from './types';
@@ -95,7 +96,11 @@ export const contentRevision: ContentRevision = {
   // l4u8l1 — the lunch question and the game question, both part English
   // and so shown without script, both accepting the typed ni for nee.
   // New ids; nothing existing moved.
-  revision: 36,
+  // 37: Level 5 (Real Conversations) opens with its first two scenes —
+  // l5u1l1 at the tea shop and l5u2l1 at the market, the first lessons
+  // played with the new role-play step, where the other speaker's line is
+  // the cue and the learner answers it. 16 new ids; nothing existing moved.
+  revision: 37,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -244,4 +249,4 @@ export function currentItemIds(): string[] {
   );
 }
 
-export const levels: Level[] = [level1, level2, level3, level4];
+export const levels: Level[] = [level1, level2, level3, level4, level5];
