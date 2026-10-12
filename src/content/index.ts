@@ -81,7 +81,12 @@ export const contentRevision: ContentRevision = {
   // verb correction applied to avan enth paranju in l4u1l1 (the ruled
   // form, found by sweeping the build for it). Two loan pins (glass,
   // laptop) carry the spellings the script requires.
-  revision: 33,
+  // 34: the second Level 4 sign-off round (native-speaker, 2026-10-12) —
+  // three items in l4u6l1 re-keyed: the bus question becomes ee bus
+  // engotta (the fused asking a, as in aara and eppozha), the how-do-I
+  // question becomes ithu engane aanu cheyyunnath, and the who question
+  // becomes athu aara paranje; nothing else moved.
+  revision: 34,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -211,6 +216,11 @@ export const contentRevision: ContentRevision = {
     'ippo-oru-bus-undo',
     // The same entha-before-a-verb correction in l4u1l1.
     'avan-entha-paranju',
+    // Second Level 4 sign-off round: three l4u6l1 questions re-keyed
+    // under the native speaker's preferred forms (see revision 34).
+    'ee-bus-evide-pokum',
+    'ithu-engane-cheyyum',
+    'athu-aaru-paranju',
   ],
 };
 

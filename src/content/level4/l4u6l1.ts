@@ -4,10 +4,13 @@ import type { Lesson } from '../types';
  * Level 4 Unit 6 Lesson 1 — asking in sentences (PLAN.md §5 Level 4):
  * the question words the learner met in isolation now carry whole
  * questions they would actually ask — evide, eppo, entha, ethra, engane,
- * aaru — with one long question in the Level 3 ... aanu ...ath form.
+ * aara — with one long question in the Level 3 ... aanu ...ath form.
  * Every question here is one a listener could answer from the sentence
  * alone (native-speaker ruling 2026-10-12): a house question names its
  * owner, and the what-would-you-like question takes -aanu and vendath.
+ * The second sign-off round (native-speaker, 2026-10-12) brought the bus
+ * question to engotta, the how-do-I question to ... aanu cheyyunnath, and
+ * the who question to aara paranje.
  */
 export const l4u6l1: Lesson = {
   id: 'l4u6l1',
@@ -17,28 +20,28 @@ export const l4u6l1: Lesson = {
   comprehensionOnly: false,
   items: [
     {
-      id: 'ee-bus-evide-pokum',
-      manglish: 'ee bus evide pokum',
-      script: 'ഈ ബസ്സ് എവിടെ പോകും',
+      id: 'ee-bus-engotta',
+      manglish: 'ee bus engotta',
+      script: 'ഈ ബസ്സ് എങ്ങോട്ടാ',
       meaning: 'where does this bus go?',
       kind: 'sentence',
       audio: {
-        slow: 'l4u6l1_ee-bus-evide-pokum_slow',
-        medium: 'l4u6l1_ee-bus-evide-pokum_medium',
-        normal: 'l4u6l1_ee-bus-evide-pokum_normal',
+        slow: 'l4u6l1_ee-bus-engotta_slow',
+        medium: 'l4u6l1_ee-bus-engotta_medium',
+        normal: 'l4u6l1_ee-bus-engotta_normal',
       },
       sentence: {
-        bank: ['ee', 'bus', 'evide', 'pokum', 'eth'],
-        orders: ['ee bus evide pokum'],
+        bank: ['ee', 'bus', 'engotta', 'engottu'],
+        orders: ['ee bus engotta'],
         parts: [
           { word: 'ee', meaning: 'this' },
           { word: 'bus', meaning: 'bus' },
-          { word: 'evide', meaning: 'where' },
-          { word: 'pokum', meaning: 'will go' },
+          { word: 'engotta', meaning: 'where to' },
         ],
       },
       notes: [
-        'Evide asks by itself: the words stay in their statement order and the question word does the asking.',
+        'Engotta asks where to: ee bus engotta, where does this bus go.',
+        'The direction word is angott, over there; engotta carries the asking a, the same final a as entha and eppozha.',
         'The bus question you will ask most in Kerala.',
       ],
       tags: [],
@@ -152,54 +155,59 @@ export const l4u6l1: Lesson = {
       tags: [],
     },
     {
-      id: 'ithu-engane-cheyyum',
-      manglish: 'ithu engane cheyyum',
-      script: 'ഇത് എങ്ങനെ ചെയ്യും',
+      id: 'ithu-engane-aanu-cheyyunnath',
+      manglish: 'ithu engane aanu cheyyunnath',
+      script: 'ഇത് എങ്ങനെ ആണ് ചെയ്യുന്നത്',
       meaning: 'how do I do this?',
       kind: 'sentence',
       audio: {
-        slow: 'l4u6l1_ithu-engane-cheyyum_slow',
-        medium: 'l4u6l1_ithu-engane-cheyyum_medium',
-        normal: 'l4u6l1_ithu-engane-cheyyum_normal',
+        slow: 'l4u6l1_ithu-engane-aanu-cheyyunnath_slow',
+        medium: 'l4u6l1_ithu-engane-aanu-cheyyunnath_medium',
+        normal: 'l4u6l1_ithu-engane-aanu-cheyyunnath_normal',
       },
+      acceptedInputs: ['ithu engane aanu cheyyunnath', 'ith engane aanu cheyyunnath'],
       sentence: {
-        bank: ['ithu', 'engane', 'cheyyum', 'cheyyuva'],
-        orders: ['ithu engane cheyyum'],
+        bank: ['ithu', 'engane', 'aanu', 'cheyyunnath', 'cheyyum'],
+        orders: ['ithu engane aanu cheyyunnath', 'engane aanu ithu cheyyunnath'],
         parts: [
           { word: 'ithu', meaning: 'this' },
           { word: 'engane', meaning: 'how' },
-          { word: 'cheyyum', meaning: 'does one do' },
+          { word: 'aanu', meaning: 'is' },
+          { word: 'cheyyunnath', meaning: 'the doing' },
         ],
       },
       notes: [
         'Engane asks how, the same word as in engane und, how are you.',
-        'Cheyyum here is how does one do it; the doing is not yours alone.',
+        'Cheyyunnath is the doing itself and the aanu carries the is: how is it that this is done.',
+        'Ith is accepted in typing; the display keeps the full ithu.',
       ],
       tags: [],
     },
     {
-      id: 'athu-aaru-paranju',
-      manglish: 'athu aaru paranju',
-      script: 'അത് ആരു പറഞ്ഞു',
+      id: 'athu-aara-paranje',
+      manglish: 'athu aara paranje',
+      script: 'അത് ആരാ പറഞ്ഞേ',
       meaning: 'who said that?',
       kind: 'sentence',
       audio: {
-        slow: 'l4u6l1_athu-aaru-paranju_slow',
-        medium: 'l4u6l1_athu-aaru-paranju_medium',
-        normal: 'l4u6l1_athu-aaru-paranju_normal',
+        slow: 'l4u6l1_athu-aara-paranje_slow',
+        medium: 'l4u6l1_athu-aara-paranje_medium',
+        normal: 'l4u6l1_athu-aara-paranje_normal',
       },
+      acceptedInputs: ['athu aara paranje', 'ath aara paranje', 'athu aaru paranju'],
       sentence: {
-        bank: ['athu', 'aaru', 'paranju', 'parayuva'],
-        orders: ['athu aaru paranju'],
+        bank: ['athu', 'aara', 'paranje', 'paranju'],
+        orders: ['athu aara paranje'],
         parts: [
           { word: 'athu', meaning: 'that' },
-          { word: 'aaru', meaning: 'who' },
-          { word: 'paranju', meaning: 'said' },
+          { word: 'aara', meaning: 'who' },
+          { word: 'paranje', meaning: 'said' },
         ],
       },
       notes: [
-        'Aaru asks who; aarum with illa answers nobody, as in veettil aarum illa.',
-        'The past verb makes it a question about something already said.',
+        'Aara is the who question with the asking a fused on, the same final a as entha and eppozha.',
+        'Paranje ends with the spoken e; the plain past is paranju, and typing it that way is accepted.',
+        'Aarum with illa answers nobody, as in veettil aarum illa.',
       ],
       tags: [],
     },
@@ -234,17 +242,17 @@ export const l4u6l1: Lesson = {
   ],
   minimalPairs: [],
   drills: [
-    { kind: 'multipleChoice', itemId: 'ee-bus-evide-pokum', distractors: ['where is your house?', 'when will he come?'] },
+    { kind: 'multipleChoice', itemId: 'ee-bus-engotta', distractors: ['where is your house?', 'when will he come?'] },
     { kind: 'multipleChoice', itemId: 'ithu-ethra-aanu', distractors: ['where does this bus go?', 'what would you like?'] },
     { kind: 'multipleChoice', itemId: 'ningalkku-enthaanu-vendath', distractors: ['where did you buy this?', 'how do I do this?'] },
-    { kind: 'multipleChoice', itemId: 'athu-aaru-paranju', distractors: ['how much is this?', 'where is your house?'] },
-    { kind: 'sentenceBuilder', itemId: 'ee-bus-evide-pokum', mode: 'bank' },
+    { kind: 'multipleChoice', itemId: 'athu-aara-paranje', distractors: ['how much is this?', 'where is your house?'] },
+    { kind: 'sentenceBuilder', itemId: 'ee-bus-engotta', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ninte-veedu-evide-aanu', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'avan-eppo-varum', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ithu-ethra-aanu', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ningalkku-enthaanu-vendath', mode: 'bank' },
-    { kind: 'sentenceBuilder', itemId: 'ithu-engane-cheyyum', mode: 'bank' },
-    { kind: 'sentenceBuilder', itemId: 'athu-aaru-paranju', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'ithu-engane-aanu-cheyyunnath', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'athu-aara-paranje', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ithu-evide-ninn-aanu-medichath', mode: 'bank' },
   ],
   reviewSlots: 0,
