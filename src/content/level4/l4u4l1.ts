@@ -193,6 +193,10 @@ export const l4u4l1: Lesson = {
         medium: 'l4u4l1_nammal-innu-kadayil-pokaam_medium',
         normal: 'l4u4l1_nammal-innu-kadayil-pokaam_normal',
       },
+      acceptedInputs: [
+        'nammalkku innu oru cinemakku pokaam',
+        'nammalkku innu oru cinemakk pokaam',
+      ],
       sentence: {
         bank: ['nammaḷkku', 'innu', 'oru', 'cinemakku', 'pokaam', 'kadayil'],
         orders: ['nammaḷkku innu oru cinemakku pokaam'],
@@ -207,6 +211,7 @@ export const l4u4l1: Lesson = {
       notes: [
         'The suggestion takes the to-us form: nammaḷkku innu oru cinemakku pokaam.',
         'Cinema is the movies; cinemakku is the heading-to form. Swap it for any other place.',
+        'Fast speech clips it to cinemakk, and typing that is accepted; the display keeps the full -kku.',
       ],
       tags: [],
     },
