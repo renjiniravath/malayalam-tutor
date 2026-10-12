@@ -67,7 +67,10 @@ export const contentRevision: ContentRevision = {
   // avan-jolikku-pokum) — each accepts the clipped jolikk explicitly
   // instead of resting on the one-typo rule, with the fast-speech note;
   // no ids or keys moved.
-  revision: 31,
+  // 32: Level 4 completed — l4u5l1 (saying no), l4u6l1 (asking in
+  // sentences), l4u7l1 and l4u8l1 (the assembling block) are new lessons
+  // with new items; nothing existing changed, and no ids or keys moved.
+  revision: 32,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',

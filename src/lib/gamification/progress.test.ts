@@ -66,18 +66,24 @@ describe('sound mastery and can-do (real logs only)', () => {
         unitIds.flatMap((unitId) => itemsOf(unitId)).map((item) => log(item.id)),
       ).map((entry) => entry.done);
 
-    assert.equal(level4.canDo.length, 4, 'one statement per unit');
+    assert.equal(level4.canDo.length, 8, 'one statement per unit');
     assert.deepEqual(
       level4.lessons.map((lesson) => lesson.unitId),
-      ['l4u1', 'l4u2', 'l4u3', 'l4u4'],
-      'four units, one lesson each',
+      ['l4u1', 'l4u2', 'l4u3', 'l4u4', 'l4u5', 'l4u6', 'l4u7', 'l4u8'],
+      'eight units, one lesson each',
     );
 
-    assert.deepEqual(lights([]), [false, false, false, false]);
-    assert.deepEqual(lights(['l4u1']), [true, false, false, false]);
-    assert.deepEqual(lights(['l4u1', 'l4u2']), [true, true, false, false]);
-    assert.deepEqual(lights(['l4u1', 'l4u2', 'l4u3']), [true, true, true, false]);
-    assert.deepEqual(lights(['l4u1', 'l4u2', 'l4u3', 'l4u4']), [true, true, true, true]);
+    assert.deepEqual(lights([]), [false, false, false, false, false, false, false, false]);
+    assert.deepEqual(lights(['l4u1']), [true, false, false, false, false, false, false, false]);
+    assert.deepEqual(lights(['l4u1', 'l4u2']), [true, true, false, false, false, false, false, false]);
+    assert.deepEqual(
+      lights(['l4u1', 'l4u2', 'l4u3', 'l4u4']),
+      [true, true, true, true, false, false, false, false],
+    );
+    assert.deepEqual(
+      lights(['l4u1', 'l4u2', 'l4u3', 'l4u4', 'l4u5', 'l4u6', 'l4u7', 'l4u8']),
+      [true, true, true, true, true, true, true, true],
+    );
   });
 });
 

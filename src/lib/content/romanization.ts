@@ -47,6 +47,7 @@ const CLASS_LETTERS = new Set(['k', 'g', 'j', 'p', 'b', 'm', 'y', 'v', 's']);
  */
 const LOAN_SCRIPTS: Record<string, string[]> = {
   okay: ['ഓക്കേ'],
+  bus: ['ബസ്സ്'],
   busil: ['ബസ്സിൽ'],
   busilekk: ['ബസ്സിലേക്ക്'],
   businte: ['ബസ്സിന്റെ'],

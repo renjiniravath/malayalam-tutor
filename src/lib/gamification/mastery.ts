@@ -59,7 +59,7 @@ export function soundMastery(level: Level, logs: ReviewLogRecord[]): SoundMaster
  *    nouns/verbs/pronouns line on unit 3 (pronouns); the noun and verb
  *    units are not authored yet, so this reflects what the course teaches
  *    today
- *  - Level 4 has four units of one lesson each, one line per unit, so
+ *  - Level 4 has eight units of one lesson each, one line per unit, so
  *    finishing a lesson lights exactly one statement; a level with no
  *    mapping yet reports every line open
  */
@@ -71,7 +71,7 @@ export function soundMastery(level: Level, logs: ReviewLogRecord[]): SoundMaster
  */
 const CAN_DO_UNITS: Record<string, string[]> = {
   l1: ['sound', 'l1u2', 'l1u3'],
-  l4: ['l4u1', 'l4u2', 'l4u3', 'l4u4'],
+  l4: ['l4u1', 'l4u2', 'l4u3', 'l4u4', 'l4u5', 'l4u6', 'l4u7', 'l4u8'],
 };
 
 export function levelCanDo(level: Level, logs: ReviewLogRecord[]): CanDoState[] {
