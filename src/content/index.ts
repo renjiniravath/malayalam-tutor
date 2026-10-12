@@ -70,7 +70,18 @@ export const contentRevision: ContentRevision = {
   // 32: Level 4 completed — l4u5l1 (saying no), l4u6l1 (asking in
   // sentences), l4u7l1 and l4u8l1 (the assembling block) are new lessons
   // with new items; nothing existing changed, and no ids or keys moved.
-  revision: 32,
+  // 33: the Level 4 second-half sign-off (native-speaker rulings
+  // 2026-10-12) — sixteen sentences re-keyed under their corrected words
+  // (time not kaashu, vannilla, the bag and the laptop, ninte veedu,
+  // enthaanu vendath, medichath, tonight going angott, the ninn in the
+  // eating suggestion, the glass of water, the morning pokum, chechi enth
+  // paranju, ivide irikkatte, nammal evide aanu pokunnath, kaappikku and
+  // the Ernakulam bus uḷḷath), the three -illa past words vannilla,
+  // kandilla and etthiyilla added as items, and the same entha-before-a-
+  // verb correction applied to avan enth paranju in l4u1l1 (the ruled
+  // form, found by sweeping the build for it). Two loan pins (glass,
+  // laptop) carry the spellings the script requires.
+  revision: 33,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -180,6 +191,26 @@ export const contentRevision: ContentRevision = {
     // information — avarude veedu avide und was pointless and is replaced
     // by the model akhilinte car black color aanu.
     'avarude-veedu-avide-und',
+    // Level 4 second-half rulings: sixteen sentences re-keyed under the
+    // corrected words (see revision 33).
+    'enikk-ippo-kaashu-illa',
+    'avan-innale-officil-illa',
+    'ithu-ente-chaaya-alla',
+    'athu-ente-veedu-alla',
+    'kada-evide-aanu',
+    'ningalkku-entha-venam',
+    'ithu-evide-ninn-aanu-vaangiyath',
+    'njan-innu-raathri-veettil-kazhikkum',
+    'nammalkku-avide-kazhikkaam',
+    'enikk-ippo-oru-kaappi-venam',
+    'njan-innu-raavile-officil-pokuva',
+    'chechi-entha-paranju',
+    'njan-evide-irikkam',
+    'nammalkku-evide-pokaam',
+    'oru-kaappi-ethra-aanu',
+    'ippo-oru-bus-undo',
+    // The same entha-before-a-verb correction in l4u1l1.
+    'avan-entha-paranju',
   ],
 };
 
