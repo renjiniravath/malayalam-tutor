@@ -8,7 +8,10 @@ import type { Lesson } from '../types';
  * The native-speaker rulings of 2026-10-12 settled five: enth before a
  * verb (chechi enth paranju), the may-I form irikkatte, the long group
  * question ... aanu pokunnath, the price frame -kku (oru kaappikku), and
- * the bus-stand question with ini, eppozha and uḷḷath.
+ * the bus-stand question with ini, eppozha and uḷḷath. Two more cleft
+ * questions joined them later (native-speaker, 2026-10-12): the lunch
+ * question and the game question, both part English and so shown without
+ * script, both accepting the typed ni for nee.
  */
 export const l4u8l1: Lesson = {
   id: 'l4u8l1',
@@ -154,6 +157,65 @@ export const l4u8l1: Lesson = {
       tags: [],
     },
     {
+      id: 'nee-evide-ninn-aanu-lunch-kazhikkunnath',
+      manglish: 'nee evide ninn aanu lunch kazhikkunnath',
+      meaning: 'where are you having lunch from?',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u8l1_nee-evide-ninn-aanu-lunch-kazhikkunnath_slow',
+        medium: 'l4u8l1_nee-evide-ninn-aanu-lunch-kazhikkunnath_medium',
+        normal: 'l4u8l1_nee-evide-ninn-aanu-lunch-kazhikkunnath_normal',
+      },
+      acceptedInputs: ['nee evide ninn aanu lunch kazhikkunnath', 'ni evide ninn aanu lunch kazhikkunnath'],
+      sentence: {
+        bank: ['nee', 'evide', 'ninn', 'aanu', 'lunch', 'kazhikkunnath', 'kazhikkum'],
+        orders: ['nee evide ninn aanu lunch kazhikkunnath', 'evide ninn aanu nee lunch kazhikkunnath'],
+        parts: [
+          { word: 'nee', meaning: 'you' },
+          { word: 'evide', meaning: 'where' },
+          { word: 'ninn', meaning: 'from' },
+          { word: 'aanu', meaning: 'is' },
+          { word: 'lunch', meaning: 'lunch' },
+          { word: 'kazhikkunnath', meaning: 'the eating' },
+        ],
+      },
+      notes: [
+        'The long question with lunch: ... aanu kazhikkunnath, where is it that you are eating lunch.',
+        'Ninn is from, the same word as in ithu evide ninn aanu medichath.',
+        'Lunch is part English, so this sentence carries no script. Ni is accepted in typing; the display keeps nee.',
+      ],
+      tags: [],
+    },
+    {
+      id: 'nee-eth-game-aanu-kalikkunnath',
+      manglish: 'nee eth game aanu kalikkunnath',
+      meaning: 'which game are you playing?',
+      kind: 'sentence',
+      audio: {
+        slow: 'l4u8l1_nee-eth-game-aanu-kalikkunnath_slow',
+        medium: 'l4u8l1_nee-eth-game-aanu-kalikkunnath_medium',
+        normal: 'l4u8l1_nee-eth-game-aanu-kalikkunnath_normal',
+      },
+      acceptedInputs: ['nee eth game aanu kalikkunnath', 'ni eth game aanu kalikkunnath'],
+      sentence: {
+        bank: ['nee', 'eth', 'game', 'aanu', 'kalikkunnath', 'kalikkum'],
+        orders: ['nee eth game aanu kalikkunnath', 'eth game aanu nee kalikkunnath'],
+        parts: [
+          { word: 'nee', meaning: 'you' },
+          { word: 'eth', meaning: 'which' },
+          { word: 'game', meaning: 'game' },
+          { word: 'aanu', meaning: 'is' },
+          { word: 'kalikkunnath', meaning: 'the playing' },
+        ],
+      },
+      notes: [
+        'The long question with a game: ... aanu kalikkunnath, which game is it that you are playing.',
+        'Kalikkunnath is the playing itself, the same ending as pokunnath; eth is the which from nee eth schoolil aanu padichath.',
+        'Game is part English, so this sentence carries no script. Ni is accepted in typing; the display keeps nee.',
+      ],
+      tags: [],
+    },
+    {
       id: 'oru-kaappikku-ethra-aanu',
       manglish: 'oru kaappikku ethra aanu',
       script: 'ഒരു കാപ്പിക്ക് എത്ര ആണ്',
@@ -245,11 +307,15 @@ export const l4u8l1: Lesson = {
   drills: [
     { kind: 'multipleChoice', itemId: 'ini-eppozha-ernakulatthekk-bus-ullath', distractors: ['who all are at home?', 'may I sit here?'] },
     { kind: 'multipleChoice', itemId: 'veettil-aarokke-und', distractors: ['how much for a coffee?', 'where are you?'] },
+    { kind: 'multipleChoice', itemId: 'nee-evide-ninn-aanu-lunch-kazhikkunnath', distractors: ['who all are at home?', 'when will you come?'] },
+    { kind: 'multipleChoice', itemId: 'nee-eth-game-aanu-kalikkunnath', distractors: ['what did your sister say?', 'where are we going?'] },
     { kind: 'sentenceBuilder', itemId: 'ningal-evide-aanu', mode: 'typing' },
     { kind: 'sentenceBuilder', itemId: 'chechi-enth-paranju', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'ningal-eppo-varum', mode: 'typing' },
     { kind: 'sentenceBuilder', itemId: 'njan-ivide-irikkatte', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'nammal-evide-aanu-pokunnath', mode: 'typing' },
+    { kind: 'sentenceBuilder', itemId: 'nee-evide-ninn-aanu-lunch-kazhikkunnath', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'nee-eth-game-aanu-kalikkunnath', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'oru-kaappikku-ethra-aanu', mode: 'bank' },
     { kind: 'sentenceBuilder', itemId: 'veettil-aarokke-und', mode: 'typing' },
     { kind: 'sentenceBuilder', itemId: 'ini-eppozha-ernakulatthekk-bus-ullath', mode: 'bank' },

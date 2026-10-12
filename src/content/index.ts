@@ -91,7 +91,11 @@ export const contentRevision: ContentRevision = {
   // aanu pokunnath, no fused a) and the who question takes the ...ath
   // ending (athu aara paranjath, lining up with pokunnath and medichath);
   // the how-do-I question stands as ruled.
-  revision: 35,
+  // 36: two more cleft questions from the same native-speaker round join
+  // l4u8l1 — the lunch question and the game question, both part English
+  // and so shown without script, both accepting the typed ni for nee.
+  // New ids; nothing existing moved.
+  revision: 36,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',

@@ -36,13 +36,13 @@ export const l4u6l1: Lesson = {
         parts: [
           { word: 'ee', meaning: 'this' },
           { word: 'bus', meaning: 'bus' },
-          { word: 'engott', meaning: 'where to' },
+          { word: 'engott', meaning: 'where' },
           { word: 'aanu', meaning: 'is' },
           { word: 'pokunnath', meaning: 'the going' },
         ],
       },
       notes: [
-        'Engott asks where to, and the verb waits at the end: ee bus engott aanu pokunnath, where does this bus go.',
+        'Engott is where: ee bus engott aanu pokunnath, where does this bus go.',
         'The same aanu ...unnath shape as the long questions from Level 3.',
         'The bus question you will ask most in Kerala.',
       ],
