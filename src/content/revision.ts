@@ -135,8 +135,13 @@
  *  31 — number agreement on two Level 4 notes: avan friday raathri varum
  *       and avan ella weekendsum veettil varum each mix in one English
  *       word, so their no-script notes say "that word ... it sounds"
+ *  32 — native-speaker ruling 2026-10-12: English words take the full
+ *       -kku. The two cinema sentences display cinemakku (njan innale oru
+ *       cinemakku poyi, nammaḷkku innu oru cinemakku pokaam) with the
+ *       fast-speech cinemakk accepted at item and builder level — the same
+ *       split as jolikku / jolikk. Ids unchanged (display-only)
  */
-export const CONTENT_REVISION = 31
+export const CONTENT_REVISION = 32
 
 /**
  * Item ids retired from content — the record of what was replaced by a
@@ -161,7 +166,7 @@ export const REMOVED_ITEM_IDS: readonly string[] = [
   // l4u1l1-l4u4l1 — the Level 4 sign-off round (2026-10-11) replaced these
   // with the native speaker's own sentences: each past or future sentence
   // carries its time or destination, and a suggestion takes the to-us form.
-  'njan-veettil-poyi', // -> njan innale oru cinemakk poyi
+  'njan-veettil-poyi', // -> njan innale oru cinemakku poyi
   'avan-ippo-vannu', // -> njan lunch kazhichu
   'njan-veettil-pokum', // -> njan naaḷe raavile veettil pokum
   'avan-varum', // -> avan friday raathri varum
@@ -171,6 +176,6 @@ export const REMOVED_ITEM_IDS: readonly string[] = [
   'nammal-appo-pokaam', // -> enna nammaḷkku pokaam
   'avan-veettil-pokum', // -> avan naaḷe veettil pokum
   'njan-innale-veettil-poyi', // -> njan innale veettil etthi
-  'nammal-inn-veettil-pokaam', // -> nammaḷkku innu oru cinemakk pokaam
+  'nammal-inn-veettil-pokaam', // -> nammaḷkku innu oru cinemakku pokaam
   'njan-innale-chaaya-kudichu', // -> njan innale oru cinema kandu
 ]

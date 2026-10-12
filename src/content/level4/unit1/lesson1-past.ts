@@ -121,9 +121,10 @@ export const lesson1Past: Lesson = {
     },
     {
       id: 'njan-innale-oru-cinemakk-poyi',
-      manglish: 'njan innale oru cinemakk poyi',
+      manglish: 'njan innale oru cinemakku poyi',
       meaning: 'I went to a movie yesterday.',
       kind: 'sentence',
+      acceptedInputs: ['njan innale oru cinemakk poyi'],
       notes: [
         'English words fill slots you have not learned yet — that is exactly how Manglish works.',
         'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
@@ -132,7 +133,7 @@ export const lesson1Past: Lesson = {
         { token: 'njan', gloss: 'I' },
         { token: 'innale', gloss: 'yesterday' },
         { token: 'oru', gloss: 'a (one)' },
-        { token: 'cinemakk', gloss: 'to a movie (cinema + kk)' },
+        { token: 'cinemakku', gloss: 'to a movie (cinema + kku)' },
         { token: 'poyi', gloss: 'went' },
       ],
       audio: { slow: 'njan-innale-oru-cinemakk-poyi.slow', medium: 'njan-innale-oru-cinemakk-poyi.medium', normal: 'njan-innale-oru-cinemakk-poyi.normal' },
@@ -172,7 +173,7 @@ export const lesson1Past: Lesson = {
     {
       kind: 'sentenceBuilder',
       sentenceId: 'njan-innale-oru-cinemakk-poyi',
-      bank: ['njan', 'innale', 'oru', 'cinemakk', 'poyi'],
+      bank: ['njan', 'innale', 'oru', 'cinemakku', 'poyi'],
       acceptedInputs: ['njan innale oru cinemakku poyi', 'njan innale oru cinemakk poyi'],
     },
     {

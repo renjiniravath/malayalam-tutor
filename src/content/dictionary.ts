@@ -285,7 +285,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'nokki', script: 'നോക്കി', meaning: 'looked' },
   { manglish: 'paranju', script: 'പറഞ്ഞു', meaning: 'said' },
   { manglish: 'cheythu', script: 'ചെയ്തു', meaning: 'did' },
-  { manglish: 'njan innale oru cinemakk poyi', meaning: 'I went to a movie yesterday.' },
+  { manglish: 'njan innale oru cinemakku poyi', meaning: 'I went to a movie yesterday.' },
   { manglish: 'njan lunch kazhichu', meaning: 'I ate lunch.' },
   // Level 4 Unit 2 — the future and the "let's" form
   { manglish: 'pokum', script: 'പോകും', meaning: 'will go' },
@@ -318,7 +318,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'avan innale vannu', script: 'അവൻ ഇന്നലെ വന്നു', meaning: 'he came yesterday.' },
   { manglish: 'njan naaḷe veettil pokum', script: 'ഞാൻ നാളെ വീട്ടിൽ പോകും', meaning: 'I will go home tomorrow.' },
   { manglish: 'avan naaḷe varum', script: 'അവൻ നാളെ വരും', meaning: 'he will come tomorrow.' },
-  { manglish: 'nammaḷkku innu oru cinemakk pokaam', meaning: "let's go to a movie today." },
+  { manglish: 'nammaḷkku innu oru cinemakku pokaam', meaning: "let's go to a movie today." },
   { manglish: 'njan innale oru cinema kandu', meaning: 'I saw a movie yesterday.' },
   { manglish: 'avan innu varum', script: 'അവൻ ഇന്നു വരും', meaning: 'he will come today.' },
 ]

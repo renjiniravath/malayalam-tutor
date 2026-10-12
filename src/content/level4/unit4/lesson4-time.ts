@@ -113,16 +113,16 @@ export const lesson4Time: Lesson = {
     },
     {
       id: 'nammalkku-innu-oru-cinemakk-pokaam',
-      manglish: 'nammaḷkku innu oru cinemakk pokaam',
+      manglish: 'nammaḷkku innu oru cinemakku pokaam',
       meaning: "let's go to a movie today.",
       kind: 'sentence',
-      acceptedInputs: ['namukku innu oru cinemakk pokaam'],
+      acceptedInputs: ['namukku innu oru cinemakku pokaam', 'nammaḷkku innu oru cinemakk pokaam'],
       notes: ['No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'nammaḷkku', gloss: 'for us (nammaḷ + kku)' },
         { token: 'innu', gloss: 'today' },
         { token: 'oru', gloss: 'a (one)' },
-        { token: 'cinemakk', gloss: 'to a movie (cinema + kk)' },
+        { token: 'cinemakku', gloss: 'to a movie (cinema + kku)' },
         { token: 'pokaam', gloss: "let's go" },
       ],
       audio: { slow: 'nammalkku-innu-oru-cinemakk-pokaam.slow', medium: 'nammalkku-innu-oru-cinemakk-pokaam.medium', normal: 'nammalkku-innu-oru-cinemakk-pokaam.normal' },
@@ -202,8 +202,8 @@ export const lesson4Time: Lesson = {
     {
       kind: 'sentenceBuilder',
       sentenceId: 'nammalkku-innu-oru-cinemakk-pokaam',
-      bank: ['nammaḷkku', 'innu', 'oru', 'cinemakk', 'pokaam'],
-      acceptedInputs: ['nammalkku innu oru cinemakku pokaam', 'nammaḷkku innu oru cinemakk pokaam', 'namukku innu oru cinemakk pokaam'],
+      bank: ['nammaḷkku', 'innu', 'oru', 'cinemakku', 'pokaam'],
+      acceptedInputs: ['nammalkku innu oru cinemakku pokaam', 'nammaḷkku innu oru cinemakk pokaam', 'namukku innu oru cinemakku pokaam'],
     },
     {
       kind: 'sentenceBuilder',
