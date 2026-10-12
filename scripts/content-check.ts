@@ -124,17 +124,55 @@ function hasEmoji(text: string): boolean {
 
 /**
  * Words banned by native-speaker rulings — taught forms removed from the
- * course. Exact matches on whole manglish tokens; the shop/store English
- * family is banned by substring (the native word is kada).
+ * course. The first six are retired vocabulary; the last six are retired
+ * *spellings* (njaan, enthaa, eppozhaa, aaraa, vali, kettiyo) that a later
+ * round must never quietly re-type — the whole point of the ban is that a
+ * ruling cannot be undone by someone retyping the old form. Matched as whole
+ * words in any manglish field; the shop/store English family is banned by
+ * substring instead (the native word is kada).
  */
-const BANNED_TOKENS = new Set(['azhaku', 'aunty', 'kudikkuka', 'kudi', 'shoppil', 'shoppilekk']);
+const BANNED_TOKENS = new Set([
+  'azhaku',
+  'aunty',
+  'kudikkuka',
+  'kudi',
+  'shoppil',
+  'shoppilekk',
+  'njaan',
+  'enthaa',
+  'eppozhaa',
+  'aaraa',
+  'vali',
+  'kettiyo',
+]);
+
+/**
+ * Every romanization field a learner can see or type: the item's own line,
+ * its accepted typed inputs, and the builder's bank, orders and gloss tokens.
+ * Malayalam script and English copy are not manglish fields and are not
+ * scanned.
+ */
+function manglishFields(item: Item): string[] {
+  const fields = [item.manglish, ...(item.acceptedInputs ?? [])];
+  if (item.sentence) {
+    fields.push(...item.sentence.bank, ...item.sentence.orders, ...item.sentence.parts.map((part) => part.word));
+  }
+  return fields;
+}
 
 function checkBannedWords(where: string, item: Item): void {
-  if (BANNED_TOKENS.has(item.manglish)) {
-    fail(where, `'${item.manglish}' is banned by native-speaker ruling and must not appear in content`);
-  }
-  if (/shop|store/.test(item.manglish)) {
-    fail(where, `'${item.manglish}' uses a shop/store English word — the native word is kada`);
+  for (const field of manglishFields(item)) {
+    // Words, not space-split tokens, so 'chetta,' and 'aayi,' still read as
+    // words and a banned word inside a longer one (enthaanu) does not trip.
+    for (const token of field.toLowerCase().split(/[^\p{L}']+/u)) {
+      if (!token) continue;
+      if (BANNED_TOKENS.has(token)) {
+        fail(where, `'${token}' is banned by native-speaker ruling and must not appear in content (in '${field}')`);
+      }
+      if (/shop|store/.test(token)) {
+        fail(where, `'${token}' uses a shop/store English word — the native word is kada (in '${field}')`);
+      }
+    }
   }
 }
 
@@ -298,13 +336,6 @@ function checkSentence(where: string, item: Item): void {
   // not natural — varunnund is the statement form.
   if (hasBareThirdPersonUva(spec.orders)) {
     fail(where, "a bare third-person -uva declarative ('avan varuva') is not natural; use varunnund or give the verb a complement");
-  }
-  // Lexical bans from the native-speaker rulings: these words are not
-  // taught and must not come back.
-  for (const token of spec.orders.flatMap((order) => order.split(' '))) {
-    if (BANNED_TOKENS.has(token)) {
-      fail(where, `'${token}' is banned by native-speaker ruling and must not appear in content`);
-    }
   }
 }
 

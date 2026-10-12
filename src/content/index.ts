@@ -116,7 +116,15 @@ export const contentRevision: ContentRevision = {
   // displays sugar idaṇo and retires the sugar-idaano id it shipped under
   // in revision 38; the folded sugar idano is accepted in typing. The
   // script, the id, the drill references and the can-do line move with it.
-  revision: 39,
+  // 40: Level 5 gains three more scenes on the same role-play machinery
+  // (native-speaker brief 2026-10-12) — l5u3l1 the auto ride, l5u4l1 the
+  // phone call and l5u5l1 visiting family, seven turns each, the learner
+  // opening and the other speaker cued by the turn before. The fare is a
+  // plain exchange (no haggling), the phone questions carry their own
+  // context, and the visit is the register scene, where the polite you and
+  // the already-taught polite lines do the work. 21 new ids; nothing
+  // existing moved, and the hello loan pin carries the script's single ല.
+  revision: 40,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',

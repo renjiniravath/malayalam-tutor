@@ -62,6 +62,9 @@ const LOAN_SCRIPTS: Record<string, string[]> = {
   color: ['കളർ'],
   sugar: ['ഷുഗർ'],
   kilo: ['കിലോ'],
+  // The phone answer: the English double l against the single ല of ഹലോ,
+  // the same divergence as buss- against ബസ്സ്.
+  hello: ['ഹലോ'],
 };
 
 /**
