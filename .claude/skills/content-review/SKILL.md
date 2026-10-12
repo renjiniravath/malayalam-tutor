@@ -38,7 +38,18 @@ New lessons follow the same conventions as existing ones; keep the two builds' c
 
 ## 5. Validate — one validator agent per build
 
-Fresh-eyes validators (`validator-claude`, `validator-deepseek`), pinned to the maker's commit: verify every ruling applied, no id churn, the three gates green, and probe adversarially on throwaway copies. They report, never fix.
+Fresh-eyes validators (`validator-claude`, `validator-deepseek`), pinned to the maker's commit, on throwaway copies only (`/tmp`); they report, never fix. Two scopes, and the round report says which ran:
+
+**Delta check — every iteration (the default).** Scope it to the commit range the round produced (`base..tip`):
+- Before → after per site, driven through the real modules, for the items the round touched only.
+- No id churn: retirements recorded, no id reused, no stale string from a retired form anywhere, no surviving item touched.
+- The changed items resolve through the real player path (steps, drills, banks, matcher).
+- The three gates once at the tip: `content:check`, the test suite, the build.
+- Read the round's accepted inputs by eye — the checker cannot see an unsanctioned one.
+- One targeted mutation proof per rule the delta leaned on; a few, not a dozen.
+- Do not re-sweep the untouched build, dump every item, or re-run exhaustive permutation and neighbour sweeps.
+
+**Full validation — every 5 chapters.** A chapter is one lesson delivered (for a round with no new lesson, the round itself counts). The full pass adds everything the delta check skips: keyed structural dumps base → tip over the whole build, build-wide integrity sweeps (orphan drills, distractor integrity, duplicate manglish, jargon scan, script correspondence on every item, cross-lesson references), exhaustive order permutations and one-edit neighbour sweeps, and the full mutation set. The round report carries the tally ("delta 3 of 5 since the last full pass") so the cadence is visible.
 
 ## 6. Re-serve
 
