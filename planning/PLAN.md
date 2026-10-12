@@ -118,7 +118,8 @@ Rulings from the first Level 4 sign-off round (native-speaker, 2026-10-11):
 - **"Let's" takes the dative**: `nammaḷkku veettil pokaam` — never `nammaḷ veettil pokaam` (the nominative can't carry the suggestion)
 - **A past or future sentence carries a clear time or destination** when the listener would otherwise wonder: `njan naaḷe raavile veettil pokum` (not a bare `njan veettil pokum`), `avan friday raathri varum`, `avan naaḷe veettil pokum`, `njan innale veettil etthi` ("I reached home yesterday" — `etthi`, the display form of the speaker's `ethi`, says where the speaker is now, unlike `poyi`)
 - **Sentences must carry information** — "njan innale chaaya kudichu" ("I drank tea yesterday") was struck as pointless; "he comes home every day" was replaced with `avan ella weekendsum veettil varum` ("he comes home every weekend" — the `-um` future is the every-weekend habit; say something worth knowing)
-- Frames landed as `njan innale oru cinemakk poyi` (I went to a movie yesterday), `njan lunch kazhichu` (I ate lunch), `njan innale oru cinema kandu`, `enna nammaḷkku pokaam` (then let's go), `nammaḷkku innu oru cinemakku pokaam`
+- Frames landed as `njan innale oru cinemakku poyi` (I went to a movie yesterday), `njan lunch kazhichu` (I ate lunch), `njan innale oru cinema kandu`, `enna nammaḷkku pokaam` (then let's go), `nammaḷkku innu oru cinemakku pokaam`
+- **English words take the full `-kku`** (native-speaker ruling 2026-10-12): `cinemakku` is the display, `cinemakk` stays accepted as the fast-speech input — the same split as `jolikku`/`jolikk`
 - **`nammaḷkku` is the display for both datives** (native-speaker ruling 2026-10-12): `namukku` is the same word and stays accepted as an input everywhere — including the Level 1 pronoun item, whose display and script become `nammaḷkku` / നമ്മൾക്ക്
 
 ### Level 5 — Real Conversations (Pre-advanced, still romanized) · ~100 phrases/dialogues, 8 lessons
@@ -194,7 +195,7 @@ Rules:
 3. ള and ണ are common sounds (`veḷḷam`, `veṇṇa`), not rare — dedicated symbols in the **display layer**.
 4. Never use capitalization as a phonemic signal (mobile auto-capitalize).
 5. **Display layer is strict** (this table, diacritics included). **Input layer is ASCII-forgiving**: accept loose Manglish (`l` for ള, `n` for ണ, plain `t/d` for either dental or retroflex), case-insensitive, diacritic-folded, with small typo tolerance. Learners never type diacritics on a phone.
-6. **Script rule**: the Malayalam script field spells the **colloquial form** the way Malayalis write it informally (e.g., `pokuva` → പോകുവാ). Where no natural colloquial spelling exists, show the standard written form with a small "written form" badge; if that misleads, omit script for that item. Never source script from formal texts (Moag et al.). Native-speaker sign-off per item — this rule protects the app's entire register promise.
+6. **Script rule**: the Malayalam script field spells the **colloquial form** the way Malayalis write it informally (e.g., `pokuva` → പോകുവാ). Where no natural colloquial spelling exists, show the standard written form with a small "written form" badge; if that misleads, omit script for that item. Never source script from formal texts (Moag et al.). Native-speaker sign-off per item — this rule protects the app's entire register promise. When a script is omitted because the item mixes in English words the script rules cannot spell sound-for-sound, the note says exactly that ("the word is part English…"); never claim the English word "has no settled Malayalam spelling" — office, hotel, TV and the like all have everyday spellings (native-speaker ruling 2026-10-12).
 7. Audio is the source of truth; UI copy never claims romanization is unambiguous.
 
 ## 10. Audio pipeline
