@@ -107,8 +107,9 @@ export const l4u5l1: Lesson = {
         medium: 'l4u5l1_vannilla_medium',
         normal: 'l4u5l1_vannilla_normal',
       },
+      acceptedInputs: ['vannilla'],
       notes: [
-        'Vannilla is the past of varum with illa on it: varum, will come — vannilla, did not come.',
+        'Vannu, came — vannilla, did not come.',
         'The action keeps its past shape and the illa says it did not happen.',
       ],
       tags: [],
@@ -124,6 +125,7 @@ export const l4u5l1: Lesson = {
         medium: 'l4u5l1_kandilla_medium',
         normal: 'l4u5l1_kandilla_normal',
       },
+      acceptedInputs: ['kandilla'],
       notes: [
         'Kandu, saw — kandilla, did not see.',
         'The same move as vannilla: the past word first, then illa.',
@@ -141,8 +143,10 @@ export const l4u5l1: Lesson = {
         medium: 'l4u5l1_etthiyilla_medium',
         normal: 'l4u5l1_etthiyilla_normal',
       },
+      acceptedInputs: ['etthiyilla', 'ethiyilla'],
       notes: [
         'Etthi is to arrive or reach: etthi, arrived — etthiyilla, did not arrive.',
+        'Ethi is accepted in typing; the display carries the tth of etthi.',
         'The family so far: vannilla, kandilla, etthiyilla.',
       ],
       tags: [],
@@ -288,6 +292,7 @@ export const l4u5l1: Lesson = {
     { kind: 'multipleChoice', itemId: 'enikk-ippo-time-illa', distractors: ["I don't want tea", 'nobody is home'] },
     { kind: 'multipleChoice', itemId: 'veettil-aarum-illa', distractors: ["I don't have time now", 'there is no class today'] },
     { kind: 'multipleChoice', itemId: 'vannilla', distractors: ["didn't see", "didn't arrive"] },
+    { kind: 'multipleChoice', itemId: 'kandilla', distractors: ["didn't come", "didn't arrive"] },
     { kind: 'multipleChoice', itemId: 'etthiyilla', distractors: ["didn't come", "didn't see"] },
     { kind: 'multipleChoice', itemId: 'ithu-ente-bag-alla', distractors: ['that is not my laptop', "I don't want tea"] },
     { kind: 'multipleChoice', itemId: 'enikk-chaaya-venda', distractors: ['this is not my bag', "I don't want anything right now"] },
