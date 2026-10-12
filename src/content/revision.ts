@@ -166,9 +166,8 @@
  *       shape as evide, so ithu engane cheyyuva becomes ithu engane aanu
  *       cheyyunnath, with the clipped ith accepted per the display/input
  *       split. Both replaced ids retired
- *  36 — native-speaker correction 2026-10-12: the bus question asks the
- *       direction, not the place, so it becomes ee bus engott aanu
- *       pokunnath — engott where evide asks the place, in the same
+ *  36 — native-speaker correction 2026-10-12: the bus question becomes
+ *       ee bus engott aanu pokunnath — engott is where, in the same
  *       aanu ... unnath shape as the other long questions (the fused
  *       ee bus engotta is not it). Replaced id retired. The ruling also
  *       settles the earlier flag: past negation displays etthiyilla per
@@ -180,7 +179,9 @@
  *       Both part English, both with the no-script note; ni accepted as
  *       typed input for nee, per the standing alternate spelling.
  *       kalikkunnath (playing) is glossed only — proposed as a word item
- *       for the native speaker's ruling rather than added silently
+ *       for the native speaker's ruling rather than added silently.
+ *       The engott item follows the same ruling: its gloss reads plain
+ *       where, and the note says engott is where
  */
 export const CONTENT_REVISION = 37
 

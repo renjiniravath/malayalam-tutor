@@ -106,7 +106,7 @@ export const lesson8Assembling2: Lesson = {
       segments: [
         { token: 'ee', gloss: 'this (before a noun)' },
         { token: 'bus', gloss: 'bus' },
-        { token: 'engott', gloss: 'where to' },
+        { token: 'engott', gloss: 'where' },
         { token: 'aanu', gloss: 'is it that' },
         { token: 'pokunnath', gloss: 'going' },
       ],
