@@ -126,7 +126,7 @@ export const lesson1Past: Lesson = {
       kind: 'sentence',
       notes: [
         'English words fill slots you have not learned yet — that is exactly how Manglish works.',
-        'No script here: the English word keeps its English shape.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'njan', gloss: 'I' },
@@ -143,6 +143,7 @@ export const lesson1Past: Lesson = {
       manglish: 'njan lunch kazhichu',
       meaning: 'I ate lunch.',
       kind: 'sentence',
+      notes: ['No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'njan', gloss: 'I' },
         { token: 'lunch', gloss: 'lunch' },

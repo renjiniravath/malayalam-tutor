@@ -79,7 +79,7 @@ export const DICTIONARY: readonly DictionaryEntry[] = [
   { manglish: 'avan', script: 'അവൻ', meaning: 'he' },
   { manglish: 'avaḷ', script: 'അവൾ', meaning: 'she' },
   { manglish: 'nammaḷ', script: 'നമ്മൾ', meaning: 'we (you and me)' },
-  { manglish: 'namukku', script: 'നമുക്ക്', meaning: "to us — also 'let's'" },
+  { manglish: 'nammaḷkku', script: 'നമ്മൾക്ക്', meaning: "to us — also 'let's'" },
   // Level 2 Unit 1 — the -uva pattern (suffix written -ുവാ per §9 rule 6)
   { manglish: 'kudikkuva', script: 'കുടിക്കുവാ', meaning: 'drinking (right now)' },
   { manglish: 'varuva', script: 'വരുവാ', meaning: 'coming (right now)' },

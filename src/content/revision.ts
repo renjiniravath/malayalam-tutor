@@ -118,8 +118,16 @@
  *       a suggestion takes the to-us form (nammaḷkku veettil pokaam); a
  *       past or future sentence carries its time or destination, and the
  *       replaced sentences are new items (retired ids in REMOVED_ITEM_IDS)
+ *  29 — native-speaker ruling 2026-10-12: nammaḷkku is the display for
+ *       both datives of "we" (namukku is the same word and stays accepted
+ *       as an input; the Level 1 pronoun item's display and script become
+ *       nammaḷkku / നമ്മൾക്ക്, and the suggestion examples use it); the
+ *       no-script note on the mixed sentences gives the real reason — the
+ *       sentence is part English, and the script rules cannot spell those
+ *       words the way they sound (the English words themselves do have
+ *       settled spellings)
  */
-export const CONTENT_REVISION = 28
+export const CONTENT_REVISION = 29
 
 /**
  * Item ids retired from content — the record of what was replaced by a

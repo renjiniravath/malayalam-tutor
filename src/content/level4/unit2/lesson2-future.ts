@@ -118,7 +118,7 @@ export const lesson2Future: Lesson = {
       kind: 'sentence',
       notes: [
         'English words fill slots you have not learned yet — that is exactly how Manglish works.',
-        'No script here: the English words have no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell those words the way they sound.',
       ],
       segments: [
         { token: 'avan', gloss: 'he' },
@@ -135,6 +135,7 @@ export const lesson2Future: Lesson = {
       script: 'നമ്മൾക്ക് വീട്ടിൽ പോകാം',
       meaning: "let's go home.",
       kind: 'sentence',
+      acceptedInputs: ['namukku veettil pokaam'],
       notes: ['A suggestion is shared, so it uses the to-us form: nammaḷkku, for us.'],
       segments: [
         { token: 'nammaḷkku', gloss: 'for us (nammaḷ + kku)' },
@@ -152,7 +153,7 @@ export const lesson2Future: Lesson = {
       notes: [
         'weekendsum pulls the -um into its other job: not will come but comes, as a rule.',
         'English words fill slots you have not learned yet — that is exactly how Manglish works.',
-        'No script here: the English words have no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell those words the way they sound.',
       ],
       segments: [
         { token: 'avan', gloss: 'he' },
@@ -208,7 +209,7 @@ export const lesson2Future: Lesson = {
       kind: 'sentenceBuilder',
       sentenceId: 'nammalkku-veettil-pokaam',
       bank: ['nammaḷkku', 'veettil', 'pokaam'],
-      acceptedInputs: ['nammalkku veetil pokaam', 'nammaḷkku veettil pokaam'],
+      acceptedInputs: ['nammalkku veetil pokaam', 'nammaḷkku veettil pokaam', 'namukku veettil pokaam'],
     },
     {
       kind: 'sentenceBuilder',

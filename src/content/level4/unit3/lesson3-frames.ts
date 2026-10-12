@@ -82,7 +82,7 @@ export const lesson3Frames: Lesson = {
       kind: 'sentence',
       notes: [
         'English keeps the when slot here; the time-word lesson swaps innale in.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'njan', gloss: 'I' },
@@ -100,7 +100,7 @@ export const lesson3Frames: Lesson = {
       kind: 'sentence',
       notes: [
         'The same frame looks forward with -um: tomorrow varum, will come tomorrow.',
-        'No script here: the English word has no settled Malayalam spelling.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'avan', gloss: 'he' },
@@ -116,6 +116,7 @@ export const lesson3Frames: Lesson = {
       script: 'എന്നാ നമ്മൾക്ക് പോകാം',
       meaning: 'then shall we go?',
       kind: 'sentence',
+      acceptedInputs: ['enna namukku pokaam'],
       notes: ['enna is then, and here it turns the suggestion into a question: then shall we go?'],
       segments: [
         { token: 'enna', gloss: 'then' },
@@ -224,7 +225,7 @@ export const lesson3Frames: Lesson = {
       kind: 'sentenceBuilder',
       sentenceId: 'enna-nammalkku-pokaam',
       bank: ['enna', 'nammaḷkku', 'pokaam'],
-      acceptedInputs: ['enna nammalkku pokaam', 'enna nammaḷkku pokaam'],
+      acceptedInputs: ['enna nammalkku pokaam', 'enna nammaḷkku pokaam', 'enna namukku pokaam'],
     },
     {
       kind: 'sentenceBuilder',

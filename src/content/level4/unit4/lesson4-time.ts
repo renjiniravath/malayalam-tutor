@@ -116,6 +116,8 @@ export const lesson4Time: Lesson = {
       manglish: 'nammaḷkku innu oru cinemakk pokaam',
       meaning: "let's go to a movie today.",
       kind: 'sentence',
+      acceptedInputs: ['namukku innu oru cinemakk pokaam'],
+      notes: ['No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'nammaḷkku', gloss: 'for us (nammaḷ + kku)' },
         { token: 'innu', gloss: 'today' },
@@ -131,6 +133,7 @@ export const lesson4Time: Lesson = {
       manglish: 'njan innale oru cinema kandu',
       meaning: 'I saw a movie yesterday.',
       kind: 'sentence',
+      notes: ['No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.'],
       segments: [
         { token: 'njan', gloss: 'I' },
         { token: 'innale', gloss: 'yesterday' },
@@ -200,7 +203,7 @@ export const lesson4Time: Lesson = {
       kind: 'sentenceBuilder',
       sentenceId: 'nammalkku-innu-oru-cinemakk-pokaam',
       bank: ['nammaḷkku', 'innu', 'oru', 'cinemakk', 'pokaam'],
-      acceptedInputs: ['nammalkku innu oru cinemakku pokaam', 'nammaḷkku innu oru cinemakk pokaam'],
+      acceptedInputs: ['nammalkku innu oru cinemakku pokaam', 'nammaḷkku innu oru cinemakk pokaam', 'namukku innu oru cinemakk pokaam'],
     },
     {
       kind: 'sentenceBuilder',
