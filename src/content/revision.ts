@@ -132,8 +132,11 @@
  *       part the way it sounds (word items say "the word", the rest "the
  *       sentence"); every one of those loans does have a settled spelling,
  *       so none kept the old phrasing
+ *  31 — number agreement on two Level 4 notes: avan friday raathri varum
+ *       and avan ella weekendsum veettil varum each mix in one English
+ *       word, so their no-script notes say "that word ... it sounds"
  */
-export const CONTENT_REVISION = 30
+export const CONTENT_REVISION = 31
 
 /**
  * Item ids retired from content — the record of what was replaced by a

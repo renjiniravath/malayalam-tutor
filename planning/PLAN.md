@@ -71,7 +71,7 @@ All levels use English-alphabet romanization; Malayalam script is shown passivel
 Units:
 1. **First sounds** (3 lessons, comprehension-only — no speaking yet) — ഴ, dental/retroflex/alveolar, gemination, vowel length. Sound-focus clips + minimal-pair discrimination + **text articulation cues for ഴ and the coronal series** (no visuals).
 2. **Greetings & expressions** (~10 items) — `engane und?` "how is it? (also how are you?)" (example: `kaappi engane und, koḷḷaamo?` "how is the coffee, is it good?"); `enna und vishesham?` "what's up?" (`ennaa vishesham` is incomplete); `nannayitt pokunnu` "it's going well" (single-a sanctioned exception; NOT `nalla irippu`); `appo sheri, bye` (NOT `poyi varatte`); `seri`, `nokkam`, `ayyo`, `pinnalla`, `alle?`. `puzha` (river) is the zh teaching word. `ishttamilla` spelled with double t (`avanu chaaya ishttamilla`). Question words plain: `entha`, `etha`, `enthina`, `eppozha` (no doubled aa — native-speaker rulings 2026-10-06). Tag questions need real context to be sentences: `nalla kaappi, alle?` "nice coffee, right?" — bare `nalla, alle` is not a sentence (native-speaker ruling 2026-10-07).
-3. **Pronouns** — `njan`, `nee`, `ningal`, `taankal`, `avan`, `aval`, `nammal`, `namukku`, plus pro-drop.
+3. **Pronouns** — `njan`, `nee`, `ningal`, `taankal`, `avan`, `aval`, `nammal`, `nammaḷkku`, plus pro-drop.
 4. **High-frequency nouns** (visuals) — food/drink (`vellam`, `chaya`, `kaapi`, `choru`), people (`amma`, `achan`, `chechi`, `kuttikal`), home/city (`veedu`, `joli`, `kashu`, `vazhi`), ~40 items.
 5. **Core verbs** (action visuals) — taught as **casual present-tense chunks** usable in sentences immediately: `pokuva`, `varuva`, `cheyyuva`, `parayuva`, `kudikkuva`, `kazhikkuva`, `irikkuva`, `kodukkuva`, `edukkuva`, `vaanguva`, `nokkuva`, `kittuva` — with the root noted (`pok`) for later pattern work.
 
@@ -115,10 +115,10 @@ Rulings from the first Level 4 sign-off round (native-speaker, 2026-10-11):
 
 - **Spellings**: `poyi` is the display (`poi` accepted); the `-aam` ending is doubled — `nokkaam`, `pokaam` (`nokkam`/`pokam` accepted inputs); "today" is `innu` (`inn` is a real English word, accept it but don't display it)
 - **`-aam` has two jobs**: `pokaam`/`kudikkaam` propose ("let's"), and `cheyyaam`/`nokkaam` also answer a question as a committed yes ("will you do this?" — "cheyyaam, I will")
-- **"Let's" takes the dative**: `nammalkku veettil pokaam` — never `nammaḷ veettil pokaam` (the nominative can't carry the suggestion)
-- **A past or future sentence carries a clear time or destination** when the listener would otherwise wonder: `njan naale raavile veettil pokum` (not a bare `njan veettil pokum`), `avan friday raatri varum`, `avan naale veettil pokum`, `njan innale veettil ethi` ("I reached home yesterday" — `ethi` says where the speaker is now, unlike `poyi`)
+- **"Let's" takes the dative**: `nammaḷkku veettil pokaam` — never `nammaḷ veettil pokaam` (the nominative can't carry the suggestion)
+- **A past or future sentence carries a clear time or destination** when the listener would otherwise wonder: `njan naaḷe raavile veettil pokum` (not a bare `njan veettil pokum`), `avan friday raathri varum`, `avan naaḷe veettil pokum`, `njan innale veettil etthi` ("I reached home yesterday" — `etthi`, the display form of the speaker's `ethi`, says where the speaker is now, unlike `poyi`)
 - **Sentences must carry information** — "njan innale chaaya kudichu" ("I drank tea yesterday") was struck as pointless; "he comes home every day" was replaced with `avan ella weekendsum veettil varum` ("he comes home every weekend" — the `-um` future is the every-weekend habit; say something worth knowing)
-- Frames landed as `njan innale oru cinemakk poyi` (I went to a movie yesterday), `njan lunch kazhichu` (I ate lunch), `njan innale oru cinema kandu`, `enna nammalkku pokaam` (then let's go), `nammalkku innu oru cinemakk pokaam`
+- Frames landed as `njan innale oru cinemakk poyi` (I went to a movie yesterday), `njan lunch kazhichu` (I ate lunch), `njan innale oru cinema kandu`, `enna nammaḷkku pokaam` (then let's go), `nammaḷkku innu oru cinemakku pokaam`
 - **`nammaḷkku` is the display for both datives** (native-speaker ruling 2026-10-12): `namukku` is the same word and stays accepted as an input everywhere — including the Level 1 pronoun item, whose display and script become `nammaḷkku` / നമ്മൾക്ക്
 
 ### Level 5 — Real Conversations (Pre-advanced, still romanized) · ~100 phrases/dialogues, 8 lessons
@@ -194,7 +194,7 @@ Rules:
 3. ള and ണ are common sounds (`veḷḷam`, `veṇṇa`), not rare — dedicated symbols in the **display layer**.
 4. Never use capitalization as a phonemic signal (mobile auto-capitalize).
 5. **Display layer is strict** (this table, diacritics included). **Input layer is ASCII-forgiving**: accept loose Manglish (`l` for ള, `n` for ണ, plain `t/d` for either dental or retroflex), case-insensitive, diacritic-folded, with small typo tolerance. Learners never type diacritics on a phone.
-6. **Script rule**: the Malayalam script field spells the **colloquial form** the way Malayalis write it informally (e.g., `pokuva` → പോകുവാ). Where no natural colloquial spelling exists, show the standard written form with a small "written form" badge; if that misleads, omit script for that item. Never source script from formal texts (Moag et al.). Native-speaker sign-off per item — this rule protects the app's entire register promise.
+6. **Script rule**: the Malayalam script field spells the **colloquial form** the way Malayalis write it informally (e.g., `pokuva` → പോകുവാ). Where no natural colloquial spelling exists, show the standard written form with a small "written form" badge; if that misleads, omit script for that item. Never source script from formal texts (Moag et al.). Native-speaker sign-off per item — this rule protects the app's entire register promise. When a script is omitted because the item mixes in English words the script rules cannot spell sound-for-sound, the note says exactly that ("the word is part English…"); never claim the English word "has no settled Malayalam spelling" — office, hotel, TV and the like all have everyday spellings (native-speaker ruling 2026-10-12).
 7. Audio is the source of truth; UI copy never claims romanization is unambiguous.
 
 ## 10. Audio pipeline

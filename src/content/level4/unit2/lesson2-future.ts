@@ -118,7 +118,7 @@ export const lesson2Future: Lesson = {
       kind: 'sentence',
       notes: [
         'English words fill slots you have not learned yet — that is exactly how Manglish works.',
-        'No script here: the sentence is part English, and the script rules cannot spell those words the way they sound.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'avan', gloss: 'he' },
@@ -153,7 +153,7 @@ export const lesson2Future: Lesson = {
       notes: [
         'weekendsum pulls the -um into its other job: not will come but comes, as a rule.',
         'English words fill slots you have not learned yet — that is exactly how Manglish works.',
-        'No script here: the sentence is part English, and the script rules cannot spell those words the way they sound.',
+        'No script here: the sentence is part English, and the script rules cannot spell that word the way it sounds.',
       ],
       segments: [
         { token: 'avan', gloss: 'he' },
