@@ -140,7 +140,9 @@ const IRREGULAR_WORDS: Record<string, string> = {
  * word in a manglish field is a content error.
  */
 const BANNED_WORDS = new Set([
-  'njaan', 'enthaa', 'eppozhaa', 'kudikkuka', 'kudi',
+  // The fused-copula question words keep a single final a: enthaa, eppozhaa
+  // and aaraa are the retired doubled spellings of entha, eppozha and aara.
+  'njaan', 'enthaa', 'eppozhaa', 'aaraa', 'kudikkuka', 'kudi',
   'shoppil', 'aunty', 'vali', 'azhaku', 'kettiyo',
 ])
 
