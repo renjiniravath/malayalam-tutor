@@ -111,7 +111,12 @@ export const contentRevision: ContentRevision = {
   // ids), 11 ids are new, and sheri-pinne-kaanam moves from l5u1l1 to
   // l5u2l1 under its own id. Both recognition drills are re-authored on
   // turns that survive.
-  revision: 38,
+  // 39: the tea-shop sugar question takes its ruled form (native-speaker
+  // correction 2026-10-12) — the word is ഇടണോ, not ഇടാണോ, so the item
+  // displays sugar idaṇo and retires the sugar-idaano id it shipped under
+  // in revision 38; the folded sugar idano is accepted in typing. The
+  // script, the id, the drill references and the can-do line move with it.
+  revision: 39,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -266,6 +271,9 @@ export const contentRevision: ContentRevision = {
     'arai-kilo-mathi',
     'illa-ithu-mathi',
     'sheri-patthu-roopa',
+    // The sugar question re-keyed under its ruled word (see revision 39):
+    // ഇടണോ, so the id and the display carry idaṇo, not idaano.
+    'sugar-idaano',
   ],
 };
 
