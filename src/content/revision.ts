@@ -150,8 +150,16 @@
  *       and types. The checker sanctions aara (ആരാ): the same short final a
  *       as entha and etha, so it is exempt from the long-ാ count. No item
  *       was retired this round
+ *  34 — native-speaker rulings 2026-10-12 on Level 4 lessons 5-8: a lesson
+ *       sentence must be one that could actually happen in a conversation,
+ *       so ithu chaaya alla, ithu ente veedu alla and kada evide aanu give
+ *       way to ithu ente bag alla, athu ente laptop alla and ninte veedu
+ *       evide aanu (retired ids in REMOVED_ITEM_IDS); the price question
+ *       takes the ending (ithinu ethra aanu — display-only, id unchanged);
+ *       past negation is the -illa family (vannilla, kandilla, etthiyilla,
+ *       and avan innale officil vannilla) taught in the saying-no lesson
  */
-export const CONTENT_REVISION = 33
+export const CONTENT_REVISION = 34
 
 /**
  * Item ids retired from content — the record of what was replaced by a
@@ -188,4 +196,9 @@ export const REMOVED_ITEM_IDS: readonly string[] = [
   'njan-innale-veettil-poyi', // -> njan innale veettil etthi
   'nammal-inn-veettil-pokaam', // -> nammaḷkku innu oru cinemakku pokaam
   'njan-innale-chaaya-kudichu', // -> njan innale oru cinema kandu
+  // l4u5l1, l4u8l1 — the Level 4 second-half sign-off (2026-10-12): the
+  // probable-sentence rule replaced sentences a listener could not place.
+  'ithu-chaaya-alla', // -> ithu ente bag alla
+  'ithu-ente-veedu-alla', // -> athu ente laptop alla
+  'kada-evide-aanu', // -> ninte veedu evide aanu
 ]

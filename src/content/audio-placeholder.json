@@ -383,9 +383,11 @@
         "venda.slow", "venda.medium", "venda.normal", "samayam.slow", "samayam.medium", "samayam.normal", "enikk-chaaya-venda.slow",
         "enikk-chaaya-venda.medium", "enikk-chaaya-venda.normal", "enikk-venda.slow", "enikk-venda.medium", "enikk-venda.normal",
         "enikk-ippo-venda.slow", "enikk-ippo-venda.medium", "enikk-ippo-venda.normal", "enikk-samayam-illa.slow", "enikk-samayam-illa.medium",
-        "enikk-samayam-illa.normal", "veettil-chaaya-illa.slow", "veettil-chaaya-illa.medium", "veettil-chaaya-illa.normal", "ithu-chaaya-alla.slow",
-        "ithu-chaaya-alla.medium", "ithu-chaaya-alla.normal", "ithu-ente-veedu-alla.slow", "ithu-ente-veedu-alla.medium", "ithu-ente-veedu-alla.normal",
-        "avan-ente-chettan-alla.slow", "avan-ente-chettan-alla.medium", "avan-ente-chettan-alla.normal"
+        "enikk-samayam-illa.normal", "veettil-chaaya-illa.slow", "veettil-chaaya-illa.medium", "veettil-chaaya-illa.normal", "ithu-ente-bag-alla.slow",
+        "ithu-ente-bag-alla.medium", "ithu-ente-bag-alla.normal", "athu-ente-laptop-alla.slow", "athu-ente-laptop-alla.medium", "athu-ente-laptop-alla.normal",
+        "avan-ente-chettan-alla.slow", "avan-ente-chettan-alla.medium", "avan-ente-chettan-alla.normal", "vannilla.slow", "vannilla.medium",
+        "vannilla.normal", "kandilla.slow", "kandilla.medium", "kandilla.normal", "etthiyilla.slow", "etthiyilla.medium", "etthiyilla.normal",
+        "avan-innale-officil-vannilla.slow", "avan-innale-officil-vannilla.medium", "avan-innale-officil-vannilla.normal"
 
       ]
     },
@@ -422,8 +424,8 @@
         "nee-enth-aanu-cheyyunnath.medium", "nee-enth-aanu-cheyyunnath.normal", "avan-eppo-aanu-varunnath.slow", "avan-eppo-aanu-varunnath.medium",
         "avan-eppo-aanu-varunnath.normal", "njan-evide-aanu-irangunnath.slow", "njan-evide-aanu-irangunnath.medium", "njan-evide-aanu-irangunnath.normal",
         "ee-bus-evide-aanu-pokunnath.slow", "ee-bus-evide-aanu-pokunnath.medium", "ee-bus-evide-aanu-pokunnath.normal", "avan-aara.slow", "avan-aara.medium",
-        "avan-aara.normal", "athu-entha.slow", "athu-entha.medium", "athu-entha.normal", "kada-evide-aanu.slow", "kada-evide-aanu.medium",
-        "kada-evide-aanu.normal"
+        "avan-aara.normal", "athu-entha.slow", "athu-entha.medium", "athu-entha.normal", "ninte-veedu-evide-aanu.slow", "ninte-veedu-evide-aanu.medium",
+        "ninte-veedu-evide-aanu.normal"
 
       ]
     }

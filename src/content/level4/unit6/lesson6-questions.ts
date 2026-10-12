@@ -59,15 +59,17 @@ export const lesson6Questions: Lesson = {
     },
     {
       id: 'ithu-ethra-aanu',
-      manglish: 'ithu ethra aanu',
-      script: 'ഇത് എത്ര ആണ്',
+      manglish: 'ithinu ethra aanu',
+      script: 'ഇതിനു എത്ര ആണ്',
       meaning: 'How much is this?',
       kind: 'sentence',
       notes: [
-        'The price question: ithu ethra aanu. ethra already carries the question, so aanu stays plain.',
+        'The price question: ithinu ethra aanu, how much for this.',
+        'The thing you are pricing takes the ending: ithu becomes ithinu.',
+        'ethra already carries the question, so aanu stays plain.',
       ],
       segments: [
-        { token: 'ithu', gloss: 'this' },
+        { token: 'ithinu', gloss: 'for this (ithu + nu)' },
         { token: 'ethra', gloss: 'how much' },
         { token: 'aanu', gloss: 'is' },
       ],
@@ -199,8 +201,8 @@ export const lesson6Questions: Lesson = {
     {
       kind: 'sentenceBuilder',
       sentenceId: 'ithu-ethra-aanu',
-      bank: ['ithu', 'ethra', 'aanu'],
-      acceptedInputs: ['ithu ethra aanu'],
+      bank: ['ithinu', 'ethra', 'aanu'],
+      acceptedInputs: ['ithinu ethra aanu', 'ithu ethra aanu'],
     },
     {
       kind: 'sentenceBuilder',
@@ -238,7 +240,7 @@ export const lesson6Questions: Lesson = {
       bank: ['ithu', 'engane', 'cheyyuva'],
       acceptedInputs: ['ithu engane cheyyuva'],
     },
-    { kind: 'typing', itemId: 'ithu-ethra-aanu', acceptedInputs: ['ithu ethra aanu'] },
+    { kind: 'typing', itemId: 'ithu-ethra-aanu', acceptedInputs: ['ithinu ethra aanu', 'ithu ethra aanu'] },
     { kind: 'typing', itemId: 'athu-aara', acceptedInputs: ['athu aara', 'aara athu'] },
     { kind: 'typing', itemId: 'ithu-entha', acceptedInputs: ['ithu entha', 'entha ithu'] },
     { kind: 'typing', itemId: 'avan-eppo-varum', acceptedInputs: ['avan eppo varum'] },
