@@ -100,7 +100,18 @@ export const contentRevision: ContentRevision = {
   // l5u1l1 at the tea shop and l5u2l1 at the market, the first lessons
   // played with the new role-play step, where the other speaker's line is
   // the cue and the learner answers it. 16 new ids; nothing existing moved.
-  revision: 37,
+  // 38: the native-speaker second round on both scenes — shop scenes do not
+  // haggle and the learner opens the exchange, so both scenes are re-cut to
+  // seven turns: the tea shop runs chetta, oru chaaya / sugar idaano /
+  // venda chetta / chaaya ready / ethra aayi, chetta / patthu roopa /
+  // thanks chetta, pinne kaanam, and the market runs chetta, thakkaaḷikk
+  // ethra aanu / mupatthu roopa / sheri chetta, ara kilo eduttho / vere
+  // vallathum veno / venda, ithu mathi / pathinanchu roopa / sheri, pinne
+  // kaanam. The haggling arc and the keeper's greeting lines retire (13
+  // ids), 11 ids are new, and sheri-pinne-kaanam moves from l5u1l1 to
+  // l5u2l1 under its own id. Both recognition drills are re-authored on
+  // turns that survive.
+  revision: 38,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -239,6 +250,22 @@ export const contentRevision: ContentRevision = {
     // revision 35): the bus question and the who question re-keyed again.
     'ee-bus-engotta',
     'athu-aara-paranje',
+    // The Level 5 second round (see revision 38): the keeper's greeting
+    // lines retire when the learner opens the scene, and the market
+    // haggling arc is gone — shop scenes do not haggle.
+    'oru-chaaya-veno',
+    'athe-oru-chaaya',
+    'sugar-veno',
+    'sugar-venda',
+    'ithaa-chaaya',
+    'chetta-ethra-aanu',
+    'chetta-thakkaali-ethra-aanu',
+    'irupathu-roopa',
+    'athu-kooduthal-aanu',
+    'pathinettu-roopa',
+    'arai-kilo-mathi',
+    'illa-ithu-mathi',
+    'sheri-patthu-roopa',
   ],
 };
 

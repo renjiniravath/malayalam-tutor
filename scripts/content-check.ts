@@ -382,8 +382,9 @@ function scriptCoronals(script: string): string[] {
 
 /**
  * Romanization coronal tokens, longest-first. 'nth' scans as n + th (enthaa),
- * 'nt' as n + ṟ (nte), 'nj' and 'ng' as the ഞ and ങ digraphs, and 'nk' as the
- * ങ before ക (thaankal) — all n-runs are single coronal positions.
+ * 'nt' as n + ṟ (nte), 'nj' and 'ng' as the ഞ and ങ digraphs, 'nk' as the ങ
+ * before ക (thaankal), and 'nch' as the ഞ before ച (pathinanchu) — all n-runs
+ * are single coronal positions.
  */
 function romanCoronals(manglish: string): string[] {
   // Scan word by word: stripping spaces would merge cross-word runs
@@ -411,6 +412,9 @@ function romanCoronals(manglish: string): string[] {
       else if (s.startsWith('nn', i)) { out.push('nn'); i += 2; }
       else if (s.startsWith('ng', i)) { out.push('ng'); i += 2; }
       else if (s.startsWith('nk', i)) { out.push('ng'); i += 2; }
+      // ഞ before ച is written n and the ch does the rest (pathinanchu) —
+      // the same shape as the ങ before ക above.
+      else if (s.startsWith('nch', i)) { out.push('nj'); i += 3; }
       else { out.push('n'); i++; }
     } else if (c === 'ḷ') {
       if (s.startsWith('ḷḷ', i)) { out.push('ḷḷ'); i += 2; } else { out.push('ḷ'); i++; }

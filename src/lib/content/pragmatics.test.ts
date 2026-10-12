@@ -40,6 +40,12 @@ describe('-uva pragmatics (PLAN.md §5)', () => {
     assert.equal(hasChettaSubject(['avan varuva']), false);
   });
 
+  it('allows chetta trailing the line as a call', () => {
+    assert.equal(hasChettaSubject(['venda chetta']), false);
+    assert.equal(hasChettaSubject(['ethra aayi, chetta']), false);
+    assert.equal(hasChettaSubject(['sheri chetta, ara kilo eduttho']), false);
+  });
+
   it('flags bare first-person parayuva/cheyyuva declaratives', () => {
     assert.equal(hasBareFirstPersonSayDo(['njan parayuva']), true);
     assert.equal(hasBareFirstPersonSayDo(['njan cheyyuva']), true);

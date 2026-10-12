@@ -12,8 +12,8 @@ export const level5: Level = {
   id: 'l5',
   name: 'Level 5 — Real Conversations',
   canDo: [
-    'Order at a tea shop and pay for it: oru chaaya veno, sugar venda, chetta ethra aanu, patthu roopa.',
-    'Buy at a market stall: ask the price, say athu kooduthal aanu, and settle it with arai kilo mathi.',
+    'Open at a tea shop and see it through to paying: chetta, oru chaaya, sugar idaano, venda chetta, ethra aayi chetta, patthu roopa.',
+    'Buy at a market stall: ask chetta, thakkaaḷikk ethra aanu, order with ara kilo eduttho, and close it with venda, ithu mathi.',
   ],
   lessons: [l5u1l1, l5u2l1],
 };
