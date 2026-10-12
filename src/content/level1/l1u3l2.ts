@@ -62,8 +62,8 @@ export const l1u3l2: Lesson = {
     },
     {
       id: 'namukku',
-      manglish: 'namukku',
-      script: 'നമുക്ക്',
+      manglish: 'nammaḷkku',
+      script: 'നമ്മൾക്ക്',
       meaning: "let's; to us",
       kind: 'word',
       pos: 'pronoun',
@@ -72,8 +72,8 @@ export const l1u3l2: Lesson = {
         medium: 'l1u3l2_namukku_medium',
         normal: 'l1u3l2_namukku_normal',
       },
-      acceptedInputs: ['namukku'],
-      notes: ['From nammaḷ: namukku pokaam, let us go.'],
+      acceptedInputs: ['nammalkku', 'namukku'],
+      notes: ['From nammaḷ: nammaḷkku pokaam, let us go.', 'Namukku is the same word and typing it is accepted; the display keeps the ḷ of nammaḷ.'],
       tags: [],
     },
     {

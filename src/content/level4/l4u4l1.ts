@@ -212,8 +212,8 @@ export const l4u4l1: Lesson = {
     },
     {
       id: 'namukku-ippo-pokaam',
-      manglish: 'namukku ippo pokaam',
-      script: 'നമുക്ക് ഇപ്പോ പോകാം',
+      manglish: 'nammaḷkku ippo pokaam',
+      script: 'നമ്മൾക്ക് ഇപ്പോ പോകാം',
       meaning: "let's go now",
       kind: 'sentence',
       audio: {
@@ -221,16 +221,17 @@ export const l4u4l1: Lesson = {
         medium: 'l4u4l1_namukku-ippo-pokaam_medium',
         normal: 'l4u4l1_namukku-ippo-pokaam_normal',
       },
+      acceptedInputs: ['nammalkku ippo pokaam', 'namukku ippo pokaam'],
       sentence: {
-        bank: ['namukku', 'ippo', 'pokaam', 'pokum'],
-        orders: ['namukku ippo pokaam'],
+        bank: ['nammaḷkku', 'ippo', 'pokaam', 'pokum'],
+        orders: ['nammaḷkku ippo pokaam'],
         parts: [
-          { word: 'namukku', meaning: 'to us' },
+          { word: 'nammaḷkku', meaning: 'to us' },
           { word: 'ippo', meaning: 'now' },
           { word: 'pokaam', meaning: "let's go" },
         ],
       },
-      notes: ['The plan with no waiting: ippo, now.'],
+      notes: ['The plan with no waiting: ippo, now.', 'Namukku is the same word and typing it is accepted; the display keeps the ḷ of nammaḷ.'],
       tags: [],
     },
   ],

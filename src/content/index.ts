@@ -54,7 +54,11 @@ export const contentRevision: ContentRevision = {
   // doubled -aam are the displays (poi/nokkam/pokam stay accepted), the
   // sentences take their time, place and to-us forms, and the -aam notes
   // gain its second job.
-  revision: 28,
+  // 29: nammaḷkku is the display for both datives (native-speaker ruling
+  // 2026-10-12) — the Level 1 pronoun item (id namukku) and the Level 4
+  // sentence (id namukku-ippo-pokaam) now display nammaḷkku with the script
+  // നമ്മൾക്ക്, and namukku stays an accepted input; no ids or keys moved.
+  revision: 29,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',

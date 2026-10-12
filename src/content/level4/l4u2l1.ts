@@ -88,7 +88,7 @@ export const l4u2l1: Lesson = {
       },
       acceptedInputs: ['pokaam', 'pokam'],
       notes: [
-        'The plan word: -aam turns the verb into let us — namukku pokaam, let us go.',
+        'The plan word: -aam turns the verb into let us — nammaḷkku pokaam, let us go.',
         'The same -aam has a second job: answering a question as a firm yes. Will you do it? — cheyyaam, I will. Pokaam itself is the suggestion, not the promise.',
       ],
       tags: [],
