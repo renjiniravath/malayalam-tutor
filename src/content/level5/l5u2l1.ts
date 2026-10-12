@@ -71,7 +71,7 @@ export const l5u2l1: Lesson = {
         ],
       },
       notes: [
-        'Mupatthu is thirty. The keeper answers a price with the number and roopa, nothing else.',
+        'Muppatthu is thirty. The keeper answers a price with the number and roopa, nothing else.',
         'The price is for a kilo of the tomatoes, and it stands as said.',
       ],
       tags: [],

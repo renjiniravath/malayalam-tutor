@@ -105,7 +105,7 @@ export const contentRevision: ContentRevision = {
   // seven turns: the tea shop runs chetta, oru chaaya / sugar idaano /
   // venda chetta / chaaya ready / ethra aayi, chetta / patthu roopa /
   // thanks chetta, pinne kaanam, and the market runs chetta, thakkaaḷikk
-  // ethra aanu / mupatthu roopa / sheri chetta, ara kilo eduttho / vere
+  // ethra aanu / muppatthu roopa / sheri chetta, ara kilo eduttho / vere
   // vallathum veno / venda, ithu mathi / pathinanchu roopa / sheri, pinne
   // kaanam. The haggling arc and the keeper's greeting lines retire (13
   // ids), 11 ids are new, and sheri-pinne-kaanam moves from l5u1l1 to
