@@ -97,6 +97,8 @@ describe('gemination cross-check (§9 rule 2)', () => {
   it('pins the hotel order loan scripts, the -um forms included', () => {
     assert.deepEqual(geminationProblems('ചിക്കൻ ബിരിയാണി ഉണ്ടോ', 'chicken biriyani undo'), []);
     assert.deepEqual(geminationProblems('ആ ടേബിളിൽ ഇരുന്നോ', 'aa tablil irunno'), []);
+    assert.deepEqual(geminationProblems('ആ ടേബിളിലേക്ക് ഇരുന്നോ', 'aa tableilekk irunno'), []);
+    assert.deepEqual(loanScriptsFor('tableilekk'), ['ടേബിളിലേക്ക്']);
     assert.deepEqual(geminationProblems('ഒരു ഫ്രഷ് ലൈമും', 'oru fresh lime-um'), []);
     // The dash is not part of the spelling: lime-um looks up the limeum pin,
     // the same way hospital-ilekk looks up hospitalilekk.

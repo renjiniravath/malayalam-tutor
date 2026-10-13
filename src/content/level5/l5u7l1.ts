@@ -22,8 +22,8 @@ export const l5u7l1: Lesson = {
   items: [
     {
       id: 'chetta-chicken-biriyani-undo',
-      manglish: 'chetta, chicken biriyani undo',
-      script: 'ചേട്ടാ ചിക്കൻ ബിരിയാണി ഉണ്ടോ',
+      manglish: 'chetta, chicken biriyani undo?',
+      script: 'ചേട്ടാ ചിക്കൻ ബിരിയാണി ഉണ്ടോ?',
       meaning: 'chetta, do you have chicken biriyani?',
       kind: 'sentence',
       audio: {
@@ -43,6 +43,7 @@ export const l5u7l1: Lesson = {
         ],
       },
       notes: [
+        'The learner walks into the hotel and the waiter comes over to the table.',
         'A hotel in Kerala is where you eat — the everyday word for a restaurant, not a place to sleep.',
         'Undo is the is-there question, the is-it-there that asks whether the kitchen has the dish today. Chicken and biriyani are English words Kerala uses every day, so they keep their English spelling and are written in Malayalam the way every hotel writes them.',
         'Name the dish before the undo, the same way the place came before povumo in the auto.',
@@ -50,31 +51,31 @@ export const l5u7l1: Lesson = {
       tags: [],
     },
     {
-      id: 'undello-aa-tablil-irunno',
-      manglish: 'undello, aa tablil irunno',
-      script: 'ഉണ്ടെല്ലോ ആ ടേബിളിൽ ഇരുന്നോ',
-      meaning: 'yes we do — sit at that table',
+      id: 'undello-aa-tableilekk-irunno',
+      manglish: 'undello, aa tableilekk irunno',
+      script: 'ഉണ്ടെല്ലോ ആ ടേബിളിലേക്ക് ഇരുന്നോ',
+      meaning: 'yes we do — sit over at that table',
       kind: 'sentence',
       audio: {
-        slow: 'l5u7l1_undello-aa-tablil-irunno_slow',
-        medium: 'l5u7l1_undello-aa-tablil-irunno_medium',
-        normal: 'l5u7l1_undello-aa-tablil-irunno_normal',
+        slow: 'l5u7l1_undello-aa-tableilekk-irunno_slow',
+        medium: 'l5u7l1_undello-aa-tableilekk-irunno_medium',
+        normal: 'l5u7l1_undello-aa-tableilekk-irunno_normal',
       },
-      acceptedInputs: ['undello aa tablil irunno', 'aa tablil irunno'],
+      acceptedInputs: ['undello aa tableilekk irunno', 'aa tableilekk irunno'],
       sentence: {
-        bank: ['undello,', 'aa', 'tablil', 'irunno', 'illa'],
-        orders: ['undello, aa tablil irunno', 'aa tablil irunno'],
+        bank: ['undello,', 'aa', 'tableilekk', 'irunno', 'illa'],
+        orders: ['undello, aa tableilekk irunno', 'aa tableilekk irunno'],
         parts: [
           { word: 'undello,', meaning: 'yes, we do — the yes both sides already know' },
           { word: 'aa', meaning: 'that' },
-          { word: 'tablil', meaning: 'at the table' },
+          { word: 'tableilekk', meaning: 'over to that table' },
           { word: 'irunno', meaning: 'sit down' },
         ],
       },
       notes: [
         'Undello is undu with the -ello on it, the same as-you-know ending as illallo on the phone — the waiter is agreeing with a question that was already hopeful.',
-        'Tablil is table with the in-form on it: the English word takes a Malayalam ending the way hospital does in the auto, and the script spells it the way the sound goes.',
-        'Irunno is the sit — aa tablil irunno points at a table and tells the learner to take it.',
+        'Tableilekk is table with the to-form on it, built like officeilekk: the English word keeps its English spelling and takes the Malayalam ending, and the script spells it the way hotels write it.',
+        'Irunno is the sit, and the to-form is what makes this an instruction: aa tableilekk irunno sends the learner over to the table rather than saying where they already are.',
       ],
       tags: [],
     },
@@ -118,8 +119,8 @@ export const l5u7l1: Lesson = {
     },
     {
       id: 'vere-enthelum-veno',
-      manglish: 'vere enthelum veno',
-      script: 'വേറെ എന്തേലും വേണോ',
+      manglish: 'vere enthelum veno?',
+      script: 'വേറെ എന്തേലും വേണോ?',
       meaning: 'anything else?',
       kind: 'sentence',
       audio: {
@@ -234,7 +235,7 @@ export const l5u7l1: Lesson = {
     {
       kind: 'rolePlay',
       itemId: 'oru-chicken-biriyaniyum-oru-fresh-lime-um-edukkaamo-chetta',
-      promptItemId: 'undello-aa-tablil-irunno',
+      promptItemId: 'undello-aa-tableilekk-irunno',
       mode: 'typing',
     },
     { kind: 'rolePlay', itemId: 'vere-onnum-venda-chetta', promptItemId: 'vere-enthelum-veno', mode: 'typing' },

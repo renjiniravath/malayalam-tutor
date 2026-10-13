@@ -24,7 +24,7 @@ export const l5u8l1: Lesson = {
   items: [
     {
       id: 'hello-bro-enna-und-vishesham',
-      manglish: 'hello bro, enna und vishesham',
+      manglish: 'hello bro, enna und vishesham?',
       meaning: "hello bro, what's up?",
       kind: 'sentence',
       audio: {
@@ -45,6 +45,7 @@ export const l5u8l1: Lesson = {
         ],
       },
       notes: [
+        'The learner is at a wedding and finds a friend in the crowd — the opener is the familiar hello, not a call on the hosts.',
         'Bro is part English, so this line carries no script.',
         'The same enna und vishesham the learner said at the family door, said to a friend instead — hello, the what-is-up, and nothing formal in between.',
       ],
@@ -52,8 +53,8 @@ export const l5u8l1: Lesson = {
     },
     {
       id: 'hello-sugham-aayitt-irikkunneda-ninakk-enna-und',
-      manglish: 'hello, sugham aayitt irikkunneda, ninakk enna und',
-      script: 'ഹലോ സുഖം ആയിട്ട് ഇരിക്കുന്നെടാ നിനക്ക് എന്നാ ഉണ്ട്',
+      manglish: 'hello, sugham aayitt irikkunneda, ninakk enna und?',
+      script: 'ഹലോ സുഖം ആയിട്ട് ഇരിക്കുന്നെടാ നിനക്ക് എന്നാ ഉണ്ട്?',
       meaning: "hello — I'm well, what about you?",
       kind: 'sentence',
       audio: {
@@ -86,8 +87,8 @@ export const l5u8l1: Lesson = {
     },
     {
       id: 'oh-ingane-pokunnu-kazhicho',
-      manglish: 'oh ingane pokunnu, kazhicho',
-      script: 'ഓ ഇങ്ങനെ പോകുന്നു കഴിച്ചോ',
+      manglish: 'oh ingane pokunnu, kazhicho?',
+      script: 'ഓ ഇങ്ങനെ പോകുന്നു കഴിച്ചോ?',
       meaning: 'oh, going along like this — have you eaten?',
       kind: 'sentence',
       audio: {
@@ -114,8 +115,8 @@ export const l5u8l1: Lesson = {
     },
     {
       id: 'illa-nee-kazhicho',
-      manglish: 'illa, nee kazhicho',
-      script: 'ഇല്ല നീ കഴിച്ചോ',
+      manglish: 'illa, nee kazhicho?',
+      script: 'ഇല്ല നീ കഴിച്ചോ?',
       meaning: 'no — have you eaten?',
       kind: 'sentence',
       audio: {

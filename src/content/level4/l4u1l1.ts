@@ -161,8 +161,8 @@ export const l4u1l1: Lesson = {
     },
     {
       id: 'avan-enth-paranju',
-      manglish: 'avan enth paranju',
-      script: 'അവൻ എന്ത് പറഞ്ഞു',
+      manglish: 'avan enth paranju?',
+      script: 'അവൻ എന്ത് പറഞ്ഞു?',
       meaning: 'what did he say?',
       kind: 'sentence',
       audio: {

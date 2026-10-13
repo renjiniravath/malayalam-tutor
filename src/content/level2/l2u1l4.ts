@@ -110,8 +110,8 @@ export const l2u1l4: Lesson = {
     },
     {
       id: 'avan-varunundo',
-      manglish: 'avan varunnundo',
-      script: 'അവൻ വരുന്നുണ്ടോ',
+      manglish: 'avan varunnundo?',
+      script: 'അവൻ വരുന്നുണ്ടോ?',
       meaning: 'is he coming?',
       kind: 'sentence',
       audio: {
@@ -132,8 +132,8 @@ export const l2u1l4: Lesson = {
     },
     {
       id: 'nee-varunundo',
-      manglish: 'nee varunnundo',
-      script: 'നീ വരുന്നുണ്ടോ',
+      manglish: 'nee varunnundo?',
+      script: 'നീ വരുന്നുണ്ടോ?',
       meaning: 'are you coming?',
       kind: 'sentence',
       audio: {

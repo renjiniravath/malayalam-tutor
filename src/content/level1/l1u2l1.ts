@@ -14,8 +14,8 @@ export const l1u2l1: Lesson = {
   items: [
     {
       id: 'engane-und',
-      manglish: 'engane und',
-      script: 'എങ്ങനെ ഉണ്ട്',
+      manglish: 'engane und?',
+      script: 'എങ്ങനെ ഉണ്ട്?',
       meaning: 'how is it?',
       kind: 'expression',
       audio: {
@@ -44,8 +44,8 @@ export const l1u2l1: Lesson = {
     },
     {
       id: 'kaappi-engane-und-kollamo',
-      manglish: 'kaappi engane und, koḷḷaamo',
-      script: 'കാപ്പി എങ്ങനെ ഉണ്ട് കൊള്ളാമോ',
+      manglish: 'kaappi engane und, koḷḷaamo?',
+      script: 'കാപ്പി എങ്ങനെ ഉണ്ട് കൊള്ളാമോ?',
       meaning: 'how is the coffee, is it good?',
       kind: 'sentence',
       audio: {
@@ -87,8 +87,8 @@ export const l1u2l1: Lesson = {
     },
     {
       id: 'enna-und-vishesham',
-      manglish: 'enna und vishesham',
-      script: 'എന്നാ ഉണ്ട് വിശേഷം',
+      manglish: 'enna und vishesham?',
+      script: 'എന്നാ ഉണ്ട് വിശേഷം?',
       meaning: "what's up?",
       kind: 'expression',
       audio: {

@@ -40,7 +40,12 @@ import {
   hasBareThirdPersonUva,
   hasChettaSubject,
 } from '../src/lib/content/pragmatics';
-import { geminationProblems, loanScriptsFor, sentenceSpellingFindings } from '../src/lib/content/romanization';
+import {
+  geminationProblems,
+  loanScriptsFor,
+  sentenceSpellingFindings,
+  wordWithoutMark,
+} from '../src/lib/content/romanization';
 import type { Item, Lesson, MinimalPair, MinimalPairSegment } from '../src/content/types';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -192,10 +197,16 @@ function checkItem(lesson: Lesson, item: Item): void {
   // §9 charset: romanization letters, the display diacritics, space, punctuation
   const bad = item.manglish.match(/[^a-z ḷṇṟ'.,?!-]/gu);
   if (bad) fail(where, `manglish has characters outside the §9 spec: ${[...new Set(bad)].join(' ')}`);
-  // Native-speaker ruling: manglish tokens never carry '?' — the question
-  // is carried by word shape (varunnundo) and the English meaning.
+  // §9 rule 8 (native-speaker ruling 2026-10-13): a question carries '?'
+  // in the display, and the mark closes it — the question form stays in the
+  // word shape (varunnundo) and the English meaning says what it asks.
   if (item.manglish.includes('?')) {
-    fail(where, `manglish must not carry '?' — the question form is in the word itself: '${item.manglish}'`);
+    if (!item.manglish.endsWith('?')) {
+      fail(where, `the question mark closes the display: '${item.manglish}'`);
+    }
+    if (!item.meaning.includes('?')) {
+      fail(where, `manglish asks but the meaning does not — both say what the line does: '${item.manglish}'`);
+    }
   }
   checkBannedWords(where, item);
   // §9 rule 1: doubled vowel runs may only be aa/ee/oo — long i is
@@ -211,6 +222,10 @@ function checkItem(lesson: Lesson, item: Item): void {
     checkScript(where, item.script);
     checkCoronals(where, item);
     for (const problem of geminationProblems(item.script, item.manglish)) fail(where, problem);
+    // §9 rule 8: both displays carry the mark, or neither does.
+    if (item.manglish.endsWith('?') !== item.script.endsWith('?')) {
+      fail(where, 'the manglish and the script both carry the question mark (§9 rule 8)');
+    }
   }
 
   // The sentence drill renders the orders and the bank/parts tokens, so
@@ -266,6 +281,9 @@ function checkItem(lesson: Lesson, item: Item): void {
     }
     for (const input of item.acceptedInputs) {
       if (/[^a-z ?'.-]/.test(input)) fail(where, `acceptedInputs must be lowercase ASCII: '${input}'`);
+      if (input.includes('?')) {
+        fail(where, `acceptedInputs carry no '?' — a learner never types one (§9 rule 8): '${input}'`);
+      }
     }
     if (new Set(item.acceptedInputs).size !== item.acceptedInputs.length) fail(where, 'duplicate acceptedInputs');
   }
@@ -310,6 +328,13 @@ function checkSentence(where: string, item: Item): void {
   if (spec.orders.length < 1) fail(where, 'sentence.orders needs at least one accepted order');
   if (new Set(spec.bank).size !== spec.bank.length) fail(where, 'sentence.bank has duplicate tokens');
   if (new Set(spec.orders).size !== spec.orders.length) fail(where, 'sentence.orders has duplicates');
+  // §9 rule 8: the input layer is punctuation-free — the builder joins bank
+  // chips, so an order carrying a '?' would need a '?' chip to build it.
+  for (const token of [...spec.bank, ...spec.orders]) {
+    if (token.includes('?')) {
+      fail(where, `the word bank and the accepted orders carry no '?': '${token}' (§9 rule 8)`);
+    }
+  }
   const words = spec.orders[0].split(' ');
   if (!words.every((word) => spec.bank.includes(word))) {
     fail(where, 'every word of the first accepted order must appear in the bank');
@@ -365,6 +390,14 @@ function checkScript(where: string, script: string): void {
       const next = chars[i + 1];
       if (!prev || !next || !MALAYALAM.test(prev) || !MALAYALAM.test(next)) {
         fail(where, 'ZWJ/ZWNJ must sit between two Malayalam letters');
+      }
+      return;
+    }
+    if (ch === '?') {
+      // §9 rule 8: the question mark is the one non-Malayalam character the
+      // display carries, and it closes the line.
+      if (i !== chars.length - 1 || !chars[i - 1] || !MALAYALAM.test(chars[i - 1])) {
+        fail(where, 'the question mark closes the script (§9 rule 8)');
       }
       return;
     }
@@ -531,8 +564,8 @@ const ASPIRATE_SCRIPTS: Record<string, string[]> = {
  * script from riding along.
  */
 function checkCoronals(where: string, item: Item): void {
-  const scriptWords = item.script!.trim().split(/\s+/);
-  const romanWords = item.manglish.trim().split(/\s+/);
+  const scriptWords = item.script!.trim().split(/\s+/).map(wordWithoutMark);
+  const romanWords = item.manglish.trim().split(/\s+/).map(wordWithoutMark);
   if (scriptWords.length !== romanWords.length) {
     compareCoronals(where, item.script!, item.manglish);
     return;

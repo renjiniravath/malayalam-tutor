@@ -22,8 +22,8 @@ export const l4u8l1: Lesson = {
   items: [
     {
       id: 'ningal-evide-aanu',
-      manglish: 'ningaḷ evide aanu',
-      script: 'നിങ്ങൾ എവിടെ ആണ്',
+      manglish: 'ningaḷ evide aanu?',
+      script: 'നിങ്ങൾ എവിടെ ആണ്?',
       meaning: 'where are you?',
       kind: 'sentence',
       audio: {
@@ -49,8 +49,8 @@ export const l4u8l1: Lesson = {
     },
     {
       id: 'chechi-enth-paranju',
-      manglish: 'chechi enth paranju',
-      script: 'ചേച്ചി എന്ത് പറഞ്ഞു',
+      manglish: 'chechi enth paranju?',
+      script: 'ചേച്ചി എന്ത് പറഞ്ഞു?',
       meaning: 'what did your sister say?',
       kind: 'sentence',
       audio: {
@@ -76,8 +76,8 @@ export const l4u8l1: Lesson = {
     },
     {
       id: 'ningal-eppo-varum',
-      manglish: 'ningaḷ eppo varum',
-      script: 'നിങ്ങൾ എപ്പോ വരും',
+      manglish: 'ningaḷ eppo varum?',
+      script: 'നിങ്ങൾ എപ്പോ വരും?',
       meaning: 'when will you come?',
       kind: 'sentence',
       audio: {
@@ -103,8 +103,8 @@ export const l4u8l1: Lesson = {
     },
     {
       id: 'njan-ivide-irikkatte',
-      manglish: 'njan ivide irikkatte',
-      script: 'ഞാൻ ഇവിടെ ഇരിക്കട്ടെ',
+      manglish: 'njan ivide irikkatte?',
+      script: 'ഞാൻ ഇവിടെ ഇരിക്കട്ടെ?',
       meaning: 'may I sit here?',
       kind: 'sentence',
       audio: {
@@ -129,8 +129,8 @@ export const l4u8l1: Lesson = {
     },
     {
       id: 'nammal-evide-aanu-pokunnath',
-      manglish: 'nammaḷ evide aanu pokunnath',
-      script: 'നമ്മൾ എവിടെ ആണ് പോകുന്നത്',
+      manglish: 'nammaḷ evide aanu pokunnath?',
+      script: 'നമ്മൾ എവിടെ ആണ് പോകുന്നത്?',
       meaning: 'where are we going?',
       kind: 'sentence',
       audio: {
@@ -158,7 +158,7 @@ export const l4u8l1: Lesson = {
     },
     {
       id: 'nee-evide-ninn-aanu-lunch-kazhikkunnath',
-      manglish: 'nee evide ninn aanu lunch kazhikkunnath',
+      manglish: 'nee evide ninn aanu lunch kazhikkunnath?',
       meaning: 'where are you having lunch from?',
       kind: 'sentence',
       audio: {
@@ -188,7 +188,7 @@ export const l4u8l1: Lesson = {
     },
     {
       id: 'nee-eth-game-aanu-kalikkunnath',
-      manglish: 'nee eth game aanu kalikkunnath',
+      manglish: 'nee eth game aanu kalikkunnath?',
       meaning: 'which game are you playing?',
       kind: 'sentence',
       audio: {
@@ -217,8 +217,8 @@ export const l4u8l1: Lesson = {
     },
     {
       id: 'oru-kaappikku-ethra-aanu',
-      manglish: 'oru kaappikku ethra aanu',
-      script: 'ഒരു കാപ്പിക്ക് എത്ര ആണ്',
+      manglish: 'oru kaappikku ethra aanu?',
+      script: 'ഒരു കാപ്പിക്ക് എത്ര ആണ്?',
       meaning: 'how much for a coffee?',
       kind: 'sentence',
       audio: {
@@ -245,8 +245,8 @@ export const l4u8l1: Lesson = {
     },
     {
       id: 'veettil-aarokke-und',
-      manglish: 'veettil aarokke und',
-      script: 'വീട്ടിൽ ആരൊക്കെ ഉണ്ട്',
+      manglish: 'veettil aarokke und?',
+      script: 'വീട്ടിൽ ആരൊക്കെ ഉണ്ട്?',
       meaning: 'who all are at home?',
       kind: 'sentence',
       audio: {
@@ -271,8 +271,8 @@ export const l4u8l1: Lesson = {
     },
     {
       id: 'ini-eppozha-ernakulatthekk-bus-ullath',
-      manglish: 'ini eppozha ernakuḷatthekk bus uḷḷath',
-      script: 'ഇനി എപ്പോഴാ എറണാകുളത്തേക്ക് ബസ്സ് ഉള്ളത്',
+      manglish: 'ini eppozha ernakuḷatthekk bus uḷḷath?',
+      script: 'ഇനി എപ്പോഴാ എറണാകുളത്തേക്ക് ബസ്സ് ഉള്ളത്?',
       meaning: 'when is the next bus to Ernakulam?',
       kind: 'sentence',
       audio: {

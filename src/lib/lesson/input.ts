@@ -12,7 +12,10 @@ export function foldInput(raw: string): string {
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
     .trim()
-    .replace(/\s+/g, ' ');
+    .replace(/\s+/g, ' ')
+    // §9 rule 8: the question mark is a display mark — the learner never
+    // types one, so a trailing '?' folds away on both sides of a compare.
+    .replace(/[\s?]+$/, '');
 }
 
 export function matchesAcceptedInput(raw: string, acceptedInputs: string[]): boolean {

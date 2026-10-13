@@ -125,8 +125,8 @@ export const l3u2l1: Lesson = {
     },
     {
       id: 'nee-eth-schoolil-aanu-padichath',
-      manglish: 'nee eth schoolil aanu padichath',
-      script: 'നീ ഏത് സ്കൂളിൽ ആണ് പഠിച്ചത്',
+      manglish: 'nee eth schoolil aanu padichath?',
+      script: 'നീ ഏത് സ്കൂളിൽ ആണ് പഠിച്ചത്?',
       meaning: 'which school did you go to?',
       kind: 'sentence',
       audio: {
@@ -150,8 +150,8 @@ export const l3u2l1: Lesson = {
     },
     {
       id: 'chechi-raavile-enth-aanu-kazhichath',
-      manglish: 'chechi raavile enth aanu kazhichath',
-      script: 'ചേച്ചി രാവിലെ എന്ത് ആണ് കഴിച്ചത്',
+      manglish: 'chechi raavile enth aanu kazhichath?',
+      script: 'ചേച്ചി രാവിലെ എന്ത് ആണ് കഴിച്ചത്?',
       meaning: 'what did you eat in the morning, chechi?',
       kind: 'sentence',
       audio: {
@@ -178,8 +178,8 @@ export const l3u2l1: Lesson = {
     },
     {
       id: 'ee-tv-evide-ninn-aanu-medichath',
-      manglish: 'ee tv evide ninn aanu medichath',
-      script: 'ഈ ടീവി എവിടെ നിന്ന് ആണ് മേടിച്ചത്',
+      manglish: 'ee tv evide ninn aanu medichath?',
+      script: 'ഈ ടീവി എവിടെ നിന്ന് ആണ് മേടിച്ചത്?',
       meaning: 'where did you buy this TV from?',
       kind: 'sentence',
       audio: {
@@ -204,8 +204,8 @@ export const l3u2l1: Lesson = {
     },
     {
       id: 'avan-evide-ninn-aanu-varunnath',
-      manglish: 'avan evide ninn aanu varunnath',
-      script: 'അവൻ എവിടെ നിന്ന് ആണ് വരുന്നത്',
+      manglish: 'avan evide ninn aanu varunnath?',
+      script: 'അവൻ എവിടെ നിന്ന് ആണ് വരുന്നത്?',
       meaning: 'where is he coming from?',
       kind: 'sentence',
       audio: {

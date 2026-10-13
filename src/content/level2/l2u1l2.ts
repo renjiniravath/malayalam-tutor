@@ -58,8 +58,8 @@ export const l2u1l2: Lesson = {
     },
     {
       id: 'aano',
-      manglish: 'aano',
-      script: 'ആണോ',
+      manglish: 'aano?',
+      script: 'ആണോ?',
       meaning: 'is it?',
       kind: 'word',
       audio: {
@@ -172,8 +172,8 @@ export const l2u1l2: Lesson = {
     },
     {
       id: 'ningal-ready-aano',
-      manglish: 'ningaḷ ready aano',
-      script: 'നിങ്ങൾ റെഡി ആണോ',
+      manglish: 'ningaḷ ready aano?',
+      script: 'നിങ്ങൾ റെഡി ആണോ?',
       meaning: 'are you ready?',
       kind: 'sentence',
       audio: {

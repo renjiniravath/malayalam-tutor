@@ -19,8 +19,8 @@ export const l5u2l1: Lesson = {
   items: [
     {
       id: 'chetta-thakkaalikk-ethra-aanu',
-      manglish: 'chetta, thakkaaḷikk ethra aanu',
-      script: 'ചേട്ടാ തക്കാളിക്ക് എത്ര ആണ്',
+      manglish: 'chetta, thakkaaḷikk ethra aanu?',
+      script: 'ചേട്ടാ തക്കാളിക്ക് എത്ര ആണ്?',
       meaning: 'chetta, how much are the tomatoes?',
       kind: 'sentence',
       audio: {
@@ -107,8 +107,8 @@ export const l5u2l1: Lesson = {
     },
     {
       id: 'vere-vallathum-veno',
-      manglish: 'vere vallathum veno',
-      script: 'വേറെ വല്ലതും വേണോ',
+      manglish: 'vere vallathum veno?',
+      script: 'വേറെ വല്ലതും വേണോ?',
       meaning: 'anything else?',
       kind: 'sentence',
       audio: {

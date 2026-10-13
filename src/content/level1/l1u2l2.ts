@@ -85,8 +85,8 @@ export const l1u2l2: Lesson = {
     },
     {
       id: 'alle',
-      manglish: 'alle',
-      script: 'അല്ലേ',
+      manglish: 'alle?',
+      script: 'അല്ലേ?',
       meaning: "right? (isn't it?)",
       kind: 'expression',
       audio: {

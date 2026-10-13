@@ -165,8 +165,8 @@ export const l3u1l4: Lesson = {
     },
     {
       id: 'athu-aarude-aanu',
-      manglish: 'athu aarude aanu',
-      script: 'അത് ആരുടെ ആണ്',
+      manglish: 'athu aarude aanu?',
+      script: 'അത് ആരുടെ ആണ്?',
       meaning: 'whose is that?',
       kind: 'sentence',
       audio: {

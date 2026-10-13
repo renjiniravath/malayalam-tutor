@@ -79,8 +79,8 @@ export const l2u2l1: Lesson = {
     },
     {
       id: 'ayaal-ingott-varunnundo',
-      manglish: 'ayaaḷ ingott varunnundo',
-      script: 'അയാൾ ഇങ്ങോട്ട് വരുന്നുണ്ടോ',
+      manglish: 'ayaaḷ ingott varunnundo?',
+      script: 'അയാൾ ഇങ്ങോട്ട് വരുന്നുണ്ടോ?',
       meaning: 'is he coming here?',
       kind: 'sentence',
       audio: {
@@ -102,8 +102,8 @@ export const l2u2l1: Lesson = {
     },
     {
       id: 'addheham-ingott-varunnundo',
-      manglish: 'addheham ingott varunnundo',
-      script: 'അദ്ദേഹം ഇങ്ങോട്ട് വരുന്നുണ്ടോ',
+      manglish: 'addheham ingott varunnundo?',
+      script: 'അദ്ദേഹം ഇങ്ങോട്ട് വരുന്നുണ്ടോ?',
       meaning: 'is he (respectful) coming here?',
       kind: 'sentence',
       audio: {
@@ -125,8 +125,8 @@ export const l2u2l1: Lesson = {
     },
     {
       id: 'iyaal-ingott-varunnundo',
-      manglish: 'iyaaḷ ingott varunnundo',
-      script: 'ഇയാൾ ഇങ്ങോട്ട് വരുന്നുണ്ടോ',
+      manglish: 'iyaaḷ ingott varunnundo?',
+      script: 'ഇയാൾ ഇങ്ങോട്ട് വരുന്നുണ്ടോ?',
       meaning: 'is he coming here? (this man)',
       kind: 'sentence',
       audio: {
@@ -148,8 +148,8 @@ export const l2u2l1: Lesson = {
     },
     {
       id: 'avar-ingott-varunnundo',
-      manglish: 'avar ingott varunnundo',
-      script: 'അവർ ഇങ്ങോട്ട് വരുന്നുണ്ടോ',
+      manglish: 'avar ingott varunnundo?',
+      script: 'അവർ ഇങ്ങോട്ട് വരുന്നുണ്ടോ?',
       meaning: 'are they coming here? (polite he or she)',
       kind: 'sentence',
       audio: {
@@ -171,8 +171,8 @@ export const l2u2l1: Lesson = {
     },
     {
       id: 'thaankal-varunnundo',
-      manglish: 'thaankaḷ varunnundo',
-      script: 'താങ്കൾ വരുന്നുണ്ടോ',
+      manglish: 'thaankaḷ varunnundo?',
+      script: 'താങ്കൾ വരുന്നുണ്ടോ?',
       meaning: 'are you coming? (very formal)',
       kind: 'sentence',
       audio: {
@@ -192,8 +192,8 @@ export const l2u2l1: Lesson = {
     },
     {
       id: 'nee-chaaya-kudikkumello-alle',
-      manglish: 'nee chaaya kudikkumello, alle',
-      script: 'നീ ചായ കുടിക്കുമല്ലോ അല്ലേ',
+      manglish: 'nee chaaya kudikkumello, alle?',
+      script: 'നീ ചായ കുടിക്കുമല്ലോ അല്ലേ?',
       meaning: 'you drink tea, right?',
       kind: 'sentence',
       audio: {

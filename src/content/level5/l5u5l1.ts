@@ -21,8 +21,8 @@ export const l5u5l1: Lesson = {
   items: [
     {
       id: 'hello-chechi-enna-und-vishesham',
-      manglish: 'hello, chechi, enna und vishesham',
-      script: 'ഹലോ ചേച്ചി എന്നാ ഉണ്ട് വിശേഷം',
+      manglish: 'hello, chechi, enna und vishesham?',
+      script: 'ഹലോ ചേച്ചി എന്നാ ഉണ്ട് വിശേഷം?',
       meaning: "hello chechi, what's up?",
       kind: 'sentence',
       audio: {
@@ -50,9 +50,9 @@ export const l5u5l1: Lesson = {
     },
     {
       id: 'sugham-aayitt-irikkunnu-entha-ee-vazhi',
-      manglish: 'sugham aayitt irikkunnu, entha ee vazhi onnum parayathe pettannu',
-      script: 'സുഖം ആയിട്ട് ഇരിക്കുന്നു എന്താ ഈ വഴി ഒന്നും പറയാതെ പെട്ടന്ന്',
-      meaning: "I'm well — what's this, turning up suddenly without a word?",
+      manglish: 'sugham aayitt irikkunnu, entha ee vazhi onnum parayathe pettannu?',
+      script: 'സുഖം ആയിട്ട് ഇരിക്കുന്നു എന്താ ഈ വഴി ഒന്നും പറയാതെ പെട്ടന്ന്?',
+      meaning: "I'm doing great — what's up? I didn't expect to see you today.",
       kind: 'sentence',
       audio: {
         slow: 'l5u5l1_sugham-aayitt-irikkunnu-entha-ee-vazhi_slow',
@@ -182,6 +182,7 @@ export const l5u5l1: Lesson = {
         ],
       },
       notes: [
+        'The learner goes in and sits down with the family; a few minutes later the tea is announced.',
         'Eduttho at the stall was the taking; edukkette is the same word with the -ette on it, which announces what the speaker is about to do rather than asking.',
         'No question comes with it — the house says it is getting tea, and the answer is yes or venda.',
       ],
@@ -244,6 +245,7 @@ export const l5u5l1: Lesson = {
         ],
       },
       notes: [
+        'The tea is turned down and the visit ends; the learner is the one who says it is time to go.',
         'Enna is the then that closes a visit, and iranguva is the same stepping out as chumma irangiyath — this time the learner is the one doing it.',
         'Pinne oru dhivasam veram is the promise made at the door: one day, not a date — the shape every goodbye takes.',
       ],

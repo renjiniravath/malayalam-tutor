@@ -20,8 +20,8 @@ export const l5u3l1: Lesson = {
   items: [
     {
       id: 'government-hospital-ilekk-povumo',
-      manglish: 'government hospital-ilekk povumo',
-      script: 'ഗവൺമെന്റ് ഹോസ്പിറ്റലിലേക്ക് പോവുമോ',
+      manglish: 'government hospital-ilekk povumo?',
+      script: 'ഗവൺമെന്റ് ഹോസ്പിറ്റലിലേക്ക് പോവുമോ?',
       meaning: 'will you go to the government hospital?',
       kind: 'sentence',
       audio: {
@@ -74,8 +74,8 @@ export const l5u3l1: Lesson = {
     },
     {
       id: 'ivide-nirtthikko-ethra-aayi-chetta',
-      manglish: 'ivide nirtthikko, ethra aayi chetta',
-      script: 'ഇവിടെ നിർത്തിക്കോ എത്ര ആയി ചേട്ടാ',
+      manglish: 'ivide nirtthikko, ethra aayi chetta?',
+      script: 'ഇവിടെ നിർത്തിക്കോ എത്ര ആയി ചേട്ടാ?',
       meaning: 'stop here, how much is it, chetta?',
       kind: 'sentence',
       audio: {
@@ -100,7 +100,7 @@ export const l5u3l1: Lesson = {
         ],
       },
       notes: [
-        'The junction comes up and the learner says both halves at once: stop here, and the fare question from the counter.',
+        'The auto reaches the hospital junction and the learner says both halves at once: stop here, and the fare question from the counter.',
         'Nirtthikko is stop with the -ikko on it, the same shape as kerikko — the doubled tt is the held sound in the middle.',
       ],
       tags: [],

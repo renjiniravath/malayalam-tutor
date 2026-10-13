@@ -115,8 +115,8 @@ export const l2u3l2: Lesson = {
     },
     {
       id: 'athu-entha',
-      manglish: 'athu entha',
-      script: 'അത് എന്താ',
+      manglish: 'athu entha?',
+      script: 'അത് എന്താ?',
       meaning: 'what is that?',
       kind: 'sentence',
       audio: {
@@ -137,8 +137,8 @@ export const l2u3l2: Lesson = {
     },
     {
       id: 'athu-etha',
-      manglish: 'ithil etha ishttappette',
-      script: 'ഇതിൽ ഏതാ ഇഷ്ടപ്പെട്ടേ',
+      manglish: 'ithil etha ishttappette?',
+      script: 'ഇതിൽ ഏതാ ഇഷ്ടപ്പെട്ടേ?',
       meaning: 'which among these did you like?',
       kind: 'sentence',
       audio: {
@@ -160,8 +160,8 @@ export const l2u3l2: Lesson = {
     },
     {
       id: 'eth-busa',
-      manglish: 'eth busa',
-      script: 'ഏത് ബസ്സാ',
+      manglish: 'eth busa?',
+      script: 'ഏത് ബസ്സാ?',
       meaning: 'which bus is it?',
       kind: 'sentence',
       audio: {
@@ -186,8 +186,8 @@ export const l2u3l2: Lesson = {
     },
     {
       id: 'ningal-evide',
-      manglish: 'ningaḷ evide',
-      script: 'നിങ്ങൾ എവിടെ',
+      manglish: 'ningaḷ evide?',
+      script: 'നിങ്ങൾ എവിടെ?',
       meaning: 'where are you?',
       kind: 'sentence',
       audio: {

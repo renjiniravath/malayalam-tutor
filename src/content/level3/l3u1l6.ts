@@ -256,8 +256,8 @@ export const l3u1l6: Lesson = {
     },
     {
       id: 'ninte-veettil-ninn-aarokke-varunnund',
-      manglish: 'ninte veettil ninn aarokke varunnund',
-      script: 'നിന്റെ വീട്ടിൽ നിന്ന് ആരൊക്കെ വരുന്നുണ്ട്',
+      manglish: 'ninte veettil ninn aarokke varunnund?',
+      script: 'നിന്റെ വീട്ടിൽ നിന്ന് ആരൊക്കെ വരുന്നുണ്ട്?',
       meaning: 'who all are coming from your house?',
       kind: 'sentence',
       audio: {

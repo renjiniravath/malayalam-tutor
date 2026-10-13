@@ -36,15 +36,15 @@ export const l5u4l1: Lesson = {
         parts: [{ word: 'hello', meaning: 'hello' }],
       },
       notes: [
-        'The house picks up with one word and nothing else — no name, because the caller has not said anything yet.',
+        'The learner dials the number and it rings; the house picks up with one word and nothing else — no name, because the caller has not said anything yet.',
         'A bare hello is how a Kerala house answers the ring; the who-is-it comes after the caller speaks.',
       ],
       tags: [],
     },
     {
       id: 'hello-babunte-veed-aano',
-      manglish: 'hello, babunte veed aano',
-      script: 'ഹലോ ബാബുന്റെ വീട് ആണോ',
+      manglish: 'hello, babunte veed aano?',
+      script: 'ഹലോ ബാബുന്റെ വീട് ആണോ?',
       meaning: "hello, is this Babu's house?",
       kind: 'sentence',
       audio: {
@@ -108,8 +108,8 @@ export const l5u4l1: Lesson = {
     },
     {
       id: 'oh-babu-eppo-varum-enn-ariyamo',
-      manglish: 'oh, babu eppo varum enn ariyamo',
-      script: 'ഓ ബാബു എപ്പോ വരും എന്ന് അറിയാമോ',
+      manglish: 'oh, babu eppo varum enn ariyamo?',
+      script: 'ഓ ബാബു എപ്പോ വരും എന്ന് അറിയാമോ?',
       meaning: 'oh — do you know when Babu will come?',
       kind: 'sentence',
       audio: {

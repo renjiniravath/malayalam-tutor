@@ -21,8 +21,8 @@ export const l4u6l1: Lesson = {
   items: [
     {
       id: 'ee-bus-engott-aanu-pokunnath',
-      manglish: 'ee bus engott aanu pokunnath',
-      script: 'ഈ ബസ്സ് എങ്ങോട്ട് ആണ് പോകുന്നത്',
+      manglish: 'ee bus engott aanu pokunnath?',
+      script: 'ഈ ബസ്സ് എങ്ങോട്ട് ആണ് പോകുന്നത്?',
       meaning: 'where does this bus go?',
       kind: 'sentence',
       audio: {
@@ -50,8 +50,8 @@ export const l4u6l1: Lesson = {
     },
     {
       id: 'ninte-veedu-evide-aanu',
-      manglish: 'ninte veedu evide aanu',
-      script: 'നിന്റെ വീട് എവിടെ ആണ്',
+      manglish: 'ninte veedu evide aanu?',
+      script: 'നിന്റെ വീട് എവിടെ ആണ്?',
       meaning: 'where is your house?',
       kind: 'sentence',
       audio: {
@@ -78,8 +78,8 @@ export const l4u6l1: Lesson = {
     },
     {
       id: 'avan-eppo-varum',
-      manglish: 'avan eppo varum',
-      script: 'അവൻ എപ്പോ വരും',
+      manglish: 'avan eppo varum?',
+      script: 'അവൻ എപ്പോ വരും?',
       meaning: 'when will he come?',
       kind: 'sentence',
       audio: {
@@ -104,8 +104,8 @@ export const l4u6l1: Lesson = {
     },
     {
       id: 'ithu-ethra-aanu',
-      manglish: 'ithu ethra aanu',
-      script: 'ഇത് എത്ര ആണ്',
+      manglish: 'ithu ethra aanu?',
+      script: 'ഇത് എത്ര ആണ്?',
       meaning: 'how much is this?',
       kind: 'sentence',
       audio: {
@@ -130,8 +130,8 @@ export const l4u6l1: Lesson = {
     },
     {
       id: 'ningalkku-enthaanu-vendath',
-      manglish: 'ningaḷkku enthaanu vendath',
-      script: 'നിങ്ങൾക്ക് എന്താണ് വേണ്ടത്',
+      manglish: 'ningaḷkku enthaanu vendath?',
+      script: 'നിങ്ങൾക്ക് എന്താണ് വേണ്ടത്?',
       meaning: 'what would you like?',
       kind: 'sentence',
       audio: {
@@ -158,8 +158,8 @@ export const l4u6l1: Lesson = {
     },
     {
       id: 'ithu-engane-aanu-cheyyunnath',
-      manglish: 'ithu engane aanu cheyyunnath',
-      script: 'ഇത് എങ്ങനെ ആണ് ചെയ്യുന്നത്',
+      manglish: 'ithu engane aanu cheyyunnath?',
+      script: 'ഇത് എങ്ങനെ ആണ് ചെയ്യുന്നത്?',
       meaning: 'how do I do this?',
       kind: 'sentence',
       audio: {
@@ -187,8 +187,8 @@ export const l4u6l1: Lesson = {
     },
     {
       id: 'athu-aara-paranjath',
-      manglish: 'athu aara paranjath',
-      script: 'അത് ആരാ പറഞ്ഞത്',
+      manglish: 'athu aara paranjath?',
+      script: 'അത് ആരാ പറഞ്ഞത്?',
       meaning: 'who said that?',
       kind: 'sentence',
       audio: {
@@ -215,8 +215,8 @@ export const l4u6l1: Lesson = {
     },
     {
       id: 'ithu-evide-ninn-aanu-medichath',
-      manglish: 'ithu evide ninn aanu medichath',
-      script: 'ഇത് എവിടെ നിന്ന് ആണ് മേടിച്ചത്',
+      manglish: 'ithu evide ninn aanu medichath?',
+      script: 'ഇത് എവിടെ നിന്ന് ആണ് മേടിച്ചത്?',
       meaning: 'where did you buy this?',
       kind: 'sentence',
       audio: {

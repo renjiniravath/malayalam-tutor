@@ -47,8 +47,8 @@ export const l5u1l1: Lesson = {
     },
     {
       id: 'sugar-idano',
-      manglish: 'sugar idaṇo',
-      script: 'ഷുഗർ ഇടണോ',
+      manglish: 'sugar idaṇo?',
+      script: 'ഷുഗർ ഇടണോ?',
       meaning: 'shall I put sugar?',
       kind: 'sentence',
       audio: {
@@ -124,8 +124,8 @@ export const l5u1l1: Lesson = {
     },
     {
       id: 'ethra-aayi-chetta',
-      manglish: 'ethra aayi, chetta',
-      script: 'എത്ര ആയി ചേട്ടാ',
+      manglish: 'ethra aayi, chetta?',
+      script: 'എത്ര ആയി ചേട്ടാ?',
       meaning: 'how much is it, chetta?',
       kind: 'sentence',
       audio: {

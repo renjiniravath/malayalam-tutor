@@ -68,8 +68,8 @@ export const l2u2l2: Lesson = {
     },
     {
       id: 'chettan-varunnundo',
-      manglish: 'chettan varunnundo',
-      script: 'ചേട്ടൻ വരുന്നുണ്ടോ',
+      manglish: 'chettan varunnundo?',
+      script: 'ചേട്ടൻ വരുന്നുണ്ടോ?',
       meaning: 'is chettan coming?',
       kind: 'sentence',
       audio: {
@@ -90,8 +90,8 @@ export const l2u2l2: Lesson = {
     },
     {
       id: 'chetta-varunnundo',
-      manglish: 'chetta, varunnundo',
-      script: 'ചേട്ടാ വരുന്നുണ്ടോ',
+      manglish: 'chetta, varunnundo?',
+      script: 'ചേട്ടാ വരുന്നുണ്ടോ?',
       meaning: 'chetta, are you coming?',
       kind: 'sentence',
       audio: {
@@ -112,8 +112,8 @@ export const l2u2l2: Lesson = {
     },
     {
       id: 'chetta-coffee-veno',
-      manglish: 'chetta, kaappi veno',
-      script: 'ചേട്ടാ കാപ്പി വേണോ',
+      manglish: 'chetta, kaappi veno?',
+      script: 'ചേട്ടാ കാപ്പി വേണോ?',
       meaning: 'chetta, do you want coffee?',
       kind: 'sentence',
       audio: {
@@ -135,8 +135,8 @@ export const l2u2l2: Lesson = {
     },
     {
       id: 'chechi-ready-aano',
-      manglish: 'chechi, ready aano',
-      script: 'ചേച്ചി റെഡി ആണോ',
+      manglish: 'chechi, ready aano?',
+      script: 'ചേച്ചി റെഡി ആണോ?',
       meaning: 'chechi, are you ready?',
       kind: 'sentence',
       audio: {
@@ -158,8 +158,8 @@ export const l2u2l2: Lesson = {
     },
     {
       id: 'chechi-chaaya-veno',
-      manglish: 'chechi, chaaya veno',
-      script: 'ചേച്ചി ചായ വേണോ',
+      manglish: 'chechi, chaaya veno?',
+      script: 'ചേച്ചി ചായ വേണോ?',
       meaning: 'chechi, do you want tea?',
       kind: 'sentence',
       audio: {
@@ -181,8 +181,8 @@ export const l2u2l2: Lesson = {
     },
     {
       id: 'chechi-varunnundo',
-      manglish: 'chechi varunnundo',
-      script: 'ചേച്ചി വരുന്നുണ്ടോ',
+      manglish: 'chechi varunnundo?',
+      script: 'ചേച്ചി വരുന്നുണ്ടോ?',
       meaning: 'is chechi coming?',
       kind: 'sentence',
       audio: {
@@ -203,8 +203,8 @@ export const l2u2l2: Lesson = {
     },
     {
       id: 'ningal-busy-aano',
-      manglish: 'ningaḷ busy aano',
-      script: 'നിങ്ങൾ ബിസി ആണോ',
+      manglish: 'ningaḷ busy aano?',
+      script: 'നിങ്ങൾ ബിസി ആണോ?',
       meaning: 'are you busy?',
       kind: 'sentence',
       audio: {

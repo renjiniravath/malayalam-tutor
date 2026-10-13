@@ -26,19 +26,22 @@ describe('sentence checking', () => {
     assert.equal(checkAssembly(['avan', 'chaaya', 'kudikkuva'], spec), false);
   });
 
-  it('folds diacritics and question marks in both directions', () => {
+  it('ignores a trailing question mark: the display carries it, the learner does not type it', () => {
+    // §9 rule 8: the bank and the orders are punctuation-free, and a '?'
+    // the learner types folds away before the compare.
     const question: SentenceSpec = {
-      bank: ['ningaḷ', 'ready', 'aano?', 'athe'],
-      orders: ['ningaḷ ready aano?'],
+      bank: ['ningaḷ', 'ready', 'aano', 'athe'],
+      orders: ['ningaḷ ready aano'],
       parts: [
         { word: 'ningaḷ', meaning: 'you' },
         { word: 'ready', meaning: 'ready' },
-        { word: 'aano?', meaning: 'is it?' },
+        { word: 'aano', meaning: 'is it?' },
       ],
     };
-    assert.equal(checkAssembly(['ningal', 'ready', 'aano?'], question), true);
-    assert.equal(checkTypedSentence('ningal ready aano', question), true, 'missing ? is one small edit');
-    assert.equal(checkTypedSentence('ningal readi aano?', question), true, 'one typo tolerated');
+    assert.equal(checkAssembly(['ningal', 'ready', 'aano'], question), true);
+    assert.equal(checkTypedSentence('ningal ready aano', question), true, 'the display mark is not typed');
+    assert.equal(checkTypedSentence('ningal ready aano?', question), true, 'typing it anyway is forgiven');
+    assert.equal(checkTypedSentence('ningal readi aano', question), true, 'one typo tolerated');
     assert.equal(checkTypedSentence('njan ready aano?', question), false);
   });
 

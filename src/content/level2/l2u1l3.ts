@@ -29,8 +29,8 @@ export const l2u1l3: Lesson = {
     },
     {
       id: 'neeyyo',
-      manglish: 'neeyo',
-      script: 'നീയോ',
+      manglish: 'neeyo?',
+      script: 'നീയോ?',
       meaning: 'you?',
       kind: 'expression',
       audio: {
@@ -59,8 +59,8 @@ export const l2u1l3: Lesson = {
     },
     {
       id: 'ketto',
-      manglish: 'ketto',
-      script: 'കേട്ടോ',
+      manglish: 'ketto?',
+      script: 'കേട്ടോ?',
       meaning: 'did you hear?',
       kind: 'expression',
       audio: {
@@ -78,8 +78,8 @@ export const l2u1l3: Lesson = {
     },
     {
       id: 'varunundo',
-      manglish: 'varunnundo',
-      script: 'വരുന്നുണ്ടോ',
+      manglish: 'varunnundo?',
+      script: 'വരുന്നുണ്ടോ?',
       meaning: 'coming?',
       kind: 'expression',
       audio: {
@@ -97,8 +97,8 @@ export const l2u1l3: Lesson = {
     },
     {
       id: 'pokatte',
-      manglish: 'pokatte',
-      script: 'പോകട്ടെ',
+      manglish: 'pokatte?',
+      script: 'പോകട്ടെ?',
       meaning: 'may I go?',
       kind: 'expression',
       audio: {
@@ -116,8 +116,8 @@ export const l2u1l3: Lesson = {
     },
     {
       id: 'chaaya-veno',
-      manglish: 'chaaya veno',
-      script: 'ചായ വേണോ',
+      manglish: 'chaaya veno?',
+      script: 'ചായ വേണോ?',
       meaning: 'do you want tea?',
       kind: 'sentence',
       audio: {
@@ -140,8 +140,8 @@ export const l2u1l3: Lesson = {
     },
     {
       id: 'njan-pokatte',
-      manglish: 'njan pokatte',
-      script: 'ഞാൻ പോകട്ടെ',
+      manglish: 'njan pokatte?',
+      script: 'ഞാൻ പോകട്ടെ?',
       meaning: 'may I go?',
       kind: 'sentence',
       audio: {
@@ -162,8 +162,8 @@ export const l2u1l3: Lesson = {
     },
     {
       id: 'ningal-varunundo',
-      manglish: 'ningaḷ varunnundo',
-      script: 'നിങ്ങൾ വരുന്നുണ്ടോ',
+      manglish: 'ningaḷ varunnundo?',
+      script: 'നിങ്ങൾ വരുന്നുണ്ടോ?',
       meaning: 'are you coming?',
       kind: 'sentence',
       audio: {
@@ -184,8 +184,8 @@ export const l2u1l3: Lesson = {
     },
     {
       id: 'njan-varatte',
-      manglish: 'njan varatte',
-      script: 'ഞാൻ വരട്ടെ',
+      manglish: 'njan varatte?',
+      script: 'ഞാൻ വരട്ടെ?',
       meaning: 'shall I come?',
       kind: 'sentence',
       audio: {
@@ -206,8 +206,8 @@ export const l2u1l3: Lesson = {
     },
     {
       id: 'athu-sheri-alle',
-      manglish: 'athu sheri alle',
-      script: 'അത് ശെരി അല്ലേ',
+      manglish: 'athu sheri alle?',
+      script: 'അത് ശെരി അല്ലേ?',
       meaning: "that's correct, right?",
       kind: 'sentence',
       audio: {

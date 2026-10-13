@@ -20,8 +20,8 @@ export const l5u6l1: Lesson = {
   items: [
     {
       id: 'chechi-ee-bus-pala-vazhi-aano-pokunnath',
-      manglish: 'chechi, ee bus pala vazhi aano pokunnath',
-      script: 'ചേച്ചി ഈ ബസ്സ് പാലാ വഴി ആണോ പോകുന്നത്',
+      manglish: 'chechi, ee bus pala vazhi aano pokunnath?',
+      script: 'ചേച്ചി ഈ ബസ്സ് പാലാ വഴി ആണോ പോകുന്നത്?',
       meaning: 'chechi, does this bus go via Pala?',
       kind: 'sentence',
       audio: {

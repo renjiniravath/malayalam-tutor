@@ -88,6 +88,11 @@ const LOAN_SCRIPTS: Record<string, string[]> = {
   fresh: ['ഫ്രഷ്'],
   limeum: ['ലൈമും'],
   tablil: ['ടേബിളിൽ'],
+  // The seating line's to-form (native-speaker correction 2026-10-13): the
+  // English word keeps its spelling and the to-form is built on the end, the
+  // same shape as officeilekk — and ടേബിളിലേക്ക് carries the retroflex ള the
+  // romanization spells with a plain l.
+  tableilekk: ['ടേബിളിലേക്ക്'],
 };
 
 /**
@@ -132,6 +137,14 @@ function romanDoubles(manglish: string): string[] {
   return out;
 }
 
+/**
+ * §9 rule 8: the display's question mark closes the line, not the word.
+ * The cross-checks compare words, so it comes off both sides first.
+ */
+export function wordWithoutMark(word: string): string {
+  return word.replace(/\?+$/, '');
+}
+
 function mismatch(scriptWord: string, romanWord: string): string | undefined {
   const spelled = scriptDoubles(scriptWord);
   const doubled = romanDoubles(romanWord);
@@ -152,8 +165,8 @@ export function geminationProblems(script: string, manglish: string): string[] {
     if (found) problems.push(found);
   };
 
-  const scriptWords = script.trim().split(/\s+/);
-  const romanWords = manglish.trim().split(/\s+/);
+  const scriptWords = script.trim().split(/\s+/).map(wordWithoutMark);
+  const romanWords = manglish.trim().split(/\s+/).map(wordWithoutMark);
   if (scriptWords.length !== romanWords.length) {
     // The script and the manglish run word for word; if the split ever
     // drifts, compare the whole item rather than pairing the wrong words.

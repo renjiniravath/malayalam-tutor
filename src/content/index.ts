@@ -166,7 +166,20 @@ export const contentRevision: ContentRevision = {
   // pinned as English loans; ok, thank you and bro take no script, because
   // those lines mix in English the script rules cannot spell sound for
   // sound.
-  revision: 42,
+  // 43 (native-speaker rulings 2026-10-13): questions carry '?' in the
+  // display — both the manglish and the script — across all five levels, 76
+  // items marked; the word bank, the accepted orders and the accepted inputs
+  // stay punctuation-free, and the matcher folds a trailing '?' away, so a
+  // learner never types one (§9 rule 8). Display spellings changed under the
+  // unchanged ids, so nothing is re-keyed. The family visit's second line
+  // carries the native gloss ("I'm doing great — what's up? I didn't expect
+  // to see you today."), its manglish unchanged. The hotel's seating line
+  // takes the to-form — undello, aa tableilekk irunno — so that one id is
+  // re-keyed (see removedItemIds) and tableilekk joins the loan pins. The
+  // scene stage directions (the auto reaching the junction, the learner
+  // sitting down, the conductor coming down the aisle, the food and the
+  // bill) are visible learner notes on the turns they lead into.
+  revision: 43,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -372,6 +385,9 @@ export const contentRevision: ContentRevision = {
     'chechi-kazhichu',
     'athe-chetta-vere-veno',
     'venda-chechi-njan-pokatte',
+    // Native-speaker correction 2026-10-13: the waiter's seating line takes
+    // the to-form, so it is re-keyed under the corrected spelling.
+    'undello-aa-tablil-irunno',
   ],
 };
 
