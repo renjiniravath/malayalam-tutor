@@ -65,6 +65,11 @@ const LOAN_SCRIPTS: Record<string, string[]> = {
   // The phone answer: the English double l against the single ല of ഹലോ,
   // the same divergence as buss- against ബസ്സ്.
   hello: ['ഹലോ'],
+  // The bus ticket and the hotel bill: English words whose script doubles
+  // what the English spelling does not (ടിക്കറ്റ്), or ends on a chillu the
+  // romanization spells with a doubled l (ബിൽ).
+  ticket: ['ടിക്കറ്റ്'],
+  bill: ['ബിൽ'],
 };
 
 /**

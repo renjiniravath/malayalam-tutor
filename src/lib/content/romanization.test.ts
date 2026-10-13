@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { levels } from '@/content';
-import { geminationProblems, sentenceSpellingFindings } from './romanization';
+import { geminationProblems, loanScriptsFor, sentenceSpellingFindings } from './romanization';
 
 describe('gemination cross-check (§9 rule 2)', () => {
   it('passes a script geminate written as a doubled consonant', () => {
@@ -70,6 +70,17 @@ describe('gemination cross-check (§9 rule 2)', () => {
     const problems = geminationProblems('ഹെല്ലോ ആരാ', 'hello, aara');
     assert.equal(problems.length, 1);
     assert.match(problems[0], /ഹെല്ലോ/);
+  });
+
+  it('pins the ticket and bill loan scripts', () => {
+    assert.deepEqual(geminationProblems('എറണാകുളം രണ്ട് ടിക്കറ്റ്', 'ernakuḷam, randu ticket'), []);
+    const problems = geminationProblems('എറണാകുളം രണ്ട് ടികറ്റ്', 'ernakuḷam, randu ticket');
+    assert.equal(problems.length, 1);
+    assert.match(problems[0], /ടികറ്റ്/);
+    // The bill is not a gemination case — ബിൽ has no doubled class letter —
+    // so the pin is what the coronal pass reads for it.
+    assert.deepEqual(loanScriptsFor('bill'), ['ബിൽ']);
+    assert.deepEqual(loanScriptsFor('ticket'), ['ടിക്കറ്റ്']);
   });
 
   it('does not read an inherited object key as a loan (constructor)', () => {

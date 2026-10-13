@@ -59,5 +59,8 @@ export const audioManifest: {
     l5u3l1: { file: 'audio/l5u3l1.mp3' },
     l5u4l1: { file: 'audio/l5u4l1.mp3' },
     l5u5l1: { file: 'audio/l5u5l1.mp3' },
+    l5u6l1: { file: 'audio/l5u6l1.mp3' },
+    l5u7l1: { file: 'audio/l5u7l1.mp3' },
+    l5u8l1: { file: 'audio/l5u8l1.mp3' },
   },
 };

@@ -124,7 +124,18 @@ export const contentRevision: ContentRevision = {
   // context, and the visit is the register scene, where the polite you and
   // the already-taught polite lines do the work. 21 new ids; nothing
   // existing moved, and the hello loan pin carries the script's single ല.
-  revision: 40,
+  // 41: Level 5 completed — l5u6l1 a ticket on the bus, l5u7l1 a meal at the
+  // hotel and l5u8l1 at a wedding join the five scenes (native-speaker brief
+  // 2026-10-12), seven turns each, the learner opening and every role-play
+  // cued by the line before it. The bus scene carries two moments, and the
+  // gap is said in plain English on the line that ends the first and on the
+  // conductor's line that opens the second; the fare for two is one payment.
+  // The hotel ends on the bill and a small tip, and the note says the tip is
+  // optional. The wedding is the register scene — the polite ningaḷ and the
+  // may-I-go — and it never asks about the marriage itself, since kettiyo is
+  // a banned spelling. 21 new ids; nothing existing moved, and the ticket and
+  // bill loan pins carry the scripts those two English words are written with.
+  revision: 41,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
