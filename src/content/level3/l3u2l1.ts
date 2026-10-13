@@ -18,8 +18,8 @@ export const l3u2l1: Lesson = {
   items: [
     {
       id: 'eth',
-      manglish: 'eth',
-      script: 'ഏത്',
+      manglish: 'eth?',
+      script: 'ഏത്?',
       meaning: 'which',
       kind: 'word',
       audio: {

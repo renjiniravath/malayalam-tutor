@@ -90,8 +90,8 @@ export const l1u1l2: Lesson = {
     },
     {
       id: 'enthe',
-      manglish: 'enthe',
-      script: 'എന്തേ',
+      manglish: 'enthe?',
+      script: 'എന്തേ?',
       meaning: 'why',
       kind: 'word',
       articulation: {

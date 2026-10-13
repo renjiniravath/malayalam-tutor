@@ -122,6 +122,24 @@ function checkStructure(): void {
 
 // ------------------------------------------------------------------- items
 
+/**
+ * The bare question words (native-speaker ruling 2026-10-13): said on their
+ * own, each one is a question, so each one carries the display's question
+ * mark. A single-word item spelled from this set and written without the
+ * mark is a mistake, not a spelling choice.
+ */
+const BARE_QUESTION_WORDS = new Set([
+  'aano',
+  'entha',
+  'etha',
+  'engane',
+  'enthina',
+  'evide',
+  'ethra',
+  'aaru',
+  'eppo',
+]);
+
 const EMOJI_RE = /\p{Extended_Pictographic}/u;
 function hasEmoji(text: string): boolean {
   return EMOJI_RE.test(text);
@@ -199,13 +217,20 @@ function checkItem(lesson: Lesson, item: Item): void {
   if (bad) fail(where, `manglish has characters outside the §9 spec: ${[...new Set(bad)].join(' ')}`);
   // §9 rule 8 (native-speaker ruling 2026-10-13): a question carries '?'
   // in the display, and the mark closes it — the question form stays in the
-  // word shape (varunnundo) and the English meaning says what it asks.
+  // word shape (varunnundo). The English meaning is not the criterion: a
+  // bare question word is glossed with the plain English word ("what") and
+  // still carries the mark, because the display is what the ruling governs.
   if (item.manglish.includes('?')) {
     if (!item.manglish.endsWith('?')) {
       fail(where, `the question mark closes the display: '${item.manglish}'`);
     }
-    if (!item.meaning.includes('?')) {
-      fail(where, `manglish asks but the meaning does not — both say what the line does: '${item.manglish}'`);
+  }
+  // A question word is a question (native-speaker ruling 2026-10-13): the
+  // bare question words carry the mark like any other question, whatever
+  // their English gloss says.
+  if (BARE_QUESTION_WORDS.has(wordWithoutMark(item.manglish))) {
+    if (!item.manglish.endsWith('?')) {
+      fail(where, `a bare question word carries the question mark: '${item.manglish}' (§9 rule 8)`);
     }
   }
   checkBannedWords(where, item);

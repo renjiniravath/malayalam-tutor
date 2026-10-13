@@ -16,8 +16,8 @@ export const l2u3l2: Lesson = {
   items: [
     {
       id: 'entha',
-      manglish: 'entha',
-      script: 'എന്താ',
+      manglish: 'entha?',
+      script: 'എന്താ?',
       meaning: 'what',
       kind: 'word',
       audio: {
@@ -34,8 +34,8 @@ export const l2u3l2: Lesson = {
     },
     {
       id: 'etha',
-      manglish: 'etha',
-      script: 'ഏതാ',
+      manglish: 'etha?',
+      script: 'ഏതാ?',
       meaning: 'which',
       kind: 'word',
       audio: {
@@ -52,8 +52,8 @@ export const l2u3l2: Lesson = {
     },
     {
       id: 'engane-word',
-      manglish: 'engane',
-      script: 'എങ്ങനെ',
+      manglish: 'engane?',
+      script: 'എങ്ങനെ?',
       meaning: 'how',
       kind: 'word',
       audio: {
@@ -67,8 +67,8 @@ export const l2u3l2: Lesson = {
     },
     {
       id: 'enthina',
-      manglish: 'enthina',
-      script: 'എന്തിനാ',
+      manglish: 'enthina?',
+      script: 'എന്തിനാ?',
       meaning: 'why',
       kind: 'word',
       audio: {
@@ -82,8 +82,8 @@ export const l2u3l2: Lesson = {
     },
     {
       id: 'eppozha',
-      manglish: 'eppozha',
-      script: 'എപ്പോഴാ',
+      manglish: 'eppozha?',
+      script: 'എപ്പോഴാ?',
       meaning: 'when',
       kind: 'word',
       audio: {
@@ -100,8 +100,8 @@ export const l2u3l2: Lesson = {
     },
     {
       id: 'evide',
-      manglish: 'evide',
-      script: 'എവിടെ',
+      manglish: 'evide?',
+      script: 'എവിടെ?',
       meaning: 'where',
       kind: 'word',
       audio: {

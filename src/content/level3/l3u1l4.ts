@@ -75,8 +75,8 @@ export const l3u1l4: Lesson = {
     },
     {
       id: 'aarude',
-      manglish: 'aarude',
-      script: 'ആരുടെ',
+      manglish: 'aarude?',
+      script: 'ആരുടെ?',
       meaning: 'whose',
       kind: 'word',
       audio: {

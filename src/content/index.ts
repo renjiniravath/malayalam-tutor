@@ -179,7 +179,18 @@ export const contentRevision: ContentRevision = {
   // scene stage directions (the auto reaching the junction, the learner
   // sitting down, the conductor coming down the aisle, the food and the
   // bill) are visible learner notes on the turns they lead into.
-  revision: 43,
+  // 44 (native-speaker ruling 2026-10-13): a question word is a question, so
+  // the bare question words carry the display's mark like any other question —
+  // entha, etha, engane, enthina, eppozha, evide (l2u3l2), enthe (l1u1l2),
+  // aarude (l3u1l4), aarokke (l3u1l6) and eth (l3u2l1); their English glosses
+  // stay the plain word, because the display is what the ruling governs. The
+  // hotel's order line is marked too — the -aamo asks — and its gloss now reads
+  // as the question ("can I get one chicken biriyani and a fresh lime, chetta?").
+  // The native speaker's loose typing of the seating line, tabililekk and
+  // tablil, is accepted input only; the display keeps tableilekk. content:check
+  // now fails a bare question word written without the mark, in place of the
+  // rule that wanted the mark in the English gloss too.
+  revision: 44,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',

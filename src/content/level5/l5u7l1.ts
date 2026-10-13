@@ -61,7 +61,15 @@ export const l5u7l1: Lesson = {
         medium: 'l5u7l1_undello-aa-tableilekk-irunno_medium',
         normal: 'l5u7l1_undello-aa-tableilekk-irunno_normal',
       },
-      acceptedInputs: ['undello aa tableilekk irunno', 'aa tableilekk irunno'],
+      acceptedInputs: [
+        'undello aa tableilekk irunno',
+        'aa tableilekk irunno',
+        // The native speaker's loose typing of the same line (ruling
+        // 2026-10-13): both the tabililekk and the older tablil spelling are
+        // accepted from the learner, and neither is ever the display.
+        'undello aa tabililekk irunno',
+        'undello aa tablil irunno',
+      ],
       sentence: {
         bank: ['undello,', 'aa', 'tableilekk', 'irunno', 'illa'],
         orders: ['undello, aa tableilekk irunno', 'aa tableilekk irunno'],
@@ -81,9 +89,9 @@ export const l5u7l1: Lesson = {
     },
     {
       id: 'oru-chicken-biriyaniyum-oru-fresh-lime-um-edukkaamo-chetta',
-      manglish: 'oru chicken biriyaniyum oru fresh lime-um edukkaamo chetta',
-      script: 'ഒരു ചിക്കൻ ബിരിയാണിയും ഒരു ഫ്രഷ് ലൈമും എടുക്കാമോ ചേട്ടാ',
-      meaning: 'one chicken biriyani and a fresh lime, chetta',
+      manglish: 'oru chicken biriyaniyum oru fresh lime-um edukkaamo chetta?',
+      script: 'ഒരു ചിക്കൻ ബിരിയാണിയും ഒരു ഫ്രഷ് ലൈമും എടുക്കാമോ ചേട്ടാ?',
+      meaning: 'can I get one chicken biriyani and a fresh lime, chetta?',
       kind: 'sentence',
       audio: {
         slow: 'l5u7l1_oru-chicken-biriyaniyum-oru-fresh-lime-um-edukkaamo-chetta_slow',
