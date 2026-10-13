@@ -170,8 +170,8 @@ export const contentRevision: ContentRevision = {
   // display — both the manglish and the script — across all five levels, 76
   // items marked; the word bank, the accepted orders and the accepted inputs
   // stay punctuation-free, and the matcher folds a trailing '?' away, so a
-  // learner never types one (§9 rule 8). Display spellings changed under the
-  // unchanged ids, so nothing is re-keyed. The family visit's second line
+  // learner never types one (§9 rule 8). The sweep adds a display mark only,
+  // so every swept id stays exactly as it was. The family visit's second line
   // carries the native gloss ("I'm doing great — what's up? I didn't expect
   // to see you today."), its manglish unchanged. The hotel's seating line
   // takes the to-form — undello, aa tableilekk irunno — so that one id is
