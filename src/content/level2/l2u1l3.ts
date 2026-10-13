@@ -44,8 +44,8 @@ export const l2u1l3: Lesson = {
     },
     {
       id: 'neeyyum',
-      manglish: 'neeyum',
-      script: 'നീയും',
+      manglish: 'neeyum?',
+      script: 'നീയും?',
       meaning: 'you too?',
       kind: 'expression',
       audio: {
@@ -54,7 +54,10 @@ export const l2u1l3: Lesson = {
         normal: 'l2u1l3_neeyyum_normal',
       },
       acceptedInputs: ['neeyum', 'neeyyum', 'niyyum'],
-      notes: ['-um adds "too": neeyum. Contrast with neeyo, plain "you?".'],
+      notes: [
+        'The -um means "too" or "also" and does not ask anything by itself: neeyum koode avante koode po is a plain sentence — you go along with him too. The question lives in how the line is said, so neeyum? is "you too?".',
+        'Contrast with neeyo, plain "you?".',
+      ],
       tags: [],
     },
     {

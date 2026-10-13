@@ -190,7 +190,14 @@ export const contentRevision: ContentRevision = {
   // tablil, is accepted input only; the display keeps tableilekk. content:check
   // now fails a bare question word written without the mark, in place of the
   // rule that wanted the mark in the English gloss too.
-  revision: 44,
+  // 45 (native-speaker ruling 2026-10-13): the -um word takes the question
+  // mark like any other question — neeyum? in both displays, the gloss "you
+  // too?" unchanged — and the note now teaches the distinction the native
+  // speaker drew: the -um means "too" or "also" and does not ask anything by
+  // itself (neeyum koode avante koode po is a plain sentence), so the question
+  // lives in how the line is said, next to the neeyo contrast. Display and
+  // note only, under the unchanged id.
+  revision: 45,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
