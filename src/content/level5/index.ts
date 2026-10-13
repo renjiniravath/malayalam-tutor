@@ -23,12 +23,12 @@ export const level5: Level = {
   canDo: [
     'Open at a tea shop and see it through to paying: chetta, oru chaaya, sugar idaṇo, venda chetta, ethra aayi chetta, patthu roopa.',
     'Buy at a market stall: ask chetta, thakkaaḷikk ethra aanu, order with ara kilo eduttho, and close it with venda, ithu mathi.',
-    'Ride an auto home: chetta, veettilekku pokaam, hear sheri, keri, ask ethra aayi chetta, hear nooru roopa, and call ivide nirtthu when the corner comes.',
-    'Take a phone call: answer with hello, aara, say njan suresh aanu, ask enna und vishesham, agree with athe, njan varaam, and close it with sheri, bye.',
-    'Visit family: greet with chechi, ningaḷ engane und, ask njan ivide irikkatte, take the tea with venam, chechi, and leave with pinne kaanam, chechi.',
-    'Ride the bus: ask chetta, ee bus engott aanu pokunnath at the door, hear athe, ernakuḷam, get in with njan keri, and buy for two with ernakuḷam, randu ticket when the conductor reaches your seat.',
-    'Eat at a hotel: order chetta, oru choru venam, add oru chaaya koodi, ask chetta, bill ethra aanu, and pay with ithaa, nooru roopa, anchu koodi.',
-    'Go to a wedding: wish with chechi, aashamsakaḷ, ask chechi, ningaḷ kazhicho, be sent to eat with avide poyi kazhikku, and leave with venda, chechi, njan pokatte.',
+    'Ride an auto to the hospital: ask government hospital-ilekk povumo, hear kerikko, stop it with ivide nirtthikko, ask ethra aayi chetta, hear nooru roopa, and end with ok, thank you.',
+    'Call about someone: open with hello, ask hello, babunte veed aano, hear athelo, pakshe babu ippo sthalath illallo, ask eppo varum enn ariyamo, and leave a message to pass on — babu verumbo suresh call cheythayirunnu enn paranjal mathi.',
+    'Visit family unannounced: greet with hello, chechi, enna und vishesham, explain the visit with kurach kaalam aayallo ellarem kanditt, hear keri vaa, ellarum und, turn the tea down with venda chechi, kozhappamilla, and leave with enna njan iranguva, pinne oru dhivasam veram.',
+    'Ride the bus: ask chechi, ee bus pala vazhi aano pokunnath at the door, get in on athe, kerikko, and buy for two with chechi, rand pala when the conductor reaches your seat — muppathu roopa, with ithaa baakki irupathu coming back in change.',
+    'Eat at a hotel: ask chetta, chicken biriyani undo, order with oru chicken biriyaniyum oru fresh lime-um edukkaamo chetta, turn the anything-else down with vere onnum venda chetta, hear ok, oru pathinanchu minute, and close with appo sheri chetta, kaanam.',
+    'Meet a friend at a wedding: greet with hello bro, enna und vishesham, answer with sugham aayitt irikkunneda, ask oh ingane pokunnu, kazhicho, and sit down together with enna vaa irikkam.',
   ],
   lessons: [l5u1l1, l5u2l1, l5u3l1, l5u4l1, l5u5l1, l5u6l1, l5u7l1, l5u8l1],
 };

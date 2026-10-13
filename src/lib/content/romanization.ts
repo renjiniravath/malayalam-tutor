@@ -70,6 +70,24 @@ const LOAN_SCRIPTS: Record<string, string[]> = {
   // romanization spells with a doubled l (ബിൽ).
   ticket: ['ടിക്കറ്റ്'],
   bill: ['ബിൽ'],
+  // The auto ride's place (native-speaker dialogue 2026-10-13): government
+  // and hospital are English words, and the to-form is built straight onto
+  // the second one — the same -ilekk as busilekk — so the fused word is
+  // pinned beside the plain one, and ഹോസ്പിറ്റലിലേക്ക് carries the റ്റ.
+  government: ['ഗവൺമെന്റ്'],
+  hospitalilekk: ['ഹോസ്പിറ്റലിലേക്ക്'],
+  // The hotel order (native-speaker dialogue 2026-10-13): the dish and the
+  // drink are English words Kerala says every day, written the way the hotels
+  // write them — ചിക്കൻ carries a ക്ക the English spelling does not, and
+  // ടേബിളിൽ ends on a retroflex ḷ the romanization spells with a plain l. The
+  // -um forms are pinned beside the plain ones, the same treatment as
+  // hospitalilekk.
+  chicken: ['ചിക്കൻ'],
+  biriyani: ['ബിരിയാണി'],
+  biriyaniyum: ['ബിരിയാണിയും'],
+  fresh: ['ഫ്രഷ്'],
+  limeum: ['ലൈമും'],
+  tablil: ['ടേബിളിൽ'],
 };
 
 /**

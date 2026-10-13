@@ -135,7 +135,38 @@ export const contentRevision: ContentRevision = {
   // may-I-go — and it never asks about the marriage itself, since kettiyo is
   // a banned spelling. 21 new ids; nothing existing moved, and the ticket and
   // bill loan pins carry the scripts those two English words are written with.
-  revision: 41,
+  // 42: the native speaker's line-by-line re-authoring of scenes 3-8
+  // (2026-10-13), on the same role-play machinery — longer, more natural
+  // turns, the same cue chains. The auto ride runs government hospital-ilekk
+  // povumo / kerikko / ivide nirtthikko, ethra aayi chetta / nooru roopa /
+  // ok, thank you. The phone call runs hello / hello, babunte veed aano /
+  // athelo, pakshe babu ippo sthalath illallo / oh, babu eppo varum enn
+  // ariyamo / oru ara manikkoor kazhiyumbo varum enna paranjath / ok, babu
+  // verumbo suresh call cheythayirunnu enn paranjal mathi / ok / thank you.
+  // The family visit runs hello, chechi, enna und vishesham / sugham aayitt
+  // irikkunnu, entha ee vazhi onnum parayathe pettannu / kurach kaalam
+  // aayallo ellarem kanditt, chumma irangiyath / keri vaa, ellarum und /
+  // chaaya edukkette / venda chechi, kozhappamilla / enna njan iranguva,
+  // pinne oru dhivasam veram / sheri enna, njangaḷ oru dhivasam angott
+  // varaam. The bus ride runs chechi, ee bus pala vazhi aano pokunnath /
+  // athe, kerikko / chechi, rand pala / muppathu roopa / ithaa baakki
+  // irupathu, with the conductor a woman the learner addresses as chechi
+  // (native-speaker ruling 2026-10-13, the opening question included). The
+  // hotel runs chetta, chicken biriyani undo / undello, aa tablil irunno /
+  // oru chicken biriyaniyum oru fresh lime-um edukkaamo chetta / vere
+  // enthelum veno / vere onnum venda chetta / ok, oru pathinanchu minute /
+  // appo sheri chetta, kaanam, with the bill and its optional tip a stage
+  // direction in the last note rather than a line. The wedding runs hello
+  // bro, enna und vishesham / hello, sugham aayitt irikkunneda, ninakk enna
+  // und / oh ingane pokunnu, kazhicho / illa, nee kazhicho / enna vaa
+  // irikkam / ok, njan avare koode viḷikkette, the familiar address the eda
+  // form and never edi (native-speaker ruling 2026-10-13). 41 ids retire,
+  // 38 are new, and nooru-roopa carries over in the auto ride. Chicken,
+  // biriyani, fresh, lime-um, tablil and the government/hospital pair are
+  // pinned as English loans; ok, thank you and bro take no script, because
+  // those lines mix in English the script rules cannot spell sound for
+  // sound.
+  revision: 42,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -293,6 +324,54 @@ export const contentRevision: ContentRevision = {
     // The sugar question re-keyed under its ruled word (see revision 39):
     // ഇടണോ, so the id and the display carry idaṇo, not idaano.
     'sugar-idaano',
+    // The six scenes re-authored to the native speaker's line-by-line
+    // dialogue (see revision 42). Scene by scene: the auto ride's old
+    // opening, get-in, stop and hundred, keeping nooru-roopa; the phone
+    // call's whole first cut; the family visit's whole first cut; the bus
+    // ride's whole first cut, including the Ernakulam destination; the
+    // hotel's whole first cut, including the bill and the tip line; and the
+    // wedding's whole first cut, including the aashamsakaḷ wish.
+    'chetta-veettilekku-pokaam',
+    'sheri-keri',
+    'ethra-aayi-auto',
+    'ivide-nirtthu',
+    'ivide-aano',
+    'athe-ivide-mathi',
+    'hello-aara',
+    'njan-suresh-aanu',
+    'enna-und-vishesham-call',
+    'innu-raathri-angott-varunnundo',
+    'athe-njan-varaam',
+    'sheri-raathri-kaanam',
+    'sheri-bye',
+    'chechi-ningal-engane-und',
+    'nannayitt-pokunnu-vaa',
+    'njan-ivide-irikkatte-visit',
+    'ivide-irikk-chaaya-veno',
+    'venam-chechi',
+    'ini-ningal-eppo-varum',
+    'pinne-kaanam-chechi',
+    'chetta-ee-bus-engott-aanu-pokunnath',
+    'athe-ernakulam',
+    'sheri-chetta-njan-keri',
+    'evide-chetta-bus',
+    'ernakulam-randu-ticket',
+    'irupathu-roopa-bus',
+    'ithaa-irupathu-roopa',
+    'chetta-oru-choru-venam',
+    'sheri-chetta-vere-vallathum-veno',
+    'oru-chaaya-koodi',
+    'ithaa-choru',
+    'chetta-bill-ethra-aanu',
+    'nooru-roopa-hotel',
+    'ithaa-nooru-roopa-anchu-koodi',
+    'chechi-aashamsakal',
+    'athe-chetta-vaa',
+    'chechi-ningal-kazhicho',
+    'njan-kazhichu-avide-poyi-kazhikku',
+    'chechi-kazhichu',
+    'athe-chetta-vere-veno',
+    'venda-chechi-njan-pokatte',
   ],
 };
 

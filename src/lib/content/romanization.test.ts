@@ -83,6 +83,30 @@ describe('gemination cross-check (§9 rule 2)', () => {
     assert.deepEqual(loanScriptsFor('ticket'), ['ടിക്കറ്റ്']);
   });
 
+  it('pins the government hospital loan scripts', () => {
+    assert.deepEqual(
+      geminationProblems('ഗവൺമെന്റ് ഹോസ്പിറ്റലിലേക്ക് പോവുമോ', 'government hospital-ilekk povumo'),
+      [],
+    );
+    const problems = geminationProblems('ഗവമെന്റ് ഹോസ്പിറ്റലിലേക്ക് പോവുമോ', 'government hospital-ilekk povumo');
+    assert.equal(problems.length, 1);
+    assert.match(problems[0], /'government'/);
+    assert.match(problems[0], /ഗവൺമെന്റ്/);
+  });
+
+  it('pins the hotel order loan scripts, the -um forms included', () => {
+    assert.deepEqual(geminationProblems('ചിക്കൻ ബിരിയാണി ഉണ്ടോ', 'chicken biriyani undo'), []);
+    assert.deepEqual(geminationProblems('ആ ടേബിളിൽ ഇരുന്നോ', 'aa tablil irunno'), []);
+    assert.deepEqual(geminationProblems('ഒരു ഫ്രഷ് ലൈമും', 'oru fresh lime-um'), []);
+    // The dash is not part of the spelling: lime-um looks up the limeum pin,
+    // the same way hospital-ilekk looks up hospitalilekk.
+    assert.deepEqual(loanScriptsFor('limeum'), ['ലൈമും']);
+    assert.deepEqual(loanScriptsFor('biriyaniyum'), ['ബിരിയാണിയും']);
+    const problems = geminationProblems('ചിക്കൻ ബിരിയാനി ഉണ്ടോ', 'chicken biriyani undo');
+    assert.equal(problems.length, 1);
+    assert.match(problems[0], /ബിരിയാണി/);
+  });
+
   it('does not read an inherited object key as a loan (constructor)', () => {
     // A plain object answers for Object.prototype members, so an unguarded
     // lookup would return a function and crash the pass instead of reporting.

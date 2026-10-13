@@ -2,14 +2,18 @@ import type { Lesson } from '../types';
 
 /**
  * Level 5 Unit 8 Lesson 1 — at a wedding (PLAN.md §5 Level 5): the eighth
- * dialogue scene, and the register scene. The learner arrives and wishes the
- * family, is waved in, asks after the host before eating (the polite ningaḷ,
- * earning its keep), is sent to the meal, comes back to say they have eaten,
- * is offered more, and takes their leave with the may-I-go the first lessons
- * taught. Seven turns, the learner opening, every role-play cued by the line
- * before it. The retired spelling kettiyo is banned (native-speaker ruling
- * 2026-10-12), so the scene never asks about the marriage itself — the wish
- * carries the whole greeting.
+ * dialogue scene, re-authored to the native speaker's line-by-line dialogue
+ * (2026-10-13). Six turns, and the learner opens it: the greeting to a friend,
+ * the friend's hello back with the state-of-things question, the learner's
+ * how-it-goes with the eaten question, the friend's no and the same question
+ * back, the learner's come-and-sit, and the friend's let-me-call-the-others.
+ * Two old friends at a wedding, not a formal call on a host — the register is
+ * the familiar one, so the friend talks to the learner with nee and ends the
+ * address with eda (native-speaker ruling 2026-10-13: the familiar address is
+ * the eda form, never edi, because the app does not gender the learner). The
+ * retired spelling kettiyo stays banned (native-speaker ruling 2026-10-12), so
+ * the scene never asks about the marriage itself. Every learner turn after the
+ * opener carries a role-play drill whose cue is the line right before it.
  */
 export const l5u8l1: Lesson = {
   id: 'l5u8l1',
@@ -19,207 +23,189 @@ export const l5u8l1: Lesson = {
   comprehensionOnly: false,
   items: [
     {
-      id: 'chechi-aashamsakal',
-      manglish: 'chechi, aashamsakaḷ',
-      script: 'ചേച്ചി ആശംസകൾ',
-      meaning: 'chechi, congratulations',
+      id: 'hello-bro-enna-und-vishesham',
+      manglish: 'hello bro, enna und vishesham',
+      meaning: "hello bro, what's up?",
       kind: 'sentence',
       audio: {
-        slow: 'l5u8l1_chechi-aashamsakal_slow',
-        medium: 'l5u8l1_chechi-aashamsakal_medium',
-        normal: 'l5u8l1_chechi-aashamsakal_normal',
+        slow: 'l5u8l1_hello-bro-enna-und-vishesham_slow',
+        medium: 'l5u8l1_hello-bro-enna-und-vishesham_medium',
+        normal: 'l5u8l1_hello-bro-enna-und-vishesham_normal',
       },
-      acceptedInputs: ['chechi aashamsakal', 'aashamsakal'],
+      acceptedInputs: ['hello bro enna und vishesham', 'enna und vishesham'],
       sentence: {
-        bank: ['chechi,', 'aashamsakaḷ', 'sheri,'],
-        orders: ['chechi, aashamsakaḷ'],
+        bank: ['hello', 'bro,', 'enna', 'und', 'vishesham', 'evide'],
+        orders: ['hello bro, enna und vishesham'],
         parts: [
-          { word: 'chechi,', meaning: 'chechi! — the elder-sister call' },
-          { word: 'aashamsakaḷ', meaning: 'congratulations' },
+          { word: 'hello', meaning: 'hello' },
+          { word: 'bro,', meaning: 'bro — the English word friends use' },
+          { word: 'enna', meaning: 'what is it?' },
+          { word: 'und', meaning: 'there is' },
+          { word: 'vishesham', meaning: 'news' },
         ],
       },
       notes: [
-        'Aashamsakaḷ is the word for the wish, said to the family as you arrive — the one word covers the whole of it.',
-        'Chechi first, the way the visit opened: the name, then the wish.',
+        'Bro is part English, so this line carries no script.',
+        'The same enna und vishesham the learner said at the family door, said to a friend instead — hello, the what-is-up, and nothing formal in between.',
       ],
       tags: [],
     },
     {
-      id: 'athe-chetta-vaa',
-      manglish: 'athe, chetta, vaa',
-      script: 'അതെ ചേട്ടാ വാ',
-      meaning: 'yes, chetta — come in',
+      id: 'hello-sugham-aayitt-irikkunneda-ninakk-enna-und',
+      manglish: 'hello, sugham aayitt irikkunneda, ninakk enna und',
+      script: 'ഹലോ സുഖം ആയിട്ട് ഇരിക്കുന്നെടാ നിനക്ക് എന്നാ ഉണ്ട്',
+      meaning: "hello — I'm well, what about you?",
       kind: 'sentence',
       audio: {
-        slow: 'l5u8l1_athe-chetta-vaa_slow',
-        medium: 'l5u8l1_athe-chetta-vaa_medium',
-        normal: 'l5u8l1_athe-chetta-vaa_normal',
+        slow: 'l5u8l1_hello-sugham-aayitt-irikkunneda-ninakk-enna-und_slow',
+        medium: 'l5u8l1_hello-sugham-aayitt-irikkunneda-ninakk-enna-und_medium',
+        normal: 'l5u8l1_hello-sugham-aayitt-irikkunneda-ninakk-enna-und_normal',
       },
-      acceptedInputs: ['athe chetta vaa', 'chetta vaa'],
+      acceptedInputs: [
+        'hello sugham aayitt irikkunneda ninakk enna und',
+        'sugham aayitt irikkunneda ninakk enna und',
+      ],
       sentence: {
-        bank: ['athe,', 'chetta,', 'vaa', 'irikk'],
-        orders: ['athe, chetta, vaa'],
+        bank: ['hello,', 'sugham', 'aayitt', 'irikkunneda,', 'ninakk', 'enna', 'und', 'evide'],
+        orders: ['hello, sugham aayitt irikkunneda, ninakk enna und'],
         parts: [
-          { word: 'athe,', meaning: 'yes' },
-          { word: 'chetta,', meaning: 'chetta! — the call form of chettan' },
-          { word: 'vaa', meaning: 'come' },
+          { word: 'hello,', meaning: 'hello' },
+          { word: 'sugham', meaning: 'comfort; fine' },
+          { word: 'aayitt', meaning: 'the -aayitt that turns it into a state' },
+          { word: 'irikkunneda,', meaning: 'am — with the friendly -eda on the end' },
+          { word: 'ninakk', meaning: 'to you' },
+          { word: 'enna', meaning: 'what is it?' },
+          { word: 'und', meaning: 'there is' },
         ],
       },
       notes: [
-        'Athe takes the wish and vaa waves the learner in — the same come as at the family visit.',
-        "The chetta goes the other way here: the host is the learner's chechi, and she calls the guest chetta. The same word, both ways round.",
+        'The same sugham aayitt irikkunnu the family visit answered with, and this time the address is on the end of it: irikkunneda.',
+        'Ninakk is the to-you form — the question is turned around and handed back, the way a friend answers a greeting.',
+        'The -eda is how friends call each other here: the same friendly ending for everyone the learner talks to, never split by who they are.',
       ],
       tags: [],
     },
     {
-      id: 'chechi-ningal-kazhicho',
-      manglish: 'chechi, ningaḷ kazhicho',
-      script: 'ചേച്ചി നിങ്ങൾ കഴിച്ചോ',
-      meaning: 'chechi, have you eaten?',
+      id: 'oh-ingane-pokunnu-kazhicho',
+      manglish: 'oh ingane pokunnu, kazhicho',
+      script: 'ഓ ഇങ്ങനെ പോകുന്നു കഴിച്ചോ',
+      meaning: 'oh, going along like this — have you eaten?',
       kind: 'sentence',
       audio: {
-        slow: 'l5u8l1_chechi-ningal-kazhicho_slow',
-        medium: 'l5u8l1_chechi-ningal-kazhicho_medium',
-        normal: 'l5u8l1_chechi-ningal-kazhicho_normal',
+        slow: 'l5u8l1_oh-ingane-pokunnu-kazhicho_slow',
+        medium: 'l5u8l1_oh-ingane-pokunnu-kazhicho_medium',
+        normal: 'l5u8l1_oh-ingane-pokunnu-kazhicho_normal',
       },
-      acceptedInputs: ['chechi ningal kazhicho', 'ningal kazhicho'],
+      acceptedInputs: ['oh ingane pokunnu kazhicho', 'ingane pokunnu kazhicho'],
       sentence: {
-        bank: ['chechi,', 'ningaḷ', 'kazhicho', 'kazhichu'],
-        orders: ['chechi, ningaḷ kazhicho'],
+        bank: ['oh', 'ingane', 'pokunnu,', 'kazhicho', 'kazhichu'],
+        orders: ['oh ingane pokunnu, kazhicho'],
         parts: [
-          { word: 'chechi,', meaning: 'chechi! — the elder-sister call' },
-          { word: 'ningaḷ', meaning: 'you — the polite one' },
+          { word: 'oh', meaning: 'oh' },
+          { word: 'ingane', meaning: 'like this' },
+          { word: 'pokunnu,', meaning: 'it goes' },
           { word: 'kazhicho', meaning: 'have you eaten?' },
         ],
       },
       notes: [
-        'Ningaḷ is the polite you, and asking after the host before eating is the courtesy the moment calls for.',
-        'Kazhicho is the eaten question: the -o on the end turns kazhichu into have you eaten.',
+        'Oh is the recognising sound, and ingane pokunnu is the how-it-goes: things are going along like this, nothing to report.',
+        'Kazhicho is the eaten question the wedding is really about — the food is the point of the day, so it comes before anything else.',
       ],
       tags: [],
     },
     {
-      id: 'njan-kazhichu-avide-poyi-kazhikku',
-      manglish: 'njan kazhichu, avide poyi kazhikku',
-      script: 'ഞാൻ കഴിച്ചു അവിടെ പോയി കഴിക്ക്',
-      meaning: 'I have eaten — go and eat over there',
+      id: 'illa-nee-kazhicho',
+      manglish: 'illa, nee kazhicho',
+      script: 'ഇല്ല നീ കഴിച്ചോ',
+      meaning: 'no — have you eaten?',
       kind: 'sentence',
       audio: {
-        slow: 'l5u8l1_njan-kazhichu-avide-poyi-kazhikku_slow',
-        medium: 'l5u8l1_njan-kazhichu-avide-poyi-kazhikku_medium',
-        normal: 'l5u8l1_njan-kazhichu-avide-poyi-kazhikku_normal',
+        slow: 'l5u8l1_illa-nee-kazhicho_slow',
+        medium: 'l5u8l1_illa-nee-kazhicho_medium',
+        normal: 'l5u8l1_illa-nee-kazhicho_normal',
       },
-      acceptedInputs: ['njan kazhichu avide poyi kazhikku', 'avide poyi kazhikku'],
+      acceptedInputs: ['illa nee kazhicho', 'illa ni kazhicho', 'nee kazhicho'],
       sentence: {
-        bank: ['njan', 'kazhichu,', 'avide', 'poyi', 'kazhikku', 'ivide'],
-        orders: ['njan kazhichu, avide poyi kazhikku', 'avide poyi kazhikku'],
+        bank: ['illa,', 'nee', 'kazhicho', 'ningaḷ'],
+        orders: ['illa, nee kazhicho', 'nee kazhicho'],
         parts: [
+          { word: 'illa,', meaning: 'no — there is none of it' },
+          { word: 'nee', meaning: 'you — the familiar one' },
+          { word: 'kazhicho', meaning: 'have you eaten?' },
+        ],
+      },
+      notes: [
+        'Illa is the no of not-having: the same word as in vellam illa, answering a question with what there is not.',
+        'Nee is the familiar you two friends use with each other, and the question comes straight back at the learner. Ni is accepted in typing; the display keeps nee.',
+      ],
+      tags: [],
+    },
+    {
+      id: 'enna-vaa-irikkam',
+      manglish: 'enna vaa irikkam',
+      script: 'എന്നാ വാ ഇരിക്കാം',
+      meaning: "then come, let's sit down",
+      kind: 'sentence',
+      audio: {
+        slow: 'l5u8l1_enna-vaa-irikkam_slow',
+        medium: 'l5u8l1_enna-vaa-irikkam_medium',
+        normal: 'l5u8l1_enna-vaa-irikkam_normal',
+      },
+      acceptedInputs: ['enna vaa irikkam', 'vaa irikkam'],
+      sentence: {
+        bank: ['enna', 'vaa', 'irikkam', 'irikkunnu'],
+        orders: ['enna vaa irikkam'],
+        parts: [
+          { word: 'enna', meaning: 'then' },
+          { word: 'vaa', meaning: 'come' },
+          { word: 'irikkam', meaning: "let's sit" },
+        ],
+      },
+      notes: [
+        'Vaa is the come from the family visit, and irikkam is the let-us-sit: the -aam ending on a verb makes it a let-us, an invitation rather than an order.',
+        'Enna opens it the way it closed the visit — then, in that case — and turns the greeting into the two of them finding a place to sit.',
+      ],
+      tags: [],
+    },
+    {
+      id: 'ok-njan-avare-koode-vilikkette',
+      manglish: 'ok, njan avare koode viḷikkette',
+      meaning: 'ok — let me call them along too',
+      kind: 'sentence',
+      audio: {
+        slow: 'l5u8l1_ok-njan-avare-koode-vilikkette_slow',
+        medium: 'l5u8l1_ok-njan-avare-koode-vilikkette_medium',
+        normal: 'l5u8l1_ok-njan-avare-koode-vilikkette_normal',
+      },
+      acceptedInputs: ['ok njan avare koode vilikkette', 'njan avare koode vilikkette'],
+      sentence: {
+        bank: ['ok,', 'njan', 'avare', 'koode', 'viḷikkette', 'vilikku'],
+        orders: ['ok, njan avare koode viḷikkette', 'njan avare koode viḷikkette'],
+        parts: [
+          { word: 'ok,', meaning: 'ok' },
           { word: 'njan', meaning: 'I' },
-          { word: 'kazhichu,', meaning: 'have eaten' },
-          { word: 'avide', meaning: 'there' },
-          { word: 'poyi', meaning: 'having gone' },
-          { word: 'kazhikku', meaning: 'eat!' },
+          { word: 'avare', meaning: 'them' },
+          { word: 'koode', meaning: 'along, with' },
+          { word: 'viḷikkette', meaning: 'let me call' },
         ],
       },
       notes: [
-        'The host answers for herself and sends the guest to the meal: the food is that way, and go and eat is poyi kazhikku.',
-        'Kazhikku is the eat! said to someone — the meal word with the direction to it. Poyi before it is the going — go, and eat.',
-      ],
-      tags: [],
-    },
-    {
-      id: 'chechi-kazhichu',
-      manglish: 'chechi, kazhichu',
-      script: 'ചേച്ചി കഴിച്ചു',
-      meaning: 'chechi, I have eaten',
-      kind: 'sentence',
-      audio: {
-        slow: 'l5u8l1_chechi-kazhichu_slow',
-        medium: 'l5u8l1_chechi-kazhichu_medium',
-        normal: 'l5u8l1_chechi-kazhichu_normal',
-      },
-      acceptedInputs: ['chechi kazhichu', 'kazhichu'],
-      sentence: {
-        bank: ['chechi,', 'kazhichu', 'kazhikkaam'],
-        orders: ['chechi, kazhichu'],
-        parts: [
-          { word: 'chechi,', meaning: 'chechi! — the elder-sister call' },
-          { word: 'kazhichu', meaning: 'have eaten' },
-        ],
-      },
-      notes: [
-        'Kazhichu is the ate from the evening at home, and one word of it answers the whole meal.',
-        'The learner comes back to the host to say it, rather than slipping away from the line.',
-      ],
-      tags: [],
-    },
-    {
-      id: 'athe-chetta-vere-veno',
-      manglish: 'athe, chetta, vere veno',
-      script: 'അതെ ചേട്ടാ വേറെ വേണോ',
-      meaning: 'yes, chetta — want more?',
-      kind: 'sentence',
-      audio: {
-        slow: 'l5u8l1_athe-chetta-vere-veno_slow',
-        medium: 'l5u8l1_athe-chetta-vere-veno_medium',
-        normal: 'l5u8l1_athe-chetta-vere-veno_normal',
-      },
-      acceptedInputs: ['athe chetta vere veno', 'vere veno'],
-      sentence: {
-        bank: ['athe,', 'chetta,', 'vere', 'veno', 'mathi'],
-        orders: ['athe, chetta, vere veno'],
-        parts: [
-          { word: 'athe,', meaning: 'yes' },
-          { word: 'chetta,', meaning: 'chetta! — the call form of chettan' },
-          { word: 'vere', meaning: 'more; other' },
-          { word: 'veno', meaning: 'want?' },
-        ],
-      },
-      notes: [
-        'Vere veno is the short want-more question; the stall asked it the long way, vere vallathum veno.',
-        'A second helping is the Kerala way of saying the food was good, so the host always asks.',
-      ],
-      tags: [],
-    },
-    {
-      id: 'venda-chechi-njan-pokatte',
-      manglish: 'venda, chechi, njan pokatte',
-      script: 'വേണ്ട ചേച്ചി ഞാൻ പോകട്ടെ',
-      meaning: 'no, chechi — let me go',
-      kind: 'sentence',
-      audio: {
-        slow: 'l5u8l1_venda-chechi-njan-pokatte_slow',
-        medium: 'l5u8l1_venda-chechi-njan-pokatte_medium',
-        normal: 'l5u8l1_venda-chechi-njan-pokatte_normal',
-      },
-      acceptedInputs: ['venda chechi njan pokatte', 'njan pokatte'],
-      sentence: {
-        bank: ['venda,', 'chechi,', 'njan', 'pokatte', 'venam'],
-        orders: ['venda, chechi, njan pokatte', 'njan pokatte'],
-        parts: [
-          { word: 'venda,', meaning: 'do not want' },
-          { word: 'chechi,', meaning: 'chechi! — the elder-sister call' },
-          { word: 'njan', meaning: 'I' },
-          { word: 'pokatte', meaning: 'may I go' },
-        ],
-      },
-      notes: [
-        'Venda turns down the second helping and njan pokatte takes the leave — the may-I-go from the first lessons, said to an elder.',
-        'Turning the food down with a word and asking to go in the same breath is how a wedding visit ends.',
+        'Ok is part English, so this line carries no script.',
+        'Avare is them, and koode is along: the friend is going to fetch the others so they can all sit together.',
+        'Viḷikkette is the call with the let-me ending on it — the same shape as edukkette, said instead of done.',
       ],
       tags: [],
     },
   ],
   minimalPairs: [],
   drills: [
-    { kind: 'sentenceBuilder', itemId: 'chechi-aashamsakal', mode: 'bank' },
-    { kind: 'rolePlay', itemId: 'chechi-ningal-kazhicho', promptItemId: 'athe-chetta-vaa', mode: 'typing' },
-    { kind: 'rolePlay', itemId: 'chechi-kazhichu', promptItemId: 'njan-kazhichu-avide-poyi-kazhikku', mode: 'typing' },
-    { kind: 'rolePlay', itemId: 'venda-chechi-njan-pokatte', promptItemId: 'athe-chetta-vere-veno', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'hello-bro-enna-und-vishesham', mode: 'bank' },
+    { kind: 'rolePlay', itemId: 'oh-ingane-pokunnu-kazhicho', promptItemId: 'hello-sugham-aayitt-irikkunneda-ninakk-enna-und', mode: 'typing' },
+    { kind: 'rolePlay', itemId: 'enna-vaa-irikkam', promptItemId: 'illa-nee-kazhicho', mode: 'typing' },
     {
       kind: 'multipleChoice',
-      itemId: 'athe-chetta-vere-veno',
-      distractors: ['chechi, have you eaten?', 'chechi, I have eaten'],
+      itemId: 'oh-ingane-pokunnu-kazhicho',
+      distractors: ["hello — I'm well, what about you?", 'no — have you eaten?'],
     },
   ],
   reviewSlots: 0,
