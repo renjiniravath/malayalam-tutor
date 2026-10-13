@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { Item } from "@/content/types";
 import { audioEngine } from "@/lib/audio/engine";
-import { checkAssembly, checkTypedSentence } from "@/lib/lesson/sentence";
+import { checkAssembly, checkTypedSentence, sentenceWords } from "@/lib/lesson/sentence";
 import { PlayButton } from "./PlayButton";
 import { WordBreakdown } from "./WordBreakdown";
 
@@ -66,7 +66,13 @@ export function SentenceBuilderDrill({ item, spriteId, mode, revealImmediately, 
     );
   };
 
-  const words = checked ? spec.orders[0].split(' ') : assembly;
+  // §9 rule 8: the model line is the item's own display text, so on a
+  // question item the romanized line carries the mark the script beneath
+  // it carries. The tray and the word breakdown stay the punctuation-free
+  // words of the first accepted order — the input layer the learner built
+  // from, and the words the parts are written for.
+  const model = item.manglish;
+  const words = checked ? sentenceWords(spec) : assembly;
 
   return (
     <div>
@@ -177,12 +183,12 @@ export function SentenceBuilderDrill({ item, spriteId, mode, revealImmediately, 
               checked ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400'
             }`}
           >
-            {checked ? 'Correct' : `It's ${spec.orders[0]}`}
+            {checked ? 'Correct' : `It's ${model}`}
           </p>
           <p lang="ml" className="mt-1 font-malayalam text-lg text-text-2">
             {item.script}
           </p>
-          <WordBreakdown words={spec.orders[0].split(' ')} parts={spec.parts} />
+          <WordBreakdown words={sentenceWords(spec)} parts={spec.parts} />
           <button
             type="button"
             onClick={() => onComplete(checked)}

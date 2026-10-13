@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { Item } from "@/content/types";
 import { audioEngine } from "@/lib/audio/engine";
-import { checkAssembly, checkTypedSentence } from "@/lib/lesson/sentence";
+import { checkAssembly, checkTypedSentence, sentenceWords } from "@/lib/lesson/sentence";
 import { PlayButton } from "./PlayButton";
 import { WordBreakdown } from "./WordBreakdown";
 
@@ -54,7 +54,13 @@ export function RolePlayDrill({
 
   if (!spec) return null;
 
-  const model = spec.orders[0];
+  // §9 rule 8: the model line is the item's own display text, so on a
+  // question item the romanized line carries the mark the script beneath
+  // it carries. The tray and the word breakdown stay the punctuation-free
+  // words of the first accepted order — the input layer the learner built
+  // from, and the words the parts are written for.
+  const model = item.manglish;
+  const modelWords = sentenceWords(spec);
   const cueVisible = heard || revealImmediately || !audioReady;
 
   const hearTheCue = async () => {
@@ -75,7 +81,7 @@ export function RolePlayDrill({
     );
   };
 
-  const words = checked !== null ? model.split(" ") : assembly;
+  const words = checked !== null ? modelWords : assembly;
 
   return (
     <div>
@@ -245,7 +251,7 @@ export function RolePlayDrill({
               />
             </div>
           )}
-          <WordBreakdown words={model.split(" ")} parts={spec.parts} />
+          <WordBreakdown words={modelWords} parts={spec.parts} />
           <button
             type="button"
             onClick={() => onComplete(checked)}
