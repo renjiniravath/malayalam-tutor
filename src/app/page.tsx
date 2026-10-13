@@ -42,7 +42,7 @@ export default function Home() {
               എങ്ങനെ ഉണ്ട്
             </p>
             <p lang="ml" className="font-malayalam text-xl self-start pl-10">
-              ശെരി
+              ശരി
             </p>
           </div>
         </div>

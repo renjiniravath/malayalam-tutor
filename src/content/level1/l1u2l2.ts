@@ -14,7 +14,7 @@ export const l1u2l2: Lesson = {
     {
       id: 'sheri',
       manglish: 'sheri',
-      script: 'ശെരി',
+      script: 'ശരി',
       meaning: 'okay; yes (casual)',
       kind: 'expression',
       audio: {
@@ -23,7 +23,7 @@ export const l1u2l2: Lesson = {
         normal: 'l1u2l2_sheri_normal',
       },
       acceptedInputs: ['sheri', 'seri'],
-      notes: ['The everyday yes — also the all-purpose "okay".', 'The standard spelling is ശരി; informal writing uses ശെരി.'],
+      notes: ['The everyday yes — also the all-purpose "okay".'],
       tags: [],
     },
     {

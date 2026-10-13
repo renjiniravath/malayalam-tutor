@@ -197,7 +197,24 @@ export const contentRevision: ContentRevision = {
   // itself (neeyum koode avante koode po is a plain sentence), so the question
   // lives in how the line is said, next to the neeyo contrast. Display and
   // note only, under the unchanged id.
-  revision: 45,
+  // 46 (native-speaker rulings 2026-10-13): the seven cross-lesson spelling
+  // divergences, one spelling each, applied everywhere. Thirty is muppathu /
+  // മുപ്പത്, the standard form's single ത, so the market's price line
+  // re-keys and muppatthu-roopa retires; the market copy takes the -market
+  // suffix because the bus scene already holds muppathu-roopa. The family
+  // visit's promise is varaam / വരാം, matching Level 4, under a re-keyed id.
+  // The phone line is babunte veedu aano / ബാബുന്റെ വീട് ആണോ — house with
+  // its u — under a re-keyed id, and the clipped veed stays an accepted
+  // input with a note saying so. Level 4's to-the-shop form is the clipped
+  // kadayilekk, its script already the virama form. The sheri script is ശരി
+  // everywhere (the Level 1 item's note about the informal ശെരി goes, since
+  // one spelling is taught now) and aanu is ആണ്, the form the rest of the
+  // corpus already writes. The ithu script is the virama form ഇത്, the
+  // display stays ithu, and the clipped ith is accepted as input everywhere
+  // the word appears — all five items now carry the note the how-do-I
+  // sentence already had. Three ids re-keyed, and ok and okay both stand as
+  // they are.
+  revision: 46,
   removedItemIds: [
     // Native-speaker corrections re-keyed these items under their corrected spellings.
     'kettiyo',
@@ -406,6 +423,12 @@ export const contentRevision: ContentRevision = {
     // Native-speaker correction 2026-10-13: the waiter's seating line takes
     // the to-form, so it is re-keyed under the corrected spelling.
     'undello-aa-tablil-irunno',
+    // The seven-spelling rulings 2026-10-13 (see revision 46): the market's
+    // price line, the phone line and the family visit's promise all re-keyed
+    // under their ruled spellings.
+    'muppatthu-roopa',
+    'hello-babunte-veed-aano',
+    'enna-njan-iranguva-pinne-oru-dhivasam-veram',
   ],
 };
 

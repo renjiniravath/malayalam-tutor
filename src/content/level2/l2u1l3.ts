@@ -210,7 +210,7 @@ export const l2u1l3: Lesson = {
     {
       id: 'athu-sheri-alle',
       manglish: 'athu sheri alle?',
-      script: 'അത് ശെരി അല്ലേ?',
+      script: 'അത് ശരി അല്ലേ?',
       meaning: "that's correct, right?",
       kind: 'sentence',
       audio: {

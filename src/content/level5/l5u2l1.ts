@@ -52,21 +52,21 @@ export const l5u2l1: Lesson = {
       tags: [],
     },
     {
-      id: 'muppatthu-roopa',
-      manglish: 'muppatthu roopa',
-      script: 'മുപ്പത്ത് രൂപ',
+      id: 'muppathu-roopa-market',
+      manglish: 'muppathu roopa',
+      script: 'മുപ്പത് രൂപ',
       meaning: 'thirty rupees',
       kind: 'sentence',
       audio: {
-        slow: 'l5u2l1_muppatthu-roopa_slow',
-        medium: 'l5u2l1_muppatthu-roopa_medium',
-        normal: 'l5u2l1_muppatthu-roopa_normal',
+        slow: 'l5u2l1_muppathu-roopa-market_slow',
+        medium: 'l5u2l1_muppathu-roopa-market_medium',
+        normal: 'l5u2l1_muppathu-roopa-market_normal',
       },
       sentence: {
-        bank: ['muppatthu', 'roopa', 'patthu'],
-        orders: ['muppatthu roopa'],
+        bank: ['muppathu', 'roopa', 'patthu'],
+        orders: ['muppathu roopa'],
         parts: [
-          { word: 'muppatthu', meaning: 'thirty' },
+          { word: 'muppathu', meaning: 'thirty' },
           { word: 'roopa', meaning: 'rupees' },
         ],
       },
@@ -134,7 +134,7 @@ export const l5u2l1: Lesson = {
     {
       id: 'venda-ithu-mathi',
       manglish: 'venda, ithu mathi',
-      script: 'വേണ്ട ഇതു മതി',
+      script: 'വേണ്ട ഇത് മതി',
       meaning: 'no, that is enough',
       kind: 'sentence',
       audio: {
@@ -142,7 +142,7 @@ export const l5u2l1: Lesson = {
         medium: 'l5u2l1_venda-ithu-mathi_medium',
         normal: 'l5u2l1_venda-ithu-mathi_normal',
       },
-      acceptedInputs: ['venda ithu mathi'],
+      acceptedInputs: ['venda ithu mathi', 'venda ith mathi'],
       sentence: {
         bank: ['venda,', 'ithu', 'mathi', 'venam'],
         orders: ['venda, ithu mathi'],
@@ -155,6 +155,7 @@ export const l5u2l1: Lesson = {
       notes: [
         'Venda starts the answer and ithu mathi finishes it: no, this is enough.',
         'Venda is the no of wanting, the same word as at the tea shop, and mathi settles the amount without refusing anyone.',
+        'Ith is accepted in typing; the display keeps the full ithu.',
       ],
       tags: [],
     },
@@ -170,7 +171,7 @@ export const l5u2l1: Lesson = {
         normal: 'l5u2l1_pathinanchu-roopa_normal',
       },
       sentence: {
-        bank: ['pathinanchu', 'roopa', 'muppatthu'],
+        bank: ['pathinanchu', 'roopa', 'muppathu'],
         orders: ['pathinanchu roopa'],
         parts: [
           { word: 'pathinanchu', meaning: 'fifteen' },
@@ -179,7 +180,7 @@ export const l5u2l1: Lesson = {
       },
       notes: [
         'Pathinanchu is fifteen, and it lands like every other price: the number and roopa.',
-        'It is the price of the half kilo, worked out from the muppatthu roopa a kilo.',
+        'It is the price of the half kilo, worked out from the muppathu roopa a kilo.',
       ],
       tags: [],
     },
@@ -214,7 +215,7 @@ export const l5u2l1: Lesson = {
   minimalPairs: [],
   drills: [
     { kind: 'sentenceBuilder', itemId: 'chetta-thakkaalikk-ethra-aanu', mode: 'bank' },
-    { kind: 'rolePlay', itemId: 'sheri-chetta-ara-kilo-eduttho', promptItemId: 'muppatthu-roopa', mode: 'bank' },
+    { kind: 'rolePlay', itemId: 'sheri-chetta-ara-kilo-eduttho', promptItemId: 'muppathu-roopa-market', mode: 'bank' },
     { kind: 'rolePlay', itemId: 'venda-ithu-mathi', promptItemId: 'vere-vallathum-veno', mode: 'bank' },
     { kind: 'rolePlay', itemId: 'sheri-pinne-kaanam', promptItemId: 'pathinanchu-roopa', mode: 'typing' },
     {

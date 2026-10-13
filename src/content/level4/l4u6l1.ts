@@ -113,6 +113,7 @@ export const l4u6l1: Lesson = {
         medium: 'l4u6l1_ithu-ethra-aanu_medium',
         normal: 'l4u6l1_ithu-ethra-aanu_normal',
       },
+      acceptedInputs: ['ithu ethra aanu', 'ith ethra aanu'],
       sentence: {
         bank: ['ithu', 'ethra', 'aanu', 'und'],
         orders: ['ithu ethra aanu'],
@@ -125,6 +126,7 @@ export const l4u6l1: Lesson = {
       notes: [
         'The market question: ithu ethra aanu, how much is this one.',
         'Ethra also counts people and days: how many, how much.',
+        'Ith is accepted in typing; the display keeps the full ithu.',
       ],
       tags: [],
     },
@@ -224,6 +226,7 @@ export const l4u6l1: Lesson = {
         medium: 'l4u6l1_ithu-evide-ninn-aanu-medichath_medium',
         normal: 'l4u6l1_ithu-evide-ninn-aanu-medichath_normal',
       },
+      acceptedInputs: ['ithu evide ninn aanu medichath', 'ith evide ninn aanu medichath'],
       sentence: {
         bank: ['ithu', 'evide', 'ninn', 'aanu', 'medichath'],
         orders: ['ithu evide ninn aanu medichath'],
@@ -238,6 +241,7 @@ export const l4u6l1: Lesson = {
       notes: [
         'The long question from Level 3 with the everyday buying word: ... aanu medichath, where was it that you bought it.',
         'Medichath is what people say; vaangiyath is its formal twin and means the same thing.',
+        'Ith is accepted in typing; the display keeps the full ithu.',
       ],
       tags: [],
     },

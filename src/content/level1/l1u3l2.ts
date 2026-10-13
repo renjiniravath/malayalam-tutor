@@ -79,7 +79,7 @@ export const l1u3l2: Lesson = {
     {
       id: 'njan-okay-aanu',
       manglish: 'njan okay aanu',
-      script: 'ഞാൻ ഓക്കേ ആണു',
+      script: 'ഞാൻ ഓക്കേ ആണ്',
       meaning: 'I am fine',
       kind: 'phrase',
       audio: {

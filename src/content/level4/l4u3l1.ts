@@ -117,7 +117,7 @@ export const l4u3l1: Lesson = {
     },
     {
       id: 'nammal-kadayil-poi',
-      manglish: 'avaḷ kadayilekku poyi',
+      manglish: 'avaḷ kadayilekk poyi',
       script: 'അവൾ കടയിലേക്ക് പോയി',
       meaning: 'she went to the shop',
       kind: 'sentence',
@@ -127,15 +127,15 @@ export const l4u3l1: Lesson = {
         normal: 'l4u3l1_nammal-kadayil-poi_normal',
       },
       sentence: {
-        bank: ['avaḷ', 'kadayilekku', 'poyi', 'pokum'],
-        orders: ['avaḷ kadayilekku poyi'],
+        bank: ['avaḷ', 'kadayilekk', 'poyi', 'pokum'],
+        orders: ['avaḷ kadayilekk poyi'],
         parts: [
           { word: 'avaḷ', meaning: 'she' },
-          { word: 'kadayilekku', meaning: 'to the shop' },
+          { word: 'kadayilekk', meaning: 'to the shop' },
           { word: 'poyi', meaning: 'went' },
         ],
       },
-      notes: ['A different person in the same frame, with the heading-to form kadayilekku.'],
+      notes: ['A different person in the same frame, with the heading-to form kadayilekk.'],
       tags: [],
     },
     {

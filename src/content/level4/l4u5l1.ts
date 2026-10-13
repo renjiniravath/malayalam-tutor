@@ -188,6 +188,7 @@ export const l4u5l1: Lesson = {
         medium: 'l4u5l1_ithu-ente-bag-alla_medium',
         normal: 'l4u5l1_ithu-ente-bag-alla_normal',
       },
+      acceptedInputs: ['ithu ente bag alla', 'ith ente bag alla'],
       sentence: {
         bank: ['ithu', 'ente', 'bag', 'alla', 'illa'],
         orders: ['ithu ente bag alla'],
@@ -202,6 +203,7 @@ export const l4u5l1: Lesson = {
         'You say it with the bag in your hand: this one is not mine.',
         'Alla takes away the mine and leaves the bag; illa would say there is no bag at all.',
         'Bag is the English word, used as it is.',
+        'Ith is accepted in typing; the display keeps the full ithu.',
       ],
       tags: [],
     },

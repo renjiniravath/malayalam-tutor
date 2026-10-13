@@ -126,7 +126,7 @@ export const l1u2l1: Lesson = {
     {
       id: 'appo-sheri-bye',
       manglish: 'appo sheri, bye',
-      script: 'അപ്പോ ശെരി ബൈ',
+      script: 'അപ്പോ ശരി ബൈ',
       meaning: 'okay then, bye',
       kind: 'expression',
       audio: {
