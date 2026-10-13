@@ -164,7 +164,10 @@ function checkBannedWords(where: string, item: Item): void {
   for (const field of manglishFields(item)) {
     // Words, not space-split tokens, so 'chetta,' and 'aayi,' still read as
     // words and a banned word inside a longer one (enthaanu) does not trip.
-    for (const token of field.toLowerCase().split(/[^\p{L}']+/u)) {
+    // An apostrophe separates the same way a comma does: a spelling cannot
+    // dodge the ban by being written njaan' or njaan's, and the possessive
+    // piece ('s) reads as its own token rather than hiding the word in front.
+    for (const token of field.toLowerCase().split(/[^\p{L}]+/u)) {
       if (!token) continue;
       if (BANNED_TOKENS.has(token)) {
         fail(where, `'${token}' is banned by native-speaker ruling and must not appear in content (in '${field}')`);
