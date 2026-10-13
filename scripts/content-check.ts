@@ -223,6 +223,13 @@ function checkItem(lesson: Lesson, item: Item): void {
   const where = `${lesson.id}/${item.id}`;
   if (!item.manglish.trim()) fail(where, 'manglish is empty');
   if (!item.meaning.trim()) fail(where, 'meaning is empty');
+  // A stray space is invisible to the learner and hides the last word from
+  // every pass that reads the display as written — the question word lookup
+  // and the mark that closes the line among them — so the manglish is trimmed
+  // (validator finding 2026-10-13: 'entha ' and 'veedu ' both read clean).
+  // The script needs no rule of its own: a space that is not between two
+  // Malayalam words is already a mistake there.
+  if (item.manglish !== item.manglish.trim()) fail(where, `manglish has a stray space: '${item.manglish}'`);
   for (const [field, text] of itemTextFields(item)) {
     if (hasEmoji(text)) fail(where, `no emoji in ${field}: '${text}'`);
   }
