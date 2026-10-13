@@ -284,3 +284,25 @@ describe('sentence drill spelling (§9, learner-visible strings)', () => {
     assert.ok(marked > 0, 'the corpus still has a marked question item to render');
   });
 });
+
+describe('the mark is for questions (native-speaker ruling 2026-10-13)', () => {
+  const itemById = (id: string) =>
+    levels.flatMap((level) => level.lessons.flatMap((lesson) => lesson.items)).find((item) => item.id === id);
+
+  it('leaves the two request lines plain in both layers', () => {
+    // "sit over at that table" and "give me half a kilo" are shaped like
+    // their questions but are requests, so they take no mark: the display
+    // and the script stay plain, and nothing asks for one — the bare
+    // question word rule reads single words only, and the sentence rule
+    // wants the display and the first order to agree, which they do. Mark
+    // them and this fails, which is the point: the ruling is the reason.
+    for (const id of ['undello-aa-tableilekk-irunno', 'sheri-chetta-ara-kilo-eduttho']) {
+      const item = itemById(id);
+      assert.ok(item, `${id} is still in the corpus`);
+      assert.ok(!item.manglish.endsWith('?'), `${id}: a request takes no mark`);
+      assert.ok(item.script && !item.script.endsWith('?'), `${id}: its script is plain too`);
+      assert.ok(item.sentence, `${id} is still a sentence item`);
+      assert.deepEqual(sentenceSpellingFindings(item.manglish, item.sentence), [], id);
+    }
+  });
+});
