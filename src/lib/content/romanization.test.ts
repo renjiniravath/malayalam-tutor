@@ -292,10 +292,12 @@ describe('the mark is for questions (native-speaker ruling 2026-10-13)', () => {
   it('leaves the two request lines plain in both layers', () => {
     // "sit over at that table" and "give me half a kilo" are shaped like
     // their questions but are requests, so they take no mark: the display
-    // and the script stay plain, and nothing asks for one — the bare
-    // question word rule reads single words only, and the sentence rule
-    // wants the display and the first order to agree, which they do. Mark
-    // them and this fails, which is the point: the ruling is the reason.
+    // and the script stay plain, and nothing asks for one — neither line
+    // spells a bare question word ('irunno' and 'eduttho' are not
+    // standalone askers, so even a reading over the whole display leaves
+    // them alone), and the sentence rule wants the display and the first
+    // order to agree, which they do. Mark them and this fails, which is
+    // the point: the ruling is the reason.
     for (const id of ['undello-aa-tableilekk-irunno', 'sheri-chetta-ara-kilo-eduttho']) {
       const item = itemById(id);
       assert.ok(item, `${id} is still in the corpus`);

@@ -125,8 +125,9 @@ function checkStructure(): void {
 /**
  * The bare question words (native-speaker ruling 2026-10-13): said on their
  * own, each one is a question, so each one carries the display's question
- * mark. A single-word item spelled from this set and written without the
- * mark is a mistake, not a spelling choice.
+ * mark. A display spelled with one of them and written without the mark is a
+ * mistake, not a spelling choice — one word or a sentence, sound drills
+ * included (PLAN §9 rule 8).
  */
 const BARE_QUESTION_WORDS = new Set([
   'aano',
@@ -144,6 +145,17 @@ const BARE_QUESTION_WORDS = new Set([
   'ethra',
   'evide',
 ]);
+
+/**
+ * The question words a display spells — split on spaces like every other
+ * word pass here, punctuation dropped the way the spelling passes drop it, so
+ * 'entha,' and 'aano' read the same. A display that spells one of them is a
+ * question and belongs with the others.
+ */
+function questionWordsIn(manglish: string): string[] {
+  const spelling = (word: string): string => wordWithoutMark(word).replace(/[^A-Za-zḷṇṟ]/g, '').toLowerCase();
+  return [...new Set(manglish.split(/\s+/).map(spelling).filter((word) => BARE_QUESTION_WORDS.has(word)))];
+}
 
 const EMOJI_RE = /\p{Extended_Pictographic}/u;
 function hasEmoji(text: string): boolean {
@@ -230,13 +242,17 @@ function checkItem(lesson: Lesson, item: Item): void {
       fail(where, `the question mark closes the display: '${item.manglish}'`);
     }
   }
-  // A question word is a question (native-speaker ruling 2026-10-13): the
-  // bare question words carry the mark like any other question, whatever
-  // their English gloss says.
-  if (BARE_QUESTION_WORDS.has(wordWithoutMark(item.manglish))) {
-    if (!item.manglish.endsWith('?')) {
-      fail(where, `a bare question word carries the question mark: '${item.manglish}' (§9 rule 8)`);
-    }
+  // A question word is a question (native-speaker ruling 2026-10-13, PLAN §9
+  // rule 8): the mark goes wherever a bare question word appears — one word or
+  // a sentence, sound drills included — whatever the English gloss says. The
+  // words are read the way the spelling passes read them: split on spaces,
+  // punctuation dropped, so a comma or the mark itself never hides one.
+  const displayQuestionWords = questionWordsIn(item.manglish);
+  if (displayQuestionWords.length > 0 && !item.manglish.endsWith('?')) {
+    fail(
+      where,
+      `a display with a question word carries the question mark: '${item.manglish}' (${displayQuestionWords.join(', ')}) (§9 rule 8)`,
+    );
   }
   checkBannedWords(where, item);
   // §9 rule 1: doubled vowel runs may only be aa/ee/oo — long i is
