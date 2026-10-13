@@ -199,7 +199,9 @@ const spelling = (word: string): string => word.replace(/[^A-Za-zḷṇṟ]/g, '
  * must spell the same words the sentence spells. The bank is judged by the
  * drill's own folding (foldInput) and its assembly check: every word of an
  * accepted order needs a chip to build it, and a chip spelled differently from
- * the sentence word it folds to would show the item's word two ways.
+ * the sentence word it folds to would show the item's word two ways. The first
+ * accepted order is the sentence itself, mark aside — the drill renders the
+ * model line from the display text and grades against that order.
  */
 export function sentenceSpellingFindings(manglish: string, sentence: SentenceSpec): string[] {
   const findings: string[] = [];
@@ -223,6 +225,17 @@ export function sentenceSpellingFindings(manglish: string, sentence: SentenceSpe
     for (const word of order) checkToken('order word', word);
   }
   for (const part of sentence.parts) checkToken('part word', part.word);
+
+  // The drills render the model line from the item's own display text and
+  // grade the learner against the accepted orders, so the first order must
+  // be that same sentence with only the display's mark between them — else
+  // the line the learner reads back is not the line that was checked
+  // (§9 rule 8, ruling 2026-10-13).
+  if (orders.length > 0 && foldInput(manglish) !== foldInput(sentence.orders[0])) {
+    findings.push(
+      `the first accepted order '${sentence.orders[0]}' is not the sentence '${manglish}', mark aside (§9 rule 8)`,
+    );
+  }
 
   // The first accepted order is already pinned to the bank and the parts,
   // exactly, by checkSentence in scripts/content-check.ts. The alternate

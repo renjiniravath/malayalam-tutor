@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { levels } from '@/content';
+import { foldInput } from '@/lib/lesson/input';
 import { geminationProblems, loanScriptsFor, sentenceSpellingFindings } from './romanization';
 
 describe('gemination cross-check (§9 rule 2)', () => {
@@ -163,9 +164,45 @@ describe('sentence drill spelling (§9, learner-visible strings)', () => {
       ],
     };
     const findings = sentenceSpellingFindings(manglish, reverted);
-    assert.equal(findings.length, 2);
+    // Two spelling findings, plus the display/order check the mis-spelled
+    // order trips as well: the order is no longer the sentence on display.
+    assert.equal(findings.length, 3);
     assert.match(findings[0], /order word 'ishttapette' is not a word of the sentence 'ithil etha ishttappette'/);
     assert.match(findings[1], /part word 'ishttapette' is not a word of the sentence 'ithil etha ishttappette'/);
+    assert.match(findings[2], /is not the sentence 'ithil etha ishttappette', mark aside/);
+  });
+
+  it('passes a marked question whose first order is the same sentence', () => {
+    const asked = {
+      bank: ['ningal', 'ready', 'aano'],
+      orders: ['ningal ready aano'],
+      parts: [
+        { word: 'ningal', meaning: 'you' },
+        { word: 'ready', meaning: 'ready' },
+        { word: 'aano', meaning: 'is it?' },
+      ],
+    };
+    assert.deepEqual(sentenceSpellingFindings('ningal ready aano?', asked), []);
+  });
+
+  it('fails a first accepted order that is not the sentence on display', () => {
+    // The drill reads the model line back from the display text, so an
+    // order that says it another way would not be the line it shows.
+    const reordered = {
+      bank: ['ithil', 'etha', 'ishttappette', 'entha'],
+      orders: ['etha ithil ishttappette'],
+      parts: [
+        { word: 'ithil', meaning: 'among these' },
+        { word: 'etha', meaning: 'which' },
+        { word: 'ishttappette', meaning: 'did you like?' },
+      ],
+    };
+    const findings = sentenceSpellingFindings('ithil etha ishttappette', reordered);
+    assert.equal(findings.length, 1);
+    assert.match(
+      findings[0],
+      /the first accepted order 'etha ithil ishttappette' is not the sentence 'ithil etha ishttappette', mark aside/,
+    );
   });
 
   it('names the sentence spelling when an order word folds to it', () => {
@@ -223,5 +260,27 @@ describe('sentence drill spelling (§9, learner-visible strings)', () => {
         }
       }
     }
+  });
+
+  it('keeps every model line on the graded order, mark aside', () => {
+    // §9 rule 8: the drill renders the model line from the item's own
+    // display text and grades against the first accepted order, so the two
+    // are the same sentence with only the display's mark between them — a
+    // marked question shows the mark above its script, an unmarked one
+    // shows none, and the learner who types either one passes.
+    let marked = 0;
+    for (const level of levels) {
+      for (const lesson of level.lessons) {
+        for (const item of lesson.items) {
+          if (!item.sentence) continue;
+          const where = `${lesson.id}/${item.id}`;
+          const order = item.sentence.orders[0];
+          assert.equal(foldInput(item.manglish), foldInput(order), where);
+          assert.ok(!order.endsWith('?'), `${where}: the graded order carries no mark`);
+          if (item.manglish.endsWith('?')) marked++;
+        }
+      }
+    }
+    assert.ok(marked > 0, 'the corpus still has a marked question item to render');
   });
 });
