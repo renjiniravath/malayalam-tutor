@@ -81,7 +81,6 @@ export const l5u8l1: Lesson = {
       notes: [
         'The same sugham aayitt irikkunnu the family visit answered with, and this time the address is on the end of it: irikkunneda.',
         'Ninakk is the to-you form — the question is turned around and handed back, the way a friend answers a greeting.',
-        'The -eda is how friends call each other here: the same friendly ending for everyone the learner talks to, never split by who they are.',
       ],
       tags: [],
     },
