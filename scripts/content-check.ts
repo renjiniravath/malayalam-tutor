@@ -130,14 +130,19 @@ function checkStructure(): void {
  */
 const BARE_QUESTION_WORDS = new Set([
   'aano',
-  'entha',
-  'etha',
-  'engane',
-  'enthina',
-  'evide',
-  'ethra',
+  'aarokke',
+  'aarude',
   'aaru',
+  'engane',
+  'entha',
+  'enthe',
+  'enthina',
   'eppo',
+  'eppozha',
+  'eth',
+  'etha',
+  'ethra',
+  'evide',
 ]);
 
 const EMOJI_RE = /\p{Extended_Pictographic}/u;
