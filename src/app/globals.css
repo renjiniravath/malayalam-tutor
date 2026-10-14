@@ -29,6 +29,8 @@
   --color-text-3: var(--text-3);
   --font-sans: var(--font-geist-sans);
   --font-malayalam: var(--font-noto-malayalam);
+  /* Pixel face for the drawn-scene POC (src/app/poc). */
+  --font-pixel: var(--font-pixel-face);
 }
 
 /*
