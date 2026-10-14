@@ -52,13 +52,18 @@ function Wall({ bulb = 150 }: { bulb?: number | null }) {
   );
 }
 
-/** The near shoulder of the learner, used to frame the over-the-shoulder beat. */
+/**
+ * The near shoulder and the back of the learner's head, cropped by the
+ * frame, used to shoot the over-the-shoulder beat. Slate shirt, green
+ * collar, dark hair: the same three shapes the learner has in the wide
+ * panels, so the mass in the corner reads as them and not as a dark lump.
+ */
 function Foreground() {
   return (
     <g>
-      <path d="M-12 200 Q-10 132 44 122 Q86 114 100 146 L104 200 Z" fill={PALETTE.trouserDark} {...INK} />
+      <path d="M-12 200 Q-10 132 44 122 Q86 114 100 146 L104 200 Z" fill={PALETTE.trouser} {...INK} />
+      <path d="M20 136 Q44 129 68 136 L44 168 Z" fill={PALETTE.palm} />
       <circle cx={40} cy={104} r={30} fill={PALETTE.ink} />
-      <path d="M14 112 Q40 84 66 112 Q40 98 14 112 Z" fill={PALETTE.ink} />
     </g>
   );
 }
@@ -111,18 +116,20 @@ function Panel3() {
  * Close on the glass. The depth is the whole point: the rank of glasses
  * and the kettle sit on the far edge of the counter at counter scale, the
  * glass the chettan has just set down is pushed right up to the camera,
- * and his hand is still in the frame leaving it.
+ * and his hand is still in the frame leaving it. The counter is set lower
+ * here than in the medium panels so the near edge, not a slab of wood,
+ * fills the bottom of the frame.
  */
 function Panel4() {
   return (
     <g>
       <Wall bulb={null} />
-      <Kettle x={288} y={102} scale={1.05} />
-      <GlassRow x={28} y={102} count={5} gap={26} scale={1.1} />
-      <Counter y={104} />
-      <Glass x={126} y={190} scale={3.6} steam />
-      <Limb d="M320 136 Q244 140 202 152" scale={1} width={13} />
-      <Hand x={182} y={154} scale={2} />
+      <Kettle x={288} y={124} scale={1.05} />
+      <GlassRow x={28} y={124} count={5} gap={26} scale={1.1} />
+      <Counter y={126} />
+      <Glass x={122} y={196} scale={3.4} steam />
+      <Limb d="M320 146 Q244 150 202 162" scale={1} width={13} />
+      <Hand x={182} y={164} scale={2} />
     </g>
   );
 }

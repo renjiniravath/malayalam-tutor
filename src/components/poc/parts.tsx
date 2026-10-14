@@ -165,7 +165,7 @@ export function Glass({
     <g transform={place({ x, y, scale })}>
       {steam && (
         <path
-          d="M-3 -22 Q-8 -30 -2 -38 Q4 -46 -1 -54 M6 -22 Q11 -31 5 -39"
+          d="M-3 -22 Q-8 -30 -2 -38 Q4 -45 -1 -50 M6 -22 Q11 -30 5 -38"
           fill="none"
           stroke="#ffffff"
           strokeWidth={2.6 / scale}
@@ -174,8 +174,10 @@ export function Glass({
         />
       )}
       <path d="M-7 0 L-6 -20 L6 -20 L7 0 Z" fill={PALETTE.glass} {...ink} />
-      <path d="M-5.5 -2 L-4.8 -15 L4.8 -15 L5.5 -2 Z" fill={fill} />
-      <path d="M-4.8 -14 L4.8 -14 L4.9 -12 L-4.9 -12 Z" fill={PALETTE.teaLight} />
+      <path d="M-5.5 -2 L-4.8 -13 L4.8 -13 L5.5 -2 Z" fill={fill} />
+      <path d="M-4.8 -13 L4.8 -13 L4.9 -11 L-4.9 -11 Z" fill={PALETTE.teaLight} />
+      {/* the near wall of the glass, catching the light */}
+      <path d="M-4.4 -5 L-3.9 -12" stroke="#ffffff" strokeWidth={1.6 / scale} strokeLinecap="round" opacity={0.75} />
       <path d="M-7 0 L-6 -20" stroke={PALETTE.ink} strokeWidth={1.2 / scale} opacity={0.5} />
     </g>
   );
