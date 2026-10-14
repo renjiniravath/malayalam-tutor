@@ -41,10 +41,12 @@ export function TeaShopScene({ beats }: { beats: Beat[] }) {
 
   // Arrow keys and space advance the scene on desktop. Keys pressed while a
   // control has focus are left alone — that button already handles them.
+  // The target is tested for being an element first: a key event can land on
+  // the document itself, which has no closest().
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
-      const target = event.target as HTMLElement | null;
-      if (target?.closest("button, a, input, textarea")) return;
+      const target = event.target;
+      if (target instanceof HTMLElement && target.closest("button, a, input, textarea")) return;
       if (event.key === "ArrowRight" || event.key === " ") {
         event.preventDefault();
         go(1);
