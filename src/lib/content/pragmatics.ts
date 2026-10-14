@@ -1,0 +1,72 @@
+/**
+ * Pragmatics rule for the -uva declarative (PLAN.md §5): a bare -uva
+ * statement with a second-person subject reads like a command, not a
+ * statement ("nee varuva" sounds like an order). -uva declaratives are
+ * natural only in first and third person; the second person must use
+ * the colloquial question form (nee varunnundo) instead.
+ *
+ * The linter enforces this mechanically on sentence orders; the same
+ * predicate is unit-tested here. Manglish tokens never carry '?'
+ * (native-speaker ruling), so question forms are told apart by word
+ * shape alone.
+ */
+
+export const SECOND_PERSON_SUBJECTS = ['nee', 'ningaḷ', 'thaankaḷ'];
+
+/** True when an accepted order is a bare second-person -uva declarative. */
+export function hasBareSecondPersonUva(orders: string[]): boolean {
+  return orders.some((order) => {
+    const tokens = order.split(' ');
+    const subject = tokens[0];
+    if (!SECOND_PERSON_SUBJECTS.includes(subject)) return false;
+    return tokens.some((token) => token.endsWith('uva'));
+  });
+}
+
+/**
+ * 'chetta' is a vocative, never a sentence subject: it is used only to
+ * summon or address someone in an addressed question ("chetta, ith
+ * kando?"). An addressed question writes the vocative with a comma, so
+ * a bare 'chetta' token in an order is the subject misuse — unless it
+ * stands last, where the address trails the line instead of leading it
+ * ("venda chetta", "ethra aayi, chetta"; native-speaker ruling
+ * 2026-10-12). The verb comes last in a Malayalam sentence, so a
+ * trailing chetta is never in the subject slot.
+ */
+export function hasChettaSubject(orders: string[]): boolean {
+  return orders.some((order) => {
+    const tokens = order.split(' ');
+    return tokens.includes('chetta') && tokens[tokens.length - 1] !== 'chetta';
+  });
+}
+
+/**
+ * Native-speaker ruling: bare first-person declaratives from say/do-type
+ * verbs do not work in conversation ("njan parayuva" is not something
+ * said; it needs an object or is dropped). Only the bare two-word form
+ * is flagged — a verb with a complement is a different construction.
+ */
+export function hasBareFirstPersonSayDo(orders: string[]): boolean {
+  return orders.some((order) => {
+    const tokens = order.split(' ');
+    if (tokens.length !== 2) return false;
+    if (tokens[0] !== 'njan' && tokens[0] !== 'nammaḷ') return false;
+    return tokens[1] === 'parayuva' || tokens[1] === 'cheyyuva';
+  });
+}
+
+const THIRD_PERSON_SUBJECTS = ['avan', 'avaḷ', 'avar', 'ayaaḷ', 'iyaaḷ', 'addheham'];
+
+/**
+ * Native-speaker ruling: bare third-person -uva declaratives are not
+ * natural ("avan varuva"); the natural form is varunnund, or the verb
+ * needs a complement ("avan chaaya kudikkuva" is fine).
+ */
+export function hasBareThirdPersonUva(orders: string[]): boolean {
+  return orders.some((order) => {
+    const tokens = order.split(' ');
+    if (tokens.length !== 2) return false;
+    if (!THIRD_PERSON_SUBJECTS.includes(tokens[0])) return false;
+    return tokens[1].endsWith('uva');
+  });
+}

@@ -1,0 +1,170 @@
+import type { Lesson } from '../types';
+
+/**
+ * Level 1 Unit 1 Lesson 3 — gemination and vowel length.
+ * Both are duration features, so they get held-sound drills and duration
+ * cues instead of tongue diagrams (PLAN.md §4). Comprehension-only.
+ */
+export const l1u1l3: Lesson = {
+  id: 'l1u1l3',
+  levelId: 'l1',
+  unitId: 'l1u1',
+  title: 'Doubled consonants and long vowels',
+  comprehensionOnly: true,
+  items: [
+    {
+      id: 'ippo',
+      manglish: 'ippo',
+      script: 'ഇപ്പോ',
+      meaning: 'now',
+      kind: 'word',
+      audio: {
+        slow: 'l1u1l3_ippo_slow',
+        medium: 'l1u1l3_ippo_medium',
+        normal: 'l1u1l3_ippo_normal',
+        focus: ['l1u1l3_ippo_focus'],
+      },
+      acceptedInputs: ['ippo'],
+      articulation: {
+        cue: 'Hold the doubled pp for a full beat, then release.',
+      },
+      notes: ['Hold the pp twice as long as a single p. The doubled consonant is what makes the word.'],
+      tags: ['sound:geminate'],
+    },
+    {
+      id: 'nalla',
+      manglish: 'nalla',
+      script: 'നല്ല',
+      meaning: 'good',
+      kind: 'word',
+      audio: {
+        slow: 'l1u1l3_nalla_slow',
+        medium: 'l1u1l3_nalla_medium',
+        normal: 'l1u1l3_nalla_normal',
+        focus: ['l1u1l3_nalla_focus'],
+      },
+      acceptedInputs: ['nalla'],
+      articulation: {
+        cue: 'Hold the doubled ll for a full beat before finishing the word.',
+      },
+      notes: ['Hold the ll in the middle for a full beat longer than a single l.'],
+      tags: ['sound:geminate'],
+    },
+    {
+      id: 'ila',
+      manglish: 'ila',
+      script: 'ഇല',
+      meaning: 'leaf',
+      kind: 'word',
+      audio: {
+        slow: 'l1u1l3_ila_slow',
+        medium: 'l1u1l3_ila_medium',
+        normal: 'l1u1l3_ila_normal',
+      },
+      acceptedInputs: ['ila'],
+      tags: [],
+    },
+    {
+      id: 'illa-pair',
+      manglish: 'illa',
+      script: 'ഇല്ല',
+      meaning: 'no; none',
+      kind: 'word',
+      audio: {
+        slow: 'l1u1l3_illa-pair_slow',
+        medium: 'l1u1l3_illa-pair_medium',
+        normal: 'l1u1l3_illa-pair_normal',
+        focus: ['l1u1l3_illa-pair_focus'],
+      },
+      acceptedInputs: ['illa'],
+      articulation: {
+        cue: 'Hold the doubled ll for a full beat before finishing the word.',
+      },
+      notes: ['Hold the ll twice as long as the single l in ila.'],
+      tags: ['sound:geminate'],
+    },
+    {
+      id: 'aadi',
+      manglish: 'aadi',
+      script: 'ആടി',
+      meaning: 'swing',
+      kind: 'word',
+      audio: {
+        slow: 'l1u1l3_aadi_slow',
+        medium: 'l1u1l3_aadi_medium',
+        normal: 'l1u1l3_aadi_normal',
+        focus: ['l1u1l3_aadi_focus'],
+      },
+      acceptedInputs: ['aadi'],
+      articulation: {
+        cue: 'Stretch the aa twice as long as a short a.',
+      },
+      notes: ['Stretch the aa twice as long as the a in adi.'],
+      tags: ['sound:vowel-length'],
+    },
+    {
+      id: 'adi',
+      manglish: 'adi',
+      script: 'അടി',
+      meaning: 'hit',
+      kind: 'word',
+      audio: {
+        slow: 'l1u1l3_adi_slow',
+        medium: 'l1u1l3_adi_medium',
+        normal: 'l1u1l3_adi_normal',
+      },
+      acceptedInputs: ['adi'],
+      tags: [],
+    },
+    {
+      id: 'koodi',
+      manglish: 'koodi',
+      script: 'കൂടി',
+      meaning: 'together; also',
+      kind: 'word',
+      audio: {
+        slow: 'l1u1l3_koodi_slow',
+        medium: 'l1u1l3_koodi_medium',
+        normal: 'l1u1l3_koodi_normal',
+        focus: ['l1u1l3_koodi_focus'],
+      },
+      acceptedInputs: ['koodi'],
+      articulation: {
+        cue: 'Stretch the oo twice as long as a short u.',
+      },
+      notes: ['Stretch the oo twice as long as a short u.'],
+      tags: ['sound:vowel-length'],
+    },
+  ],
+  minimalPairs: [
+    {
+      id: 'l1u1-p-ila-illa',
+      aItemId: 'ila',
+      bItemId: 'illa-pair',
+      segment: 'geminate',
+      aClip: 'l1u1l3_ila_normal',
+      bClip: 'l1u1l3_illa-pair_normal',
+    },
+    {
+      id: 'l1u1-p-aadi-adi',
+      aItemId: 'aadi',
+      bItemId: 'adi',
+      segment: 'vowelLength',
+      aClip: 'l1u1l3_aadi_normal',
+      bClip: 'l1u1l3_adi_normal',
+    },
+  ],
+  drills: [
+    { kind: 'multipleChoice', itemId: 'ippo', distractors: ['good', 'leaf', 'hit'] },
+    { kind: 'multipleChoice', itemId: 'nalla', distractors: ['now', 'no; none', 'together; also'] },
+    { kind: 'multipleChoice', itemId: 'aadi', distractors: ['hit', 'now', 'together; also'] },
+    { kind: 'multipleChoice', itemId: 'adi', distractors: ['swing', 'good', 'together; also'] },
+    { kind: 'multipleChoice', itemId: 'ila', distractors: ['no; none', 'now', 'good'] },
+    { kind: 'multipleChoice', itemId: 'illa-pair', distractors: ['leaf', 'swing', 'hit'] },
+    { kind: 'multipleChoice', itemId: 'koodi', distractors: ['now', 'swing', 'no; none'] },
+    { kind: 'minimalPair', pairId: 'l1u1-p-ila-illa' },
+    { kind: 'minimalPair', pairId: 'l1u1-p-aadi-adi' },
+  ],
+  reviewSlots: 0,
+  spriteId: 'l1u1l3',
+};

@@ -21,4 +21,11 @@ audio-manifest*.json
 # OS and editor
 .DS_Store
 *.log
+
+# Benchmark scratch (planning-side)
 benchmark/
+
+# Next.js / TypeScript
+next-env.d.ts
+*.tsbuildinfo
+coverage/

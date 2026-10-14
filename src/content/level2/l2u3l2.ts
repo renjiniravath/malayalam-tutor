@@ -1,0 +1,225 @@
+import type { Lesson } from '../types';
+
+/**
+ * Level 2 Unit 3 Lesson 2 — the question words (PLAN.md §5): entha,
+ * etha, engane, enthina, eppozha, evide, plus the model sentence
+ * eth busa. With engane und and evide covered, these complete the
+ * everyday question set. The -a on entha, etha and eppozha is the
+ * fused copula (native-speaker ruling 2026-10-08): a squeezed-in is.
+ */
+export const l2u3l2: Lesson = {
+  id: 'l2u3l2',
+  levelId: 'l2',
+  unitId: 'l2u3',
+  title: 'Question words',
+  comprehensionOnly: false,
+  items: [
+    {
+      id: 'entha',
+      manglish: 'entha?',
+      script: 'എന്താ?',
+      meaning: 'what',
+      kind: 'word',
+      audio: {
+        slow: 'l2u3l2_entha_slow',
+        medium: 'l2u3l2_entha_medium',
+        normal: 'l2u3l2_entha_normal',
+      },
+      acceptedInputs: ['entha'],
+      notes: [
+        'The everyday what: entha is enth plus a squeezed-in is — what is it?',
+        'Spell the is out as its own word — enth aanu kazhichath, what is it that you ate — and the -a has nothing to do, so it goes.',
+      ],
+      tags: [],
+    },
+    {
+      id: 'etha',
+      manglish: 'etha?',
+      script: 'ഏതാ?',
+      meaning: 'which',
+      kind: 'word',
+      audio: {
+        slow: 'l2u3l2_etha_slow',
+        medium: 'l2u3l2_etha_medium',
+        normal: 'l2u3l2_etha_normal',
+      },
+      acceptedInputs: ['etha'],
+      notes: [
+        'Which one: etha is eth plus the same squeezed-in is — which one is it?',
+        'Leaning straight on a noun the -a goes: eth schoolil, which school.',
+      ],
+      tags: [],
+    },
+    {
+      id: 'engane-word',
+      manglish: 'engane?',
+      script: 'എങ്ങനെ?',
+      meaning: 'how',
+      kind: 'word',
+      audio: {
+        slow: 'l2u3l2_engane-word_slow',
+        medium: 'l2u3l2_engane-word_medium',
+        normal: 'l2u3l2_engane-word_normal',
+      },
+      acceptedInputs: ['engane'],
+      notes: ['How — the question word inside engane und.'],
+      tags: [],
+    },
+    {
+      id: 'enthina',
+      manglish: 'enthina?',
+      script: 'എന്തിനാ?',
+      meaning: 'why',
+      kind: 'word',
+      audio: {
+        slow: 'l2u3l2_enthina_slow',
+        medium: 'l2u3l2_enthina_medium',
+        normal: 'l2u3l2_enthina_normal',
+      },
+      acceptedInputs: ['enthina'],
+      notes: ['Why — enthin plus the same squeezed-in -a: enthina, what is it for.'],
+      tags: [],
+    },
+    {
+      id: 'eppozha',
+      manglish: 'eppozha?',
+      script: 'എപ്പോഴാ?',
+      meaning: 'when',
+      kind: 'word',
+      audio: {
+        slow: 'l2u3l2_eppozha_slow',
+        medium: 'l2u3l2_eppozha_medium',
+        normal: 'l2u3l2_eppozha_normal',
+      },
+      acceptedInputs: ['eppozha'],
+      notes: [
+        'When — eppozha carries the same squeezed-in -a: when is it? eppo is the bare form, for when the is stands as its own word.',
+        'The pattern: e- asks (eppozha, evide, etha), i- points near (ippo, ivide), a- points far (appo, avide).',
+      ],
+      tags: [],
+    },
+    {
+      id: 'evide',
+      manglish: 'evide?',
+      script: 'എവിടെ?',
+      meaning: 'where',
+      kind: 'word',
+      audio: {
+        slow: 'l2u3l2_evide_slow',
+        medium: 'l2u3l2_evide_medium',
+        normal: 'l2u3l2_evide_normal',
+      },
+      acceptedInputs: ['evide'],
+      notes: ['Where — the question pair of ivide, here.'],
+      tags: [],
+    },
+    {
+      id: 'athu-entha',
+      manglish: 'athu entha?',
+      script: 'അത് എന്താ?',
+      meaning: 'what is that?',
+      kind: 'sentence',
+      audio: {
+        slow: 'l2u3l2_athu-entha_slow',
+        medium: 'l2u3l2_athu-entha_medium',
+        normal: 'l2u3l2_athu-entha_normal',
+      },
+      sentence: {
+        bank: ['athu', 'entha', 'etha', 'evide'],
+        orders: ['athu entha'],
+        parts: [
+          { word: 'athu', meaning: 'that (thing)' },
+          { word: 'entha', meaning: 'what' },
+        ],
+      },
+      notes: ['The pointing question.'],
+      tags: [],
+    },
+    {
+      id: 'athu-etha',
+      manglish: 'ithil etha ishttappette?',
+      script: 'ഇതിൽ ഏതാ ഇഷ്ടപ്പെട്ടേ?',
+      meaning: 'which among these did you like?',
+      kind: 'sentence',
+      audio: {
+        slow: 'l2u3l2_athu-etha_slow',
+        medium: 'l2u3l2_athu-etha_medium',
+        normal: 'l2u3l2_athu-etha_normal',
+      },
+      sentence: {
+        bank: ['ithil', 'etha', 'ishttappette', 'entha'],
+        orders: ['ithil etha ishttappette'],
+        parts: [
+          { word: 'ithil', meaning: 'among these' },
+          { word: 'etha', meaning: 'which' },
+          { word: 'ishttappette', meaning: 'did you like?' },
+        ],
+      },
+      notes: ['Choosing among things right in front of you: ithil, among these.'],
+      tags: [],
+    },
+    {
+      id: 'eth-busa',
+      manglish: 'eth busa?',
+      script: 'ഏത് ബസ്സാ?',
+      meaning: 'which bus is it?',
+      kind: 'sentence',
+      audio: {
+        slow: 'l2u3l2_eth-busa_slow',
+        medium: 'l2u3l2_eth-busa_medium',
+        normal: 'l2u3l2_eth-busa_normal',
+      },
+      acceptedInputs: ['eth busa', 'bus etha'],
+      sentence: {
+        bank: ['eth', 'busa', 'entha', 'evide'],
+        orders: ['eth busa'],
+        parts: [
+          { word: 'eth', meaning: 'which' },
+          { word: 'busa', meaning: 'bus (bus plus the squeezed-in is)' },
+        ],
+      },
+      notes: [
+        'The -a rides straight on the noun here: busa, bus is it.',
+        'bus etha is fine too, but etha bus is not said — the -a never stands as its own word.',
+      ],
+      tags: [],
+    },
+    {
+      id: 'ningal-evide',
+      manglish: 'ningaḷ evide?',
+      script: 'നിങ്ങൾ എവിടെ?',
+      meaning: 'where are you?',
+      kind: 'sentence',
+      audio: {
+        slow: 'l2u3l2_ningal-evide_slow',
+        medium: 'l2u3l2_ningal-evide_medium',
+        normal: 'l2u3l2_ningal-evide_normal',
+      },
+      sentence: {
+        bank: ['ningaḷ', 'evide', 'avide', 'entha'],
+        orders: ['ningaḷ evide'],
+        parts: [
+          { word: 'ningaḷ', meaning: 'you' },
+          { word: 'evide', meaning: 'where' },
+        ],
+      },
+      notes: ['No verb needed: the question word does the asking.'],
+      tags: [],
+    },
+  ],
+  minimalPairs: [],
+  drills: [
+    { kind: 'multipleChoice', itemId: 'entha', distractors: ['which', 'how', 'why'] },
+    { kind: 'multipleChoice', itemId: 'etha', distractors: ['what', 'when', 'where'] },
+    { kind: 'multipleChoice', itemId: 'engane-word', distractors: ['what', 'when', 'where'] },
+    { kind: 'multipleChoice', itemId: 'enthina', distractors: ['what', 'how', 'where'] },
+    { kind: 'multipleChoice', itemId: 'eppozha', distractors: ['what', 'how', 'why'] },
+    { kind: 'multipleChoice', itemId: 'evide', distractors: ['what', 'which', 'why'] },
+    { kind: 'sentenceBuilder', itemId: 'athu-entha', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'athu-etha', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'eth-busa', mode: 'bank' },
+    { kind: 'sentenceBuilder', itemId: 'ningal-evide', mode: 'bank' },
+  ],
+  reviewSlots: 0,
+  spriteId: 'l2u3l2',
+};
