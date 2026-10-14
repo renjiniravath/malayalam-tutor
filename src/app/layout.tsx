@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Noto_Sans_Malayalam } from "next/font/google";
+import { Geist, Noto_Sans_Malayalam, Silkscreen } from "next/font/google";
 import { AppInit } from "@/components/app/AppInit";
 import { InstallPrompt } from "@/components/app/InstallPrompt";
 import "./globals.css";
@@ -12,6 +12,17 @@ const geistSans = Geist({
 const notoMalayalam = Noto_Sans_Malayalam({
   variable: "--font-noto-malayalam",
   subsets: ["malayalam"],
+});
+
+/**
+ * The pixel face, for the drawn-scene POC only. Self-hosted by next/font
+ * like the others, and only fetched on pages that actually use it, so it
+ * costs the rest of the app nothing.
+ */
+const silkscreen = Silkscreen({
+  variable: "--font-silkscreen",
+  weight: "400",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${notoMalayalam.variable} antialiased`}
+      className={`${geistSans.variable} ${notoMalayalam.variable} ${silkscreen.variable} antialiased`}
     >
       <body>
         {children}

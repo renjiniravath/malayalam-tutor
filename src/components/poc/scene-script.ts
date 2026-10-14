@@ -14,7 +14,7 @@
  */
 
 import { levels } from "@/content";
-import type { PanelId } from "./panels";
+import type { PanelId } from "./scenes";
 
 export interface Beat {
   /** The content item this turn speaks. */
@@ -37,14 +37,14 @@ const DIRECTION: Record<
   "chetta-oru-chaaya": {
     panel: 1,
     panelLabel:
-      "The tea shop seen from the road: a tiled roof over a cream wall, a serving hatch with a tea board above it, and a coconut palm at the corner. The learner walks up and calls out to the chettan inside.",
+      "The tea shop seen from the road: a tiled roof over a cream wall, a serving hatch with a tea board above it, and a coconut palm at the left corner. The learner stands on the road in front of it and calls out to the chettan inside.",
     speaker: "you",
     caption: "Late afternoon on the road, and you call out from the doorway.",
   },
   "sugar-idano": {
     panel: 2,
     panelLabel:
-      "Behind the counter: the chettan holds a glass, jars on the shelf behind him, a rank of glasses on the left and the big kettle on the right.",
+      "Behind the counter: the chettan holds a glass up, jars on the shelf behind him, the big kettle on the left and two glasses standing on the right.",
     speaker: "chettan",
     caption: "He takes a glass down off the shelf and looks up.",
   },
@@ -58,7 +58,7 @@ const DIRECTION: Record<
   "chaaya-ready": {
     panel: 4,
     panelLabel:
-      "Close on the counter: one glass of tea, steaming, with the chettan's hand just leaving the frame and rows of glasses behind it.",
+      "Close on the counter: one tall glass of tea, steaming, with the chettan's arm reaching up to it from the bottom of the frame and smaller glasses standing behind.",
     speaker: "chettan",
     caption: "The glass lands on the counter, hot enough to steam.",
   },
@@ -78,7 +78,7 @@ const DIRECTION: Record<
   "thanks-chetta-pinne-kaanam": {
     panel: 7,
     panelLabel:
-      "The learner walking away down the road with their back turned, the tea shop smaller behind them and palms on both sides.",
+      "The learner walking away down the road with their back turned, the tea shop smaller behind them and the palm at the left corner.",
     speaker: "you",
     caption: "You leave the coins on the counter and step back out to the road.",
   },

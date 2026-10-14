@@ -1,30 +1,22 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { PALETTE } from "./palette";
-import { ScenePanel } from "./panels";
+import { PORTRAIT } from "./scenes";
+import { BOX, Stage } from "./stage";
 import type { Beat } from "./scene-script";
 
 /**
- * The tea-shop scene as a run of static panels (POC, branch poc-visuals).
+ * The tea-shop scene, played a beat at a time (POC, branch poc-visuals).
  *
- * One turn is one panel: the picture on top, the dialogue box under it,
- * carrying a name plate, the caption of what happens around the line, and
- * the line in the three layers the product uses (romanization primary,
- * script secondary, English under it). Nothing animates — a beat change is
- * an instant swap, the way a page turn is.
+ * One turn is one panel: the scene is drawn, the speaker's face replaces
+ * the other's in the portrait panel, and the box carries the line with the
+ * speaker's name in front of it, the way the games this follows do it.
+ * Nothing animates — a beat change is an instant swap, like a page turn.
  */
 
 const SPEAKER_LABEL: Record<Beat["speaker"], string> = {
   chettan: "Chettan",
   you: "You",
-};
-
-// Plate colours are the app's ink-on-cream at accessible contrast, not the
-// scene palette: the plate is interface, the panel is illustration.
-const SPEAKER_PLATE: Record<Beat["speaker"], string> = {
-  chettan: PALETTE.woodDark,
-  you: PALETTE.palmDark,
 };
 
 export function TeaShopScene({ beats }: { beats: Beat[] }) {
@@ -66,12 +58,12 @@ export function TeaShopScene({ beats }: { beats: Beat[] }) {
         <p>
           Turn {index + 1} of {beats.length}
         </p>
-        <div className="flex items-center gap-1.5" aria-hidden="true">
+        <div className="flex items-center gap-1" aria-hidden="true">
           {beats.map((candidate, i) => (
             <span
               key={candidate.itemId}
-              className="h-2 w-2 rounded-full"
-              // Chrome, not illustration: the app's tokens, so the dots
+              className="h-2.5 w-2.5"
+              // Chrome, not illustration: the app's tokens, so the marks
               // survive the dark theme the way the scene colours do not
               // need to.
               style={{ background: i <= index ? "var(--accent)" : "var(--line)" }}
@@ -80,54 +72,34 @@ export function TeaShopScene({ beats }: { beats: Beat[] }) {
         </div>
       </div>
 
-      {/* Tap anywhere on the panel to go on, the way a reader taps a page.
-          The buttons below are the real, keyboard-reachable controls. */}
-      <div
-        onClick={() => go(1)}
-        className="mt-3 cursor-pointer overflow-hidden rounded-2xl border-2"
-        style={{ borderColor: PALETTE.ink }}
-      >
-        <ScenePanel id={beat.panel} label={beat.panelLabel} />
-
-        <div
-          className="relative px-4 pb-4 pt-5"
-          style={{ background: PALETTE.box, color: PALETTE.boxEdge }}
+      {/* Tap the frame to go on, the way a reader taps a page. The buttons
+          below are the real, keyboard-reachable controls. */}
+      <div onClick={() => go(1)} className="mt-3 cursor-pointer">
+        <Stage
+          panel={beat.panel}
+          panelLabel={beat.panelLabel}
+          portrait={PORTRAIT[beat.speaker]}
+          caption={beat.caption}
         >
-          <span
-            className="absolute -top-3.5 left-3 rounded-md border-2 px-3 py-1 text-sm font-semibold tracking-wide"
-            style={{
-              background: SPEAKER_PLATE[beat.speaker],
-              borderColor: PALETTE.ink,
-              color: PALETTE.boxEdge,
-            }}
-          >
-            {SPEAKER_LABEL[beat.speaker]}
-          </span>
-
           <div aria-live="polite" aria-atomic="true">
-            <p className="text-sm italic" style={{ color: "#c9bda2" }}>
-              {beat.caption}
+            <p className="font-pixel text-[15px] leading-[1.55]">
+              <span style={{ color: BOX.name }}>{SPEAKER_LABEL[beat.speaker]}:</span>{" "}
+              <span style={{ color: BOX.line }}>{beat.manglish}</span>
             </p>
-            <p className="mt-2 text-2xl font-semibold leading-snug">{beat.manglish}</p>
             {beat.script && (
-              <p lang="ml" className="mt-1 font-malayalam text-lg" style={{ color: "#d8c9a8" }}>
+              <p
+                lang="ml"
+                className="mt-1 font-malayalam text-[13px] leading-snug"
+                style={{ color: BOX.script }}
+              >
                 {beat.script}
               </p>
             )}
-            <p className="mt-1.5 text-base" style={{ color: "#e6d9bd" }}>
+            <p className="mt-0.5 text-[13px] leading-snug" style={{ color: BOX.gloss }}>
               {beat.meaning}
             </p>
           </div>
-
-          {/* Static "there is more" mark; it does not blink. */}
-          <span
-            aria-hidden="true"
-            className="absolute bottom-3 right-4 text-lg leading-none"
-            style={{ color: last ? "transparent" : PALETTE.boxEdge }}
-          >
-            ▸
-          </span>
-        </div>
+        </Stage>
       </div>
 
       <div className="mt-4 flex items-center gap-3">
