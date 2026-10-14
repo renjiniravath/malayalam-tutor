@@ -79,10 +79,19 @@ export function TeaShopScene({ beats }: { beats: Beat[] }) {
           panel={beat.panel}
           panelLabel={beat.panelLabel}
           portrait={PORTRAIT[beat.speaker]}
+          speaker={beat.speaker}
           caption={beat.caption}
         >
           <div aria-live="polite" aria-atomic="true">
-            <p className="font-pixel text-[15px] leading-[1.55]">
+            {/*
+              18px, not 15. A pixel face has no hinting to fall back on: at
+              15px its strokes land on fractional pixels and mush together,
+              which is what made the line hard to read. Measured against
+              16/18/20/22 in the browser, 18 is the first size that reads
+              cleanly without the line wrapping early. The tracking keeps
+              the tiny counters of a,e and o from closing up.
+            */}
+            <p className="font-pixel text-[18px] leading-[1.4] tracking-[0.02em]">
               <span style={{ color: BOX.name }}>{SPEAKER_LABEL[beat.speaker]}:</span>{" "}
               <span style={{ color: BOX.line }}>{beat.manglish}</span>
             </p>

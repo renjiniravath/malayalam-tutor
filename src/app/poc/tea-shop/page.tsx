@@ -31,7 +31,7 @@ export default function TeaShopPocPage() {
 
       <h1 className="mt-3 text-2xl font-bold tracking-tight">{lessonTitle}</h1>
       <p className="mt-1 text-sm text-text-2">
-        Level 5, drawn as panels. One turn per panel, tap to go on.
+        Level 5, one turn at a time. Four illustrated set-ups across seven turns; tap to go on.
       </p>
 
       <div className="mt-6">
@@ -39,8 +39,9 @@ export default function TeaShopPocPage() {
       </div>
 
       <p className="mt-10 text-sm text-text-2">
-        Visual POC. The pictures are drawn in code; there is no audio yet, so the box shows
-        the line straight away instead of holding the text back until it has been heard.
+        Visual POC. The four plates and the two faces are generated art; there is no audio yet,
+        so the box shows the line straight away instead of holding the text back until it has
+        been heard.
       </p>
     </main>
   );

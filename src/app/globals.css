@@ -30,7 +30,7 @@
   --font-sans: var(--font-geist-sans);
   --font-malayalam: var(--font-noto-malayalam);
   /* Pixel face for the drawn-scene POC (src/app/poc). */
-  --font-pixel: var(--font-silkscreen);
+  --font-pixel: var(--font-pixel-face);
 }
 
 /*

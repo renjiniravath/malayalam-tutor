@@ -27,6 +27,7 @@ export default function TeaShopPanelsPage() {
       <h1 className="mt-3 text-2xl font-bold tracking-tight">The seven panels</h1>
       <p className="mt-1 text-sm text-text-2">
         Drawn in code, no image files. Each panel is a 64x44 grid of pixels, fifteen colours.
+        Panel 1 here is the drawing; the scene itself now shows a generated image in its place.
       </p>
 
       <ol className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

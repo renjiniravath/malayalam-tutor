@@ -32,7 +32,12 @@ export interface Beat {
 
 const DIRECTION: Record<
   string,
-  { panel: PanelId; panelLabel: string; speaker: Beat["speaker"]; caption: string }
+  {
+    panel: PanelId;
+    panelLabel: string;
+    speaker: Beat["speaker"];
+    caption: string;
+  }
 > = {
   "chetta-oru-chaaya": {
     panel: 1,
@@ -67,7 +72,7 @@ const DIRECTION: Record<
     panelLabel:
       "The chettan leaning on the counter with both hands down, the tea glass steaming in front of the learner.",
     speaker: "you",
-    caption: "The tea is in front of you. Both his hands are on the counter.",
+    caption: "The road is quiet and the tea is good. You take your time over it before you ask.",
   },
   "patthu-roopa": {
     panel: 6,
